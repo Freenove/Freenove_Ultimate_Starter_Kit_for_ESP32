@@ -1,0 +1,18 @@
+
+  MAC OS:   https://github.com/thonny/thonny/releases/download/v3.2.7/thonny-3.2.7.pkg 
+  
+  Windows:  https://github.com/thonny/thonny/releases/download/v3.2.7/thonny-3.2.7.exe 
+  
+  Linux:    The latest version:
+			Binary bundle for PC (Thonny+Python):
+			bash <(wget -O - https://thonny.org/installer-for-linux)
+
+			With pip:
+			pip3 install thonny
+
+			Distro packages (may not be the latest version):
+			Debian, Rasbian, Ubuntu, Mint and others:
+			sudo apt install thonny
+
+			Fedora:
+			sudo dnf install thonny
