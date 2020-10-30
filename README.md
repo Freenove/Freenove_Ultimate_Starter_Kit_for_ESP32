@@ -19,7 +19,7 @@ Do NOT click the "Open in Desktop" button, it will lead you to install Github so
 
 1. Download the ZIP file as above.
 2. Unzip it and you will get a folder contains tutorials and related files.
-3. Please start with "Tutorial.pdf".
+3. Please start with "Start Here.pdf".
 
 ### Support
 
