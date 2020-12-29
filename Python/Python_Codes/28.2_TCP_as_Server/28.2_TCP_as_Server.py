@@ -2,8 +2,8 @@ import network
 import socket
 import time
 
-ssidRouter     =  "FYI_2.4G"       #Enter the router name
-passwordRouter =  "freenove208"    #Enter the router password
+ssidRouter     =  "********"       #Enter the router name
+passwordRouter =  "********"       #Enter the router password
 port           =   8000            #input the remote port
 wlan=None
 listenSocket=None

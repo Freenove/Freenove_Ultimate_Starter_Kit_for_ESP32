@@ -1,12 +1,3 @@
-#
-#20ms一个周期，0.5ms代表0度，1.5ms代表90度，2.5ms代表180度
-#0.5ms/20ms=2.5%, 1.5ms/20ms=7.5%, 2.5ms/20ms=12.5%
-#1024*2.5%=25.6, 1024*7.5%=76.8, 1024*12.5%=128
-
-#myServoWriteDuty函数参数范围：26-128
-#myServoWriteAngle函数参数范围：0-180
-#myServoWriteTime函数参数范围：500-2500
-#
 
 from machine import Pin,PWM
 

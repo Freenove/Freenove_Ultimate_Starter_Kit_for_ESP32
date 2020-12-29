@@ -10,12 +10,12 @@ chip = Chip74HC595(14,12,13,5)
 while True:
     x=0x01
     for count in range(8):
-        chip.shiftOut(1,x)#高位先发送
+        chip.shiftOut(1,x)
         x=x<<1;
         time.sleep_ms(300)
     x=0x01
     for count in range(8):
-        chip.shiftOut(0,x)#低位先发送
+        chip.shiftOut(0,x)
         x=x<<1
         time.sleep_ms(300)
    
