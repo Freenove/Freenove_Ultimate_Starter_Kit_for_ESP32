@@ -39,7 +39,7 @@ void loop() {
 
 void driveMotor(boolean dir, int spd) {
   // Control motor rotation direction
-  if (rotationDir) {
+  if (dir) {
     digitalWrite(in1Pin, HIGH);
     digitalWrite(in2Pin, LOW);
   }
