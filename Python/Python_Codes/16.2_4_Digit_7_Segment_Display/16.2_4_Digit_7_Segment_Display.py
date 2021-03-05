@@ -9,16 +9,15 @@ num =[0xc0, 0xf9, 0xa4, 0xb0, 0x99, 0x92, 0x82, 0xf8,
 def led_display():
     for i in range(0,4):
         chns=Pin(comPin[i],Pin.OUT)
-        chns.value(1)
         chip.shiftOut(0,num[i])
+        chns.value(1)
         time.sleep_ms(1)
-        chip.clear()
         chns.value(0)
   
 #Pin(15) - 74hc595.ds
-#Pin(4)  - 74hc595.st_cp
-#Pin(2)  - 74hc595.sh_cp
-chip = Chip74HC595(15,4,2)
+#Pin(2)  - 74hc595.st_cp
+#Pin(4)  - 74hc595.sh_cp
+chip = Chip74HC595(15,2,4)
 try:
     while True:
         led_display()
