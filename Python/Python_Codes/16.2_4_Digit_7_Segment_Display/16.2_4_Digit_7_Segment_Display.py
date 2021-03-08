@@ -14,9 +14,7 @@ def led_display():
         time.sleep_ms(1)
         chns.value(0)
   
-#Pin(15) - 74hc595.ds
-#Pin(2)  - 74hc595.st_cp
-#Pin(4)  - 74hc595.sh_cp
+#Pin(15)-74hc595.ds, Pin(2)-74hc595.st_cp, Pin(4)-74hc595.sh_cp
 chip = Chip74HC595(15,2,4)
 try:
     while True:
