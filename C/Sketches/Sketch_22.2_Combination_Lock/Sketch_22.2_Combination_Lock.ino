@@ -15,7 +15,7 @@ char keys[4][4] = {
   {'*', '0', '#', 'D'}
 };
 
-byte rowPins[4] = {14, 25, 26, 27};   // connect to the row pinouts of the keypad
+byte rowPins[4] = {14, 27, 26, 25};   // connect to the row pinouts of the keypad
 byte colPins[4] = {13, 21, 22, 23};   // connect to the column pinouts of the keypad
 
 // initialize an instance of class NewKeypad
