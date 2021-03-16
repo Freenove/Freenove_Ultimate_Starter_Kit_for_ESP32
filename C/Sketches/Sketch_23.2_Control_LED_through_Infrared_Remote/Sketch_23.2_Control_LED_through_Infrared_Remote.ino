@@ -9,10 +9,10 @@
 #include <IRrecv.h>
 #include <IRutils.h>
 
+const uint16_t recvPin = 15; // Infrared receiving pin
 IRrecv irrecv(recvPin);      // Create a class object used to receive class
 decode_results results;       // Create a decoding results class object
 
-const uint16_t recvPin = 15; // Infrared receiving pin
 int ledPin = 14;              // the number of the LED pin
 int buzzerPin = 13;           // the number of the buzzer pin
 

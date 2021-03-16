@@ -1,4 +1,4 @@
-2020/07/11/**********************************************************************
+/**********************************************************************
   Filename    : Temperature and Humidity Sensor
   Description : Use DHT11 to measure temperature and humidity.Print the result to the LCD1602.
   Auther      : www.freenove.com
