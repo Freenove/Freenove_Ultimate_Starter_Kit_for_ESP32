@@ -1,17 +1,30 @@
-# This file is executed on every boot (including wake-boot from deepsleep)
-#import esp
-#esp.osdebug(None)
-#import webrepl
-#webrepl.start()
+#!/opt/bin/lv_micropython
+import uos as os
+import uerrno as errno
+iter = os.ilistdir()
+IS_DIR = 0x4000
+IS_REGULAR = 0x8000
 
-import os
-files=os.listdir()
-if len(files)>=2:
-    print('The device have %d files'%len(files))
-    for i in range(len(files)):
-        if files[i]!='boot.py':
-            print('file name:',files[i])
-            exec(open(files[i]).read(),globals())
-            
-else:
-    print("MicroPython has no files!")
+while True:
+    try:
+        entry = next(iter)
+        filename = entry[0]
+        file_type = entry[1]
+        if filename == 'boot.py':
+            continue
+        else:
+            print("===============================")
+            print(filename,end="")
+            if file_type == IS_DIR:
+                print(", File is a directory")
+                print("===============================")
+            else:
+                print("\n===============================")
+                #print("Contents:")
+                #with open(filename) as f:
+                #   for line in enumerate(f):
+                #       print("{}".format(line[1]),end="")
+                #print("")
+                exec(open(filename).read(),globals())
+    except StopIteration:
+        break
