@@ -1,4 +1,4 @@
-## Freenove_Ultimate_Kit_for_ESP32
+## Freenove_Ultimate_Starter_Kit_for_ESP32
 
 A kit with a Freenove® ESP32 Board for learning programming and electronics.
 
