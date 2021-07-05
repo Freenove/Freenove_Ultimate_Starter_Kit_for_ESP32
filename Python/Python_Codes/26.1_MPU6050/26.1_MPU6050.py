@@ -15,7 +15,7 @@ try:
               gyro[0],"\t",gyro[1],"\t",gyro[2])
         print("a/g:\t")
         print(accel[0]/16384,"g",accel[1]/16384,"g",accel[2]/16384,"g",
-              gyro[0]/16384,"d/s",gyro[1]/16384,"d/s",gyro[2]/16384,"d/s")
+              gyro[0]/131,"d/s",gyro[1]/131,"d/s",gyro[2]/131,"d/s")
         time.sleep_ms(1000)
 except:
     pass

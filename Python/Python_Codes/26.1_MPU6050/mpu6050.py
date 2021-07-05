@@ -147,14 +147,27 @@ class MPU6050(object):
         gx=(buf[0]<<8)|buf[1]
         gy=(buf[2]<<8)|buf[3]
         gz=(buf[4]<<8)|buf[5]
+        if gx >= 0x8000:
+            gx = -((65535-gx)+1)
+        if gy >= 0x8000:
+            gy = -((65535-gy)+1)
+        if gz >= 0x8000:
+            gz = -((65535-gz)+1)
         #print('MPU_Get_Gyroscope: ',gx,gy,gz)
         return gx,gy,gz
+    
     def MPU_Get_Accelerometer(self):
         buf = bytearray(6)
         res = self.Read_Mpu6050_Len(MPU_ACCEL_XOUTH_REG,6,buf)
         ax=(buf[0]<<8)|buf[1]
         ay=(buf[2]<<8)|buf[3]
         az=(buf[4]<<8)|buf[5]
+        if ax >= 0x8000:
+            ax = -((65535-ax)+1)
+        if ay >= 0x8000:
+            ay = -((65535-ay)+1)
+        if az >= 0x8000:
+            az = -((65535-az)+1)
         #print('MPU_Get_Accelerometer: ',ax,ay,az)
         return ax,ay,az
 
