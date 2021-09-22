@@ -41,7 +41,9 @@ void setup() {
   }
   
   sensor_t * s = esp_camera_sensor_get();
-  s->set_vflip(s, 1);        //flip it back
+  s->set_vflip(s, 1);        //1-Upside down, 0-No operation
+  s->set_hmirror(s, 0);      //1-Reverse left and right, 0-No operation
+  
   s->set_brightness(s, 1);   //up the blightness just a bit
   s->set_saturation(s, -1);  //lower the saturation
 
