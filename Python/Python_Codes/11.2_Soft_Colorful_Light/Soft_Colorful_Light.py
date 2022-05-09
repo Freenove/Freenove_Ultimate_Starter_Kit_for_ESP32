@@ -1,9 +1,9 @@
 from machine import Pin,PWM,ADC
 import time
 
-pwm0=PWM(Pin(15,Pin.OUT),10000,0)
-pwm1=PWM(Pin(2,Pin.OUT),10000,0)
-pwm2=PWM(Pin(5,Pin.OUT),10000,0)
+pwm0=PWM(Pin(15,Pin.OUT),10000)
+pwm1=PWM(Pin(2,Pin.OUT),10000)
+pwm2=PWM(Pin(5,Pin.OUT),10000)
 adc0=ADC(Pin(36))
 adc1=ADC(Pin(39))
 adc2=ADC(Pin(34))

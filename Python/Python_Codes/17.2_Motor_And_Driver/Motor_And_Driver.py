@@ -6,7 +6,7 @@ in1Pin=Pin(12, Pin.OUT)
 in2Pin=Pin(14, Pin.OUT)
 
 enablePin=Pin(13, Pin.OUT)
-pwm=PWM(enablePin,10000,512)
+pwm=PWM(enablePin,10000)
 
 adc=ADC(Pin(36))
 adc.atten(ADC.ATTN_11DB)

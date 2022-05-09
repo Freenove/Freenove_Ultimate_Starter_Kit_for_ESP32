@@ -1,7 +1,7 @@
 from machine import Pin,PWM
 import time
 
-pwm =PWM(Pin(2),10000,0)
+pwm =PWM(Pin(2),10000)
 try:
     while True:
         for i in range(0,1023):

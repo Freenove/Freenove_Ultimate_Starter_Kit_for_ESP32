@@ -1,7 +1,7 @@
 from myservo import myServo
 import time
 
-servo=myServo(15)
+servo=myServo(4)
 servo.myServoWriteAngle(0)
 time.sleep_ms(1000)
 

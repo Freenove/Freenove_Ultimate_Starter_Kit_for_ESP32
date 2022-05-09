@@ -2,7 +2,7 @@ from machine import Pin,PWM
 import time
 from irrecvdata import irGetCMD
 
-ledPin=PWM(Pin(14,Pin.OUT),10000,512) 
+ledPin=PWM(Pin(14,Pin.OUT),10000) 
 buzzerPin=Pin(13,Pin.OUT)
 recvPin = irGetCMD(15)
 

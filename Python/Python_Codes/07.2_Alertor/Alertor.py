@@ -4,7 +4,7 @@ import time
 
 PI=3.14
 button=Pin(4,Pin.IN,Pin.PULL_UP)
-passiveBuzzer=PWM(Pin(13),2000,512)
+passiveBuzzer=PWM(Pin(13),2000)
 
 def alert():
     for x in range(0,36):
@@ -15,8 +15,9 @@ def alert():
 try:
     while True:
         if not button.value():
+            passiveBuzzer.init()
             alert()   
         else:
-            passiveBuzzer.freq(0)
+            passiveBuzzer.deinit()
 except:
     passiveBuzzer.deinit()
