@@ -66,7 +66,7 @@ HTTP/1.0 200 OK\r\n
   </head>
   <body>
     <h1>Video Streaming Demonstration</h1>
-    <img src="/video" margin-top:100px; style="transform:rotate(180deg); "/>
+    <img src="/video" margin-top:100px; style="transform:rotate(180deg)"; />
   </body>
 </html>
 """
