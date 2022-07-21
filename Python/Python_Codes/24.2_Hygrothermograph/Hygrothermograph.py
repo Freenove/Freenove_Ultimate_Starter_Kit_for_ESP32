@@ -18,7 +18,7 @@ try:
         lcd.move_to(0, 1)
         lcd.putstr("Humidity:    ")
         lcd.putstr(str(DHT.humidity()))
-        sleep_ms(1000)
+        sleep_ms(2000)
 except:
     pass
 

@@ -34,4 +34,5 @@ void loop() {
   lcd.setCursor(0, 1);              //set the cursor to column 0, line 0 
   lcd.print("Humidity   :");        //display the Humidity on the LCD1602
   lcd.print(DHT.humidity);  
+  delay(2000);
 }

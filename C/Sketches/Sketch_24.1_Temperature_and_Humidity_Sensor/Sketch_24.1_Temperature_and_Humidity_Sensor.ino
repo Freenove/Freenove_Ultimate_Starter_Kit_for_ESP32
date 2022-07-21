@@ -21,5 +21,5 @@ void loop() {
   }
   Serial.println(" Temperature:" + String(newValues.temperature) + 
   " Humidity:" + String(newValues.humidity));
-  delay(1000);
+  delay(2000);
 }
