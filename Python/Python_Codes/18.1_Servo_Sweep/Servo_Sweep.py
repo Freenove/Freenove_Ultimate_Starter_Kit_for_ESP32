@@ -1,8 +1,8 @@
 from myservo import myServo
 import time
 
-servo=myServo(4)
-servo.myServoWriteAngle(0)
+servo=myServo(15)#set servo pin
+servo.myServoWriteAngle(0)#Set Servo Angle
 time.sleep_ms(1000)
 
 try:
