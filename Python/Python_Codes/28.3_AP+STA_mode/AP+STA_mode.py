@@ -38,5 +38,5 @@ try:
     STA_Setup(ssidRouter,passwordRouter)
 except:
     sta_if.disconnect()
-    ap_if.idsconnect()
+    ap_if.disconnect()
     
