@@ -2,7 +2,8 @@ import time
 from machine import I2C, Pin
 from I2C_LCD import I2cLcd
 
-DEFAULT_I2C_ADDR = 0x27
+DEFAULT_I2C_ADDR = 0x27  #PCF8574T
+#DEFAULT_I2C_ADDR = 0x3F  #PCF8574AT
 i2c = I2C(scl=Pin(14), sda=Pin(13), freq=400000)
 lcd = I2cLcd(i2c, DEFAULT_I2C_ADDR, 2, 16)
 
