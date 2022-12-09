@@ -8,9 +8,12 @@
 #include "esp_camera.h"
 #include <WiFi.h>
 
+// ===================
 // Select camera model
+// ===================
 #define CAMERA_MODEL_WROVER_KIT // Has PSRAM
 //#define CAMERA_MODEL_ESP_EYE // Has PSRAM
+//#define CAMERA_MODEL_ESP32S3_EYE // Has PSRAM
 //#define CAMERA_MODEL_M5STACK_PSRAM // Has PSRAM
 //#define CAMERA_MODEL_M5STACK_V2_PSRAM // M5Camera version B Has PSRAM
 //#define CAMERA_MODEL_M5STACK_WIDE // Has PSRAM
@@ -18,6 +21,10 @@
 //#define CAMERA_MODEL_M5STACK_UNITCAM // No PSRAM
 //#define CAMERA_MODEL_AI_THINKER // Has PSRAM
 //#define CAMERA_MODEL_TTGO_T_JOURNAL // No PSRAM
+// ** Espressif Internal Boards **
+//#define CAMERA_MODEL_ESP32_CAM_BOARD
+//#define CAMERA_MODEL_ESP32S2_CAM_BOARD
+//#define CAMERA_MODEL_ESP32S3_CAM_LCD
 
 
 #include "camera_pins.h"
@@ -35,8 +42,6 @@ void setup() {
   Serial.println();
 
   config_init();
-  config.frame_size = FRAMESIZE_VGA;
-  config.jpeg_quality = 10;
 
   // camera init
   esp_err_t err = esp_camera_init(&config);
@@ -46,7 +51,7 @@ void setup() {
   }
 
   sensor_t * s = esp_camera_sensor_get();
-  s->set_vflip(s, 1);        //1-Upside down, 0-No operation
+  s->set_vflip(s, 0);        //1-Upside down, 0-No operation
   s->set_hmirror(s, 0);      //1-Reverse left and right, 0-No operation
   s->set_brightness(s, 1);   //up the blightness just a bit
   s->set_saturation(s, -1);  //lower the saturation
@@ -90,6 +95,11 @@ void config_init() {
   config.pin_pwdn = PWDN_GPIO_NUM;
   config.pin_reset = RESET_GPIO_NUM;
   config.xclk_freq_hz = 20000000;
-  config.pixel_format = PIXFORMAT_JPEG;
+  config.frame_size = FRAMESIZE_QVGA;
+  config.pixel_format = PIXFORMAT_JPEG; // for streaming
+  //config.pixel_format = PIXFORMAT_RGB565; // for face detection/recognition
+  config.grab_mode = CAMERA_GRAB_WHEN_EMPTY;
+  config.fb_location = CAMERA_FB_IN_PSRAM;
+  config.jpeg_quality = 12;
   config.fb_count = 1;
 }
