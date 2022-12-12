@@ -2,9 +2,9 @@
 from machine import Pin,PWM
 
 class myServo(object):
-    def __init__(self, pin: int=15, hz: int=50, duty: int=512):
-        self._servo = PWM(Pin(pin),hz,duty) 
-
+    def __init__(self, pin: int=15, hz: int=50):
+        self._servo = PWM(Pin(pin),hz) 
+    
     def myServoWriteDuty(self, duty):
         if duty <= 26:
             duty = 26
