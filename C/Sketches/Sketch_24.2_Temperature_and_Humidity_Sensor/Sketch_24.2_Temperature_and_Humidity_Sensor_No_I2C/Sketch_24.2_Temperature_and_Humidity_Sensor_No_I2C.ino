@@ -21,7 +21,7 @@ void setup() {
 void loop() {
   // read DHT11 data and save it 
   flag:TempAndHumidity DHT = dht.getTempAndHumidity();
-  if (dht.getStatus() != 0) {       //判断读取是否成功，如果失败，回到flag重新读取数据
+  if (dht.getStatus() != 0) {       
     goto flag;
   }  
   lcd.setCursor(0, 0);              //set the cursor to column 0, line 1

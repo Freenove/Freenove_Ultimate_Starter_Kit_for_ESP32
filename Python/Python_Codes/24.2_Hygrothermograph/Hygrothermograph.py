@@ -4,10 +4,14 @@ from I2C_LCD import I2cLcd
 import dht
 
 DHT = dht.DHT11(Pin(18))
-
-DEFAULT_I2C_ADDR = 0x27
 i2c = I2C(scl=Pin(14), sda=Pin(13), freq=400000)
-lcd = I2cLcd(i2c, DEFAULT_I2C_ADDR, 2, 16)
+devices = i2c.scan()
+if len(devices) == 0:
+    print("No i2c device !")
+else:
+    for device in devices:
+        print("I2C addr: "+hex(device))
+        lcd = I2cLcd(i2c, device, 2, 16)
 
 try:
     while True:
