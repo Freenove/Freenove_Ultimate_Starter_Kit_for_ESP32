@@ -92,9 +92,10 @@ void draw()
       // Prepare wave data
       for (int i = 0; i < analogsCount - 1; i++)
         analogs[i] = analogs[i + 1];
-      analogs[analogsCount - 1] = height - 10 - analog * (height - 10 - 30) / 1023;
+      analogs[analogsCount - 1] = int(height - 10 - (analog * (height - 10 - 30) / 1023 * (3.3 / 5.0)));
       // Voltage text
-      voltage = analog * 500 / 1023;
+      //voltage = analog * 500 / 1023;
+      voltage = analog * 330 / 1023;
     }
     String sVoltage = voltage / 100 + "." + voltage / 10 % 10 + voltage % 10;
     text(sVoltage + "V", width - 48, 15 - 2);
