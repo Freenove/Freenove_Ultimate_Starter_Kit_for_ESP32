@@ -21,8 +21,8 @@
 #include "esp_a2dp_api.h"
 #include "esp_avrc_api.h"
 
-#define CONFIG_I2S_LRCK_PIN 23
-#define CONFIG_I2S_BCK_PIN  21
+#define CONFIG_I2S_LRCK_PIN 25
+#define CONFIG_I2S_BCK_PIN  26
 #define CONFIG_I2S_DATA_PIN 22
 BluetoothSerial SerialBT;
 
