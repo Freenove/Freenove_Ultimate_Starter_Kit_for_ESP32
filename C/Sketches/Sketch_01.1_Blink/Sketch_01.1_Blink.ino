@@ -2,7 +2,7 @@
 * Filename    : Blink
 * Description : Make an led blinking.
 * Auther      : www.freenove.com
-* Modification: 2020/07/11
+* Modification: 2024/06/18
 **********************************************************************/
 #define LED_BUILTIN  2
 // the setup function runs once when you press reset or power the board
@@ -13,8 +13,8 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED off (HIGH is the voltage level)
   delay(1000);                       // wait for a second
-  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
+  digitalWrite(LED_BUILTIN, LOW);    // turn the LED on by making the voltage LOW
   delay(1000);                       // wait for a second
 }

@@ -2,7 +2,7 @@
   Filename    : Combination Lock
   Description : Make a simple combination lock.
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/19
 **********************************************************************/
 #include <Keypad.h>
 #include <ESP32Servo.h>
@@ -56,9 +56,9 @@ void loop() {
           isRight = false;            // Mark wrong passageword if there is any wrong character.
       }
       if (isRight) {                  // If the input password is right
-        myservo.write(90);           // Open the switch
+        myservo.write(90);            // Open the switch
         delay(2000);                  // Delay a period of time
-        myservo.write(0);            // Close the switch
+        myservo.write(0);             // Close the switch
         Serial.println("passWord right!");
       }
       else {                          // If the input password is wrong

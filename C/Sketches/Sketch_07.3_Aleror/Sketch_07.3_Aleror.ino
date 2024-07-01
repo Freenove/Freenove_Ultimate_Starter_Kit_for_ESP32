@@ -2,7 +2,7 @@
   Filename    : Alertor
   Description : Using software pwm to control passive buzzer by button.
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/18
 **********************************************************************/
 #define BUZZER_PIN     13
 #define PIN_BUTTON     4
@@ -17,26 +17,25 @@ void IRAM_ATTR onTimer() {
 void setup() {
   pinMode(PIN_BUTTON, INPUT);
   pinMode(BUZZER_PIN, OUTPUT);
-  // Use 1st timer of 4 (counted from zero).
-  // Set 80 divider for prescaler (see ESP32 Technical Reference Manual for more info).
-  timer = timerBegin(0, 80, true);
+  // Set the timer frequency to 1MHz.(see ESP32 Technical Reference Manual for more info).
+  timer = timerBegin(1000000);
   // Attach onTimer function to our timer.
-  timerAttachInterrupt(timer, &onTimer, true);
+  timerAttachInterrupt(timer, &onTimer);
 }
 void loop() {
   if (digitalRead(PIN_BUTTON) == LOW) {
     if (!isAlerting) {
       isAlerting = true;
-      // Set alarm, 1ms, repeat
-      timerAlarmWrite(timer, 1000, true);
+      // Set alarm, 1ms, repeat, auto-reload value.
+      timerAlarm(timer, 1000, true, 0);
       // Start an alarm
-      timerAlarmEnable(timer);
+      timerStart(timer);
     }
     alert();
   } else {
     if (isAlerting) {
       isAlerting = false;
-      timerAlarmDisable(timer);
+      timerStop(timer);
       digitalWrite(BUZZER_PIN, LOW);
     }
   }
@@ -48,7 +47,7 @@ void alert() {
   for (int x = 0; x < 360; x += 1) {
     sinVal = sin(x * (PI / 180));
     toneVal = 2000 + sinVal * 500;
-    timerAlarmWrite(timer, 500000 / toneVal, true);
+    timerAlarm(timer, 500000 / toneVal, true, 0);
     delay(1);
   }
 }

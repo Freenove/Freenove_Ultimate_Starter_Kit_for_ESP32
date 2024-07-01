@@ -3,7 +3,7 @@
   Description : Basic usage of LEDPixel, 
                 Make the strip light up in different colors gradually.
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/18
 **********************************************************************/
 #include "Freenove_WS2812_Lib_for_ESP32.h"
 

@@ -2,7 +2,7 @@
   Filename    : Thermomter
   Description : Making a thermometer by thermistor.
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/19
 **********************************************************************/
 #define PIN_ANALOG_IN   4
 void setup() {

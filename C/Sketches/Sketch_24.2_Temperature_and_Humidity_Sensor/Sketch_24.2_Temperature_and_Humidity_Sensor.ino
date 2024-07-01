@@ -2,7 +2,7 @@
   Filename    : Temperature and Humidity Sensor
   Description : Use DHT11 to measure temperature and humidity.Print the result to the LCD1602.
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/19
 **********************************************************************/
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
@@ -41,7 +41,6 @@ void loop() {
 }
 
 bool i2CAddrTest(uint8_t addr) {
-  Wire.begin();
   Wire.beginTransmission(addr);
   if (Wire.endTransmission() == 0) {
     return true;

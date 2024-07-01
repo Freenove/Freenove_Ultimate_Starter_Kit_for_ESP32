@@ -4,7 +4,7 @@
                 When the phone sends "LED_on," ESP32's LED lights turn on.
                 When the phone sends "LED_off," ESP32's LED lights turn off.
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/19
 **********************************************************************/
 #include "BluetoothSerial.h"
 #include "string.h"
@@ -28,10 +28,10 @@ void loop() {
   if(count>0){
     Serial.print(buffer);
     if(strncmp(buffer,"led_on",6)==0){
-      digitalWrite(LED,HIGH);
+      digitalWrite(LED,LOW);
     }
     if(strncmp(buffer,"led_off",7)==0){
-      digitalWrite(LED,LOW);
+      digitalWrite(LED,HIGH);
     }
     count=0;
     memset(buffer,0,20);

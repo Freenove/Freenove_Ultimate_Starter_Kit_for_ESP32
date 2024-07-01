@@ -2,7 +2,7 @@
   Filename    : TouchRead
   Description : Read touch sensor value.
   Auther      : www.freenove.com
-  Modification: 2020/03/11
+  Modification: 2024/06/18
 **********************************************************************/
 
 void setup()

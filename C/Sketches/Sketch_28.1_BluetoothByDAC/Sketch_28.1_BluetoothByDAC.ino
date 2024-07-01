@@ -5,7 +5,7 @@
                 then open the music APP and play the music, 
                 and you'll hear ESP32 play the phone's music
   Auther      : www.freenove.com
-  Modification: 2021/12/02
+  Modification: 2024/06/20
 **********************************************************************/
 #include "BluetoothSerial.h"
 #include "driver/i2s.h"
@@ -55,8 +55,8 @@ void setup() {
   i2s_config.mode = (i2s_mode_t)(I2S_MODE_MASTER | I2S_MODE_TX | I2S_MODE_PDM);
   i2s_config.bits_per_sample = I2S_BITS_PER_SAMPLE_24BIT;
   i2s_config.sample_rate = 44100;
-  i2s_config.channel_format = I2S_CHANNEL_FMT_ALL_LEFT;  //GPIO25|GPIO26 output left channel
-  i2s_config.communication_format = I2S_COMM_FORMAT_PCM;
+  i2s_config.channel_format = I2S_CHANNEL_FMT_ALL_LEFT;  
+  i2s_config.communication_format = I2S_COMM_FORMAT_STAND_I2S;
   i2s_config.intr_alloc_flags = 0;
   i2s_config.dma_buf_count = 6;
   i2s_config.dma_buf_len = 60;

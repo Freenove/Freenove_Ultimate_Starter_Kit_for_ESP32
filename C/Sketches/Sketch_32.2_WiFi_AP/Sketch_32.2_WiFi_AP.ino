@@ -2,7 +2,7 @@
   Filename    : WiFi AP
   Description : Set ESP32 to open an access point
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/20
 **********************************************************************/
 #include <WiFi.h>
 

@@ -2,7 +2,7 @@
   Filename    : Temperature and Humidity Sensor
   Description : Use DHT11 to measure temperature and humidity.Print the result to the serial port.
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/19
 **********************************************************************/
 #include "DHTesp.h"
 

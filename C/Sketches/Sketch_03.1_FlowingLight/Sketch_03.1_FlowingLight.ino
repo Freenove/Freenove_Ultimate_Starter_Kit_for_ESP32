@@ -2,7 +2,7 @@
   Filename    : FlowingLight
   Description : Using ledbar to demonstrate flowing lamp.
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/18
 **********************************************************************/
 byte ledPins[] = {15, 2, 0, 4, 5, 18, 19, 21, 22, 23};
 int ledCounts;

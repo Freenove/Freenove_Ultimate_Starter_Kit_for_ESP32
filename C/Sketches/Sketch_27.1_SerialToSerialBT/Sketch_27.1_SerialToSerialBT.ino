@@ -2,7 +2,7 @@
   Filename    : SerialToSerialBT
   Description : ESP32 communicates with the phone by bluetooth and print phone's data via a serial port
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/19
 **********************************************************************/
 #include "BluetoothSerial.h"
 
@@ -12,6 +12,7 @@ void setup() {
   Serial.begin(115200);
   SerialBT.begin("ESP32test"); //Bluetooth device name
   Serial.println("\nThe device started, now you can pair it with bluetooth!");
+  Serial.println("Hello!");
 }
 
 void loop() {

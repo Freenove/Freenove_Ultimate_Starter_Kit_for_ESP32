@@ -2,7 +2,7 @@
   Filename    : Joystick
   Description : Read data from joystick.
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/19
 **********************************************************************/
 int xyzPins[] = {13, 12, 14};   //x,y,z pins
 void setup() {

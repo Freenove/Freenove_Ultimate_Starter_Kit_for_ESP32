@@ -2,7 +2,7 @@
   Filename    : Camera Tcp Serrver
   Description : Users use Freenove's APP to view images from ESP32's camera
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/20
 **********************************************************************/
 #include "esp_camera.h"
 #include <WiFi.h>
@@ -59,7 +59,7 @@ void setup() {
 }
 //task loop uses core 1.
 void loop() {
-  WiFiClient client = server_Camera.available();           // listen for incoming clients
+  WiFiClient client = server_Camera.accept();           // listen for incoming clients
   if (client) {                                            // if you get a client,
     Serial.println("Camera Server connected to a client.");// print a message out the serial port
     String currentLine = "";                               // make a String to hold incoming data from the client
@@ -91,7 +91,7 @@ void loop() {
 void loopTask_Cmd(void *pvParameters) {
   Serial.println("Task Cmd_Server is starting ... ");
   while (1) {
-    WiFiClient client = server_Cmd.available(); // listen for incoming clients
+    WiFiClient client = server_Cmd.accept(); // listen for incoming clients
     if (client) {                               // if you get a client,
       Serial.println("Command Server connected to a client.");// print a message out the serial port
       String currentLine = "";                 // make a String to hold incoming data from the client
@@ -138,8 +138,8 @@ void cameraSetup() {
   config.pin_pclk = PCLK_GPIO_NUM;
   config.pin_vsync = VSYNC_GPIO_NUM;
   config.pin_href = HREF_GPIO_NUM;
-  config.pin_sscb_sda = SIOD_GPIO_NUM;
-  config.pin_sscb_scl = SIOC_GPIO_NUM;
+  config.pin_sccb_sda = SIOD_GPIO_NUM;
+  config.pin_sccb_scl = SIOC_GPIO_NUM;
   config.pin_pwdn = PWDN_GPIO_NUM;
   config.pin_reset = RESET_GPIO_NUM;
   config.xclk_freq_hz = 20000000;

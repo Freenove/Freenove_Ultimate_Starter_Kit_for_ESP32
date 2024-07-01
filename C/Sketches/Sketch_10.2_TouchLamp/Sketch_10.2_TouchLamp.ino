@@ -2,10 +2,10 @@
   Filename    : TouchLamp
   Description : Control led by touch button.
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/18
 **********************************************************************/
 #define PIN_LED   2
-#define PRESS_VAL 14	//Set a threshold to judge touch
+#define PRESS_VAL 14	  //Set a threshold to judge touch
 #define RELEASE_VAL 25	//Set a threshold to judge release
 
 bool isProcessed = false;

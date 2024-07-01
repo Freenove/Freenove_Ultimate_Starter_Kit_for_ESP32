@@ -2,7 +2,7 @@
   Filename    : SDMMC Test
   Description : The SD card is accessed using the SDMMC one-bit bus
   Auther      : www.freenove.com
-  Modification: 2023/08/21
+  Modification: 2024/06/20
 **********************************************************************/
 #include "sd_read_write.h"
 #include "SD_MMC.h"

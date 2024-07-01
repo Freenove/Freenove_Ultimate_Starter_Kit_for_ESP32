@@ -5,12 +5,13 @@
                 then open the music APP and play the music, 
                 and you'll hear ESP32 play the phone's music
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/20
 **********************************************************************/
 #include "BluetoothSerial.h"
 #include "driver/i2s.h"
 #include "nvs.h"
 #include "nvs_flash.h"
+
 #include "esp_bt.h"
 #include "bt_app_core.h"
 #include "bt_app_av.h"
@@ -42,7 +43,7 @@ void setup() {
   i2s_config.bits_per_sample = I2S_BITS_PER_SAMPLE_32BIT;
   i2s_config.sample_rate = 44100;
   i2s_config.channel_format = I2S_CHANNEL_FMT_RIGHT_LEFT;
-  i2s_config.communication_format = I2S_COMM_FORMAT_I2S_MSB;
+  i2s_config.communication_format = I2S_COMM_FORMAT_STAND_MSB;
   i2s_config.intr_alloc_flags = 0;
   i2s_config.dma_buf_count = 6;
   i2s_config.dma_buf_len = 60;
@@ -66,7 +67,7 @@ void setup() {
   esp_avrc_ct_init();
   esp_avrc_ct_register_callback(bt_app_rc_ct_cb);
   /* set discoverable and connectable mode, wait to be connected */
-  esp_bt_gap_set_scan_mode(ESP_BT_SCAN_MODE_CONNECTABLE_DISCOVERABLE);
+  esp_bt_gap_set_scan_mode(ESP_BT_CONNECTABLE, ESP_BT_GENERAL_DISCOVERABLE);
   Serial.println("ok");
 }
 

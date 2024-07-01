@@ -2,7 +2,7 @@
   Filename    : FlowingLight02
   Description : Use 74HC575 to drive the ledbar to display the flowing light.
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/19
 **********************************************************************/
 
 int latchPin = 12;          // Pin connected to ST_CP of 74HC595(Pin12)

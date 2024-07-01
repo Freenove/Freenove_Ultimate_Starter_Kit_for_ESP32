@@ -3,7 +3,7 @@
   Description : ESP32 connects to WiFi and prints a url through a serial port.
                 Users visit the site to view the image data ESP32 camera.
   Auther      : www.freenove.com
-  Modification: 2021/12/01
+  Modification: 2024/06/20
 **********************************************************************/
 #include "esp_camera.h"
 #include <WiFi.h>
@@ -57,7 +57,8 @@ void setup() {
   s->set_saturation(s, -1);  //lower the saturation
 
   WiFi.begin(ssid_Router, password_Router);
-  while (WiFi.isConnected() != true) {
+  WiFi.setSleep(false);
+  while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
   }
@@ -90,8 +91,8 @@ void config_init() {
   config.pin_pclk = PCLK_GPIO_NUM;
   config.pin_vsync = VSYNC_GPIO_NUM;
   config.pin_href = HREF_GPIO_NUM;
-  config.pin_sscb_sda = SIOD_GPIO_NUM;
-  config.pin_sscb_scl = SIOC_GPIO_NUM;
+  config.pin_sccb_sda = SIOD_GPIO_NUM;
+  config.pin_sccb_scl = SIOC_GPIO_NUM;
   config.pin_pwdn = PWDN_GPIO_NUM;
   config.pin_reset = RESET_GPIO_NUM;
   config.xclk_freq_hz = 20000000;
@@ -100,6 +101,6 @@ void config_init() {
   //config.pixel_format = PIXFORMAT_RGB565; // for face detection/recognition
   config.grab_mode = CAMERA_GRAB_WHEN_EMPTY;
   config.fb_location = CAMERA_FB_IN_PSRAM;
-  config.jpeg_quality = 12;
-  config.fb_count = 1;
+  config.jpeg_quality = 10;
+  config.fb_count = 2;
 }

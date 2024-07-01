@@ -2,7 +2,7 @@
   Filename    : WiFi Client
   Description : Use ESP32's WiFi client feature to connect and communicate with a remote IP.
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/20
 **********************************************************************/
 #include <WiFi.h>
 

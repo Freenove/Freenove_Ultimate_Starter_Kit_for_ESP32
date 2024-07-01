@@ -2,7 +2,7 @@
   Filename    : ADC_DAC
   Description : Basic usage of ADC and DAC for esp32.
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/18
 **********************************************************************/
 #define PIN_ANALOG_IN  4
 

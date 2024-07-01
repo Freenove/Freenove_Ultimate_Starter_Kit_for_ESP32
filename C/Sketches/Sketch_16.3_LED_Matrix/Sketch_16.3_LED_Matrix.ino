@@ -2,7 +2,7 @@
   Filename    : LED Matrix Display
   Description : Use 2 74HC595 to drive the LED Matrix display
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/19
 **********************************************************************/
 int latchPin = 2;          // Pin connected to ST_CP of 74HC595（Pin12）
 int clockPin = 4;          // Pin connected to SH_CP of 74HC595（Pin11）

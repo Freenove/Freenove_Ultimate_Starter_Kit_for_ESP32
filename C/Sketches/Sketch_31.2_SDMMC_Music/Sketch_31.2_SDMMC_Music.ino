@@ -2,7 +2,7 @@
   Filename    : SDMMC Music
   Description : Play music from the sd card.
   Auther      : www.freenove.com
-  Modification: 2023/08/21
+  Modification: 2024/06/20
 **********************************************************************/
 #include "Arduino.h"
 #include "Audio.h"

@@ -2,33 +2,25 @@
   Filename    : Control LED through Infrared Remote
   Description : Remote control the LED with the infrared remote control.
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/28
 **********************************************************************/
-#include <Arduino.h>
-#include <IRremoteESP8266.h>
-#include <IRrecv.h>
-#include <IRutils.h>
+#include "Freenove_IR_Lib_for_ESP32.h"
 
-const uint16_t recvPin = 15; // Infrared receiving pin
-IRrecv irrecv(recvPin);      // Create a class object used to receive class
-decode_results results;       // Create a decoding results class object
+const uint16_t recvPin = 15;              // Infrared receiving pin
+Freenove_ESP32_IR_Recv ir_recv(recvPin);  // Create a class object used to receive class
 
 int ledPin = 14;              // the number of the LED pin
 int buzzerPin = 13;           // the number of the buzzer pin
 
-void setup()
-{
-  //Initialize the ledc configuration
-  ledcSetup(0,1000,8);                  //set the channel,frequency,esolution_bits
-  ledcAttachPin(ledPin,0);              //attach the channel to GPIO pin
+void setup(){
+  ledcAttachChannel(ledPin, 1000, 8, 0);// set the frequency,solution_bits,channel to GPIO pin
   pinMode(buzzerPin, OUTPUT);           // set buzzer pin into output mode
-  irrecv.enableIRIn();                  // Start the receiver
 }
 
 void loop() {
-  if (irrecv.decode(&results)) {        // Waiting for decoding
-    handleControl(results.value);       // Handle the commands from remote control
-    irrecv.resume();                    // Receive the next value
+  ir_recv.task();                   // Get IR receice data.
+  if(ir_recv.nec_available()){      // The data of the NEC protocol is checked
+    handleControl(ir_recv.data());  // Handle the commands from remote control
   }
 }
 
@@ -37,19 +29,18 @@ void handleControl(unsigned long value) {
   digitalWrite(buzzerPin, HIGH);
   delay(100);
   digitalWrite(buzzerPin, LOW);
-  // Handle the commands
   switch (value) {
-    case 0xFF6897:              // Receive the number '0'
-      ledcWrite(0, 0);          // Turn off LED
+    case 0xff6897:              // Receive the number '0'
+      ledcWrite(ledPin, 0);     // Turn off LED
       break;
-    case 0xFF30CF:              // Receive the number '1'
-      ledcWrite(0, 7);          // Dimmest brightness
+    case 0xff30cf:              // Receive the number '1'
+      ledcWrite(ledPin, 7);     // Dimmest brightness
       break;
-    case 0xFF18E7:              // Receive the number '2'
-      ledcWrite(0, 63);         // Medium brightness
+    case 0xff18e7:              // Receive the number '2'
+      ledcWrite(ledPin, 63);    // Medium brightness
       break;
-    case 0xFF7A85:              // Receive the number '3'
-      ledcWrite(0, 255);        // Strongest brightnss
+    case 0xff7a85:              // Receive the number '3'
+      ledcWrite(ledPin, 255);   // Strongest brightnss
       break;
   }
 }

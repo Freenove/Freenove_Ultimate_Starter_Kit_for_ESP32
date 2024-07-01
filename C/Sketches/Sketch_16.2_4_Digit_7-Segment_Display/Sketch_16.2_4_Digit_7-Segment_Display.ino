@@ -2,7 +2,7 @@
   Filename    : 4 Digital 7 Segment Display
   Description : Use 74HC595 to drive the digital display
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/19
 **********************************************************************/
 int latchPin = 2;          // Pin connected to ST_CP of 74HC595（Pin12）
 int clockPin = 4;          // Pin connected to SH_CP of 74HC595（Pin11）
@@ -26,7 +26,7 @@ void setup() {
 void loop() {
   for (int i = 0; i < 4; i++) {
     // Select a single 7-segment display
-    electDigitalDisplay (i);
+    selectDigitalDisplay (i);
     // Send data to 74HC595
     writeData(num[i]);
     delay(5);
@@ -35,7 +35,7 @@ void loop() {
   }
 }
 
-void electDigitalDisplay(byte com) {
+void selectDigitalDisplay(byte com) {
   // Close all single 7-segment display
   for (int i = 0; i < 4; i++) {
     digitalWrite(comPin[i], LOW);

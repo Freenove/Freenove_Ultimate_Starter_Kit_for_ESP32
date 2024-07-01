@@ -2,7 +2,7 @@
   Filename    : Control Servo by Potentiometer
   Description : Use potentiometer to control the rotation of servo motor.
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/19
 **********************************************************************/
 #include <ESP32Servo.h> 
 #define ADC_Max 4095    // This is the default ADC max value on the ESP32 (12 bit ADC width); 

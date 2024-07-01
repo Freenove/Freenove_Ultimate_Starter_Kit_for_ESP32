@@ -2,7 +2,7 @@
   Filename    : SerialRW
   Description : Use UART read and write data between ESP32 and PC.
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/18
 **********************************************************************/
 String inputString = "";      //a String to hold incoming data
 bool stringComplete = false;  // whether the string is complete

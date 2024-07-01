@@ -2,7 +2,7 @@
   Filename    : Servo Sweep
   Description : Control the servo motor for sweeping
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/21
 **********************************************************************/
 #include <ESP32Servo.h>
 

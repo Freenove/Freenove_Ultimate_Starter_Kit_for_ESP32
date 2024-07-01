@@ -2,7 +2,7 @@
   Filename    : 1 Digital 7 Segment Display
   Description : Use 74HC595 to drive the digital display
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/19
 **********************************************************************/
 int dataPin = 15;          // Pin connected to DS of 74HC595（Pin14）
 int latchPin = 2;          // Pin connected to ST_CP of 74HC595（Pin12）

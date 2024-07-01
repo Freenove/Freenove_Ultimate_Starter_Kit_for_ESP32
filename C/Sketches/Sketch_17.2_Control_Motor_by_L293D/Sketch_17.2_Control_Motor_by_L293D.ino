@@ -2,7 +2,7 @@
   Filename    : Control_Motor_by_L293D
   Description : Use PWM to control the direction and speed of the motor.
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/19
 **********************************************************************/
 int in1Pin = 12;      // Define L293D channel 1 pin
 int in2Pin = 14;      // Define L293D channel 2 pin
@@ -16,10 +16,7 @@ void setup() {
   // Initialize the pin into an output mode:
   pinMode(in1Pin, OUTPUT);
   pinMode(in2Pin, OUTPUT);
-  pinMode(enable1Pin, OUTPUT);
-  
-  ledcSetup(channel,1000,11);         //Set PWM to 11 bits, range is 0-2047
-  ledcAttachPin(enable1Pin,channel);
+  ledcAttachChannel(enable1Pin,1000,11,channel);//Set PWM to 11 bits, range is 0-2047
 }
 
 void loop() {
@@ -48,5 +45,5 @@ void driveMotor(boolean dir, int spd) {
     digitalWrite(in2Pin, HIGH);
   }
   // Control motor rotation speed
-  ledcWrite(channel, spd);
+  ledcWrite(enable1Pin, spd);
 }

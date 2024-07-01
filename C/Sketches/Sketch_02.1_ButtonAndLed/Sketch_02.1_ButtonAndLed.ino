@@ -2,7 +2,7 @@
   Filename    : ButtonAndLed
   Description : Control led by button.
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/18
 **********************************************************************/
 #define PIN_LED    2
 #define PIN_BUTTON 13
@@ -16,8 +16,8 @@ void setup() {
 // the loop function runs over and over again forever
 void loop() {
   if (digitalRead(PIN_BUTTON) == LOW) {
-    digitalWrite(PIN_LED,HIGH);
-  }else{
     digitalWrite(PIN_LED,LOW);
+  }else{
+    digitalWrite(PIN_LED,HIGH);
   }
 }

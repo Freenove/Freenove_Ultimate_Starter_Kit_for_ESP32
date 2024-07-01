@@ -2,7 +2,7 @@
   Filename    : Control Motor by Relay
   Description : Use relay to control motor.
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/19
 **********************************************************************/
 int relayPin = 13;          // the number of the relay pin
 int buttonPin = 15;         // the number of the push button pin

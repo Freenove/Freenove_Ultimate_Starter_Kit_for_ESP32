@@ -2,15 +2,14 @@
   Filename    : SoftColorfulLight
   Description : Colorful light with gradually changing color.
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/18
 **********************************************************************/
 const byte ledPins[] = {15, 2, 4};    //define led pins
 const byte chns[] = {0, 1, 2};        //define the pwm channels
 
 void setup() {
   for (int i = 0; i < 3; i++) {   //setup the pwm channels
-    ledcSetup(chns[i], 1000, 8);
-    ledcAttachPin(ledPins[i], chns[i]);
+    ledcAttachChannel(ledPins[i], 1000, 8, chns[i]);
   }
 }
 
@@ -22,9 +21,9 @@ void loop() {
 }
 
 void setColor(long rgb) {
-  ledcWrite(chns[0], 255 - (rgb >> 16) & 0xFF);
-  ledcWrite(chns[1], 255 - (rgb >> 8) & 0xFF);
-  ledcWrite(chns[2], 255 - (rgb >> 0) & 0xFF);
+  ledcWrite(ledPins[0], 255 - (rgb >> 16) & 0xFF);
+  ledcWrite(ledPins[1], 255 - (rgb >> 8) & 0xFF);
+  ledcWrite(ledPins[2], 255 - (rgb >> 0) & 0xFF);
 }
 
 long wheel(int pos) {

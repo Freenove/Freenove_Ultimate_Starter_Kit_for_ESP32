@@ -2,7 +2,7 @@
   Filename    : Drive Stepper Motor
   Description : Use ULN2003 to drive the stepper motor.
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/19
 **********************************************************************/
 // Conncet the port of the stepper motor driver
 int outPorts[] = {14, 27, 26, 25};

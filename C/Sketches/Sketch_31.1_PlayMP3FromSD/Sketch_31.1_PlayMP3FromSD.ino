@@ -74,7 +74,7 @@ void setup()
   #endif
   
   out->SetPinout(I2S_BCLK,I2S_LRC,I2S_DOUT);//Set the audio output pin
-  out->SetGain(3.5);//Setting the Volume
+  out->SetGain(1.0);//Setting the Volume 0.1-3.9
   mp3 = new AudioGeneratorMP3();
   mp3->begin(id3, out);
 }

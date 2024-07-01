@@ -2,7 +2,7 @@
   Filename    : Acceleration detection
   Description : Read the MPU6050 data and print it out through the serial port
   Auther      : www.freenove.com
-  Modification: 2020/07/11
+  Modification: 2024/06/19
 **********************************************************************/
 #include <MPU6050_tockn.h>
 #include <Wire.h>
