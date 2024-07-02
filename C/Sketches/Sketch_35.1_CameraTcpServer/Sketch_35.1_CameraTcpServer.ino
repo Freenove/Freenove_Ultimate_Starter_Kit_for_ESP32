@@ -39,10 +39,13 @@ void setup() {
   WiFi.begin(ssid_Router, password_Router);
   Serial.print("Connecting ");
   Serial.print(ssid_Router);
-  while (WiFi.isConnected() != true) {
+  while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
-    //WiFi.begin(ssid_Router, password_Router);
+  }
+  while (WiFi.STA.hasIP() != true) {
+    Serial.print(".");
+    delay(500);
   }
   Serial.println("");
   Serial.println("WiFi connected");

@@ -34,14 +34,14 @@ const char *password_Router = "********";  //input your wifi passwords
 camera_config_t config;
 
 void startCameraServer();
-void config_init();
+void camera_init();
 
 void setup() {
   Serial.begin(115200);
   Serial.setDebugOutput(true);
   Serial.println();
 
-  config_init();
+  camera_init();
 
   // camera init
   esp_err_t err = esp_camera_init(&config);
@@ -76,7 +76,7 @@ void loop() {
   ;
 }
 
-void config_init() {
+void camera_init() {
   config.ledc_channel = LEDC_CHANNEL_0;
   config.ledc_timer = LEDC_TIMER_0;
   config.pin_d0 = Y2_GPIO_NUM;
