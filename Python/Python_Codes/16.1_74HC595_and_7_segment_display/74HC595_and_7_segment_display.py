@@ -6,7 +6,7 @@ lists =[0xc0, 0xf9, 0xa4, 0xb0, 0x99, 0x92, 0x82, 0xf8,
 
 
 while True:
-    chip = Chip74HC595()
+    chip = Chip74HC595(15,2,4)
     for count in range(16):
         chip.shiftOut(0,lists[count])
         time.sleep_ms(500)
