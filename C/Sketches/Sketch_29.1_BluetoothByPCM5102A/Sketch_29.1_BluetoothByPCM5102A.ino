@@ -45,16 +45,17 @@ void setup() {
   i2s_config.channel_format = I2S_CHANNEL_FMT_RIGHT_LEFT;
   i2s_config.communication_format = I2S_COMM_FORMAT_STAND_MSB;
   i2s_config.intr_alloc_flags = 0;
-  i2s_config.dma_buf_count = 6;
-  i2s_config.dma_buf_len = 60;
+  i2s_config.dma_desc_num = 6;
+  i2s_config.dma_frame_num = 60;
   i2s_config.tx_desc_auto_clear = true;
   i2s_driver_install(I2S_NUM_0, &i2s_config, 0, NULL);
   
   i2s_pin_config_t pin_config;
+  pin_config.mck_io_num = I2S_PIN_NO_CHANGE;
   pin_config.bck_io_num = CONFIG_I2S_BCK_PIN;
   pin_config.ws_io_num = CONFIG_I2S_LRCK_PIN;
   pin_config.data_out_num = CONFIG_I2S_DATA_PIN;
-  pin_config.data_in_num = -1;
+  pin_config.data_in_num = I2S_PIN_NO_CHANGE;
   i2s_set_pin(I2S_NUM_0, &pin_config);
 
   bt_app_task_start_up();
