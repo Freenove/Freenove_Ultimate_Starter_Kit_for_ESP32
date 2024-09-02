@@ -2,7 +2,7 @@ from machine import Pin,PWM
 from random import randint
 import time
 
-pins=[15,2,0]
+pins=[4,2,15]
 
 pwm0=PWM(Pin(pins[0]),10000)
 pwm1=PWM(Pin(pins[1]),10000)
