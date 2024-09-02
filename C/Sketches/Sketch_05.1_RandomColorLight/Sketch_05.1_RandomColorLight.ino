@@ -4,7 +4,7 @@
   Auther      : www.freenove.com
   Modification: 2024/06/18
 **********************************************************************/
-const byte ledPins[] = {4, 2, 15};    //define red, green, blue led pins
+const byte ledPins[] = {15, 2, 4};    //define red, green, blue led pins
 const byte chns[] = {0, 1, 2};        //define the pwm channels
 int red, green, blue;
 void setup() {
