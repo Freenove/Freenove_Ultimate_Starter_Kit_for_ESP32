@@ -1,7 +1,7 @@
 from machine import Pin,PWM
 import time
 
-pins=[15,2,0];
+pins=[4,2,15];
 
 pwm0=PWM(Pin(pins[0]),1000)
 pwm1=PWM(Pin(pins[1]),1000)
