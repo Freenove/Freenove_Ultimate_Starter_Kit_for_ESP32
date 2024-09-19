@@ -16,8 +16,8 @@ void setup() {
 // the loop function runs over and over again forever
 void loop() {
   if (digitalRead(PIN_BUTTON) == LOW) {
-    digitalWrite(PIN_LED,LOW);
-  }else{
     digitalWrite(PIN_LED,HIGH);
+  }else{
+    digitalWrite(PIN_LED,LOW);
   }
 }
