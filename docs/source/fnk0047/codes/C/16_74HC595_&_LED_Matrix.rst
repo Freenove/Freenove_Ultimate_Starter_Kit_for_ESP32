@@ -110,7 +110,7 @@ The following code will make LED matrix display a smiling face, and then display
 
 Download the code to ESP32-WROVER, and the LED matrix display a smiling face, and then display characters "0 to F" scrolling in a loop on the LED matrix.
 
-Sketch_16.3_LED_Matrix
+Sketch_LED_Matrix
 ---------------------------------------
 
 The following is the program code:
