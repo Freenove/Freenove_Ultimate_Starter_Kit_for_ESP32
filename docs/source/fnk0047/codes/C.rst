@@ -72,7 +72,7 @@ C language
    :caption: What's next?
    :glob:
 
-   C/What_s_next.rst
+   What_s_next.rst
 
 .. toctree::
    :maxdepth: 1

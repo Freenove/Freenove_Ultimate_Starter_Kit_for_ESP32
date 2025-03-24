@@ -67,7 +67,7 @@ Python language
    :glob:
 
    Python/What_s_next(47)
-   Python/What_s_next(others)
+   What_s_next(others)
 
 .. toctree::
    :maxdepth: 1
