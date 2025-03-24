@@ -46,7 +46,7 @@ C language
    C/16_74HC595_&_7-Segment_Display.rst
    C/16_74HC595_&_LED_Matrix.rst
    C/17_Relay_&_Motor.rst
-   C/17.2_Motor_&_Driver.rst
+   C/17_2_Motor_&_Driver.rst
    C/18_Servo.rst
    C/19_Stepper_Motor.rst
    C/20_LCD1602.rst
