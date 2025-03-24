@@ -68,7 +68,7 @@ Install ControlP5.
 .. image:: ../_static/imgs/33_TCP_IP/Chapter33_04.png
     :align: center
 
-Open the "Freenove_Ultimate_Starter_Kit_for_ESP32\Sketches\Sketches\Sketch_33.1_WiFiClient\sketchWiFi\sketchWiFi.pde", and click "Run".
+Open the "Freenove_Ultimate_Starter_Kit_for_ESP32\\Sketches\\Sketches\\Sketch_33.1_WiFiClient\\sketchWiFi\\sketchWiFi.pde", and click "Run".
 
 .. image:: ../_static/imgs/33_TCP_IP/Chapter33_05.png
     :align: center
@@ -285,7 +285,7 @@ Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_C
 Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "29.2_TCP_as_Server" and double click "TCP_as_Server.py". 
 
 Before clicking "Run current script", please modify the name and password of your router shown in the box below.
--
+
 TCP_as_Server
 ---------------------------------
 

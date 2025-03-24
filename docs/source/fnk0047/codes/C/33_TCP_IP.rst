@@ -68,7 +68,7 @@ Install ControlP5.
 .. image:: ../_static/imgs/33_TCP_IP/Chapter33_04.png
     :align: center
 
-Open the "Freenove_Ultimate_Starter_Kit_for_ESP32\Sketches\Sketches\Sketch_33.1_WiFiClient\sketchWiFi\sketchWiFi.pde", and click "Run".
+Open the "Freenove_Ultimate_Starter_Kit_for_ESP32\\Sketches\\Sketches\\Sketch_33.1_WiFiClient\\sketchWiFi\\sketchWiFi.pde", and click "Run".
 
 .. image:: ../_static/imgs/33_TCP_IP/Chapter33_05.png
     :align: center
@@ -282,7 +282,7 @@ Serial Monitor
 
 Processing: 
 
-Open the "Freenove_Ultimate_Starter_Kit_for_ESP32\Sketches\Sketches\Sketch_33.2_WiFiServer\
+Open the "Freenove_Ultimate_Starter_Kit_for_ESP32\\Sketches\\Sketches\\Sketch_33.2_WiFiServer\\
 
 sketchWiFi\sketchWiFi.pde".
 

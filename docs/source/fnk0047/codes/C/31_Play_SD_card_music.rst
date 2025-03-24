@@ -82,7 +82,7 @@ Open arduino->Sketch->Include library-> Add .ZIP Library.
 .. image:: ../_static/imgs/31_Play_SD_card_music/Chapter31_03.png
     :align: center
 
-In the new pop-up window, select "Freenove_Ultimate_Starter_Kit_for_ESP32\C\Libraries\ESP8266Audio.zip". 
+In the new pop-up window, select "Freenove_Ultimate_Starter_Kit_for_ESP32\\C\\Libraries\\ESP8266Audio.zip". 
 
 Then click "Open".
 
@@ -94,7 +94,7 @@ Sketch_31.1_PlayMP3FromSD
 
 We placed a folder called "music" in:
 
-Freenove_Ultimate_Starter_Kit_for_ESP32\Sketches\Sketch_31.1_PlayMP3FromSD
+**Freenove_Ultimate_Starter_Kit_for_ESP32\\Sketches\\Sketch_31.1_PlayMP3FromSD**
 
 User needs to copy this folder to SD card.
 
@@ -225,7 +225,7 @@ Open arduino->Sketch->Include library-> Add .ZIP Library.
 .. image:: ../_static/imgs/31_Play_SD_card_music/Chapter31_11.png
     :align: center
 
-In the new pop-up window, select "Freenove_Ultimate_Starter_Kit_for_ESP32\C\Libraries\ESP32-audioI2S.zip". 
+In the new pop-up window, select "Freenove_Ultimate_Starter_Kit_for_ESP32\\C\\Libraries\\ESP32-audioI2S.zip". 
 
 Then click "Open".
 
@@ -237,7 +237,7 @@ Sketch_SDMMC_Music
 
 We placed a folder called "music" in:
 
-**Freenove_Ultimate_Starter_Kit_for_ESP32\Sketches\Sketch_31.2_SDMMC_Music.**
+**Freenove_Ultimate_Starter_Kit_for_ESP32\\Sketches\\Sketch_31.2_SDMMC_Music.**
 
 User needs to copy this folder to SD card.
 

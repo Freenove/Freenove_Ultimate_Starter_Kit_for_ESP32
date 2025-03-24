@@ -74,7 +74,7 @@ This project is designed to make a flowing water lamp. Which are these actions: 
 
 Upload following sketch:
 
-**Freenove_Ultimate_Starter_Kit_for_ESP32\Sketches\Sketch_03.1_FlowingLight.**
+**Freenove_Ultimate_Starter_Kit_for_ESP32\\Sketches\\Sketch_03.1_FlowingLight.**
 
 Sketch_FlowingLight
 ----------------------------------

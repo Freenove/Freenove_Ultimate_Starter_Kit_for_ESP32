@@ -83,7 +83,7 @@ This project is designed for learning how to use push button switch to control a
 
 Upload following sketch:
 
-**Freenove_Ultimate_Starter_Kit_for_ESP32\Sketches\Sketch_02.1_ButtonAndLed.**
+**Freenove_Ultimate_Starter_Kit_for_ESP32\\Sketches\\Sketch_02.1_ButtonAndLed.**
 
 Sketch_ButtonAndLed
 -----------------------------------

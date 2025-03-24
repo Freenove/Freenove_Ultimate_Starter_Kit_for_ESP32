@@ -135,7 +135,7 @@ According to the circuit, when the GPIO2 of ESP32-WROVER output level is high, t
 
 Upload the following Sketch: 
 
-**Freenove_Ultimate_Starter_Kit_for_ESP32\Sketches\\Sketch_01.1_Blink.**
+**Freenove_Ultimate_Starter_Kit_for_ESP32\\Sketches\\Sketch_01.1_Blink.**
 
 Before uploading the code, click "**Tools**", "**Board**" and select "**ESP32 Wrover Module**".
 
