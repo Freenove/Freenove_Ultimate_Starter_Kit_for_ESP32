@@ -102,16 +102,15 @@ Circuit
 
 .. list-table:: 
    :width: 100%
-   :header-rows: 1 
    :align: center
    
    * -  Schematic diagram
-     -  |Chapter07_10| 
+   * -  |Chapter07_10| 
    * -  Hardware connection. 
        
         If you need any support, please feel free to contact us via: support@freenove.com
      
-     -  |Chapter07_11|
+   * -  |Chapter07_11|
 
 .. |Chapter07_10| image:: ../_static/imgs/7_Buzzer/Chapter07_10.png    
 .. |Chapter07_11| image:: ../_static/imgs/7_Buzzer/Chapter07_11.png  
