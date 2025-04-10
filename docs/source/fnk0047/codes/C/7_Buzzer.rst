@@ -106,7 +106,7 @@ Circuit
    :align: center
    
    * -  Schematic diagram
-   * -  |Chapter07_10| 
+     -  |Chapter07_10| 
    * -  Hardware connection. 
        
         If you need any support, please feel free to contact us via: support@freenove.com
