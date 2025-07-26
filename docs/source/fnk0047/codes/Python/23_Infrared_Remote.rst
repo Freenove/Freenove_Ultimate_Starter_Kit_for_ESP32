@@ -12,25 +12,30 @@ First, we need to understand how infrared remote control works, then get the com
 Component List
 =======================================================
 
-+------------------------------------+-----------------------------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1                       |
-|                                    |                                               |
-| |Chapter01_00|                     | |Chapter01_01|                                |
-+------------------------------------+-----------------------------------------------+
-| Breadboard x1                                                                      |
-|                                                                                    |
-| |Chapter01_02|                                                                     |
-+------------------------------------+------------------------+----------------------+
-| Jumper M/M                         | Infrared Remote x1     | Resistor 10kΩ x1     |
-|                                    |                        |                      |
-| |Chapter01_05|                     |  |Chapter23_01|        |   |Chapter02_01|     |
-+------------------------------------+------------------------+----------------------+
-| Infrared Remote x1                                                                 |
-|                                                                                    |
-| (May need CR2025 battery x1, please check the holder)                              |
-|                                                                                    |
-| |Chapter23_00|                                                                     |
-+------------------------------------------------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-----------------------------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1                       |
+    |                                    |                                               |
+    | |Chapter01_00|                     | |Chapter01_01|                                |
+    +------------------------------------+-----------------------------------------------+
+    | Breadboard x1                                                                      |
+    |                                                                                    |
+    | |Chapter01_02|                                                                     |
+    +------------------------------------+------------------------+----------------------+
+    | Jumper M/M                         | Infrared Remote x1     | Resistor 10kΩ x1     |
+    |                                    |                        |                      |
+    | |Chapter01_05|                     |  |Chapter23_01|        |   |Chapter02_01|     |
+    +------------------------------------+------------------------+----------------------+
+    | Infrared Remote x1                                                                 |
+    |                                                                                    |
+    | (May need CR2025 battery x1, please check the holder)                              |
+    |                                                                                    |
+    | |Chapter23_00|                                                                     |
+    +------------------------------------------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -71,14 +76,13 @@ Circuit
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
+   :class: table-line
    :align: center
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter23_05|
-   * -  Hardware connection. 
-       
-        If you need any support, please feel free to contact us via: support@freenove.com
+   * -  **Hardware connection** 
+   * -  :combo:`If you need any support, please feel free to contact us via:` support@freenove.com
 
         |Chapter23_06|
 
@@ -88,9 +92,9 @@ Circuit
 Code
 ===============================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes"** to disk(D) in advance with the path of **"D:/Micropython_Codes"**.
 
-Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "23.1_Infrared_Remote". Select "irrecvdata.py", right click your mouse to select "Upload to /", wait for "irrecvdata.py" to be uploaded to ESP32-WROVER and then double click "Infrared_Remote.py". 
+Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "23.1_Infrared_Remote". Select "irrecvdata.py", right click your mouse to select "Upload to /", wait for "irrecvdata.py" to be uploaded to ESP32-WROVER and then double click "Infrared_Remote.py". 
 
 Infrared_Remote
 ----------------------------
@@ -106,12 +110,14 @@ Click "Run current script", press the key of the infrared remote and the key val
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/23.1_Infrared_Remote/Infrared_Remote.py
+    :linenos:
     :language: python
     :dedent:
 
 Import the infrared decoder. 
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/23.1_Infrared_Remote/Infrared_Remote.py
+    :linenos:
     :language: python
     :lines: 1-1
     :dedent:
@@ -119,6 +125,7 @@ Import the infrared decoder.
 Associate the infrared decoder with Pin(15).
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/23.1_Infrared_Remote/Infrared_Remote.py
+    :linenos:
     :language: python
     :lines: 3-3
     :dedent:
@@ -126,6 +133,7 @@ Associate the infrared decoder with Pin(15).
 Call ir_read() to read the value of the pressed key and assign it to IRValue.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/23.1_Infrared_Remote/Infrared_Remote.py
+    :linenos:
     :language: python
     :lines: 6-6
     :dedent:
@@ -133,6 +141,7 @@ Call ir_read() to read the value of the pressed key and assign it to IRValue.
 When infrared key value is obtained, print it out in"	Shell".
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/23.1_Infrared_Remote/Infrared_Remote.py
+    :linenos:
     :language: python
     :lines: 5-8
     :dedent:
@@ -156,29 +165,34 @@ In this project, we will control the brightness of LED lights through an infrare
 Component List
 =======================================================
 
-+------------------------------------+-------------------------------------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1                               |
-|                                    |                                                       |
-| |Chapter01_00|                     | |Chapter01_01|                                        |
-+------------------------------------+-------------------------------------------------------+
-| Breadboard x1                                                                              |
-|                                                                                            |
-| |Chapter01_02|                                                                             |
-+------------------------------------+------------------------+------------------------------+
-| Jumper M/M                         | Infrared Remote x1     | Resistor 10kΩ x1             |
-|                                    |                        |                              |
-| |Chapter01_05|                     |  |Chapter23_01|        |   |Chapter02_01|             |
-+------------------------------------+------------------------+------------------------------+
-| Infrared Remote x1                                          | Active buzzer x1             |
-|                                                             |                              |
-| (May need CR2025 battery x1, please check the holder)       | |Chapter07_01|               |
-|                                                             |                              |
-| |Chapter23_00|                                              |                              |
-+------------------------------------+------------------------+------------------------------+
-| LED x1                             | Resistor 1kΩ x2        | NPN transistorx1 (S8050)     |
-|                                    |                        |                              |
-| |Chapter01_03|                     |  |Chapter07_03|        |   |Chapter07_02|             |
-+------------------------------------+------------------------+------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------------------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1                               |
+    |                                    |                                                       |
+    | |Chapter01_00|                     | |Chapter01_01|                                        |
+    +------------------------------------+-------------------------------------------------------+
+    | Breadboard x1                                                                              |
+    |                                                                                            |
+    | |Chapter01_02|                                                                             |
+    +------------------------------------+------------------------+------------------------------+
+    | Jumper M/M                         | Infrared Remote x1     | Resistor 10kΩ x1             |
+    |                                    |                        |                              |
+    | |Chapter01_05|                     |  |Chapter23_01|        |   |Chapter02_01|             |
+    +------------------------------------+------------------------+------------------------------+
+    | Infrared Remote x1                                          | Active buzzer x1             |
+    |                                                             |                              |
+    | (May need CR2025 battery x1, please check the holder)       | |Chapter07_01|               |
+    |                                                             |                              |
+    | |Chapter23_00|                                              |                              |
+    +------------------------------------+------------------------+------------------------------+
+    | LED x1                             | Resistor 1kΩ x2        | NPN transistorx1 (S8050)     |
+    |                                    |                        |                              |
+    | |Chapter01_03|                     |  |Chapter07_03|        |   |Chapter07_02|             |
+    +------------------------------------+------------------------+------------------------------+
 
 .. |Chapter01_03| image:: ../_static/imgs/1_LED/Chapter01_03.png 
 .. |Chapter07_03| image:: ../_static/imgs/7_Buzzer/Chapter07_03.png
@@ -190,14 +204,13 @@ Circuit
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
+   :class: table-line
    :align: center
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter23_11|
-   * -  Hardware connection. 
-       
-        If you need any support, please feel free to contact us via: support@freenove.com
+   * -  **Hardware connection** 
+   * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
         |Chapter23_12|
 
@@ -209,9 +222,9 @@ Code
 
 The Code controls the brightness of the LED by determining the key value of the infrared received.
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes"** to disk(D) in advance with the path of **"D:/Micropython_Codes"**.
 
-Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "23.2_Control_LED_through_Infrared_Remote". Select "irrecvdata.py", right click your mouse to select "Upload to /", wait for "irrecvdata.py" to be uploaded to ESP32-WROVER and then double click "Control_LED_through_Infrared_Remote.py". 
+Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "23.2_Control_LED_through_Infrared_Remote". Select "irrecvdata.py", right click your mouse to select "Upload to /", wait for "irrecvdata.py" to be uploaded to ESP32-WROVER and then double click "Control_LED_through_Infrared_Remote.py". 
 
 Control_LED_through_Infrared_Remote
 --------------------------------------------
@@ -230,12 +243,14 @@ Rendering
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/23.2_Control_LED_through_Infrared_Remote/Control_LED_through_Infrared_Remote.py
+    :linenos:
     :language: python
     :dedent:
 
 The handleControl() function is used to execute events corresponding to infrared code values. Every time when the function is called, the buzzer sounds once and determines the brightness of the LED based on the infrared key value. If the key value is not "0", "1", "2", "3", the buzzer sounds once, but the brightness of LED will not change.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/23.2_Control_LED_through_Infrared_Remote/Control_LED_through_Infrared_Remote.py
+    :linenos:
     :language: python
     :lines: 9-27
     :dedent:
@@ -243,6 +258,7 @@ The handleControl() function is used to execute events corresponding to infrared
 Each time the key value of IR remote is received, function handleControl() will be called to process it.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/23.2_Control_LED_through_Infrared_Remote/Control_LED_through_Infrared_Remote.py
+    :linenos:
     :language: python
     :lines: 28-35
     :dedent:

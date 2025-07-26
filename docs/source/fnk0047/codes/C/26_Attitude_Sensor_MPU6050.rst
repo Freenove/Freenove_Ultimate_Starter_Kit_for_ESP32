@@ -12,19 +12,24 @@ In this project, we will read acceleration and gyroscope data of the MPU6050 sen
 Component List
 ============================================
 
-+----------------------+----------------------------------------------+
-| ESP32-WROVER x1      | GPIO Extension Board x1                      |
-|                      |                                              |
-| |Chapter01_00|       | |Chapter01_01|                               |
-+----------------------+----------------------------------------------+
-| Breadboard x1                                                       |
-|                                                                     |
-| |Chapter01_02|                                                      |
-+----------------------------------+----------------------------------+
-| LED x1                           | MPU6050 x1                       |
-|                                  |                                  |
-| |Chapter01_05|                   |   |Chapter26_00|                 |
-+----------------------------------+----------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +----------------------+----------------------------------------------+
+    | ESP32-WROVER x1      | GPIO Extension Board x1                      |
+    |                      |                                              |
+    | |Chapter01_00|       | |Chapter01_01|                               |
+    +----------------------+----------------------------------------------+
+    | Breadboard x1                                                       |
+    |                                                                     |
+    | |Chapter01_02|                                                      |
+    +----------------------------------+----------------------------------+
+    | LED x1                           | MPU6050 x1                       |
+    |                                  |                                  |
+    | |Chapter01_05|                   |   |Chapter26_00|                 |
+    +----------------------------------+----------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -47,29 +52,33 @@ MPU6050 is widely used to assist with balancing vehicles, robots and aircraft, m
 
 The port description of the MPU6050 module is as follows:
 
-+----------+------------+-------------------------------------------------------------+
-| Pin name | Pin number | Description                                                 |
-+----------+------------+-------------------------------------------------------------+
-| VCC      | 1          | Positive pole of power supply with voltage 3.3V/5V          |
-+----------+------------+-------------------------------------------------------------+
-| GND      | 2          | Negative pole of power supply                               |
-+----------+------------+-------------------------------------------------------------+
-| SCL      | 3          | I2C communication clock pin                                 |
-+----------+------------+-------------------------------------------------------------+
-| SDA      | 4          | I2C communication clock pin                                 |
-+----------+------------+-------------------------------------------------------------+
-| XDA      | 5          | I2C host data pin which can be connected to other devices.  |
-+----------+------------+-------------------------------------------------------------+
-| XCL      | 6          | I2C host clock pin which can be connected to other devices. |
-+----------+------------+-------------------------------------------------------------+
-|          |            | I2C address bit control pin.                                |
-|          |            |                                                             |
-| AD0      | 7          | Low level: the device address is 0x68                       |
-|          |            |                                                             |
-|          |            | High level: the device address is 0x69                      |
-+----------+------------+-------------------------------------------------------------+
-| INT      | 8          | Output interrupt pin                                        |
-+----------+------------+-------------------------------------------------------------+
+.. table::
+    :align: center
+    :class: zebra
+    
+    +----------+------------+-------------------------------------------------------------+
+    | Pin name | Pin number | Description                                                 |
+    +==========+============+=============================================================+
+    | VCC      | 1          | Positive pole of power supply with voltage 3.3V/5V          |
+    +----------+------------+-------------------------------------------------------------+
+    | GND      | 2          | Negative pole of power supply                               |
+    +----------+------------+-------------------------------------------------------------+
+    | SCL      | 3          | I2C communication clock pin                                 |
+    +----------+------------+-------------------------------------------------------------+
+    | SDA      | 4          | I2C communication clock pin                                 |
+    +----------+------------+-------------------------------------------------------------+
+    | XDA      | 5          | I2C host data pin which can be connected to other devices.  |
+    +----------+------------+-------------------------------------------------------------+
+    | XCL      | 6          | I2C host clock pin which can be connected to other devices. |
+    +----------+------------+-------------------------------------------------------------+
+    |          |            | I2C address bit control pin.                                |
+    |          |            |                                                             |
+    | AD0      | 7          | Low level: the device address is 0x68                       |
+    |          |            |                                                             |
+    |          |            | High level: the device address is 0x69                      |
+    +----------+------------+-------------------------------------------------------------+
+    | INT      | 8          | Output interrupt pin                                        |
+    +----------+------------+-------------------------------------------------------------+
 
 For more detail, please refer to datasheet.
 
@@ -80,14 +89,14 @@ Note that the power supply voltage for MPU6050 module is 3.3V in the circuit.
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter26_02|
-   * -  Hardware connection. 
+   * -  **Hardware connection** 
        
-        If you need any support, please feel free to contact us via: support@freenove.com
+        :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
         |Chapter26_03|
 
@@ -104,7 +113,7 @@ In this project, we will read the acceleration data and gyroscope data of MPU605
 
 We use the third party library **MPU6050_tockn** . If you haven't installed it yet, please do so before learning. 
 
-The steps to add third-party Libraries are as follows: open arduino->Sketch->Include library-> Manage libraries. 
+The steps to add third-party Libraries are as follows: open arduino -> Sketch -> Include library -> Manage libraries. 
 
 Enter " **MPU6050_tockn** " in the search bar and select " **MPU6050_tockn** " for installation.
 

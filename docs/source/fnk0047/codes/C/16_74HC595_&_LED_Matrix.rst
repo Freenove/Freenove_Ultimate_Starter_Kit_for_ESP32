@@ -13,19 +13,24 @@ In this project, we will use two 74HC595 IC chips to control a monochrome (one c
 Component List
 ==========================
 
-+------------------------------------+----------------------------------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1                            |
-|                                    |                                                    |
-| |Chapter01_00|                     | |Chapter01_01|                                     |
-+------------------------------------+----------------------------------------------------+
-| Breadboard x1                                                                           |
-|                                                                                         |
-| |Chapter01_02|                                                                          |
-+-----------------+------------------+------------------------+---------------------------+
-| 74HC595 x2      | Resistor 220Ω x8 | Jumper M/M x15         | 8*8 LEDMatrix x1          |
-|                 |                  |                        |                           |
-| |Chapter15_00|  | |Chapter01_04|   | |Chapter01_05|         | |Chapter16_00|            |
-+-----------------+------------------+------------------------+---------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+----------------------------------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1                            |
+    |                                    |                                                    |
+    | |Chapter01_00|                     | |Chapter01_01|                                     |
+    +------------------------------------+----------------------------------------------------+
+    | Breadboard x1                                                                           |
+    |                                                                                         |
+    | |Chapter01_02|                                                                          |
+    +-----------------+------------------+------------------------+---------------------------+
+    | 74HC595 x2      | Resistor 220Ω x8 | Jumper M/M             | 8*8 LEDMatrix x1          |
+    |                 |                  |                        |                           |
+    | |Chapter15_00|  | |Chapter01_04|   | |Chapter01_05|         | |Chapter16_00|            |
+    +-----------------+------------------+------------------------+---------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -33,7 +38,7 @@ Component List
 .. |Chapter15_00| image:: ../_static/imgs/15_74HC595_&_LED_Bar_Graph/Chapter15_00.png 
 .. |Chapter01_04| image:: ../_static/imgs/1_LED/Chapter01_04.png    
 .. |Chapter01_05| image:: ../_static/imgs/1_LED/Chapter01_05.png
-.. |Chapter16_00| image:: ../_static/imgs/16_74HC595_&_7-Segment_Display/Chapter16_00.png
+.. |Chapter16_00| image:: ../_static/imgs/16_74HC595_&_LED_Matrix/Chapter16_00.png
 
 Component knowledge
 =================================
@@ -56,26 +61,31 @@ Here is how a common anode LED matrix works. First, choose 16 ports on ESP32 boa
 .. image:: ../_static/imgs/16_74HC595_&_LED_Matrix/Chapter16_02.png
     :align: center
 
-+--------+-----------+-------------+
-| Column |  Binary   | Hexadecimal |
-+========+===========+=============+
-| 1      | 0001 1100 | 0x1c        |
-+--------+-----------+-------------+
-| 2      | 0010 0010 | 0x22        |
-+--------+-----------+-------------+
-| 3      | 0101 0001 | 0x51        |
-+--------+-----------+-------------+
-| 4      | 0100 0101 | 0x45        |
-+--------+-----------+-------------+
-| 5      | 0100 0101 | 0x45        |
-+--------+-----------+-------------+
-| 6      | 0101 0001 | 0x51        |
-+--------+-----------+-------------+
-| 7      | 0010 0010 | 0x22        |
-+--------+-----------+-------------+
-| 8      | 0001 1100 | 0x1c        |
-+--------+-----------+-------------+
-
+.. table::
+    :width: 80%
+    :align: center
+    :class: zebra
+    
+    +--------+-----------+-------------+
+    | Column |  Binary   | Hexadecimal |
+    +========+===========+=============+
+    | 1      | 0001 1100 | 0x1c        |
+    +--------+-----------+-------------+
+    | 2      | 0010 0010 | 0x22        |
+    +--------+-----------+-------------+
+    | 3      | 0101 0001 | 0x51        |
+    +--------+-----------+-------------+
+    | 4      | 0100 0101 | 0x45        |
+    +--------+-----------+-------------+
+    | 5      | 0100 0101 | 0x45        |
+    +--------+-----------+-------------+
+    | 6      | 0101 0001 | 0x51        |
+    +--------+-----------+-------------+
+    | 7      | 0010 0010 | 0x22        |
+    +--------+-----------+-------------+
+    | 8      | 0001 1100 | 0x1c        |
+    +--------+-----------+-------------+
+    
 To begin, display the first column, then turn off the first column and display the second column. (and so on) .... turn off the seventh column and display the 8th column, and then start the process over from the first column again like the control of LED bar graph project. The whole process will be repeated rapidly in a loop. Due to the principle of optical afterglow effect and the vision persistence effect in human sight, we will see a picture of a smiling face directly rather than individual columns of LEDs turned ON one column at a time (although in fact this is the reality we cannot perceive). 
 
 Then, to save the number of GPIO, we use a 74HC595. When the first column is turned ON, set the lights that need to be displayed in the first column to "1", otherwise to "0", as shown in the above example, where the value of the first column is 0x1c. This value is sent to 74HC595 to control the display of the first column of the LED matrix. Following the above idea, turn OFF the display of the first column, then turn ON the second column, and then send the value of the second column to 74HC595 ...... Until each column is displayed, the LED matrix is displayed again from the first column.
@@ -86,16 +96,17 @@ Circuit
 In circuit of this project, the power pin of the 74HC595 IC chip is connected to 3.3V. It can also be connected to 5V to make LED matrix brighter.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :header-rows: 1 
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter16_03|
-   * -  Hardware connection. 
-       
-        :red:`If you need any support, please contact us via:` support@freenove.com
-   * -  |Chapter16_04|
+   * -  **Hardware connection** 
+   * -  :combo:`red font-bolder:If you need any support, please contact us via:` support@freenove.com
+        
+        |Chapter16_04|
 
 .. |Chapter16_03| image:: ../_static/imgs/16_74HC595_&_LED_Matrix/Chapter16_03.png    
 .. |Chapter16_04| image:: ../_static/imgs/16_74HC595_&_LED_Matrix/Chapter16_04.png  
@@ -105,7 +116,7 @@ Sketch
 
 The following code will make LED matrix display a smiling face, and then display scrolling character "0-F".
 
-.. image:: ../_static/imgs/16_74HC595_&_LED_Matrix/Chapter16_05.png
+.. image:: ../_static/imgs/16_74HC595_&_LED_Matrix/Chapter16_06.png
     :align: center
 
 Download the code to ESP32-WROVER, and the LED matrix display a smiling face, and then display characters "0 to F" scrolling in a loop on the LED matrix.

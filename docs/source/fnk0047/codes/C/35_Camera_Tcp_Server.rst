@@ -12,11 +12,16 @@ Connect ESP32 using USB and check its IP address through serial monitor. Use a m
 Component List
 ===========================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | Micro USB Wire x1       |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter08_00|          |
-+------------------------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | Micro USB Wire x1       |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter08_00|          |
+    +------------------------------------+-------------------------+
   
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter08_00| image:: ../_static/imgs/8_Serial_Communication/Chapter08_00.png
@@ -164,6 +169,7 @@ Enable ESP32's server function and set two monitor ports as 5000 and 8000. In ge
 Initialize serial port, set baud rate to 115200; open the debug and output function of the serial.
 
 .. code-block:: C
+    :linenos:
 
     Serial.begin(115200);
     Serial.setDebugOutput(true);

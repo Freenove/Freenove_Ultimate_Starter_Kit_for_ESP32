@@ -21,6 +21,7 @@ ESP32-WROVER has launched a total of two antenna packages, PCB on-board antenna 
    :width: 80%
    :header-rows: 1 
    :align: center
+   :class: table-line
    
    * -  PCB on-board antenna 
      -  IPEX antenna
@@ -37,6 +38,13 @@ ESP32-WROVER
 
 .. image:: ../_static/imgs/Preface/Preface02.png
     :align: center
+    :width: 60%
+
+**The version on the left is no longer mass-produced, and we mainly maintain the version on the right.**
+
+Please note that there are many pirated versions of the ESP32 WROVER that look very similar to the version on the left. None of them will carry our logo and Freenove font.
+
+We do not sell pirated ESP32 WROVER, nor do we provide after-sales service for pirated.
 
 The hardware interfaces of ESP32-WROVER are distributed as follows:
 
@@ -46,9 +54,10 @@ The hardware interfaces of ESP32-WROVER are distributed as follows:
 Compare the left and right images. We've boxed off the resources on the ESP32-WROVER in different colors to facilitate your understanding of the ESP32-WROVER.
 
 .. list-table:: 
-   :width: 80%
+   :widths: 10 10
    :header-rows: 1 
    :align: center
+   :class: table-line
    
    * -  Box color 
      -  Corresponding resources introduction
@@ -91,9 +100,10 @@ The hardware interfaces of ESP32-WROVER are distributed as follows:
 We've boxed off the resources on the ESP32-WROVER in different colors to facilitate your understanding of the ESP32-WROVER.
 
 .. list-table:: 
-   :width: 80%
+   :widths: 10 10
    :header-rows: 1 
    :align: center
+   :class: table-line
    
    * -  Box color 
      -  Corresponding resources introduction

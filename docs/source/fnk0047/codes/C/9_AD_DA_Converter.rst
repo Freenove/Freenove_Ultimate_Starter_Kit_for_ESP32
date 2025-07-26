@@ -12,19 +12,24 @@ In this project, we will use the ADC function of ESP32 to read the voltage value
 Component List
 ==============================================
 
-+------------------------------------+----------------------------------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1                            |
-|                                    |                                                    |
-| |Chapter01_00|                     | |Chapter01_01|                                     |
-+------------------------------------+----------------------------------------------------+
-| Breadboard x1                                                                           |
-|                                                                                         |
-| |Chapter01_02|                                                                          |
-+-----------------+------------------+------------------------+---------------------------+
-| LED x1          | Resistor 220Ω x1 | Jumper M/M x5          | Rotary potentiometer x1   |
-|                 |                  |                        |                           |
-| |Chapter01_03|  | |Chapter01_04|   | |Chapter01_05|         | |Chapter09_00|            |
-+-----------------+------------------+------------------------+---------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+----------------------------------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1                            |
+    |                                    |                                                    |
+    | |Chapter01_00|                     | |Chapter01_01|                                     |
+    +------------------------------------+----------------------------------------------------+
+    | Breadboard x1                                                                           |
+    |                                                                                         |
+    | |Chapter01_02|                                                                          |
+    +-----------------+------------------+------------------------+---------------------------+
+    | LED x1          | Resistor 220Ω x1 | Jumper M/M x5          | Rotary potentiometer x1   |
+    |                 |                  |                        |                           |
+    | |Chapter01_03|  | |Chapter01_04|   | |Chapter01_05|         | |Chapter09_00|            |
+    +-----------------+------------------+------------------------+---------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -49,7 +54,7 @@ Subsection 1: the analog in rang of 0V---3.3/4095 V corresponds to digital 0;
 
 Subsection 2: the analog in rang of 3.3/4095 V---2*3.3 /4095V corresponds to digital 1;
 
-......
+\.\.\.\.\.\.
 
 The following analog will be divided accordingly.
 
@@ -73,60 +78,68 @@ ADC on ESP32
 
 ESP32 has two digital analog converters with successive approximations of 12-bit accuracy, and a total of 16 pins can be used to measure analog signals. GPIO pin sequence number and analog pin definition are shown in the following table.
 
-+-----------------------+-------------+-------------+
-| Pin number in Arduino | GPIO number | ADC channel |
-+-----------------------+-------------+-------------+
-| A0                    | GPIO 36     | ADC1_CH0    |
-+-----------------------+-------------+-------------+
-| A3                    | GPIO 39     | ADC1_CH3    |
-+-----------------------+-------------+-------------+
-| A4                    | GPIO 32     | ADC1_CH4    |
-+-----------------------+-------------+-------------+
-| A5                    | GPIO 33     | ADC1_CH5    |
-+-----------------------+-------------+-------------+
-| A6                    | GPIO 34     | ADC1_CH6    |
-+-----------------------+-------------+-------------+
-| A7                    | GPIO 35     | ADC1_CH7    |
-+-----------------------+-------------+-------------+
-| A10                   | GPIO 4      | ADC2_CH0    |
-+-----------------------+-------------+-------------+
-| A11                   | GPIO 0      | ADC2_CH1    |
-+-----------------------+-------------+-------------+
-| A12                   | GPIO 2      | ADC2_CH2    |
-+-----------------------+-------------+-------------+
-| A13                   | GPIO 15     | ADC2_CH3    |
-+-----------------------+-------------+-------------+
-| A14                   | GPIO 13     | ADC2_CH4    |
-+-----------------------+-------------+-------------+
-| A15                   | GPIO 12     | ADC2_CH5    |
-+-----------------------+-------------+-------------+
-| A16                   | GPIO 14     | ADC2_CH6    |
-+-----------------------+-------------+-------------+
-| A17                   | GPIO 27     | ADC2_CH7    |
-+-----------------------+-------------+-------------+
-| A18                   | GPIO 25     | ADC2_CH8    |
-+-----------------------+-------------+-------------+
-| A19                   | GPIO 26     | ADC2_CH9    |
-+-----------------------+-------------+-------------+
+.. table::
+    :align: center
+    :class: zebra
+    
+    +-----------------------+-------------+-------------+
+    | Pin number in Arduino | GPIO number | ADC channel |
+    +=======================+=============+=============+
+    | A0                    | GPIO 36     | ADC1_CH0    |
+    +-----------------------+-------------+-------------+
+    | A3                    | GPIO 39     | ADC1_CH3    |
+    +-----------------------+-------------+-------------+
+    | A4                    | GPIO 32     | ADC1_CH4    |
+    +-----------------------+-------------+-------------+
+    | A5                    | GPIO 33     | ADC1_CH5    |
+    +-----------------------+-------------+-------------+
+    | A6                    | GPIO 34     | ADC1_CH6    |
+    +-----------------------+-------------+-------------+
+    | A7                    | GPIO 35     | ADC1_CH7    |
+    +-----------------------+-------------+-------------+
+    | A10                   | GPIO 4      | ADC2_CH0    |
+    +-----------------------+-------------+-------------+
+    | A11                   | GPIO 0      | ADC2_CH1    |
+    +-----------------------+-------------+-------------+
+    | A12                   | GPIO 2      | ADC2_CH2    |
+    +-----------------------+-------------+-------------+
+    | A13                   | GPIO 15     | ADC2_CH3    |
+    +-----------------------+-------------+-------------+
+    | A14                   | GPIO 13     | ADC2_CH4    |
+    +-----------------------+-------------+-------------+
+    | A15                   | GPIO 12     | ADC2_CH5    |
+    +-----------------------+-------------+-------------+
+    | A16                   | GPIO 14     | ADC2_CH6    |
+    +-----------------------+-------------+-------------+
+    | A17                   | GPIO 27     | ADC2_CH7    |
+    +-----------------------+-------------+-------------+
+    | A18                   | GPIO 25     | ADC2_CH8    |
+    +-----------------------+-------------+-------------+
+    | A19                   | GPIO 26     | ADC2_CH9    |
+    +-----------------------+-------------+-------------+
 
 The analog pin number is also defined in ESP32's code base. For example, you can replace GPIO36 with A0 in the code.
 
 .. note::
     
-    ADC2 is disabled when ESP32's WiFi function is enabled.
+    **ADC2 is disabled when ESP32's WiFi function is enabled.**
 
 DAC on ESP32
 --------------------------------------
 
 ESP32 has two 8-bit digital analog converters to be connected to GPIO25 and GPIO26 pins, respectively, and it is immutable. As shown in the following table.
 
-+---------------------+-------------+
-| Simulate pin number | GPIO number |
-+---------------------+-------------+
-| DAC1                | 25          |
-+---------------------+-------------+
-| DAC2                | 26          |
-+---------------------+-------------+
+.. table::
+    :align: center
+    :class: zebra
+    
+    +---------------------+-------------+
+    | Simulate pin number | GPIO number |
+    +=====================+=============+
+    | DAC1                | 25          |
+    +---------------------+-------------+
+    | DAC2                | 26          |
+    +---------------------+-------------+
 
 The DAC pin number is already defined in ESP32's code base; for example, you can replace GPIO25 with DAC1 in the code.
 
@@ -164,16 +177,16 @@ Circuit
 =====================================
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter09_07|
-   * -  Hardware connection. 
-       
-        :red:`If you need any support, please contact us via:` support@freenove.com
-   * -  |Chapter09_08|
+   * -  **Hardware connection**
+   * -  :combo:`red font-bolder:If you need any support, please contact us via:` support@freenove.com
+        
+        |Chapter09_08|
 
 .. |Chapter09_07| image:: ../_static/imgs/9_AD_DA_Converter/Chapter09_07.png    
 .. |Chapter09_08| image:: ../_static/imgs/9_AD_DA_Converter/Chapter09_08.png    

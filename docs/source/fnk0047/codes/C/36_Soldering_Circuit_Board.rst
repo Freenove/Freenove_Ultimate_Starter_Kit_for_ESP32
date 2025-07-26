@@ -15,25 +15,23 @@ Component List
 ============================================
 
 .. list-table:: 
-   :width: 80% 
    :align: center
+   :class: table-line
    
    * -  Pin header x2
      -  Resistor 220Ω x1
+     -  Active buzzer x1
 
    * -  |Chapter36_00|
      -  |Chapter01_04|    
-
-   * -  Active buzzer x1
-     -  Push button x1
-
-   * -  |Chapter07_01|
-     -  |Chapter02_02|
+     -  |Chapter07_01|
 
    * -  LED x1
+     -  Push button x1
      -  AA Battery Holder x1
 
    * -  |Chapter36_01|
+     -  |Chapter02_02|
      -  |Chapter36_02|
 
 .. |Chapter36_00| image:: ../_static/imgs/36_Soldering_Circuit_Board/Chapter36_00.png
@@ -49,14 +47,13 @@ Circuit
 We will solder the following circuit on the main board.
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
-     -  Hardware connection. 
+   * -  **Schematic diagram**
+     -  **Hardware connection** 
    
-        If you need any support, please feel free to contact us via: 
+        :combo:`red font-bolder:If you need any support, please feel free to contact us via:` 
         
         support@freenove.com
 
@@ -77,9 +74,9 @@ Insert the components on the main board and solder the circuit on its back.
 rendering after soldering:
 
 .. list-table:: 
-   :width: 100%
    :header-rows: 1 
    :align: center
+   :class: table-line
    
    * -  Front
      -  Back
@@ -108,11 +105,15 @@ From previous chapter, we have learned to make a flowing water light with LED. N
 Component List
 ====================================
 
-+----------------+------------------+----------------+----------------+
-| Pin header x5  | Resistor 220Ω x8 | LED x1         | 74HC595 x1     |
-|                |                  |                |                |
-| |Chapter36_00| | |Chapter01_04|   | |Chapter01_03| | |Chapter15_00| |
-+----------------+------------------+----------------+----------------+
+.. table::
+    :align: center
+    :class: table-line
+    
+    +----------------+------------------+----------------+----------------+
+    | Pin header x5  | Resistor 220Ω x8 | LED x1         | 74HC595 x1     |
+    |                |                  |                |                |
+    | |Chapter36_00| | |Chapter01_04|   | |Chapter01_03| | |Chapter15_00| |
+    +----------------+------------------+----------------+----------------+
 
 .. |Chapter01_03| image:: ../_static/imgs/1_LED/Chapter01_03.png 
 .. |Chapter15_00| image:: ../_static/imgs/15_74HC595_&_LED_Bar_Graph/Chapter15_00.png 
@@ -123,11 +124,11 @@ Circuit
 Solder the following circuit on the main board.
 
 .. list-table:: 
-   :width: 100%
    :header-rows: 1 
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
      -  Hardware connection
 
    * -  |Chapter36_09|
@@ -147,9 +148,9 @@ Insert the components on the main board and solder the circuit on its back.
 Rendering after soldering:
 
 .. list-table:: 
-   :width: 100%
    :header-rows: 1 
    :align: center
+   :class: table-line
    
    * -  Front
      -  Back

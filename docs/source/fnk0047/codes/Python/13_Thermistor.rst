@@ -12,19 +12,24 @@ A thermistor is a type of resistor whose resistance value is dependent on temper
 Component List
 ====================================
 
-+------------------------------------+------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1|
-|                                    |                        |
-| |Chapter01_00|                     | |Chapter01_01|         |
-+------------------------------------+------------------------+
-| Breadboard x1                                               |
-|                                                             |
-| |Chapter01_02|                                              |
-+-----------------+------------------+------------------------+
-| Thermistor x1   | Resistor 10kΩ x1 | Jumper M/M x3          |
-|                 |                  |                        |
-| |Chapter13_00|  | |Chapter07_04|   | |Chapter01_05|         |
-+-----------------+------------------+------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1|
+    |                                    |                        |
+    | |Chapter01_00|                     | |Chapter01_01|         |
+    +------------------------------------+------------------------+
+    | Breadboard x1                                               |
+    |                                                             |
+    | |Chapter01_02|                                              |
+    +-----------------+------------------+------------------------+
+    | Thermistor x1   | Resistor 10kΩ x1 | Jumper M/M x3          |
+    |                 |                  |                        |
+    | |Chapter13_00|  | |Chapter07_04|   | |Chapter01_05|         |
+    +-----------------+------------------+------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -82,26 +87,25 @@ Circuit
 The circuit of this project is similar to the one in the last chapter. The only difference is that the photoresistor is replaced by the thermistor.
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter13_05|
-   * -  Hardware connection. 
-       
-        :red:`If you need any support, please contact us via:` support@freenove.com
-   * -  |Chapter13_06|
+   * -  **Hardware connection**
+   * -  :combo:`red font-bolder:If you need any support, please contact us via:` support@freenove.com
 
-.. |Chapter13_05| image:: ../_static/imgs/13_Thermistor/Chapter13_05.png    
-.. |Chapter13_06| image:: ../_static/imgs/13_Thermistor/Chapter13_06.png  
+        |Chapter13_06|
+
+.. |Chapter13_05| image:: ../_static/imgs/13_Thermistor/Chapter13_05.png
+.. |Chapter13_06| image:: ../_static/imgs/13_Thermistor/Chapter13_06.png
 
 Code
 ====================================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes"** to disk(D) in advance with the path of **"D:/Micropython_Codes"**.
 
-Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "13.1_Thermometer" and double click "Thermometer.py". 
+Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "13.1_Thermometer" and double click "Thermometer.py". 
 
 Thermometer
 --------------------------------------

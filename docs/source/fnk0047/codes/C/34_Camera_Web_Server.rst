@@ -12,11 +12,16 @@ Connect ESP32 using USB and check its IP address through serial monitor. Use web
 Component List
 ===========================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | Micro USB Wire x1       |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter08_00|          |
-+------------------------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | Micro USB Wire x1       |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter08_00|          |
+    +------------------------------------+-------------------------+
   
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter08_00| image:: ../_static/imgs/8_Serial_Communication/Chapter08_00.png
@@ -56,7 +61,7 @@ Open a web browser, enter the IP address printed by the serial monitor in the ad
 
 Taking the Google browser as an example, here's what the browser prints out after successful access to ESP32's IP.
 
-We recommend that the resolution not exceed VGA(640x480).
+:combo:`red font-bolder:We recommend that the resolution not exceed VGA(640x480).`
 
 .. image:: ../_static/imgs/34_Camera_Web_Server/Chapter34_03.png
     :align: center
@@ -68,7 +73,7 @@ Click on Start Stream. The effect is shown in the image below.
 
 .. note::
     
-    If sketch compilation fails due to ESP32 support package, follow the steps of the image to open the CameraWebServer. This sketch is the same as described in the tutorial above.  
+    **If sketch compilation fails due to ESP32 support package, follow the steps of the image to open the CameraWebServer. This sketch is the same as described in the tutorial above.**
 
 .. image:: ../_static/imgs/34_Camera_Web_Server/Chapter34_05.png
     :align: center
@@ -152,25 +157,30 @@ Modify the resolution and sharpness of the images captured by the camera. The sh
 Reference
 --------------------------------
 
-+-------------------+-----------+------------------+-----------+
-| Image resolution  | Sharpness | Image resolution | Sharpness |
-+-------------------+-----------+------------------+-----------+
-| FRAMESIZE_96x96   | 96x96     | FRAMESIZE_HVGA   | 480x320   |
-+-------------------+-----------+------------------+-----------+
-| FRAMESIZE_QQVGA   | 160x120   | FRAMESIZE_VGA    | 640x480   |
-+-------------------+-----------+------------------+-----------+
-| FRAMESIZE_QCIF    | 176x144   | FRAMESIZE_SVGA   | 800x600   |
-+-------------------+-----------+------------------+-----------+
-| FRAMESIZE_HQVGA   | 240x176   | FRAMESIZE_XGA    | 1024x768  |
-+-------------------+-----------+------------------+-----------+
-| FRAMESIZE_240x240 | 240x240   | FRAMESIZE_HD     | 1280x720  |
-+-------------------+-----------+------------------+-----------+
-| FRAMESIZE_QVGA    | 320x240   | FRAMESIZE_SXGA   | 1280x1024 |
-+-------------------+-----------+------------------+-----------+
-| FRAMESIZE_CIF     | 400x296   | FRAMESIZE_UXGA   | 1600x1200 |
-+-------------------+-----------+------------------+-----------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: zebra
+    
+    +-------------------+-----------+------------------+-----------+
+    | Image resolution  | Sharpness | Image resolution | Sharpness |
+    +===================+===========+==================+===========+
+    | FRAMESIZE_96x96   | 96x96     | FRAMESIZE_HVGA   | 480x320   |
+    +-------------------+-----------+------------------+-----------+
+    | FRAMESIZE_QQVGA   | 160x120   | FRAMESIZE_VGA    | 640x480   |
+    +-------------------+-----------+------------------+-----------+
+    | FRAMESIZE_QCIF    | 176x144   | FRAMESIZE_SVGA   | 800x600   |
+    +-------------------+-----------+------------------+-----------+
+    | FRAMESIZE_HQVGA   | 240x176   | FRAMESIZE_XGA    | 1024x768  |
+    +-------------------+-----------+------------------+-----------+
+    | FRAMESIZE_240x240 | 240x240   | FRAMESIZE_HD     | 1280x720  |
+    +-------------------+-----------+------------------+-----------+
+    | FRAMESIZE_QVGA    | 320x240   | FRAMESIZE_SXGA   | 1280x1024 |
+    +-------------------+-----------+------------------+-----------+
+    | FRAMESIZE_CIF     | 400x296   | FRAMESIZE_UXGA   | 1600x1200 |
+    +-------------------+-----------+------------------+-----------+
 
-:red:`We recommend that the resolution not exceed VGA(640x480).`
+:combo:`red font-bolder:We recommend that the resolution not exceed VGA(640x480).`
 
 Project Video Web Server
 *******************************************
@@ -180,11 +190,16 @@ Connect to ESP32 using USB and view its IP address through a serial monitor. Acc
 Component List
 ============================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | Micro USB Wire x1       |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter08_00|          |
-+------------------------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | Micro USB Wire x1       |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter08_00|          |
+    +------------------------------------+-------------------------+
 
 Circuit
 =================================

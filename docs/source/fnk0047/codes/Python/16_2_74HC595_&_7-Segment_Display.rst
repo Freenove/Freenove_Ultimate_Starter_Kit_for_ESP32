@@ -9,19 +9,24 @@ Now, let's try to control more digit 7-segment display
 Component List
 ==========================================
 
-+------------------------------------+----------------------------------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1                            |
-|                                    |                                                    |
-| |Chapter01_00|                     | |Chapter01_01|                                     |
-+------------------------------------+----------------------------------------------------+
-| Breadboard x1                                                                           |
-|                                                                                         |
-| |Chapter01_02|                                                                          |
-+-----------------+------------------+------------------------+---------------------------+
-| 74HC595         | Resistor 220Ω x8 | Jumper M/M x15         | 7-segment display x1      |
-|                 |                  |                        |                           |
-| |Chapter15_00|  | |Chapter01_04|   | |Chapter01_05|         | |Chapter16_07|            |
-+-----------------+------------------+------------------------+---------------------------+
+.. table:: 
+    :align: center
+    :width: 80%
+    :class: table-line
+
+    +------------------------------------+----------------------------------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1                            |
+    |                                    |                                                    |
+    | |Chapter01_00|                     | |Chapter01_01|                                     |
+    +------------------------------------+----------------------------------------------------+
+    | Breadboard x1                                                                           |
+    |                                                                                         |
+    | |Chapter01_02|                                                                          |
+    +-----------------+------------------+------------------------+---------------------------+
+    | 74HC595         | Resistor 220Ω x8 | Jumper M/M x15         | 7-segment display x1      |
+    |                 |                  |                        |                           |
+    | |Chapter15_00|  | |Chapter01_04|   | |Chapter01_05|         | |Chapter16_07|            |
+    +-----------------+------------------+------------------------+---------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -29,7 +34,7 @@ Component List
 .. |Chapter15_00| image:: ../_static/imgs/15_74HC595_&_LED_Bar_Graph/Chapter15_00.png 
 .. |Chapter01_04| image:: ../_static/imgs/1_LED/Chapter01_04.png    
 .. |Chapter01_05| image:: ../_static/imgs/1_LED/Chapter01_05.png
-.. |Chapter16_07| image:: ../_static/imgs/16_74HC595_&_7-Segment_Display./Chapter16_07.png
+.. |Chapter16_07| image:: ../_static/imgs/16_74HC595_&_7-Segment_Display/Chapter16_07.png
 
 Component knowledge
 =============================================
@@ -55,16 +60,16 @@ Circuit
 ===============================================
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter16_10|
-   * -  Hardware connection. 
-       
-        :red:`If you need any support, please contact us via:` support@freenove.com
-   * -  |Chapter16_11|
+   * -  **Hardware connection**
+   * -  :combo:`red font-bolder:If you need any support, please contact us via:` support@freenove.com
+        
+        |Chapter16_11|
 
 .. |Chapter16_10| image:: ../_static/imgs/16_74HC595_&_7-Segment_Display/Chapter16_10.png    
 .. |Chapter16_11| image:: ../_static/imgs/16_74HC595_&_7-Segment_Display/Chapter16_11.png 
@@ -74,7 +79,7 @@ Code
 
 In this code, we use the 74HC595 IC Chip to control the 4-Digit 7-Segment Display, and use the dynamic scanning method to show the changing number characters.
 
-Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "16.2_4_Digit_7_Segment_Display". Select "my74HC595.py", right click your mouse to select "Upload to /", wait for "my74HC595.py" to be uploaded to ESP32-WROVER and double click "4_Digit_7_Segment_Display.py". 
+Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "16.2_4_Digit_7_Segment_Display". Select "my74HC595.py", right click your mouse to select "Upload to /", wait for "my74HC595.py" to be uploaded to ESP32-WROVER and double click "4_Digit_7_Segment_Display.py". 
 
 4_Digit_7_Segment_Display
 ---------------------------------------------------
@@ -90,12 +95,14 @@ Click "Run current script", and the Nixie tube display as shown in the image bel
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/16.2_4_Digit_7_Segment_Display/4_Digit_7_Segment_Display.py
+    :linenos:
     :language: python
     :dedent:
 
 Import time, my74HC595 and Pin modules.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/16.2_4_Digit_7_Segment_Display/4_Digit_7_Segment_Display.py
+    :linenos:
     :language: python
     :lines: 1-3
     :dedent:
@@ -103,6 +110,7 @@ Import time, my74HC595 and Pin modules.
 Define common anode pins for digital tubes and request a list to put character encodings in it.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/16.2_4_Digit_7_Segment_Display/4_Digit_7_Segment_Display.py
+    :linenos:
     :language: python
     :lines: 5-7
     :dedent:
@@ -110,6 +118,7 @@ Define common anode pins for digital tubes and request a list to put character e
 Request an object to drive 74HC595 and associate pins with it.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/16.2_4_Digit_7_Segment_Display/4_Digit_7_Segment_Display.py
+    :linenos:
     :language: python
     :lines: 18-18
     :dedent:
@@ -117,6 +126,7 @@ Request an object to drive 74HC595 and associate pins with it.
 Make the digital tube display "0123".
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/16.2_4_Digit_7_Segment_Display/4_Digit_7_Segment_Display.py
+    :linenos:
     :language: python
     :lines: 9-15
     :dedent:

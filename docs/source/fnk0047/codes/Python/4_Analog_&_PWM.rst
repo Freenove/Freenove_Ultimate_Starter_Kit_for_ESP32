@@ -14,19 +14,24 @@ Breathing light, that is, LED is turned from off to on gradually, and gradually 
 Component List
 ======================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1 |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter01_01|          |
-+------------------------------------+-------------------------+
-| Breadboard x1                                                |
-|                                                              |
-| |Chapter01_02|                                               |
-+-----------------+------------------+-------------------------+
-| LED x1          | Resistor 220Ω x1 | Jumper M/M x2           |
-|                 |                  |                         |
-| |Chapter01_03|  | |Chapter01_04|   | |Chapter01_05|          |
-+-----------------+------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1 |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter01_01|          |
+    +------------------------------------+-------------------------+
+    | Breadboard x1                                                |
+    |                                                              |
+    | |Chapter01_02|                                               |
+    +-----------------+------------------+-------------------------+
+    | LED x1          | Resistor 220Ω x1 | Jumper M/M x2           |
+    |                 |                  |                         |
+    | |Chapter01_03|  | |Chapter01_04|   | |Chapter01_05|          |
+    +-----------------+------------------+-------------------------+
   
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png    
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png    
@@ -81,17 +86,17 @@ Circuit
 This circuit is the same as the one in engineering Blink.
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter04_02|
-   * -  Hardware connection. 
+   * -  **Hardware connection** 
 
-        :red:`If you need any support, please feel free to contact us via:` support@freenove.com
+   * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
-   * -  |Chapter04_03|
+        |Chapter04_03|
 
 .. |Chapter04_02| image:: ../_static/imgs/4_Analog_&_PWM/Chapter04_02.png    
 .. |Chapter04_03| image:: ../_static/imgs/4_Analog_&_PWM/Chapter04_03.png  
@@ -119,12 +124,14 @@ Click "Run current script", and you'll see that LED is turned from ON to OFF and
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/04.1_BreatheLight/BreatheLight.py
+    :linenos:
     :language: python
     :dedent:
 
 The way that the ESP32 PWM pins output is different from traditionally controllers. It can change frequency and duty cycle by configuring PWM's parameters at the initialization stage. Define GPIO2's output frequency as 10000Hz, and assign them to PWM.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/04.1_BreatheLight/BreatheLight.py
+    :linenos:
     :language: python
     :lines: 4-4
     :dedent:
@@ -132,6 +139,7 @@ The way that the ESP32 PWM pins output is different from traditionally controlle
 The range of duty cycle is 0-1023, so we use the first for loop to control PWM to change the duty cycle value, making PWM output 0% -100%; Use the second for loop to make PWM output 100%-0%.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/04.1_BreatheLight/BreatheLight.py
+    :linenos:
     :language: python
     :lines: 7-13
     :dedent:
@@ -139,6 +147,7 @@ The range of duty cycle is 0-1023, so we use the first for loop to control PWM t
 Each time PWM is used, the hardware Timer will be turned ON to cooperate it. Therefore, after each use of PWM, deinit() needs to be called to turned OFF the timer. Otherwise, the PWM may fail to work next time.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/04.1_BreatheLight/BreatheLight.py
+    :linenos:
     :language: python
     :lines: 15-15
     :dedent:
@@ -172,44 +181,44 @@ After learning about PWM, we can use it to control LED Bar Graph and realize a c
 Component List
 =====================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1 |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter01_01|          |
-+------------------------------------+-------------------------+
-| Breadboard x1                                                |
-|                                                              |
-| |Chapter01_02|                                               |
-+-----------------+------------------+-------------------------+
-|Jumper M/M x10   | Resistor 220Ω x10| LED bar graph x1        |
-|                 |                  |                         |
-| |Chapter01_05|  | |Chapter01_04|   | |Chapter03_00|          |
-+-----------------+------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1 |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter01_01|          |
+    +------------------------------------+-------------------------+
+    | Breadboard x1                                                |
+    |                                                              |
+    | |Chapter01_02|                                               |
+    +-----------------+------------------+-------------------------+
+    |Jumper M/M x10   | Resistor 220Ω x10| LED bar graph x1        |
+    |                 |                  |                         |
+    | |Chapter01_05|  | |Chapter01_04|   | |Chapter03_00|          |
+    +-----------------+------------------+-------------------------+
 
-.. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
-.. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
-.. |Chapter01_02| image:: ../_static/imgs/1_LED/Chapter01_02.png
-.. |Chapter01_04| image:: ../_static/imgs/1_LED/Chapter01_04.png
-.. |Chapter01_05| image:: ../_static/imgs/1_LED/Chapter01_05.png
 .. |Chapter03_00| image:: ../_static/imgs/3_LED_Bar/Chapter03_00.png
 
 Circuit
 ===================================
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter04_10|
-   * -  Hardware connection. 
+   * -  **Hardware connection** 
 
-        If you need any support, please feel free to contact us via: support@freenove.com
+   * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
-   * -  |Chapter04_11|
+        |Chapter04_11|
 
-        :red:`If LED bar does not work, try to rotate it for 180°. The label is random.`
+        :combo:`red font-bolder:If LED bar does not work, try to rotate it for 180°. The label is random.`
 
 .. |Chapter04_10| image:: ../_static/imgs/4_Analog_&_PWM/Chapter04_10.png
 .. |Chapter04_11| image:: ../_static/imgs/4_Analog_&_PWM/Chapter04_11.png
@@ -232,12 +241,14 @@ Click "Run current script", and LED Bar Graph will gradually light up and out fr
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/04.2_FlowingLight/FlowingLight.py
+    :linenos:
     :language: python
     :dedent:
 
 Import the object myPWM from pwm.py and set corresponding pins for PWM channel.
 
 .. code-block:: python
+    :linenos:
 
     from pwm import myPWM
     ......
@@ -246,6 +257,7 @@ Import the object myPWM from pwm.py and set corresponding pins for PWM channel.
 First we defined 8 GPIO, 8 PWM channels, and 24 pulse width values.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/04.2_FlowingLight/FlowingLight.py
+    :linenos:
     :language: python
     :lines: 5-7
     :dedent:
@@ -253,6 +265,7 @@ First we defined 8 GPIO, 8 PWM channels, and 24 pulse width values.
 Call ledcWrite()to set duty cycle dutys[i+j] for the chns[j] channel of PWM.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/04.2_FlowingLight/FlowingLight.py
+    :linenos:
     :language: python
     :lines: 14-14
     :dedent:
@@ -260,6 +273,7 @@ Call ledcWrite()to set duty cycle dutys[i+j] for the chns[j] channel of PWM.
 Close the PWM of the object myPWM.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/04.2_FlowingLight/FlowingLight.py
+    :linenos:
     :language: python
     :lines: 22-22
     :dedent:
@@ -267,6 +281,7 @@ Close the PWM of the object myPWM.
 In the code, a nesting of two for loops are used to achieve this effect. 
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/04.2_FlowingLight/FlowingLight.py
+    :linenos:
     :language: python
     :lines: 12-20
     :dedent:

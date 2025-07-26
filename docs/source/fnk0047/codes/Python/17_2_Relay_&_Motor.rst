@@ -7,23 +7,28 @@ Project Control Motor with Potentiometer
 
 Control the direction and speed of the motor with a potentiometer.
 
-+------------------------------------+----------------------------------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1                            |
-|                                    |                                                    |
-| |Chapter01_00|                     | |Chapter01_01|                                     |
-+------------------------------------+----------------------------------------------------+
-| Breadboard x1                                                                           |
-|                                                                                         |
-| |Chapter01_02|                                                                          |
-+------------------------------------+----------------------------------------------------+
-| Motor x1                           | 9V battery (prepared by yourself) & battery line   |
-|                                    |                                                    |
-| |Chapter17_02|                     | |Chapter17_03|                                     |
-+-------------------------+----------+----------------------+-----------------------------+
-| Jumper M/M              | L293D                           | Rotary potentiometer x1     |
-|                         |                                 |                             |
-| |Chapter01_05|          | |Chapter17_00|                  |  |Chapter09_00|             |
-+-------------------------+---------------------------------+-----------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+----------------------------------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1                            |
+    |                                    |                                                    |
+    | |Chapter01_00|                     | |Chapter01_01|                                     |
+    +------------------------------------+----------------------------------------------------+
+    | Breadboard x1                                                                           |
+    |                                                                                         |
+    | |Chapter01_02|                                                                          |
+    +------------------------------------+----------------------------------------------------+
+    | Motor x1                           | 9V battery (prepared by yourself) & battery line   |
+    |                                    |                                                    |
+    | |Chapter17_02|                     | |Chapter17_03|                                     |
+    +-------------------------+----------+----------------------+-----------------------------+
+    | Jumper M/M              | L293D                           | Rotary potentiometer x1     |
+    |                         |                                 |                             |
+    | |Chapter01_05|          | |Chapter17_00|                  |  |Chapter09_00|             |
+    +-------------------------+---------------------------------+-----------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -47,25 +52,29 @@ L293D is an IC chip (Integrated Circuit Chip) with a 4-channel motor drive. You 
 
 Port description of L293D module is as follows:
 
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
-| Pin name |  Pin number  |                                                  Description                                                  |
-+==========+==============+===============================================================================================================+
-| In x     | 2, 7, 10, 15 | Channel x digital signal input pin                                                                            |
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
-| Out x    | 3, 6, 11, 14 | Channel x output pin, input high or low level according to In x pin, get connected to +Vmotor or 0V           |
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
-| Enable1  | 1            | Channel 1 and channel 2 enable pin, high level enable                                                         |
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
-| Enable2  | 9            | Channel 3 and channel 4 enable pin, high level enable                                                         |
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
-| 0V       | 4, 5, 12, 13 | Power cathode (GND)                                                                                           |
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
-| +V       | 16           | Positive electrode (VCC) of power supply, supply voltage 3.0~36V                                              |
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
-|          |              | Positive electrode of load power supply, provide power supply for the Out                                     |
-| +Vmotor  | 8            |                                                                                                               |
-|          |              | pin x, the supply voltage is +V~36V                                                                           |
-+----------+--------------+---------------------------------------------------------------------------------------------------------------+
+.. table::
+    :align: center
+    :class: zebra
+    
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
+    | Pin name |  Pin number  |                                                  Description                                                  |
+    +==========+==============+===============================================================================================================+
+    | In x     | 2, 7, 10, 15 | Channel x digital signal input pin                                                                            |
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
+    | Out x    | 3, 6, 11, 14 | Channel x output pin, input high or low level according to In x pin, get connected to +Vmotor or 0V           |
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
+    | Enable1  | 1            | Channel 1 and channel 2 enable pin, high level enable                                                         |
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
+    | Enable2  | 9            | Channel 3 and channel 4 enable pin, high level enable                                                         |
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
+    | 0V       | 4, 5, 12, 13 | Power cathode (GND)                                                                                           |
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
+    | +V       | 16           | Positive electrode (VCC) of power supply, supply voltage 3.0~36V                                              |
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
+    |          |              | Positive electrode of load power supply, provide power supply for the Out                                     |
+    | +Vmotor  | 8            |                                                                                                               |
+    |          |              | pin x, the supply voltage is +V~36V                                                                           |
+    +----------+--------------+---------------------------------------------------------------------------------------------------------------+
 
 For more detail, please refer to the datasheet for this IC Chip.
 
@@ -90,14 +99,13 @@ Use caution when connecting this circuit, because the DC motor is a high-power c
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter17_04|
-   * -  Hardware connection. 
-       
-        If you need any support, please feel free to contact us via: support@freenove.com
+   * -  **Hardware connection** 
+   * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
         |Chapter17_05|
 
@@ -111,9 +119,9 @@ Use caution when connecting this circuit, because the DC motor is a high-power c
 Code
 =======================================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes"** to disk(D) in advance with the path of **"D:/Micropython_Codes"**.
 
-Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "17.2_Motor_And_Driver" and double click "Motor_And_Driver.py". 
+Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "17.2_Motor_And_Driver" and double click "Motor_And_Driver.py". 
 
 Motor_And_Driver
 ----------------------------------------
@@ -129,12 +137,14 @@ Click "Run current script", rotate the potentiometer in one direction and the mo
 The following is the Code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/17.2_Motor_And_Driver/Motor_And_Driver.py
+    :linenos:
     :language: python
     :dedent:
 
 The ADC of ESP32 has a 12-bit accuracy, corresponding to a range from 0 to 4095. In this program, set the number 2048 as the midpoint. If the value of ADC is less than 2048, make the motor rotate in one direction. If the value of ADC is greater than 2048, make the motor rotate in the other direction. Subtract 2048 from the ADC value and take the absolute value, and then divide this result by 2 to be the speed of the motor.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/17.2_Motor_And_Driver/Motor_And_Driver.py
+    :linenos:
     :language: python
     :lines: 26-34
     :dedent:
@@ -142,6 +152,7 @@ The ADC of ESP32 has a 12-bit accuracy, corresponding to a range from 0 to 4095.
 Initialize pins of L293D chip.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/17.2_Motor_And_Driver/Motor_And_Driver.py
+    :linenos:
     :language: python
     :lines: 5-9
     :dedent:
@@ -149,13 +160,15 @@ Initialize pins of L293D chip.
 Initialize ADC pins, set the range of voltage to 0-3.3V and the acquisition width of data to 0-4095.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/17.2_Motor_And_Driver/Motor_And_Driver.py
+    :linenos:
     :language: python
     :lines: 11-13
     :dedent:
 
-Function driveMotor is used to control the rotation direction and speed of the motor. The dir represents direction while spd refers to speed.
+Function driveMotor is used to control the rotation direction and speed of the motor. The dir represents direction while **spd** refers to speed.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/17.2_Motor_And_Driver/Motor_And_Driver.py
+    :linenos:
     :language: python
     :lines: 15-22
     :dedent:

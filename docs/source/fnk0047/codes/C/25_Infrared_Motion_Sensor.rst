@@ -16,25 +16,30 @@ This infrared motion sensor can detect the infrared spectrum (heat signatures) e
 Component List
 ============================================
 
-+----------------------+----------------------------------------------+
-| ESP32-WROVER x1      | GPIO Extension Board x1                      |
-|                      |                                              |
-| |Chapter01_00|       | |Chapter01_01|                               |
-+----------------------+----------------------------------------------+
-| Breadboard x1                                                       |
-|                                                                     |
-| |Chapter01_02|                                                      |
-+----------------------------------+----------------------------------+
-| LED x1                           | Resistor 220Ω x1                 |
-|                                  |                                  |
-| |Chapter01_03|                   |   |Chapter01_04|                 |
-+----------------------------------+----------------------------------+
-| Jumper F/M x3                    | HC SR501                         |
-|                                  |                                  |
-| Jumper M/M x2                    |                                  |
-|                                  |                                  |
-| |Chapter24_08|                   |   |Chapter25_00|                 |
-+----------------------------------+----------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +----------------------+----------------------------------------------+
+    | ESP32-WROVER x1      | GPIO Extension Board x1                      |
+    |                      |                                              |
+    | |Chapter01_00|       | |Chapter01_01|                               |
+    +----------------------+----------------------------------------------+
+    | Breadboard x1                                                       |
+    |                                                                     |
+    | |Chapter01_02|                                                      |
+    +----------------------------------+----------------------------------+
+    | LED x1                           | Resistor 220Ω x1                 |
+    |                                  |                                  |
+    | |Chapter01_03|                   |   |Chapter01_04|                 |
+    +----------------------------------+----------------------------------+
+    | Jumper F/M x3                    | HC SR501                         |
+    |                                  |                                  |
+    | Jumper M/M x2                    |                                  |
+    |                                  |                                  |
+    | |Chapter24_08|                   |   |Chapter25_00|                 |
+    +----------------------------------+----------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -52,6 +57,7 @@ The following is the diagram of the infrared Motion sensor(HC SR-501):
 .. list-table:: 
    :width: 80%
    :header-rows: 1 
+   :class: table-line
    :align: center
    
    * -  Top
@@ -90,14 +96,14 @@ Circuit
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter25_03|
-   * -  Hardware connection. 
+   * -  **Hardware connection** 
        
-        If you need any support, please feel free to contact us via: support@freenove.com
+        :combo:`If you need any support, please feel free to contact us via:` support@freenove.com
 
         |Chapter25_04|
 
@@ -122,8 +128,9 @@ You can rotate the potentiometer on the sensor to adjust the detection effect, o
 Apart from that, you can also use this sensor to control some other modules to implement different functions by reediting the code, such as the induction lamp, induction door.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
    
    * -  Move to the Infrared Motion Sensor
    * -  |Chapter25_06|
@@ -133,36 +140,41 @@ Apart from that, you can also use this sensor to control some other modules to i
 .. |Chapter25_06| image:: ../_static/imgs/25_Infrared_Motion_Sensor/Chapter25_06.png
 .. |Chapter25_07| image:: ../_static/imgs/25_Infrared_Motion_Sensor/Chapter25_07.png
 
-+--------------+-------------------------------------------------------------------------------------+
-|              | R1 is used to adjust the delay time. When rotated counterclockwise,                 |
-|              |                                                                                     |
-|              | when the sensor recognizes the person, the output high level time will              |
-|              |                                                                                     |
-|              | be shorter, the shortest is about 0.5 seconds. When rotated clockwise,              |
-|              |                                                                                     |
-|              | when the sensor recognizes a person, the output high level will be longer,          |
-|              |                                                                                     |
-|              | up to about 300 seconds.                                                            |
-|              |                                                                                     |
-|              +-------------------------------------------------------------------------------------+
-|              | R2 is used to adjust the sensor sensing distance. When rotated                      |
-|              |                                                                                     |
-|              | counterclockwise,  when the sensor sensing distance will be shortened,              |
-|              |                                                                                     |
-||Chapter25_01|| the nearest is about 3 meters. When rotated clockwise, the sensor sensing           |
-|              |                                                                                     |
-|              | distance will become far away, the farthest is about 7 meters.                      |
-|              |                                                                                     |
-|              +-------------------------------------------------------------------------------------+
-|              | When H is selected on the right, when the sensor senses a person,                   |
-|              |                                                                                     |
-|              | it will always sense whether there is a person, and output a high level,            |
-|              |                                                                                     |
-|              | until no person is sensed for a period of time, it will output a low level          |
-|              |                                                                                     |
-|              | When L is selected on the right, when the sensor senses a person,                   |
-|              |                                                                                     |
-|              | it no longer continues to sense whether the person exists, directly                 |
-|              |                                                                                     |
-|              | outputs a high level for a period of time, and then outputs a low level.            |
-+--------------+-------------------------------------------------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +--------------+-------------------------------------------------------------------------------------+
+    |              | R1 is used to adjust the delay time. When rotated counterclockwise,                 |
+    |              |                                                                                     |
+    |              | when the sensor recognizes the person, the output high level time will              |
+    |              |                                                                                     |
+    |              | be shorter, the shortest is about 0.5 seconds. When rotated clockwise,              |
+    |              |                                                                                     |
+    |              | when the sensor recognizes a person, the output high level will be longer,          |
+    |              |                                                                                     |
+    |              | up to about 300 seconds.                                                            |
+    |              |                                                                                     |
+    |              +-------------------------------------------------------------------------------------+
+    |              | R2 is used to adjust the sensor sensing distance. When rotated                      |
+    |              |                                                                                     |
+    |              | counterclockwise,  when the sensor sensing distance will be shortened,              |
+    |              |                                                                                     |
+    ||Chapter25_01|| the nearest is about 3 meters. When rotated clockwise, the sensor sensing           |
+    |              |                                                                                     |
+    |              | distance will become far away, the farthest is about 7 meters.                      |
+    |              |                                                                                     |
+    |              +-------------------------------------------------------------------------------------+
+    |              | When H is selected on the right, when the sensor senses a person,                   |
+    |              |                                                                                     |
+    |              | it will always sense whether there is a person, and output a high level,            |
+    |              |                                                                                     |
+    |              | until no person is sensed for a period of time, it will output a low level          |
+    |              |                                                                                     |
+    |              | When L is selected on the right, when the sensor senses a person,                   |
+    |              |                                                                                     |
+    |              | it no longer continues to sense whether the person exists, directly                 |
+    |              |                                                                                     |
+    |              | outputs a high level for a period of time, and then outputs a low level.            |
+    +--------------+-------------------------------------------------------------------------------------+

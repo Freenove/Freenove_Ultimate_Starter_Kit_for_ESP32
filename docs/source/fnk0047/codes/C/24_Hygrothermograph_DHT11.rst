@@ -12,19 +12,24 @@ Hygrothermograph is an important tool in our lives to give us data on the temper
 Component List
 ============================================
 
-+----------------------+----------------------------------------------+
-| ESP32-WROVER x1      | GPIO Extension Board x1                      |
-|                      |                                              |
-| |Chapter01_00|       | |Chapter01_01|                               |
-+----------------------+----------------------------------------------+
-| Breadboard x1                                                       |
-|                                                                     |
-| |Chapter01_02|                                                      |
-+----------------------+------------------------+---------------------+
-| Jumper M/M x4        | DHT11 x1               | Resistor 10kΩ x1    |
-|                      |                        |                     |
-| |Chapter01_05|       |  |Chapter24_00|        |   |Chapter02_01|    |
-+----------------------+------------------------+---------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +----------------------+----------------------------------------------+
+    | ESP32-WROVER x1      | GPIO Extension Board x1                      |
+    |                      |                                              |
+    | |Chapter01_00|       | |Chapter01_01|                               |
+    +----------------------+----------------------------------------------+
+    | Breadboard x1                                                       |
+    |                                                                     |
+    | |Chapter01_02|                                                      |
+    +----------------------+------------------------+---------------------+
+    | Jumper M/M x4        | DHT11 x1               | Resistor 10kΩ x1    |
+    |                      |                        |                     |
+    | |Chapter01_05|       |  |Chapter24_00|        |   |Chapter02_01|    |
+    +----------------------+------------------------+---------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -54,12 +59,12 @@ Circuit
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter24_02|
-   * -  Hardware connection. 
+   * -  **Hardware connection** 
        
         If you need any support, please feel free to contact us via: support@freenove.com
 
@@ -76,7 +81,7 @@ How to install the library
 
 The code is used to read the temperature and humidity data of DHT11, and print them out.
 
-We use the third party library **DHTesp** . If you haven't installed it yet, please do so now. The steps to add third-party libraries are as follows: open arduino -> Sketch -> Include library -> Manage libraries. Enter " DHTesp " in the search bar and select " **DHTesp** " for installation.
+We use the third party library **DHTesp** . If you haven't installed it yet, please do so now. The steps to add third-party libraries are as follows: open arduino -> Sketch -> Include library -> Manage libraries. Enter " **DHTesp** " in the search bar and select " **DHTesp** " for installation.
 
 Refer to the following operations:
 
@@ -137,6 +142,7 @@ Get the temperature and humidity data and store it in a TempAndHumidity class ca
     :dedent:
 
 Reference
+------------------------------------------------------
 
 .. py:function:: class DHTesp	
 
@@ -160,25 +166,30 @@ In this project, we use L2C-LCD1602 to display data collected by DHT11.
 Component List
 ============================================
 
-+----------------------+----------------------------------------------+
-| ESP32-WROVER x1      | GPIO Extension Board x1                      |
-|                      |                                              |
-| |Chapter01_00|       | |Chapter01_01|                               |
-+----------------------+----------------------------------------------+
-| Breadboard x1                                                       |
-|                                                                     |
-| |Chapter01_02|                                                      |
-+----------------------------------+----------------------------------+
-| LCD1602 Module x1                | Resistor 10kΩ x1                 |
-|                                  |                                  |
-| |Chapter20_00|                   |   |Chapter02_01|                 |
-+----------------------------------+----------------------------------+
-| Jumper F/M x4                    | DHT11 x1                         |
-|                                  |                                  |
-| Jumper M/M x4                    |                                  |
-|                                  |                                  |
-| |Chapter24_08|                   |   |Chapter24_00|                 |
-+----------------------------------+----------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +----------------------+----------------------------------------------+
+    | ESP32-WROVER x1      | GPIO Extension Board x1                      |
+    |                      |                                              |
+    | |Chapter01_00|       | |Chapter01_01|                               |
+    +----------------------+----------------------------------------------+
+    | Breadboard x1                                                       |
+    |                                                                     |
+    | |Chapter01_02|                                                      |
+    +----------------------------------+----------------------------------+
+    | LCD1602 Module x1                | Resistor 10kΩ x1                 |
+    |                                  |                                  |
+    | |Chapter20_00|                   |   |Chapter02_01|                 |
+    +----------------------------------+----------------------------------+
+    | Jumper F/M x4                    | DHT11 x1                         |
+    |                                  |                                  |
+    | Jumper M/M x4                    |                                  |
+    |                                  |                                  |
+    | |Chapter24_08|                   |   |Chapter24_00|                 |
+    +----------------------------------+----------------------------------+
 
 .. |Chapter24_08| image:: ../_static/imgs/24_Hygrothermograph_DHT11/Chapter24_08.png
 .. |Chapter20_00| image:: ../_static/imgs/20_LCD1602/Chapter20_00.png
@@ -188,12 +199,12 @@ Circuit
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter24_09|
-   * -  Hardware connection. 
+   * -  **Hardware connection** 
        
         If you need any support, please feel free to contact us via: support@freenove.com
 

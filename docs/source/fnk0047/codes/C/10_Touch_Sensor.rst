@@ -12,19 +12,24 @@ This project reads the value of the touch sensor and prints it out.
 Component List
 ======================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1 |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter01_01|          |
-+------------------------------------+-------------------------+
-| Breadboard x1                                                |
-|                                                              |
-| |Chapter01_02|                                               |
-+--------------------------------------------------------------+
-| Jumper M/M x2                                                |
-|                                                              |
-| |Chapter01_05|                                               |
-+--------------------------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1 |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter01_01|          |
+    +------------------------------------+-------------------------+
+    | Breadboard x1                                                |
+    |                                                              |
+    | |Chapter01_02|                                               |
+    +--------------------------------------------------------------+
+    | Jumper M/M x1                                                |
+    |                                                              |
+    | |Chapter01_05|                                               |
+    +--------------------------------------------------------------+
   
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -39,29 +44,33 @@ Touch sensor
 
 ESP32's touch sensor supports up to 10 GPIO channels as capacitive touch pins. Each pin can be used separately as an independent touch switch or be combined to produce multiple touch points. The following table is a list of available touch pins on ESP32.
 
-+------------------------------+-------------------+-------------+
-| Name of touch sensing signal | Functions of pins | GPIO number |
-+------------------------------+-------------------+-------------+
-| T0                           | GPIO4             | GPIO4       |
-+------------------------------+-------------------+-------------+
-| T1                           | GPIO0             | GPIO0       |
-+------------------------------+-------------------+-------------+
-| T2                           | GPIO2             | GPIO2       |
-+------------------------------+-------------------+-------------+
-| T3                           | MTDO              | GPIO15      |
-+------------------------------+-------------------+-------------+
-| T4                           | MTCK              | GPIO13      |
-+------------------------------+-------------------+-------------+
-| T5                           | MTDI              | GPIO12      |
-+------------------------------+-------------------+-------------+
-| T6                           | MTMS              | GPIO14      |
-+------------------------------+-------------------+-------------+
-| T7                           | GPIO27            | GPIO27      |
-+------------------------------+-------------------+-------------+
-| T8                           | 32K_XN            | GPIO33      |
-+------------------------------+-------------------+-------------+
-| T9                           | 32K_XP            | GPIO32      |
-+------------------------------+-------------------+-------------+
+.. table::
+    :align: center
+    :class: zebra
+    
+    +------------------------------+-------------------+-------------+
+    | Name of touch sensing signal | Functions of pins | GPIO number |
+    +==============================+===================+=============+
+    | T0                           | GPIO4             | GPIO4       |
+    +------------------------------+-------------------+-------------+
+    | T1                           | GPIO0             | GPIO0       |
+    +------------------------------+-------------------+-------------+
+    | T2                           | GPIO2             | GPIO2       |
+    +------------------------------+-------------------+-------------+
+    | T3                           | MTDO              | GPIO15      |
+    +------------------------------+-------------------+-------------+
+    | T4                           | MTCK              | GPIO13      |
+    +------------------------------+-------------------+-------------+
+    | T5                           | MTDI              | GPIO12      |
+    +------------------------------+-------------------+-------------+
+    | T6                           | MTMS              | GPIO14      |
+    +------------------------------+-------------------+-------------+
+    | T7                           | GPIO27            | GPIO27      |
+    +------------------------------+-------------------+-------------+
+    | T8                           | 32K_XN            | GPIO33      |
+    +------------------------------+-------------------+-------------+
+    | T9                           | 32K_XP            | GPIO32      |
+    +------------------------------+-------------------+-------------+
 
 The touch pin number is already defined in ESP32's code base. For example, in the code, you can use T0 to represent GPIO4.
 
@@ -76,19 +85,19 @@ Circuit
 =============================================
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter10_01|
-   * -  Hardware connection. 
-       
-        :red:`If you need any support, please contact us via:` support@freenove.com
-   * -  |Chapter10_02|
+   * -  **Hardware connection**
+   * -  :combo:`red font-bolder:If you need any support, please contact us via:` support@freenove.com
+        
+        |Chapter10_02|
 
-.. |Chapter10_01| image:: ../_static/imgs/10_Touch_Sensor/Chapter10_01.png    
-.. |Chapter10_02| image:: ../_static/imgs/10_Touch_Sensor/Chapter10_02.png    
+.. |Chapter10_01| image:: ../_static/imgs/10_Touch_Sensor/Chapter10_01.png
+.. |Chapter10_02| image:: ../_static/imgs/10_Touch_Sensor/Chapter10_02.png
 
 Sketch
 ===========================================
@@ -124,19 +133,24 @@ In this project, we will use ESP32's touch sensor to create a touch switch lamp.
 Component List
 ==========================================
 
-+------------------------------------+------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1|
-|                                    |                        |
-| |Chapter01_00|                     | |Chapter01_01|         |
-+------------------------------------+------------------------+
-| Breadboard x1                                               |
-|                                                             |
-| |Chapter01_02|                                              |
-+-----------------+------------------+------------------------+
-| LED x1          | Resistor 220Ω x1 | Jumper M/M x3          |
-|                 |                  |                        |
-| |Chapter01_03|  | |Chapter01_04|   | |Chapter01_05|         |
-+-----------------+------------------+------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1|
+    |                                    |                        |
+    | |Chapter01_00|                     | |Chapter01_01|         |
+    +------------------------------------+------------------------+
+    | Breadboard x1                                               |
+    |                                                             |
+    | |Chapter01_02|                                              |
+    +-----------------+------------------+------------------------+
+    | LED x1          | Resistor 220Ω x1 | Jumper M/M x3          |
+    |                 |                  |                        |
+    | |Chapter01_03|  | |Chapter01_04|   | |Chapter01_05|         |
+    +-----------------+------------------+------------------------+
 
 .. |Chapter01_03| image:: ../_static/imgs/1_LED/Chapter01_03.png 
 .. |Chapter01_04| image:: ../_static/imgs/1_LED/Chapter01_04.png    
@@ -145,16 +159,16 @@ Circuit
 =========================================
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter10_06|
-   * -  Hardware connection. 
-       
-        :red:`If you need any support, please contact us via:` support@freenove.com
-   * -  |Chapter10_07|
+   * -  **Hardware connection**
+   * -  :combo:`red font-bolder:If you need any support, please contact us via:` support@freenove.com
+        
+        |Chapter10_07|
 
 .. |Chapter10_06| image:: ../_static/imgs/10_Touch_Sensor/Chapter10_06.png    
 .. |Chapter10_07| image:: ../_static/imgs/10_Touch_Sensor/Chapter10_07.png    

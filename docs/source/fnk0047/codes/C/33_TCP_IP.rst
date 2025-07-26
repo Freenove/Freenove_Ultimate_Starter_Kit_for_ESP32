@@ -12,11 +12,16 @@ In this section, ESP32 is used as Client to connect Server on the same LAN and c
 Component List
 ===========================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | Micro USB Wire x1       |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter08_00|          |
-+------------------------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | Micro USB Wire x1       |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter08_00|          |
+    +------------------------------------+-------------------------+
   
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter08_00| image:: ../_static/imgs/8_Serial_Communication/Chapter08_00.png
@@ -68,7 +73,7 @@ Install ControlP5.
 .. image:: ../_static/imgs/33_TCP_IP/Chapter33_04.png
     :align: center
 
-Open the "Freenove_Ultimate_Starter_Kit_for_ESP32\\Sketches\\Sketches\\Sketch_33.1_WiFiClient\\sketchWiFi\\sketchWiFi.pde", and click "Run".
+Open the **"Freenove_Ultimate_Starter_Kit_for_ESP32\\Sketches\\Sketches\\Sketch_33.1_WiFiClient\\sketchWiFi\\sketchWiFi.pde"**, and click "Run".
 
 .. image:: ../_static/imgs/33_TCP_IP/Chapter33_05.png
     :align: center
@@ -87,7 +92,7 @@ If ESP32 serves as server, select TCP CLIENT mode for sketchWiFi.
 
 When sketchWiFi selects TCP CLIENT mode, the LOCAL IP and LOCAL PORT of sketchWiFi need to be changed according to the IP address and port number printed by the serial monitor.
 
-**Mode selection:** select Server mode/Client mode.
+**Mode selection:** select **Server mode/Client mode.**
 
 **IP address:** In server mode, this option does not need to be filled in, and the computer will automatically obtain the IP address. In client mode, fill in the remote IP address to be connected.
 
@@ -240,11 +245,16 @@ In this section, ESP32 is used as a server to wait for the connection and commun
 Component List
 ===============================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | Micro USB Wire x1       |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter08_00|          |
-+------------------------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | Micro USB Wire x1       |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter08_00|          |
+    +------------------------------------+-------------------------+
   
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter08_00| image:: ../_static/imgs/8_Serial_Communication/Chapter08_00.png
@@ -282,9 +292,7 @@ Serial Monitor
 
 Processing: 
 
-Open the "Freenove_Ultimate_Starter_Kit_for_ESP32\\Sketches\\Sketches\\Sketch_33.2_WiFiServer\\
-
-sketchWiFi\sketchWiFi.pde".
+Open the **"Freenove_Ultimate_Starter_Kit_for_ESP32\\Sketches\\Sketches\\Sketch_33.2_WiFiServer\\sketchWiFi\sketchWiFi.pde"**.
 
 Based on the messages printed by the serial monitor, enter correct IP address and serial port in Processing to establish connection and make communication.
 

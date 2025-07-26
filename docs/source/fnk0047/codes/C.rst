@@ -73,10 +73,5 @@ C language
    :glob:
 
    What_s_next.rst
-
-.. toctree::
-   :maxdepth: 1
-   :caption: End of the Tutorial
-   :glob:
-
+   What_s_next(others).rst
    C/End_of_the_Tutorial.rst

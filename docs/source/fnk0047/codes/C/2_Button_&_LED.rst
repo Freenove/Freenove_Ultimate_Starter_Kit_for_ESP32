@@ -17,23 +17,28 @@ In the project, we will control the LED state through a Push Button Switch. When
 Component List
 ========================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1 |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter01_01|          |
-+------------------------------------+-------------------------+
-| Breadboard x1                                                |
-|                                                              |
-| |Chapter01_02|                                               |
-+-----------------+------------------+-------------------------+
-| LED x1          | Resistor 220Ω x1 | Push button x1          |
-|                 |                  |                         |
-| |Chapter01_03|  | |Chapter01_04|   | |Chapter02_02|          |
-+-----------------+------------+-----+-------------------------+
-| Resistor 10kΩ x2             | Jumper M/M x4                 |
-|                              |                               |
-|  |Chapter02_01|              |  |Chapter01_05|               |
-+------------------------------+-------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1 |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter01_01|          |
+    +------------------------------------+-------------------------+
+    | Breadboard x1                                                |
+    |                                                              |
+    | |Chapter01_02|                                               |
+    +-----------------+------------------+-------------------------+
+    | LED x1          | Resistor 220Ω x1 | Push button x1          |
+    |                 |                  |                         |
+    | |Chapter01_03|  | |Chapter01_04|   | |Chapter02_02|          |
+    +-----------------+------------+-----+-------------------------+
+    | Resistor 10kΩ x2             | Jumper M/M x4                 |
+    |                              |                               |
+    |  |Chapter02_01|              |  |Chapter01_05|               |
+    +------------------------------+-------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -62,16 +67,16 @@ Circuit
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter02_04|
-   * -  Hardware connection. 
+   * -  **Hardware connection** 
        
-        If you need any support, please feel free to contact us via: support@freenove.com
+        :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
-        |Chapter02_05|
+   * -  |Chapter02_05|
 
 .. |Chapter02_04| image:: ../_static/imgs/2_Button_&_LED/Chapter02_04.png
 .. |Chapter02_05| image:: ../_static/imgs/2_Button_&_LED/Chapter02_05.png
@@ -96,6 +101,8 @@ Download the code to ESP32-WROVER, then press the key, the LED turns ON, release
 .. image:: ../_static/imgs/2_Button_&_LED/Chapter02_07.png
     :align: center
 
+:combo:`red font-bolder:If you have any concerns, please contact us via:` support@freenove.com
+
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_02.1_ButtonAndLed/Sketch_02.1_ButtonAndLed.ino
@@ -105,10 +112,11 @@ The following is the program code:
 
 In the circuit connection, LED and button are connected with GPIO2 and GPIO13 respectively, so define ledPin and buttonPin as 2 and 13 respectively.
 
-.. code-block:: C
-
-    #define PIN_LED    2
-    #define PIN_BUTTON 13
+.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_02.1_ButtonAndLed/Sketch_02.1_ButtonAndLed.ino
+    :linenos: 
+    :language: c
+    :lines: 7-8
+    :dedent:
 
 In the while cycle of main function, use digitalRead(buttonPin) to determine the state of button. When the button is pressed, the function returns low level, the result of "if" is true, and then turn on LED. Otherwise, turn off LED.
 
@@ -158,7 +166,7 @@ Download the code to the ESP32-WROVER, press the button, the LED turns ON, and p
 .. image:: ../_static/imgs/2_Button_&_LED/Chapter02_10.png
     :align: center
 
-:red:`If you have any concerns, please contact us via:` support@freenove.com
+:combo:`red font-bolder:If you have any concerns, please contact us via:` support@freenove.com
 
 The following is the program code:
 

@@ -12,25 +12,28 @@ Now, let's use Processing and ESP32 board to create an oscilloscope.
 Component List
 ====================================
 
-+------------------------------------+------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1|
-|                                    |                        |
-| |Chapter01_00|                     | |Chapter01_01|         |
-+------------------------------------+------------------------+
-| Breadboard x1                                               |
-|                                                             |
-| |Chapter01_02|                                              |
-+------------------------------------+------------------------+
-| Rotary potentiometer x1            | Jumper M/M x3          |
-|                                    |                        |
-| |Chapter09_00|                     | |Chapter01_05|         |
-+------------------------------------+------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1|
+    |                                    |                        |
+    | |Chapter01_00|                     | |Chapter01_01|         |
+    +------------------------------------+------------------------+
+    | Breadboard x1                                               |
+    |                                                             |
+    | |Chapter01_02|                                              |
+    +------------------------------------+------------------------+
+    | Rotary potentiometer x1            | Jumper M/M x3          |
+    |                                    |                        |
+    | |Chapter09_00|                     | |Chapter01_05|         |
+    +------------------------------------+------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED/Chapter01_02.png
-.. |Chapter13_00| image:: ../_static/imgs/1_LED/Chapter13_00.png 
-.. |Chapter07_04| image:: ../_static/imgs/7_Buzzer/Chapter07_04.png   
 .. |Chapter01_05| image:: ../_static/imgs/1_LED/Chapter01_05.png
 .. |Chapter09_00| image:: ../_static/imgs/9_AD_DA_Converter/Chapter09_00.png
 
@@ -40,17 +43,19 @@ Circuit
 Use Pin4 (A10) port to detect the voltage of rotary potentiometer.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
+   :header-rows: 1
    
    * -  Schematic diagram
      -  Hardware connection
    
-   * -  |Chapter01_00|
-     -  |Chapter01_01|
+   * -  |Processing_Chapter01_00|
+     -  |Processing_Chapter01_01|
 
-.. |Chapter01_00| image:: ../_static/imgs/1_Oscilloscope/Chapter01_00.png
-.. |Chapter01_01| image:: ../_static/imgs/1_Oscilloscope/Chapter01_01.png
+.. |Processing_Chapter01_00| image:: ../_static/imgs/1_Oscilloscope/Chapter01_00.png
+.. |Processing_Chapter01_01| image:: ../_static/imgs/1_Oscilloscope/Chapter01_01.png
 
 Sketch
 ==============================

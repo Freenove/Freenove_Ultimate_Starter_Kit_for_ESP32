@@ -12,11 +12,16 @@ In this section, ESP32 is used as Client to connect Server on the same LAN and c
 Component List
 ===========================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | Micro USB Wire x1       |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter08_00|          |
-+------------------------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | Micro USB Wire x1       |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter08_00|          |
+    +------------------------------------+-------------------------+
   
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter08_00| image:: ../_static/imgs/8_Serial_Communication/Chapter08_00.png
@@ -122,9 +127,9 @@ The newly pop up window will use the computer's IP address by default and open a
 .. image:: ../_static/imgs/33_TCP_IP/Chapter33_20.png
     :align: center
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes"** to disk(D) in advance with the path of **"D:/Micropython_Codes"**.
 
-Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "29.1_TCP_as_Client" and double click "TCP_as_Client.py". 
+Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "29.1_TCP_as_Client" and double click "TCP_as_Client.py". 
 
 Before clicking "Run current script", please modify the name and password of your router and fill in the "host" and "port" according to the IP information shown in the box below:
 
@@ -152,12 +157,14 @@ ESP32 connects with TCP SERVER, and TCP SERVER receives messages from ESP32, as 
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/29.1_TCP_as_Client/TCP_as_Client.py
+    :linenos:
     :language: python
     :dedent:
 
 Import network、socket、time modules.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/28.3_AP+STA_mode/AP+STA_mode.py
+    :linenos:
     :language: python
     :lines: 1-3
     :dedent:
@@ -165,6 +172,7 @@ Import network、socket、time modules.
 Enter the actual router name, password, remote server IP address, and port number.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/28.3_AP+STA_mode/AP+STA_mode.py
+    :linenos:
     :language: python
     :lines: 5-8
     :dedent:
@@ -172,6 +180,7 @@ Enter the actual router name, password, remote server IP address, and port numbe
 Connect specified Router until it is successful. 
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/28.3_AP+STA_mode/AP+STA_mode.py
+    :linenos:
     :language: python
     :lines: 13-21
     :dedent:
@@ -179,6 +188,7 @@ Connect specified Router until it is successful.
 Connect router and then connect it to remote server.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/28.3_AP+STA_mode/AP+STA_mode.py
+    :linenos:
     :language: python
     :lines: 23-27
     :dedent:
@@ -186,6 +196,7 @@ Connect router and then connect it to remote server.
 Send messages to the remote server, receive the messages from it and print them out, and then send the messages back to the server.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/28.3_AP+STA_mode/AP+STA_mode.py
+    :linenos:
     :language: python
     :lines: 28-37
     :dedent:
@@ -193,6 +204,7 @@ Send messages to the remote server, receive the messages from it and print them 
 If an exception occurs in the program, for example, the remote server is shut down, execute the following program, turn off the socket function, and disconnect the WiFi.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/28.3_AP+STA_mode/AP+STA_mode.py
+    :linenos:
     :language: python
     :lines: 39-43
     :dedent:
@@ -260,11 +272,16 @@ In this section, ESP32 is used as a server to wait for the connection and commun
 Component List
 ===============================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | Micro USB Wire x1       |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter08_00|          |
-+------------------------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | Micro USB Wire x1       |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter08_00|          |
+    +------------------------------------+-------------------------+
   
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter08_00| image:: ../_static/imgs/8_Serial_Communication/Chapter08_00.png
@@ -314,12 +331,14 @@ You can enter any information in the "Send Box" of sketchWiFi. Click "Send" and 
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/29.2_TCP_as_Server/TCP_as_Server.py
+    :linenos:
     :language: python
     :dedent:
 
 Call function connectWifi() to connect to router and obtain the dynamic IP that it assigns to ESP32.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/29.2_TCP_as_Server/TCP_as_Server.py
+    :linenos:
     :language: python
     :lines: 22-23
     :dedent:
@@ -327,6 +346,7 @@ Call function connectWifi() to connect to router and obtain the dynamic IP that 
 Open the socket server, bind the server to the dynamic IP, and open a data monitoring port.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/29.2_TCP_as_Server/TCP_as_Server.py
+    :linenos:
     :language: python
     :lines: 24-27
     :dedent:
@@ -334,6 +354,7 @@ Open the socket server, bind the server to the dynamic IP, and open a data monit
 Print the server's IP address and port, monitor the port and wait for the connection of other network devices.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/29.2_TCP_as_Server/TCP_as_Server.py
+    :linenos:
     :language: python
     :lines: 29-34
     :dedent:
@@ -341,6 +362,7 @@ Print the server's IP address and port, monitor the port and wait for the connec
 Each time receiving data, print them in "Shell" and send them back to the client.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/29.2_TCP_as_Server/TCP_as_Server.py
+    :linenos:
     :language: python
     :lines: 36-46
     :dedent:
@@ -348,6 +370,7 @@ Each time receiving data, print them in "Shell" and send them back to the client
 If the client is disconnected, close the server and disconnect WiFi.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/29.2_TCP_as_Server/TCP_as_Server.py
+    :linenos:
     :language: python
     :lines: 47-52
     :dedent:

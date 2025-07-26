@@ -12,19 +12,24 @@ In this project, we will make a multicolored LED. And we can control RGB LED to 
 Component List
 ==========================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1 |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter01_01|          |
-+------------------------------------+-------------------------+
-| Breadboard x1                                                |
-|                                                              |
-| |Chapter01_02|                                               |
-+-----------------+------------------+-------------------------+
-| RGBLED x1       | Resistor 220Ω x1 | Jumper M/M x2           |
-|                 |                  |                         |
-| |Chapter05_00|  | |Chapter01_04|   | |Chapter01_05|          |
-+-----------------+------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1 |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter01_01|          |
+    +------------------------------------+-------------------------+
+    | Breadboard x1                                                |
+    |                                                              |
+    | |Chapter01_02|                                               |
+    +-----------------+------------------+-------------------------+
+    | RGBLED x1       | Resistor 220Ω x1 | Jumper M/M x2           |
+    |                 |                  |                         |
+    | |Chapter05_00|  | |Chapter01_04|   | |Chapter01_05|          |
+    +-----------------+------------------+-------------------------+
   
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png    
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png    
@@ -52,17 +57,17 @@ Circuit
 ===========================================
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter05_03|
-   * -  Hardware connection. 
+   * -  **Hardware connection**
 
-        :red:`If you need any support, please feel free to contact us via:` support@freenove.com
+   * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
-   * -  |Chapter05_04|
+        |Chapter05_04|
 
 .. |Chapter05_03| image:: ../_static/imgs/5_RGB_LED/Chapter05_03.png    
 .. |Chapter05_04| image:: ../_static/imgs/5_RGB_LED/Chapter05_04.png  
@@ -75,8 +80,15 @@ We need to create three PWM channels and use random duty cycle to make random RG
 Sketch_ColorfulLight
 ---------------------------------------------
 
+.. image:: ../_static/imgs/5_RGB_LED/Chapter05_10.png
+    :align: center
+
+With the code downloaded to ESP32-WROVER, RGB LED begins to display random colors.
+
 .. image:: ../_static/imgs/5_RGB_LED/Chapter05_06.png
     :align: center
+
+:combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
 The following is the program code:
 

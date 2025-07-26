@@ -12,15 +12,20 @@ This project uses ESP32's serial communicator to send data to the computer and p
 Component List
 ======================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1 |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter01_01|          |
-+------------------------------------+-------------------------+
-| Micro USB Wire x1                                            |
-|                                                              |
-| |Chapter08_00|                                               |
-+--------------------------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1 |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter01_01|          |
+    +------------------------------------+-------------------------+
+    | Micro USB Wire x1                                            |
+    |                                                              |
+    | |Chapter08_00|                                               |
+    +--------------------------------------------------------------+
   
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -104,7 +109,7 @@ Reference
 
 .. py:function:: size_t println( arg );	
 
-    Print to the serial port and wrap. The parameter arg can be a number, a character, a string, an array of characters, etc.
+    Print to the serial port and wrap. The parameter **arg** can be a number, a character, a string, an array of characters, etc.
 
 .. py:function:: size_t printf(const char * format, ...)  __attribute__ ((format (printf, 2, 3)));	
 

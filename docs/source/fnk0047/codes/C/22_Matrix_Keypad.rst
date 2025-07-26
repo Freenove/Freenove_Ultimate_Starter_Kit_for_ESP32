@@ -12,19 +12,24 @@ In this project, we will attempt to get every key code on the matrix keypad to w
 Component List
 ===========================================
 
-+------------------------------------+----------------------------------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1                            |
-|                                    |                                                    |
-| |Chapter01_00|                     | |Chapter01_01|                                     |
-+------------------------------------+----------------------------------------------------+
-| Breadboard x1                                                                           |
-|                                                                                         |
-| |Chapter01_02|                                                                          |
-+------------------------------------+----------------------------------------------------+
-| 4x4 Matrix Keypad x1               | Jumper M/M x8                                      |
-|                                    |                                                    |
-| |Chapter22_00|                     |  |Chapter01_05|                                    |
-+------------------------------------+----------------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+---------------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1         |
+    |                                    |                                 |
+    | |Chapter01_00|                     | |Chapter01_01|                  |
+    +------------------------------------+---------------------------------+
+    | Breadboard x1                                                        |
+    |                                                                      |
+    | |Chapter01_02|                                                       |
+    +------------------------------------+---------------------------------+
+    | 4x4 Matrix Keypad x1               | Jumper M/M x8                   |
+    |                                    |                                 |
+    | |Chapter22_00|                     |  |Chapter01_05|                 |
+    +------------------------------------+---------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -55,14 +60,13 @@ Circuit
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter22_03|
-   * -  Hardware connection. 
-       
-        If you need any support, please feel free to contact us via: support@freenove.com
+   * -  **Hardware connection** 
+   * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
         |Chapter22_04|
 
@@ -77,9 +81,9 @@ This code is used to obtain all key codes of the 4x4 matrix keypad, when one of 
 How to install the library
 ----------------------------------------------
 
-We use the third party library Keypad. If you haven't installed it yet, please do so before learning. 
+We use the third party library **Keypad**. If you haven't installed it yet, please do so before learning. 
 
-The steps to add third-party Libraries are as follows: open arduino->Sketch->Include library-> Manage libraries. Enter " Keypad" in the search bar and select "Keypad" for installation.
+The steps to add third-party Libraries are as follows: open arduino -> Sketch -> Include library -> Manage libraries. Enter " Keypad" in the search bar and select "Keypad" for installation.
 
 Refer to the following operations: 
 
@@ -134,6 +138,8 @@ Finally, get the key value and print it out via the serial port.
 Reference
 -------------------------------------
 
+You need to add the library each time you use the Keypad.
+
 .. py:function:: class Keypad
 
     **Keypad(char *userKeymap, byte *row, byte *col, byte numRows, byte numCols);**
@@ -178,25 +184,30 @@ In this project, we use keypad as a keyboard to control the action of the servo 
 Component List
 =======================================================
 
-+------------------------------------+-----------------------------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1                       |
-|                                    |                                               |
-| |Chapter01_00|                     | |Chapter01_01|                                |
-+------------------------------------+-----------------------------------------------+
-| Breadboard x1                                                                      |
-|                                                                                    |
-| |Chapter01_02|                                                                     |
-+------------------------------------+------------------------+----------------------+
-| Jumper M/M                         | Servo x1               | 4x4 Matrix Keypad x1 |
-|                                    |                        |                      |
-| |Chapter01_05|                     |  |Chapter18_00|        |   |Chapter22_00|     |
-+------------------------------------+------------------------+----------------------+
-| NPN transistorx1 (S8050)           | Active buzzer x1       | Resistor 1kΩ x1      |
-|                                    |                        |                      |
-| |Chapter07_02|                     |  |Chapter07_01|        |   |Chapter07_03|     |
-+------------------------------------+------------------------+----------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-----------------------------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1                       |
+    |                                    |                                               |
+    | |Chapter01_00|                     | |Chapter01_01|                                |
+    +------------------------------------+-----------------------------------------------+
+    | Breadboard x1                                                                      |
+    |                                                                                    |
+    | |Chapter01_02|                                                                     |
+    +------------------------------------+------------------------+----------------------+
+    | Jumper M/M                         | Servo x1               | 4x4 Matrix Keypad x1 |
+    |                                    |                        |                      |
+    | |Chapter01_05|                     |  |Chapter18_00|        |   |Chapter22_00|     |
+    +------------------------------------+------------------------+----------------------+
+    | NPN transistorx1 (S8050)           | Active buzzer x1       | Resistor 1kΩ x1      |
+    |                                    |                        |                      |
+    | |Chapter07_00|                     |  |Chapter07_01|        |   |Chapter07_03|     |
+    +------------------------------------+------------------------+----------------------+
 
-.. |Chapter07_02| image:: ../_static/imgs/7_Buzzer/Chapter07_02.png
+.. |Chapter07_00| image:: ../_static/imgs/7_Buzzer/Chapter07_00.png
 .. |Chapter07_01| image:: ../_static/imgs/7_Buzzer/Chapter07_01.png
 .. |Chapter07_03| image:: ../_static/imgs/7_Buzzer/Chapter07_03.png
 .. |Chapter18_00| image:: ../_static/imgs/18_Servo/Chapter18_00.png
@@ -206,14 +217,13 @@ Circuit
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
    :align: center
+   :Class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter22_09|
-   * -  Hardware connection. 
-       
-        If you need any support, please feel free to contact us via: support@freenove.com
+   * -  **Hardware connection**
+   * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
         |Chapter22_10|
 

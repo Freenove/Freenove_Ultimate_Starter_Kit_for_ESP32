@@ -12,26 +12,30 @@ In this project, we will read the output data of a joystick and display it to th
 Component List
 ====================================
 
-+------------------------------------+------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1|
-|                                    |                        |
-| |Chapter01_00|                     | |Chapter01_01|         |
-+------------------------------------+------------------------+
-| Breadboard x1                                               |
-|                                                             |
-| |Chapter01_02|                                              |
-+-----------------+------------------+------------------------+
-| Joystick x1                        | Jumper M/M x3          |
-|                                    |                        |
-| |Chapter14_00|                     | |Chapter01_05|         |
-+-----------------+------------------+------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1|
+    |                                    |                        |
+    | |Chapter01_00|                     | |Chapter01_01|         |
+    +------------------------------------+------------------------+
+    | Breadboard x1                                               |
+    |                                                             |
+    | |Chapter01_02|                                              |
+    +------------------------------------+------------------------+
+    | Joystick x1                        | Jumper F/M x5          |
+    |                                    |                        |
+    | |Chapter14_00|                     | |Chapter14_08|         |
+    +------------------------------------+------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED/Chapter01_02.png
-.. |Chapter13_00| image:: ../_static/imgs/1_LED/Chapter13_00.png 
 .. |Chapter07_04| image:: ../_static/imgs/7_Buzzer/Chapter07_04.png   
-.. |Chapter01_05| image:: ../_static/imgs/1_LED/Chapter01_05.png
+.. |Chapter14_08| image:: ../_static/imgs/14_Joystick/Chapter14_08.png
 .. |Chapter14_00| image:: ../_static/imgs/14_Joystick/Chapter14_00.png
 
 Component knowledge
@@ -56,16 +60,16 @@ Circuit
 =========================================
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter14_03|
-   * -  Hardware connection. 
-       
-        :red:`If you need any support, please contact us via:` support@freenove.com
-   * -  |Chapter14_04|
+   * -  **Hardware connection**
+   * -  :combo:`red font-bolder:If you need any support, please contact us via:` support@freenove.com
+        
+        |Chapter14_04|
 
 .. |Chapter14_03| image:: ../_static/imgs/14_Joystick/Chapter14_03.png    
 .. |Chapter14_04| image:: ../_static/imgs/14_Joystick/Chapter14_04.png  
@@ -77,6 +81,9 @@ In this project's code, we will read the ADC values of X and Y axes of the joyst
 
 Sketch_Joystick
 -------------------------------
+
+.. image:: ../_static/imgs/14_Joystick/Chapter14_09.png
+    :align: center
 
 Download the code to ESP32-WROVER, open the serial port monitor, the baud rate is 115200, as shown in the figure below, shift (moving) the joystick or pressing it down will make the data change. 
 

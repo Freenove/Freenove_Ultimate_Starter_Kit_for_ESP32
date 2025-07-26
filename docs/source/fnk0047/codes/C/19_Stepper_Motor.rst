@@ -10,19 +10,24 @@ Project Stepper Motor
 Component List
 ============================================
 
-+------------------------------------+---------------------------------------------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1                                       |
-|                                    |                                                               |
-| |Chapter01_00|                     | |Chapter01_01|                                                |
-+------------------------------------+---------------------------------------------------------------+
-| Breadboard x1                                                                                      |
-|                                                                                                    |
-| |Chapter01_02|                                                                                     |
-+------------------------------------+------------------------+--------------------------------------+
-| Stepper Motor x1                   | Jumper F/M x6          | ULN2003 Stepper Motor Driver x1      |
-|                                    |                        |                                      |
-| |Chapter19_00|                     |  |Chapter01_05|        |   |Chapter19_01|                     |
-+------------------------------------+------------------------+--------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+---------------------------------------------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1                                       |
+    |                                    |                                                               |
+    | |Chapter01_00|                     | |Chapter01_01|                                                |
+    +------------------------------------+---------------------------------------------------------------+
+    | Breadboard x1                                                                                      |
+    |                                                                                                    |
+    | |Chapter01_02|                                                                                     |
+    +------------------------------------+------------------------+--------------------------------------+
+    | Stepper Motor x1                   | Jumper F/M x6          | ULN2003 Stepper Motor Driver x1      |
+    |                                    |                        |                                      |
+    | |Chapter19_00|                     |  |Chapter01_05|        |   |Chapter19_01|                     |
+    +------------------------------------+------------------------+--------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -75,19 +80,18 @@ When building the circuit, note that rated voltage of the stepper motor is 5V, a
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter19_06|
-   * -  Hardware connection. 
-       
-        If you need any support, please feel free to contact us via: support@freenove.com
+   * -  **Hardware connection**
+   * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
-        |Chapter19_07|
+        |Chapter19_09|
 
 .. |Chapter19_06| image:: ../_static/imgs/19_Stepper_Motor/Chapter19_06.png
-.. |Chapter19_07| image:: ../_static/imgs/19_Stepper_Motor/Chapter19_07.png
+.. |Chapter19_09| image:: ../_static/imgs/19_Stepper_Motor/Chapter19_09.png
 
 Sketch
 ========================================
@@ -117,7 +121,7 @@ In this project, we define four pins to drive stepper motor.
 .. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_19.1_Drive_Stepper_Motor/Sketch_19.1_Drive_Stepper_Motor.ino
     :linenos: 
     :language: c
-    :lines: 17-18
+    :lines: 7-8
     :dedent:
 
 moveOneStep Function is used to drive the stepper motor to rotate clockwise or counterclockwise. The parameter "dir" indicates the direction of rotation. If "dir" returns true, the stepper motor rotates clockwise, otherwise the stepper motor rotates counterclockwise.  

@@ -9,19 +9,24 @@ Now, let's try to control more digit 7-segment display
 Component List
 ==========================================
 
-+------------------------------------+----------------------------------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1                            |
-|                                    |                                                    |
-| |Chapter01_00|                     | |Chapter01_01|                                     |
-+------------------------------------+----------------------------------------------------+
-| Breadboard x1                                                                           |
-|                                                                                         |
-| |Chapter01_02|                                                                          |
-+-----------------+------------------+------------------------+---------------------------+
-| 74HC595         | Resistor 220Ω x8 | Jumper M/M x15         | 7-segment display x1      |
-|                 |                  |                        |                           |
-| |Chapter15_00|  | |Chapter01_04|   | |Chapter01_05|         | |Chapter16_07|            |
-+-----------------+------------------+------------------------+---------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+----------------------------------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1                            |
+    |                                    |                                                    |
+    | |Chapter01_00|                     | |Chapter01_01|                                     |
+    +------------------------------------+----------------------------------------------------+
+    | Breadboard x1                                                                           |
+    |                                                                                         |
+    | |Chapter01_02|                                                                          |
+    +-----------------+------------------+------------------------+---------------------------+
+    | 74HC595         | Resistor 220Ω x8 | Jumper M/M x15         | 7-segment display x1      |
+    |                 |                  |                        |                           |
+    | |Chapter15_00|  | |Chapter01_04|   | |Chapter01_05|         | |Chapter16_07|            |
+    +-----------------+------------------+------------------------+---------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -55,16 +60,16 @@ Circuit
 ===============================================
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter16_10|
-   * -  Hardware connection. 
-       
-        :red:`If you need any support, please contact us via:` support@freenove.com
-   * -  |Chapter16_11|
+   * -  **Hardware connection**
+   * -  :combo:`red font-bolder:If you need any support, please contact us via:` support@freenove.com
+        
+        |Chapter16_11|
 
 .. |Chapter16_10| image:: ../_static/imgs/16_74HC595_&_7-Segment_Display/Chapter16_10.png    
 .. |Chapter16_11| image:: ../_static/imgs/16_74HC595_&_7-Segment_Display/Chapter16_11.png 

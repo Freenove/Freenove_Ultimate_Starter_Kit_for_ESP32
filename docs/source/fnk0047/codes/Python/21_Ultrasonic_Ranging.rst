@@ -12,19 +12,24 @@ In this project, we use ultrasonic ranging module to measure distance, and print
 Component List
 ===========================================
 
-+------------------------------------+----------------------------------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1                            |
-|                                    |                                                    |
-| |Chapter01_00|                     | |Chapter01_01|                                     |
-+------------------------------------+----------------------------------------------------+
-| Breadboard x1                                                                           |
-|                                                                                         |
-| |Chapter01_02|                                                                          |
-+------------------------------------+----------------------------------------------------+
-| HC SR04 x1                         | Jumper F/M x4                                      |
-|                                    |                                                    |
-| |Chapter21_00|                     |  |Chapter20_01|                                    |
-+------------------------------------+----------------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+----------------------------------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1                            |
+    |                                    |                                                    |
+    | |Chapter01_00|                     | |Chapter01_01|                                     |
+    +------------------------------------+----------------------------------------------------+
+    | Breadboard x1                                                                           |
+    |                                                                                         |
+    | |Chapter01_02|                                                                          |
+    +------------------------------------+----------------------------------------------------+
+    | HC SR04 x1                         | Jumper F/M x4                                      |
+    |                                    |                                                    |
+    | |Chapter21_00|                     |  |Chapter20_01|                                    |
+    +------------------------------------+----------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -43,9 +48,8 @@ The ultrasonic ranging module uses the principle that ultrasonic waves will be s
 The HC-SR04 ultrasonic ranging module integrates both an ultrasonic transmitter and a receiver. The transmitter is used to convert electrical signals (electrical energy) into high frequency (beyond human hearing) sound waves (mechanical energy) and the function of the receiver is opposite of this. The picture and the diagram of the HC SR04 ultrasonic ranging module are shown below:
 
 .. list-table:: 
-   :width: 80%
-   :header-rows: 1 
    :align: center
+   :class: table-line
    
    * -  |Chapter21_00|
      -  |Chapter21_02|
@@ -55,9 +59,9 @@ The HC-SR04 ultrasonic ranging module integrates both an ultrasonic transmitter 
 Pin description:
 
 .. list-table:: 
-   :width: 80%
-   :header-rows: 1 
    :align: center
+   :header-rows: 1
+   :class: zebra
    
    * -  Pin
      -  Description
@@ -96,14 +100,13 @@ Note that the voltage of ultrasonic module is 5V in the circuit.
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
+   :class: table-line
    :align: center
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter21_04|
-   * -  Hardware connection. 
-       
-        If you need any support, please feel free to contact us via: support@freenove.com
+   * -  **Hardware connection** 
+   * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
         |Chapter21_05|
 
@@ -113,9 +116,9 @@ Note that the voltage of ultrasonic module is 5V in the circuit.
 Code
 ========================================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes"** to disk(D) in advance with the path of **"D:/Micropython_Codes"**.
 
-Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "21.1_Ultrasonic_Ranging" and double click "Ultrasonic_Ranging.py". 
+Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "21.1_Ultrasonic_Ranging" and double click "Ultrasonic_Ranging.py". 
 
 Ultrasonic_Ranging
 -----------------------------------------
@@ -131,12 +134,15 @@ Click "Run current script", you can use it to measure the distance between the u
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/21.1_Ultrasonic_Ranging/Ultrasonic_Ranging.py
+    :linenos:
     :language: python
+    :lines: 1-27
     :dedent:
 
 Define the control pins of the ultrasonic ranging module.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/21.1_Ultrasonic_Ranging/Ultrasonic_Ranging.py
+    :linenos:
     :language: python
     :lines: 4-5
     :dedent:
@@ -144,6 +150,7 @@ Define the control pins of the ultrasonic ranging module.
 Set the speed of sound.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/21.1_Ultrasonic_Ranging/Ultrasonic_Ranging.py
+    :linenos:
     :language: python
     :lines: 7-8
     :dedent:
@@ -151,6 +158,7 @@ Set the speed of sound.
 Subfunction getSonar() is used to start the Ultrasonic Module to begin measurements, and return the measured distance in centimeters. In this function, first let trigPin send 10us high level to start the Ultrasonic Module. Then use pulseIn() to read the Ultrasonic Module and return the duration time of high level. Finally, the measured distance according to the time is calculated.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/21.1_Ultrasonic_Ranging/Ultrasonic_Ranging.py
+    :linenos:
     :language: python
     :lines: 10-22
     :dedent:
@@ -158,6 +166,7 @@ Subfunction getSonar() is used to start the Ultrasonic Module to begin measureme
 Delay for 2 seconds and wait for the ultrasonic module to stabilize. Print data obtained from ultrasonic module every 500 milliseconds
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/21.1_Ultrasonic_Ranging/Ultrasonic_Ranging.py
+    :linenos:
     :language: python
     :lines: 24-27
     :dedent:
@@ -189,12 +198,15 @@ Click "Run current script". Use the ultrasonic module to measure distance. As sh
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/21.2_Ultrasonic_Ranging/Ultrasonic_Ranging.py
+    :linenos:
     :language: python
+    :lines: 1-12
     :dedent:
 
 Import hcsr04 module.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/21.2_Ultrasonic_Ranging/Ultrasonic_Ranging.py
+    :linenos:
     :language: python
     :lines: 1-1
     :dedent:
@@ -202,6 +214,7 @@ Import hcsr04 module.
 Define an ultrasonic object and associate with the pins.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/21.2_Ultrasonic_Ranging/Ultrasonic_Ranging.py
+    :linenos:
     :language: python
     :lines: 4-4
     :dedent:
@@ -215,6 +228,7 @@ Obtain the distance data returned from the ultrasonic ranging module.
 Obtain the ultrasonic data every 500 milliseconds and print them out in "Shell".
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/21.2_Ultrasonic_Ranging/Ultrasonic_Ranging.py
+    :linenos:
     :language: python
     :lines: 8-10
     :dedent:

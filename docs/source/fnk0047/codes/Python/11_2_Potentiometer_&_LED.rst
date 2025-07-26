@@ -6,19 +6,24 @@ Project Soft Colorful Light
 
 In this project, 3 potentiometers are used to control the RGB LED and in principle it is the same as the Soft Light project. Namely, read the voltage value of the potentiometer and then convert it to PWM used to control LED brightness. Difference is that the original project only controlled one LED, but this project required (3) RGB LEDs.
 
-+------------------------------------+----------------------------------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1                            |
-|                                    |                                                    |
-| |Chapter01_00|                     | |Chapter01_01|                                     |
-+------------------------------------+----------------------------------------------------+
-| Breadboard x1                                                                           |
-|                                                                                         |
-| |Chapter01_02|                                                                          |
-+-----------------+------------------+------------------------+---------------------------+
-| RGBLED x1       | Resistor 220Ω x3 | Jumper M/M x13         | Rotary potentiometer x3   |
-|                 |                  |                        |                           |
-| |Chapter11_03|  | |Chapter01_04|   | |Chapter01_05|         | |Chapter09_00|            |
-+-----------------+------------------+------------------------+---------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+----------------------------------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1                            |
+    |                                    |                                                    |
+    | |Chapter01_00|                     | |Chapter01_01|                                     |
+    +------------------------------------+----------------------------------------------------+
+    | Breadboard x1                                                                           |
+    |                                                                                         |
+    | |Chapter01_02|                                                                          |
+    +-----------------+------------------+------------------------+---------------------------+
+    | RGBLED x1       | Resistor 220Ω x3 | Jumper M/M x13         | Rotary potentiometer x3   |
+    |                 |                  |                        |                           |
+    | |Chapter11_03|  | |Chapter01_04|   | |Chapter01_05|         | |Chapter09_00|            |
+    +-----------------+------------------+------------------------+---------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -32,16 +37,16 @@ Circuit
 =============================================
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter11_04|
-   * -  Hardware connection. 
-       
-        :red:`If you need any support, please contact us via:` support@freenove.com
-   * -  |Chapter11_05|
+   * -  **Hardware connection** 
+   * -  :combo:`red font-bolder:If you need any support, please contact us via:` support@freenove.com
+        
+        |Chapter11_05|
 
 .. |Chapter11_04| image:: ../_static/imgs/11_Potentiometer_&_LED/Chapter11_04.png    
 .. |Chapter11_05| image:: ../_static/imgs/11_Potentiometer_&_LED/Chapter11_05.png  
@@ -49,7 +54,7 @@ Circuit
 Code
 ============================================
 
-Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "11.2_Soft_Colorful_Light" and double click "Soft_Colorful_Light.py". 
+Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "11.2_Soft_Colorful_Light" and double click "Soft_Colorful_Light.py". 
 
 Soft_Colorful_Light
 ------------------------------------------
@@ -73,19 +78,24 @@ In this project, we use potentiometer to control Freenove 8 RGB LED Module.
 Component List
 =====================================
 
-+------------------------------------+----------------------------------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1                            |
-|                                    |                                                    |
-| |Chapter01_00|                     | |Chapter01_01|                                     |
-+------------------------------------+----------------------------------------------------+
-| Breadboard x1                                                                           |
-|                                                                                         |
-| |Chapter01_02|                                                                          |
-+------------------------------------+----------------------------------------------------+
-| Freenove 8 RGB LED Module x1       | Jumper F/M x3 Jumper M/M x3                        |
-|                                    |                                                    |
-| |Chapter11_08|                     |  |Chapter11_07|                                    |
-+------------------------------------+----------------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+----------------------------------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1                            |
+    |                                    |                                                    |
+    | |Chapter01_00|                     | |Chapter01_01|                                     |
+    +------------------------------------+----------------------------------------------------+
+    | Breadboard x1                                                                           |
+    |                                                                                         |
+    | |Chapter01_02|                                                                          |
+    +------------------------------------+----------------------------------------------------+
+    | Freenove 8 RGB LED Module x1       | Jumper F/M x3 Jumper M/M x3                        |
+    |                                    |                                                    |
+    | |Chapter11_08|                     |  |Chapter11_07|                                    |
+    +------------------------------------+----------------------------------------------------+
 
 .. |Chapter11_07| image:: ../_static/imgs/11_Potentiometer_&_LED/Chapter11_07.png
 .. |Chapter11_08| image:: ../_static/imgs/11_Potentiometer_&_LED/Chapter11_08.png
@@ -93,7 +103,7 @@ Component List
 Code
 =====================================
 
-Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "11.3_Soft_Rainbow_Light" and double click "Soft_Rainbow_Light.py". 
+Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "11.3_Soft_Rainbow_Light" and double click "Soft_Rainbow_Light.py". 
 
 11.3_Soft_Rainbow_Light
 --------------------------------------
@@ -106,11 +116,12 @@ Click "Run current script". Rotate the handle of potentiometer and the color of 
 .. image:: ../_static/imgs/11_Potentiometer_&_LED/Chapter11_13.png
     :align: center
 
-:red:`If you have any concerns, please contact us via:` support@freenove.com
+:combo:`red font-bolder:If you have any concerns, please contact us via:` support@freenove.com
 
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/11.3_Soft_Rainbow_Light/Soft_Rainbow_Light.py
+    :linenos:
     :language: python
     :dedent:
 

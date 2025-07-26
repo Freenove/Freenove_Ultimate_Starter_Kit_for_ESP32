@@ -12,11 +12,16 @@ Project Bluetooth Low Energy Data Passthrough
 Component List
 ==================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | Micro USB Wire x1       |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter08_00|          |
-+------------------------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | Micro USB Wire x1       |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter08_00|          |
+    +------------------------------------+-------------------------+
   
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter08_00| image:: ../_static/imgs/8_Serial_Communication/Chapter08_00.png
@@ -37,9 +42,9 @@ If you can't install Serial Bluetooth on your phone, try LightBlue.If you do not
 Code
 ======================================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes"** to disk(D) in advance with the path of **"D:/Micropython_Codes"**.
 
-Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "27.1_BLE". Select "ble_advertising.py", right click your mouse to select "Upload to /", wait for "ble_advertising.py" to be uploaded to ESP32-WROVER and then double click "BLE.py". 
+Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "27.1_BLE". Select "ble_advertising.py", right click your mouse to select "Upload to /", wait for "ble_advertising.py" to be uploaded to ESP32-WROVER and then double click "BLE.py". 
 
 BLE
 --------------------------------------
@@ -97,12 +102,14 @@ And now data can be transferred between your mobile phone and computer via ESP32
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/27.1_BLE/BLE.py
+    :linenos:
     :language: python
     :dedent:
 
 Define the specified UUID number for BLE vendor.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/27.1_BLE/BLE.py
+    :linenos:
     :language: python
     :lines: 20-28
     :dedent:
@@ -110,6 +117,7 @@ Define the specified UUID number for BLE vendor.
 Write an _irq function to manage BLE interrupt events.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/27.1_BLE/BLE.py
+    :linenos:
     :language: python
     :lines: 46-63
     :dedent:
@@ -117,6 +125,7 @@ Write an _irq function to manage BLE interrupt events.
 Initialize the BLE function and name it.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/27.1_BLE/BLE.py
+    :linenos:
     :language: python
     :lines: 36-36
     :dedent:
@@ -124,6 +133,7 @@ Initialize the BLE function and name it.
 When the mobile phone send data to ESP32 via BLE Bluetooth, it will print them out with serial port; When the serial port of ESP32 receive data, it will send them to mobile via BLE Bluetooth.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/27.1_BLE/BLE.py
+    :linenos:
     :language: python
     :lines: 80-96
     :dedent:

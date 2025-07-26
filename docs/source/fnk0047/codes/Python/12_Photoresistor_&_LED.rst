@@ -12,23 +12,28 @@ A photoresistor is very sensitive to the amount of light present. We can take ad
 Component List
 ======================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1 |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter01_01|          |
-+------------------------------------+-------------------------+
-| Breadboard x1                                                |
-|                                                              |
-| |Chapter01_02|                                               |
-+-----------------+--------------------------------------------+
-| LED x1          | Jumper M/M x4                              |
-|                 |                                            |
-| |Chapter07_00|  | |Chapter01_05|                             |
-+-----------------+------------------+-------------------------+
-|Photoresistor x1 | Resistor 220Ω x1 | Resistor 10kΩ x2        |
-|                 |                  |                         |
-| |Chapter07_02|  | |Chapter01_04|   | |Chapter07_04|          |
-+-----------------+------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1 |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter01_01|          |
+    +------------------------------------+-------------------------+
+    | Breadboard x1                                                |
+    |                                                              |
+    | |Chapter01_02|                                               |
+    +-----------------+--------------------------------------------+
+    | LED x1          | Jumper M/M x4                              |
+    |                 |                                            |
+    | |Chapter07_00|  | |Chapter01_05|                             |
+    +-----------------+------------------+-------------------------+
+    |Photoresistor x1 | Resistor 220Ω x1 | Resistor 10kΩ x2        |
+    |                 |                  |                         |
+    | |Chapter07_02|  | |Chapter01_04|   | |Chapter07_04|          |
+    +-----------------+------------------+-------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -65,16 +70,16 @@ Circuit
 The circuit of this project is similar to project Soft Light. The only difference is that the input signal is changed from a potentiometer to a combination of a photoresistor and a resistor.
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter12_02|
-   * -  Hardware connection. 
-       
-        :red:`If you need any support, please contact us via:` support@freenove.com
-   * -  |Chapter12_03|
+   * -  **Hardware connection**
+   * -  :combo:`red font-bolder:If you need any support, please contact us via:` support@freenove.com
+        
+        |Chapter12_03|
 
 .. |Chapter12_02| image:: ../_static/imgs/12_Photoresistor_&_LED/Chapter12_02.png    
 .. |Chapter12_03| image:: ../_static/imgs/12_Photoresistor_&_LED/Chapter12_03.png  
@@ -82,7 +87,7 @@ The circuit of this project is similar to project Soft Light. The only differenc
 Code
 =============================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes"** to disk(D) in advance with the path of **"D:/Micropython_Codes"**.
 
 Codes of this project is logically the same as the project Soft Light.
 
@@ -97,5 +102,6 @@ Click "Run current script". Cover the photoresistor with your hands or illuminat
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/12.1_NightLamp/NightLamp.py
+    :linenos:
     :language: python
     :dedent:

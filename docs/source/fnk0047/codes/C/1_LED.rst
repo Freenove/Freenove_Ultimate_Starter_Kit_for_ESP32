@@ -12,19 +12,24 @@ In this project, we will use ESP32 to control blinking a common LED.
 Component List
 ======================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1 |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter01_01|          |
-+------------------------------------+-------------------------+
-| Breadboard x1                                                |
-|                                                              |
-| |Chapter01_02|                                               |
-+-----------------+------------------+-------------------------+
-| LED x1          | Resistor 220Ω x1 | Jumper M/M x2           |
-|                 |                  |                         |
-| |Chapter01_03|  | |Chapter01_04|   | |Chapter01_05|          |
-+-----------------+------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1 |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter01_01|          |
+    +------------------------------------+-------------------------+
+    | Breadboard x1                                                |
+    |                                                              |
+    | |Chapter01_02|                                               |
+    +-----------------+------------------+-------------------------+
+    | LED x1          | Resistor 220Ω x1 | Jumper M/M x2           |
+    |                 |                  |                         |
+    | |Chapter01_03|  | |Chapter01_04|   | |Chapter01_05|          |
+    +-----------------+------------------+-------------------------+
   
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png    
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png    
@@ -66,7 +71,11 @@ The bands of color on a resistor is a shorthand code used to identify its resist
 
 With a fixed voltage, there will be less current output with greater resistance added to the circuit. The relationship between Current, Voltage and Resistance can be expressed by this formula: I=V/R known as Ohm's Law where I = Current, V = Voltage and R = Resistance. Knowing the values of any two of these allows you to solve the value of the third.
 
-In the following diagram, the current through R1 is: I=U/R=5V/10kΩ=0.0005A=0.5mA. 
+In the following diagram, the current through R1 is: 
+
+.. math::
+   
+   \boldsymbol{I = \frac{U}{R} = \frac{5\ \text{V}}{10\ \text{k}\Omega} = 0.0005\ \text{A} = 0.5\ \text{mA}}
 
 .. image:: ../_static/imgs/1_LED/Chapter01_08.png
     :align: center
@@ -108,25 +117,31 @@ Circuit
 
 First, disconnect all power from the ESP32-WROVER. Then build the circuit according to the circuit and hardware diagrams. After the circuit is built and verified correct, connect the PC to ESP32-WROVER. 
 
-CAUTION: Avoid any possible short circuits (especially connecting 5V or GND, 3.3V and GND)! WARNING: A short circuit can cause high current in your circuit, generate excessive component heat and cause permanent damage to your hardware!
+.. caution:: 
+    
+    Avoid any possible short circuits (especially connecting 5V or GND, 3.3V and GND)! 
+
+.. warning:: 
+    
+    A short circuit can cause high current in your circuit, generate excessive component heat and cause permanent damage to your hardware!
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :header-rows: 1 
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter01_11|
-   * -  Hardware connection. 
+   * -  **Hardware connection** 
        
-        :red:`If you need any support, please contact us via:` support@freenove.com
+        :combo:`red font-bolder:If you need any support, please contact us via:` support@freenove.com
    * -  |Chapter01_12|
         
-        :red:`Don't rotate ESP32-WROVER 180° for connection.`
+        :combo:`red font-bolder:Don't rotate ESP32-WROVER 180° for connection.`
 
 .. |Chapter01_11| image:: ../_static/imgs/1_LED/Chapter01_11.png    
 .. |Chapter01_12| image:: ../_static/imgs/1_LED/Chapter01_12.png    
-
 
 Sketch
 =================================
@@ -149,9 +164,7 @@ Select the serial port.
 
 .. note::
     
-    For macOS users, if the uploading fails, please set the baud rate to 115200 before clicking 
-
-"Upload Speed".
+    **For macOS users, if the uploading fails, please set the baud rate to 115200 before clicking "Upload Speed".**
 
 .. image:: ../_static/imgs/1_LED/Chapter01_15.png
     :align: center
@@ -167,4 +180,4 @@ Click "Upload", Download the code to ESP32-WROVER and your LED in the circuit st
 .. image:: ../_static/imgs/1_LED/Chapter01_17.png
     :align: center
 
-:red:`If you have any concerns, please contact us via:` support@freenove.com
+:combo:`red font-bolder:If you have any concerns, please contact us via:` support@freenove.com

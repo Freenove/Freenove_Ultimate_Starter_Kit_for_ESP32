@@ -12,19 +12,24 @@ This project reads the value of the touch sensor and prints it out.
 Component List
 ======================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1 |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter01_01|          |
-+------------------------------------+-------------------------+
-| Breadboard x1                                                |
-|                                                              |
-| |Chapter01_02|                                               |
-+--------------------------------------------------------------+
-| Jumper M/M x2                                                |
-|                                                              |
-| |Chapter01_05|                                               |
-+--------------------------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1 |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter01_01|          |
+    +------------------------------------+-------------------------+
+    | Breadboard x1                                                |
+    |                                                              |
+    | |Chapter01_02|                                               |
+    +--------------------------------------------------------------+
+    | Jumper M/M x2                                                |
+    |                                                              |
+    | |Chapter01_05|                                               |
+    +--------------------------------------------------------------+
   
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -39,29 +44,33 @@ Touch sensor
 
 ESP32's touch sensor supports up to 10 GPIO channels as capacitive touch pins. Each pin can be used separately as an independent touch switch or be combined to produce multiple touch points. The following table is a list of available touch pins on ESP32.
 
-+------------------------------+-------------------+-------------+
-| Name of touch sensing signal | Functions of pins | GPIO number |
-+------------------------------+-------------------+-------------+
-| T0                           | GPIO4             | GPIO4       |
-+------------------------------+-------------------+-------------+
-| T1                           | GPIO0             | GPIO0       |
-+------------------------------+-------------------+-------------+
-| T2                           | GPIO2             | GPIO2       |
-+------------------------------+-------------------+-------------+
-| T3                           | MTDO              | GPIO15      |
-+------------------------------+-------------------+-------------+
-| T4                           | MTCK              | GPIO13      |
-+------------------------------+-------------------+-------------+
-| T5                           | MTDI              | GPIO12      |
-+------------------------------+-------------------+-------------+
-| T6                           | MTMS              | GPIO14      |
-+------------------------------+-------------------+-------------+
-| T7                           | GPIO27            | GPIO27      |
-+------------------------------+-------------------+-------------+
-| T8                           | 32K_XN            | GPIO33      |
-+------------------------------+-------------------+-------------+
-| T9                           | 32K_XP            | GPIO32      |
-+------------------------------+-------------------+-------------+
+.. table::
+    :align: center
+    :class: zebra text-center
+    
+    +------------------------------+-------------------+-------------+
+    | Name of touch sensing signal | Functions of pins | GPIO number |
+    +==============================+===================+=============+
+    | T0                           | GPIO4             | GPIO4       |
+    +------------------------------+-------------------+-------------+
+    | T1                           | GPIO0             | GPIO0       |
+    +------------------------------+-------------------+-------------+
+    | T2                           | GPIO2             | GPIO2       |
+    +------------------------------+-------------------+-------------+
+    | T3                           | MTDO              | GPIO15      |
+    +------------------------------+-------------------+-------------+
+    | T4                           | MTCK              | GPIO13      |
+    +------------------------------+-------------------+-------------+
+    | T5                           | MTDI              | GPIO12      |
+    +------------------------------+-------------------+-------------+
+    | T6                           | MTMS              | GPIO14      |
+    +------------------------------+-------------------+-------------+
+    | T7                           | GPIO27            | GPIO27      |
+    +------------------------------+-------------------+-------------+
+    | T8                           | 32K_XN            | GPIO33      |
+    +------------------------------+-------------------+-------------+
+    | T9                           | 32K_XP            | GPIO32      |
+    +------------------------------+-------------------+-------------+
 
 The touch pin number is already defined in ESP32's code base. For example, in the code, you can use T0 to represent GPIO4.
 
@@ -76,15 +85,15 @@ Circuit
 =============================================
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter10_01|
-   * -  Hardware connection. 
+   * -  **Hardware connection** 
        
-        :red:`If you need any support, please contact us via:` support@freenove.com
+        :combo:`red font-bolder:If you need any support, please contact us via:` support@freenove.com
    * -  |Chapter10_02|
 
 .. |Chapter10_01| image:: ../_static/imgs/10_Touch_Sensor/Chapter10_01.png    
@@ -93,9 +102,9 @@ Circuit
 Code
 ============================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes"** to disk(D) in advance with the path of **"D:/Micropython_Codes"**.
 
-Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "10.1_Read_Touch_Sensor" and double click "Read_Touch_Sensor.py".
+Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "10.1_Read_Touch_Sensor" and double click "Read_Touch_Sensor.py".
 
 Read_Touch_Sensor
 -------------------------------
@@ -134,19 +143,24 @@ In this project, we will use ESP32's touch sensor to create a touch switch lamp.
 Component List
 ==========================================
 
-+------------------------------------+------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1|
-|                                    |                        |
-| |Chapter01_00|                     | |Chapter01_01|         |
-+------------------------------------+------------------------+
-| Breadboard x1                                               |
-|                                                             |
-| |Chapter01_02|                                              |
-+-----------------+------------------+------------------------+
-| LED x1          | Resistor 220Ω x1 | Jumper M/M x3          |
-|                 |                  |                        |
-| |Chapter01_03|  | |Chapter01_04|   | |Chapter01_05|         |
-+-----------------+------------------+------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1|
+    |                                    |                        |
+    | |Chapter01_00|                     | |Chapter01_01|         |
+    +------------------------------------+------------------------+
+    | Breadboard x1                                               |
+    |                                                             |
+    | |Chapter01_02|                                              |
+    +-----------------+------------------+------------------------+
+    | LED x1          | Resistor 220Ω x1 | Jumper M/M x3          |
+    |                 |                  |                        |
+    | |Chapter01_03|  | |Chapter01_04|   | |Chapter01_05|         |
+    +-----------------+------------------+------------------------+
 
 .. |Chapter01_03| image:: ../_static/imgs/1_LED/Chapter01_03.png 
 .. |Chapter01_04| image:: ../_static/imgs/1_LED/Chapter01_04.png    
@@ -155,16 +169,16 @@ Circuit
 =========================================
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter10_06|
-   * -  Hardware connection. 
-       
-        :red:`If you need any support, please contact us via:` support@freenove.com
-   * -  |Chapter10_07|
+   * -  **Hardware connection** 
+   * -  :combo:`red font-bolder:If you need any support, please contact us via:` support@freenove.com
+        
+        |Chapter10_07|
 
 .. |Chapter10_06| image:: ../_static/imgs/10_Touch_Sensor/Chapter10_06.png    
 .. |Chapter10_07| image:: ../_static/imgs/10_Touch_Sensor/Chapter10_07.png    
@@ -174,7 +188,7 @@ Code
 
 Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
 
-Open "Thonny, click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "10.2_TouchLamp"and double click "TouchLamp.py". 
+Open "Thonny, click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "10.2_TouchLamp"and double click "TouchLamp.py". 
 
 TouchLamp
 ------------------------------------------
@@ -198,12 +212,14 @@ LED displays as follows:
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/10.2_TouchLamp/TouchLamp.py
+    :linenos:
     :language: python
     :dedent:
 
 Import Pin and TouchPad modules.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/10.2_TouchLamp/TouchLamp.py
+    :linenos:
     :language: python
     :lines: 1-2
     :dedent:
@@ -211,6 +227,7 @@ Import Pin and TouchPad modules.
 The closer the return value of the function read() is to 0, the more obviously the touch action is detected. As this is not a fixed value, a threshold value needs to be defined. When the value of the sensor is less than the threshold, it is considered a valid touch action. Similarly, define a threshold value for the released state, and the value between the sensor value and the threshold is regarded as an invalid interference value.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/10.2_TouchLamp/TouchLamp.py
+    :linenos:
     :language: python
     :lines: 4-5
     :dedent:
@@ -218,6 +235,7 @@ The closer the return value of the function read() is to 0, the more obviously t
 First, decide whether the touch is detected. If yes, print some messages, reverse the state of LED and set the flag bit isProcessed to 1 to avoid repeatedly executing the program after a touch is detected.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/10.2_TouchLamp/TouchLamp.py
+    :linenos:
     :language: python
     :lines: 20-25
     :dedent:
@@ -225,6 +243,7 @@ First, decide whether the touch is detected. If yes, print some messages, revers
 And then decide whether the touch key is released. If yes, print some messages, and set isProcessed to 0 to avoid repeatedly executing the program after a touch is released and to prepare for the next touch detector.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/10.2_TouchLamp/TouchLamp.py
+    :linenos:
     :language: python
     :lines: 26-30
     :dedent:
@@ -232,6 +251,7 @@ And then decide whether the touch key is released. If yes, print some messages, 
 Customize a function that reverses the output level of the LED each time it is called.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/10.2_TouchLamp/TouchLamp.py
+    :linenos:
     :language: python
     :lines: 11-17
     :dedent:

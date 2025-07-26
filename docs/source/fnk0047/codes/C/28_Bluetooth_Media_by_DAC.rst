@@ -14,26 +14,31 @@ The accuracy of ESP32's DAC is only eight bits, so the music would be distorted 
 Component List
 ======================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1 |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter01_01|          |
-+------------------------------------+-------------------------+
-| Micro USB Wire x1                  | Speaker                 |
-|                                    |                         |
-| |Chapter08_00|                     | |Chapter28_00|          |
-+------------------------------------+-------------------------+
-| NPN transistorx1 (S8050)           | Diode x1                |
-|                                    |                         |
-| |Chapter07_02|                     | |Chapter17_01|          |
-+------------------------------------+-------------------------+
-| Resistor 1kΩ x1                    | Capacitor 10uF x1       |
-|                                    |                         |
-| |Chapter07_03|                     | |Chapter28_01|          |
-|                                    |                         |
-|                                    | :red:`(Optional)`       |
-+------------------------------------+-------------------------+
-  
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1 |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter01_01|          |
+    +------------------------------------+-------------------------+
+    | Micro USB Wire x1                  | Speaker                 |
+    |                                    |                         |
+    | |Chapter08_00|                     | |Chapter28_00|          |
+    +------------------------------------+-------------------------+
+    | NPN transistorx1 (S8050)           | Diode x1                |
+    |                                    |                         |
+    | |Chapter07_02|                     | |Chapter17_01|          |
+    +------------------------------------+-------------------------+
+    | Resistor 1kΩ x1                    | Capacitor 10uF x1       |
+    |                                    |                         |
+    | |Chapter07_03|                     | |Chapter28_01|          |
+    |                                    |                         |
+    |                                    | :red:`(Optional)`       |
+    +------------------------------------+-------------------------+
+
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
 .. |Chapter08_00| image:: ../_static/imgs/8_Serial_Communication/Chapter08_00.png
@@ -59,15 +64,15 @@ Circuit
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter28_03|
 
         |Chapter28_04|
 
-        :red:`Please note that some kits do not include the 10uF capacitor.`
+        :combo:`red font-bolder:Please note that some kits do not include the 10uF capacitor.`
         
         Even if you do not have the capacitor in your kit, you can still build the circuit 
         
@@ -75,13 +80,13 @@ Circuit
         
         please try holding the speaker closer to your ear.
   
-   * -  Hardware connection. 
+   * -  **Hardware connection** 
        
    * -  If you need any support, please feel free to contact us via: support@freenove.com
 
         |Chapter28_05|
 
-        :red:`Please note that some kits do not include the 10uF capacitor.`
+        :combo:`red font-bolder:Please note that some kits do not include the 10uF capacitor.`
         
         Even if you do not have the capacitor in your kit, you can still build the circuit 
         

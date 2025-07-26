@@ -12,24 +12,29 @@ We will make this kind of doorbell: when the button is pressed, the buzzer sound
 Component List
 ======================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1 |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter01_01|          |
-+------------------------------------+-------------------------+
-| Breadboard x1                                                |
-|                                                              |
-| |Chapter01_02|                                               |
-+-----------------+------------------+-------------------------+
-| LED x1          | Active buzzer x1 | Jumper M/M x6           |
-|                 |                  |                         |
-| |Chapter07_00|  | |Chapter07_01|   | |Chapter01_05|          |
-+-----------------+------------------+-------------------------+
-|NPN transistorx1 | Resistor 1kΩ x1  | Resistor 10kΩ x2        |
-|(S8050)          |                  |                         |
-|                 |                  |                         |
-| |Chapter07_02|  | |Chapter07_03|   | |Chapter07_04|          |
-+-----------------+------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1 |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter01_01|          |
+    +------------------------------------+-------------------------+
+    | Breadboard x1                                                |
+    |                                                              |
+    | |Chapter01_02|                                               |
+    +-----------------+------------------+-------------------------+
+    | Push button x1  | Active buzzer x1 | Jumper M/M x6           |
+    |                 |                  |                         |
+    | |Chapter07_02|  | |Chapter07_01|   | |Chapter01_05|          |
+    +-----------------+------------------+-------------------------+
+    |NPN transistorx1 | Resistor 1kΩ x1  | Resistor 10kΩ x2        |
+    |(S8050)          |                  |                         |
+    |                 |                  |                         |
+    | |Chapter07_00|  | |Chapter07_03|   | |Chapter07_04|          |
+    +-----------------+------------------+-------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -56,7 +61,7 @@ Active buzzer is easy to use. Generally, it can only make a specific frequency o
 
 Next, we will use an active buzzer to make a doorbell and a passive buzzer to make an alarm.
 
-How to identify active and passive buzzer?
+:combo:`red font-bolder:How to identify active and passive buzzer?`
 
 1.	Usually, there is a label on the surface of active buzzer covering the vocal hole, but this is not an absolute judgment method.
 
@@ -75,7 +80,7 @@ Transistor, the full name: semiconductor transistor, is a semiconductor device t
 .. image:: ../_static/imgs/7_Buzzer/Chapter07_07.png
     :align: center
 
-:red:`In our kit, the PNP transistor is marked with 8550, and the NPN transistor is marked with 8050.`
+:combo:`red font-bolder:In our kit, the PNP transistor is marked with 8550, and the NPN transistor is marked with 8050.`
 
 Based on the transistor's characteristics, it is often used as a switch in digital circuits. As micro-controller's capacity to output current is very weak, we will use transistor to amplify current and drive large-current components.
 
@@ -84,9 +89,9 @@ When use NPN transistor to drive buzzer, we often adopt the following method. If
 When use PNP transistor to drive buzzer, we often adopt the following method. If GPIO outputs low level, current will flow through R1, the transistor will get conducted, and the buzzer will sound. If GPIO outputs high level, no current flows through R1, the transistor will not be conducted, and buzzer will not sound.
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
    :align: center
+   :header-rows: 1 
+   :class: table-line
    
    * -  NPN transistor to drive buzzer
      -  PNP transistor to drive buzzer
@@ -101,24 +106,24 @@ Circuit
 ========================================
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter07_10| 
-   * -  Hardware connection. 
+   * -  **Hardware connection** 
        
-        If you need any support, please feel free to contact us via: support@freenove.com
+   * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
      
-     -  |Chapter07_11|
+        |Chapter07_11|
 
 .. |Chapter07_10| image:: ../_static/imgs/7_Buzzer/Chapter07_10.png    
 .. |Chapter07_11| image:: ../_static/imgs/7_Buzzer/Chapter07_11.png  
 
 .. note::
     
-    in this circuit, the power supply for buzzer is 5V, and pull-up resistor of the button connected to the power 3.3V. The buzzer can work when connected to power 3.3V, but it will reduce the loudness.
+    In this circuit, the power supply for buzzer is 5V, and pull-up resistor of the button connected to the power 3.3V. The buzzer can work when connected to power 3.3V, but it will reduce the loudness.
 
 Code
 ========================================
@@ -143,6 +148,7 @@ Click "Run current script", press the push button switch and the buzzer will sou
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/07.1_Doorbell/Doorbell.py
+    :linenos:
     :language: python
     :dedent:
 
@@ -165,34 +171,39 @@ Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "07
 Alertor
 ----------------------------------------
 
-.. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/07.2_Alertor/Alerto.py
+.. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/07.2_Alertor/Alertor.py
+    :linenos:
     :language: python
     :dedent:
 
 Import PWM, Pin, math and time modules.
 
-.. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/07.2_Alertor/Alerto.py
+.. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/07.2_Alertor/Alertor.py
+    :linenos:
     :language: python
     :lines: 5-7
     :dedent:
 
 Define the pins of the button and passive buzzer.
 
-.. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/07.2_Alertor/Alerto.py
+.. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/07.2_Alertor/Alertor.py
+    :linenos:
     :language: python
     :lines: 1-3
     :dedent:
 
 Call sin function of math module to generate the frequency data of the passive buzzer.
 
-.. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/07.2_Alertor/Alerto.py
+.. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/07.2_Alertor/Alertor.py
+    :linenos:
     :language: python
     :lines: 1-3
     :dedent:
 
 When not using PWM, please turn it OFF in time.
 
-.. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/07.2_Alertor/Alerto.py
+.. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/07.2_Alertor/Alertor.py
+    :linenos:
     :language: python
     :lines: 23-23
     :dedent:

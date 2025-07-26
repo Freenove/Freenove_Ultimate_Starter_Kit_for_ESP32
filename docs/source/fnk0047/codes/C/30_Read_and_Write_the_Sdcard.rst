@@ -4,7 +4,7 @@ Chapter Read and Write the Sdcard
 
 .. note:: 
     
-    The SD card chapter only applies to the ESP32 WROVER development board with an SD card slot on the back. If your ESP32 WROVER does not have an SD card slot on the back, please skip this chapter.
+    :combo:`red font-bolder:The SD card chapter only applies to the ESP32 WROVER development board with an SD card slot on the back. If your ESP32 WROVER does not have an SD card slot on the back, please skip this chapter.`
 
 An SDcard slot is integrated on the back of the ESP32 WROVER. In this chapter we learn how to use ESP32 to read and write SDcard.
 
@@ -12,9 +12,9 @@ Project SDMMC Test
 ****************************************
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
+   :class: table-line
    
    * -  ESP32 WROVER x1
      -  USB cable x1
@@ -25,7 +25,7 @@ Project SDMMC Test
      -  |Chapter30_00|
      -  |Chapter30_01|
 
-        :red:`(Not a USB flash drive.)`  
+        :combo:`red font-bolder:(Not a USB flash drive.)`  
      -  |Chapter30_02|
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png

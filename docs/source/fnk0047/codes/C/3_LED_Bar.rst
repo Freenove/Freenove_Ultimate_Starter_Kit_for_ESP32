@@ -12,19 +12,24 @@ In this project, we use a number of LEDs to make a flowing light.
 Component List
 =====================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1 |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter01_01|          |
-+------------------------------------+-------------------------+
-| Breadboard x1                                                |
-|                                                              |
-| |Chapter01_02|                                               |
-+-----------------+------------------+-------------------------+
-|Jumper M/M x10   | Resistor 220Ω x10| LED bar graph x1        |
-|                 |                  |                         |
-| |Chapter01_05|  | |Chapter01_04|   | |Chapter03_00|          |
-+-----------------+------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1 |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter01_01|          |
+    +------------------------------------+-------------------------+
+    | Breadboard x1                                                |
+    |                                                              |
+    | |Chapter01_02|                                               |
+    +-----------------+------------------+-------------------------+
+    |Jumper M/M x10   | Resistor 220Ω x10| LED bar graph x1        |
+    |                 |                  |                         |
+    | |Chapter01_05|  | |Chapter01_04|   | |Chapter03_00|          |
+    +-----------------+------------------+-------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -50,19 +55,18 @@ Circuit
 ===================================
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter03_02|
-   * -  Hardware connection. 
+   * -  **Hardware connection** 
+   * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
-        If you need any support, please feel free to contact us via: support@freenove.com
+        |Chapter03_03|
 
-   * -  |Chapter03_03|
-
-        :red:`If LED bar does not work, try to rotate it for 180°. The label is random.`
+        :combo:`red font-bolder:If LED bar does not work, try to rotate it for 180°. The label is random.`
 
 .. |Chapter03_02| image:: ../_static/imgs/3_LED_Bar/Chapter03_02.png
 .. |Chapter03_03| image:: ../_static/imgs/3_LED_Bar/Chapter03_03.png
@@ -87,7 +91,7 @@ Download the code to ESP32-WROVER and LED bar graph will light up from left to r
 .. image:: ../_static/imgs/3_LED_Bar/Chapter03_05.png
     :align: center
 
-:red:`If you have any concerns, please contact us via:` support@freenove.com
+:combo:`red font-bolder:If you have any concerns, please contact us via:` support@freenove.com
 
 The following is the program code:
 

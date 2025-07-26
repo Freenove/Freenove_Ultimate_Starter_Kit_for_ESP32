@@ -12,19 +12,24 @@ In this section we learn how to use LCD1602 to display something.
 Component List
 ===========================================
 
-+------------------------------------+----------------------------------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1                            |
-|                                    |                                                    |
-| |Chapter01_00|                     | |Chapter01_01|                                     |
-+------------------------------------+----------------------------------------------------+
-| Breadboard x1                                                                           |
-|                                                                                         |
-| |Chapter01_02|                                                                          |
-+------------------------------------+----------------------------------------------------+
-| LCD1602 Module x1                  | Jumper F/M x4                                      |
-|                                    |                                                    |
-| |Chapter20_00|                     |  |Chapter20_01|                                    |
-+------------------------------------+----------------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+----------------------------------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1                            |
+    |                                    |                                                    |
+    | |Chapter01_00|                     | |Chapter01_01|                                     |
+    +------------------------------------+----------------------------------------------------+
+    | Breadboard x1                                                                           |
+    |                                                                                         |
+    | |Chapter01_02|                                                                          |
+    +------------------------------------+----------------------------------------------------+
+    | LCD1602 Module x1                  | Jumper F/M x4                                      |
+    |                                    |                                                    |
+    | |Chapter20_00|                     |  |Chapter20_01|                                    |
+    +------------------------------------+----------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -59,8 +64,8 @@ Below is the PCF8574 pin schematic diagram and the block pin diagram:
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
    :align: center
+   :class: table-line
    
    * -  PCF8574 chip pin diagram:
      -  PCF8574 module pin diagram
@@ -85,12 +90,12 @@ Circuit
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter20_07|
-   * -  Hardware connection. 
+   * -  **Hardware connection** 
        
         If you need any support, please feel free to contact us via: support@freenove.com
 
@@ -112,7 +117,7 @@ The steps to add third-party Libraries are as follows: open arduino->Sketch->Inc
 .. image:: ../_static/imgs/20_LCD1602/Chapter20_09.png
     :align: center
 
-In the Freenove_Ultimate_Starter_Kit_for_ESP32/C/Libraries folder, select LiquidCrystal_I2c-1.2.zip and click open.
+In the **Freenove_Ultimate_Starter_Kit_for_ESP32/C/Libraries** folder, select **LiquidCrystal_I2c-1.2.zip** and click open.
 
 .. image:: ../_static/imgs/20_LCD1602/Chapter20_10.png
     :align: center
@@ -135,11 +140,6 @@ So far, at this writing, we have two types of LCD1602 on sale. One needs to adju
 The LCD1602 that does not need to adjust the backlight is shown in the figure below.
 
 .. image:: ../_static/imgs/20_LCD1602/Chapter20_13.png
-    :align: center
-
-If the LCD1602 you received is the following one, and you cannot see anything on the display or the display is not clear, try rotating the white knob on back of LCD1602 slowly, which adjusts the contrast, until the screen can display clearly.
-
-.. image:: ../_static/imgs/20_LCD1602/Chapter20_14.png
     :align: center
 
 The following is the program code:
@@ -210,22 +210,22 @@ Reference
 	
     	Instantiate the Lcd1602 and set the I2C address to 0x27, with 16 columns per row and 2 rows per column.
 	
-    **init();**
-	
-    	Initializes the Lcd1602's device
-	
-    **backlight();**
-	
-    	Turn on Lcd1602's backlight.
-	
-    **setCursor(column,row);**
-	
-    	Sets the screen's column and row.
-	
-    	column:The range is 0 to 15.
-	
-    	row:The range is 0 to 1.
-	
-    **print(String);**
-	
-    	Print the character string on Lcd1602
+        **init();**
+        
+            Initializes the Lcd1602's device
+        
+        **backlight();**
+        
+            Turn on Lcd1602's backlight.
+        
+        **setCursor(column,row);**
+        
+            Sets the screen's column and row.
+        
+            column:The range is 0 to 15.
+        
+            row:The range is 0 to 1.
+        
+        **print(String);**
+        
+            Print the character string on Lcd1602

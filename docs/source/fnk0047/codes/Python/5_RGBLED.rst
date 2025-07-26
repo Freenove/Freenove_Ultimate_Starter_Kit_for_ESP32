@@ -12,19 +12,24 @@ In this project, we will make a multicolored LED. And we can control RGB LED to 
 Component List
 ==========================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1 |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter01_01|          |
-+------------------------------------+-------------------------+
-| Breadboard x1                                                |
-|                                                              |
-| |Chapter01_02|                                               |
-+-----------------+------------------+-------------------------+
-| RGBLED x1       | Resistor 220Ω x1 | Jumper M/M x2           |
-|                 |                  |                         |
-| |Chapter05_00|  | |Chapter01_04|   | |Chapter01_05|          |
-+-----------------+------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1 |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter01_01|          |
+    +------------------------------------+-------------------------+
+    | Breadboard x1                                                |
+    |                                                              |
+    | |Chapter01_02|                                               |
+    +-----------------+------------------+-------------------------+
+    | RGBLED x1       | Resistor 220Ω x1 | Jumper M/M x2           |
+    |                 |                  |                         |
+    | |Chapter05_00|  | |Chapter01_04|   | |Chapter01_05|          |
+    +-----------------+------------------+-------------------------+
   
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png    
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png    
@@ -52,17 +57,17 @@ Circuit
 ===========================================
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter05_03|
-   * -  Hardware connection. 
+   * -  **Hardware connection** 
 
-        :red:`If you need any support, please feel free to contact us via:` support@freenove.com
+   * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
-   * -  |Chapter05_04|
+        |Chapter05_04|
 
 .. |Chapter05_03| image:: ../_static/imgs/5_RGB_LED/Chapter05_03.png    
 .. |Chapter05_04| image:: ../_static/imgs/5_RGB_LED/Chapter05_04.png
@@ -85,17 +90,19 @@ RandomColorLight
 
 Click "Run current script", RGBLED begins to display random colors.
 
-:red:`If you have any concerns, please contact us via:` support@freenove.com
+:combo:`red font-bolder:If you have any concerns, please contact us via:` support@freenove.com
 
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/05.1_RandomColorLight/RandomColorLight.py
+    :linenos:
     :language: python
     :dedent:
 
 Import Pin, PWM and Randon Function modules. 
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/05.1_RandomColorLight/RandomColorLight.py
+    :linenos:
     :language: python
     :lines: 1-3
     :dedent:
@@ -103,6 +110,7 @@ Import Pin, PWM and Randon Function modules.
 Configure ouput mode of GPIO15, GPIO2 and GPIO0 as PWM output and PWM frequency as 10000Hz 
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/05.1_RandomColorLight/RandomColorLight.py
+    :linenos:
     :language: python
     :lines: 5-9
     :dedent:
@@ -110,6 +118,7 @@ Configure ouput mode of GPIO15, GPIO2 and GPIO0 as PWM output and PWM frequency 
 Define a function to set the color of RGBLED.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/05.1_RandomColorLight/RandomColorLight.py
+    :linenos:
     :language: python
     :lines: 11-14
     :dedent:
@@ -117,6 +126,7 @@ Define a function to set the color of RGBLED.
 Call random function randint()to generate a random number in the range of 0-1023 and assign the value to red.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/05.1_RandomColorLight/RandomColorLight.py
+    :linenos:
     :language: python
     :lines: 18-18
     :dedent:
@@ -124,6 +134,7 @@ Call random function randint()to generate a random number in the range of 0-1023
 Obtain 3 random number every 200 milliseconds and call function setColor to make RGBLED display dazzling colors.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/05.1_RandomColorLight/RandomColorLight.py
+    :linenos:
     :language: python
     :lines: 17-22
     :dedent:
@@ -137,11 +148,11 @@ Reference
     
     **randint(start, end):** Randomly generates an integer between the value of start and end.
     
-    **start:** Starting value in the specified range, which would be included in the range.
-    
-    **end:** Ending value in the specified range, which would be included in the range.
-    
-    **random():** Randomly generates a floating point number between 0 and 1.
+        **start:** Starting value in the specified range, which would be included in the range.
+        
+        **end:** Ending value in the specified range, which would be included in the range.
+        
+        **random():** Randomly generates a floating point number between 0 and 1.
     
     **random.unifrom(start, end):** Randomly generates a floating point number between the value of start and end
     
@@ -167,11 +178,11 @@ Reference
     
     **random.seed(sed):** Specifies a random seed, usually being applied in conjunction with other random number generators 
     
-    **sed:** Random seed, a starting point in generating random numbers.
+        **sed:** Random seed, a starting point in generating random numbers.
     
     **random.choice(obj):** Randomly generates an element from the object obj. 
     
-    **obj:** list of elements 
+        **obj:** list of elements 
 
 Project Gradient Color Light
 *********************************************
@@ -181,6 +192,9 @@ In the previous project, we have mastered the usage of RGBLED, but the random co
 Component list, the circuit is exactly the same as the project random color light.
 
 Using a color model, the color changes from 0 to 255 as shown below. 
+
+.. image:: ../_static/imgs/5_RGB_LED/Chapter05_07.png
+    :align: center
 
 In this code, the color model will be implemented and RGBLED will change colors along the model.
 
@@ -192,12 +206,14 @@ GradientColorLight
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/05.2_GradientColorLight/GradientColorLight.py
+    :linenos:
     :language: python
     :dedent:
 
 The function wheel() is a color selection method of the color model introduced earlier. The value range of the parameter pos is 0-1023. The function will return a data containing the duty cycle values of 3 pins. 
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/05.2_GradientColorLight/GradientColorLight.py
+    :linenos:
     :language: python
     :lines: 19-37
     :dedent:

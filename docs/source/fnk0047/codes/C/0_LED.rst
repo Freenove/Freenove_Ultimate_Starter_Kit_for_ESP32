@@ -13,9 +13,10 @@ Component List
 ====================================
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :header-rows: 1 
    :align: center
+   :class: table-line
    
    * -  ESP32-WROVER x1
      -  USB cable
@@ -61,9 +62,7 @@ Select the serial port.
 
 .. note::
     
-    For macOS users, if the uploading fails, please set the baud rate to 115200 before clicking 
-
-"**Upload Speed**". 
+    **For macOS users, if the uploading fails, please set the baud rate to 115200 before clicking "Upload Speed".**
 
 .. image:: ../_static/imgs/0_LED/Chapter00_05.png
     :align: center
@@ -81,7 +80,7 @@ Click "Upload", Download the code to ESP32-WROVER and your LED in the circuit st
 
 .. hint::
     
-    :red:`If you have any concerns, please contact us via:` support@freenove.com
+    :combo:`red font-bolder:If you have any concerns, please contact us via:` support@freenove.com
 
 The following is the program code:
 

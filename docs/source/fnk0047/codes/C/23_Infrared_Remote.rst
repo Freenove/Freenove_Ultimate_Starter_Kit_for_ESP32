@@ -12,25 +12,30 @@ First, we need to understand how infrared remote control works, then get the com
 Component List
 =======================================================
 
-+------------------------------------+-----------------------------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1                       |
-|                                    |                                               |
-| |Chapter01_00|                     | |Chapter01_01|                                |
-+------------------------------------+-----------------------------------------------+
-| Breadboard x1                                                                      |
-|                                                                                    |
-| |Chapter01_02|                                                                     |
-+------------------------------------+------------------------+----------------------+
-| Jumper M/M                         | Infrared Remote x1     | Resistor 10kΩ x1     |
-|                                    |                        |                      |
-| |Chapter01_05|                     |  |Chapter23_01|        |   |Chapter02_01|     |
-+------------------------------------+------------------------+----------------------+
-| Infrared Remote x1                                                                 |
-|                                                                                    |
-| (May need CR2025 battery x1, please check the holder)                              |
-|                                                                                    |
-| |Chapter23_00|                                                                     |
-+------------------------------------------------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-----------------------------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1                       |
+    |                                    |                                               |
+    | |Chapter01_00|                     | |Chapter01_01|                                |
+    +------------------------------------+-----------------------------------------------+
+    | Breadboard x1                                                                      |
+    |                                                                                    |
+    | |Chapter01_02|                                                                     |
+    +------------------------------------+------------------------+----------------------+
+    | Jumper M/M x4                      | Infrared Remote x1     | Resistor 10kΩ x1     |
+    |                                    |                        |                      |
+    | |Chapter01_05|                     |  |Chapter23_01|        |   |Chapter02_01|     |
+    +------------------------------------+------------------------+----------------------+
+    | Infrared Remote x1                                                                 |
+    |                                                                                    |
+    | (May need CR2025 battery x1, please check the holder)                              |
+    |                                                                                    |
+    | |Chapter23_00|                                                                     |
+    +------------------------------------------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -71,12 +76,12 @@ Circuit
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter23_05|
-   * -  Hardware connection. 
+   * -  **Hardware connection** 
        
         If you need any support, please feel free to contact us via: support@freenove.com
 
@@ -93,12 +98,12 @@ This sketch uses the infrared receiving tube to receive the value sent form the 
 How to install the library
 ---------------------------------------------
 
-We use the third party library Freenove_IR_Lib_for_ESP32. If you haven't installed it yet, please do so before learning. The steps to add third-party Libraries are as follows: open arduino->Sketch->Include library-> Add .ZIP Library…. 
+We use the third party library **Freenove_IR_Lib_for_ESP32**. If you haven't installed it yet, please do so before learning. The steps to add third-party Libraries are as follows: open arduino->Sketch->Include library-> Add .ZIP Library…. 
 
 .. image:: ../_static/imgs/23_Infrared_Remote/Chapter23_07.png
     :align: center
 
-In the Freenove_Ultimate_Starter_Kit_for_ESP32/C/Libraries folder, select Freenove_IR_Lib_for_ESP32.zip and click open.
+In the **Freenove_Ultimate_Starter_Kit_for_ESP32/C/Libraries** folder, select **Freenove_IR_Lib_for_ESP32.zip** and click open.
 
 .. image:: ../_static/imgs/23_Infrared_Remote/Chapter23_08.png
     :align: center
@@ -161,8 +166,11 @@ You need to add the library each time you use the Infrared Reception.
 .. py:function:: class Freenove_ESP32_IR_Recv
 
     **Freenove_ESP32_IR_Recv irrecv(Pin)** :Create a class object used to receive class, and associated with Pin.
+    
     **task** You need to keep calling this function, so that IR can accurately get the data.
+    
     **nec_available()** : Check whether IR data is obtained from the buffer.
+    
     **data()** :Get IR data.
 
 Project Control LED through Infrared Remote
@@ -173,29 +181,34 @@ In this project, we will control the brightness of LED lights through an infrare
 Component List
 =======================================================
 
-+------------------------------------+-------------------------------------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1                               |
-|                                    |                                                       |
-| |Chapter01_00|                     | |Chapter01_01|                                        |
-+------------------------------------+-------------------------------------------------------+
-| Breadboard x1                                                                              |
-|                                                                                            |
-| |Chapter01_02|                                                                             |
-+------------------------------------+------------------------+------------------------------+
-| Jumper M/M                         | Infrared Remote x1     | Resistor 10kΩ x1             |
-|                                    |                        |                              |
-| |Chapter01_05|                     |  |Chapter23_01|        |   |Chapter02_01|             |
-+------------------------------------+------------------------+------------------------------+
-| Infrared Remote x1                                          | Active buzzer x1             |
-|                                                             |                              |
-| (May need CR2025 battery x1, please check the holder)       | |Chapter07_01|               |
-|                                                             |                              |
-| |Chapter23_00|                                              |                              |
-+------------------------------------+------------------------+------------------------------+
-| LED x1                             | Resistor 1kΩ x2        | NPN transistorx1 (S8050)     |
-|                                    |                        |                              |
-| |Chapter01_03|                     |  |Chapter07_03|        |   |Chapter07_02|             |
-+------------------------------------+------------------------+------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------------------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1                               |
+    |                                    |                                                       |
+    | |Chapter01_00|                     | |Chapter01_01|                                        |
+    +------------------------------------+-------------------------------------------------------+
+    | Breadboard x1                                                                              |
+    |                                                                                            |
+    | |Chapter01_02|                                                                             |
+    +------------------------------------+------------------------+------------------------------+
+    | Jumper M/M                         | Infrared Remote x1     | Resistor 10kΩ x1             |
+    |                                    |                        |                              |
+    | |Chapter01_05|                     |  |Chapter23_01|        |   |Chapter02_01|             |
+    +------------------------------------+------------------------+------------------------------+
+    | Infrared Remote x1                                          | Active buzzer x1             |
+    |                                                             |                              |
+    | (May need CR2025 battery x1, please check the holder)       | |Chapter07_01|               |
+    |                                                             |                              |
+    | |Chapter23_00|                                              |                              |
+    +------------------------------------+------------------------+------------------------------+
+    | LED x1                             | Resistor 1kΩ x2        | NPN transistorx1 (S8050)     |
+    |                                    |                        |                              |
+    | |Chapter01_03|                     |  |Chapter07_03|        |   |Chapter07_02|             |
+    +------------------------------------+------------------------+------------------------------+
 
 .. |Chapter01_03| image:: ../_static/imgs/1_LED/Chapter01_03.png 
 .. |Chapter07_03| image:: ../_static/imgs/7_Buzzer/Chapter07_03.png
@@ -207,14 +220,14 @@ Circuit
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter23_11|
-   * -  Hardware connection. 
+   * -  **Hardware connection** 
        
-        If you need any support, please feel free to contact us via: support@freenove.com
+   * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
         |Chapter23_12|
 

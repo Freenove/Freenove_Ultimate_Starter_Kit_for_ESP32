@@ -12,19 +12,24 @@ In this project, we will make a soft light. We will use an ADC Module to read AD
 Component List
 ==============================================
 
-+------------------------------------+----------------------------------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1                            |
-|                                    |                                                    |
-| |Chapter01_00|                     | |Chapter01_01|                                     |
-+------------------------------------+----------------------------------------------------+
-| Breadboard x1                                                                           |
-|                                                                                         |
-| |Chapter01_02|                                                                          |
-+-----------------+------------------+------------------------+---------------------------+
-| LED x1          | Resistor 220Ω x1 | Jumper M/M x5          | Rotary potentiometer x1   |
-|                 |                  |                        |                           |
-| |Chapter01_03|  | |Chapter01_04|   | |Chapter01_05|         | |Chapter09_00|            |
-+-----------------+------------------+------------------------+---------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+----------------------------------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1                            |
+    |                                    |                                                    |
+    | |Chapter01_00|                     | |Chapter01_01|                                     |
+    +------------------------------------+----------------------------------------------------+
+    | Breadboard x1                                                                           |
+    |                                                                                         |
+    | |Chapter01_02|                                                                          |
+    +-----------------+------------------+------------------------+---------------------------+
+    | LED x1          | Resistor 220Ω x1 | Jumper M/M x5          | Rotary potentiometer x1   |
+    |                 |                  |                        |                           |
+    | |Chapter01_03|  | |Chapter01_04|   | |Chapter01_05|         | |Chapter09_00|            |
+    +-----------------+------------------+------------------------+---------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -42,12 +47,12 @@ Circuit
    :header-rows: 1 
    :align: center
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter11_00|
-   * -  Hardware connection. 
-       
-        :red:`If you need any support, please contact us via:` support@freenove.com
-   * -  |Chapter11_01|
+   * -  **Hardware connection** 
+   * -  :combo:`red font-bolder:If you need any support, please contact us via:` support@freenove.com
+        
+        |Chapter11_01|
 
 .. |Chapter11_00| image:: ../_static/imgs/11_Potentiometer_&_LED/Chapter11_00.png    
 .. |Chapter11_01| image:: ../_static/imgs/11_Potentiometer_&_LED/Chapter11_01.png    
@@ -55,9 +60,9 @@ Circuit
 Code
 ======================================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes"** to disk(D) in advance with the path of **"D:/Micropython_Codes"**.
 
-Open "Thonny", click  "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "11.1_Soft_LED" and double click "Soft_LED.py". 
+Open "Thonny", click  "This computer" **->** "D:" **->** "Micropython_Codes" **->** "11.1_Soft_LED" and double click "Soft_LED.py". 
 
 Soft_LED
 -----------------------------------------
@@ -70,6 +75,7 @@ Click "Run current script". Rotate the handle of potentiometer and the brightnes
 The following is the code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/11.1_Soft_LED/Soft_LED.py
+    :linenos:
     :language: python
     :dedent:
 

@@ -12,19 +12,24 @@ In this project, we use a number of LEDs to make a flowing light.
 Component List
 =====================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1 |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter01_01|          |
-+------------------------------------+-------------------------+
-| Breadboard x1                                                |
-|                                                              |
-| |Chapter01_02|                                               |
-+-----------------+------------------+-------------------------+
-|Jumper M/M x10   | Resistor 220Ω x10| LED bar graph x1        |
-|                 |                  |                         |
-| |Chapter01_05|  | |Chapter01_04|   | |Chapter03_00|          |
-+-----------------+------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1 |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter01_01|          |
+    +------------------------------------+-------------------------+
+    | Breadboard x1                                                |
+    |                                                              |
+    | |Chapter01_02|                                               |
+    +-----------------+------------------+-------------------------+
+    |Jumper M/M x10   | Resistor 220Ω x10| LED bar graph x1        |
+    |                 |                  |                         |
+    | |Chapter01_05|  | |Chapter01_04|   | |Chapter03_00|          |
+    +-----------------+------------------+-------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -50,19 +55,18 @@ Circuit
 ===================================
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter03_02|
-   * -  Hardware connection. 
+   * -  **Hardware connection** 
+   * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
-        If you need any support, please feel free to contact us via: support@freenove.com
+        |Chapter03_03|
 
-   * -  |Chapter03_03|
-
-        :red:`If LED bar does not work, try to rotate it for 180°. The label is random.`
+        :combo:`red font-bolder:If LED bar does not work, try to rotate it for 180°. The label is random.`
 
 .. |Chapter03_02| image:: ../_static/imgs/3_LED_Bar/Chapter03_02.png
 .. |Chapter03_03| image:: ../_static/imgs/3_LED_Bar/Chapter03_03.png
@@ -72,16 +76,12 @@ Code
 
 This project is designed to make a flowing water lamp. Which are these actions: First turn LED #1 ON, then turn it OFF. Then turn LED #2 ON, and then turn it OFF... and repeat the same to all 10 LEDs until the last LED is turns OFF. This process is repeated to achieve the "movements" of flowing water.
 
-<<<<<<< HEAD
 FlowingLight
-=======
-03.1_FlowingLight
->>>>>>> c02610ff4de2c29d754fb7b42146a6d9ce5b3380
 ------------------------------
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
-Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "03.1_FlowingLight" and double click "FlowingLight.py".
+Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "03.1_FlowingLight" and double click "FlowingLight.py".
 
 .. image:: ../_static/imgs/3_LED_Bar/Chapter03_06.png
     :align: center
@@ -91,17 +91,19 @@ Click "Run current script" shown in the box above, LED Bar Graph will light up f
 .. image:: ../_static/imgs/3_LED_Bar/Chapter03_07.png
     :align: center
 
-:red:`If you have any concerns, please contact us via:` support@freenove.com
+:combo:`red font-bolder:If you have any concerns, please contact us via:` support@freenove.com
 
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/03.1_FlowingLight/FlowingLight.py
+    :linenos:
     :language: python
     :dedent:
 
 Use an array to define 10 GPIO ports connected to LED Bar Graph for easier operation.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/03.1_FlowingLight/FlowingLight.py
+    :linenos:
     :language: python
     :lines: 4-4
     :dedent:
@@ -109,6 +111,7 @@ Use an array to define 10 GPIO ports connected to LED Bar Graph for easier opera
 Use len() function to obtain the amount of elements in the list and use a for loop to configure pins as output mode.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/03.1_FlowingLight/FlowingLight.py
+    :linenos:
     :language: python
     :lines: 7-9
     :dedent:
@@ -116,6 +119,7 @@ Use len() function to obtain the amount of elements in the list and use a for lo
 Use two for loops to turn on LEDs separately from left to right and then back from right to left.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/03.1_FlowingLight/FlowingLight.py
+    :linenos:
     :language: python
     :lines: 8-17
     :dedent:

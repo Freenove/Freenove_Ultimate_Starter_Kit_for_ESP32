@@ -12,19 +12,24 @@ Learn the basic usage of LEDPixel and use it to flash red, green, blue and white
 Component List
 ======================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1 |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter01_01|          |
-+------------------------------------+-------------------------+
-| Breadboard x1                                                |
-|                                                              |
-| |Chapter01_02|                                               |
-+------------------------------------+-------------------------+
-| Freenove 8 RGB LED Module x1       | Jumper M/M x2           |
-|                                    |                         |
-| |Chapter06_00|                     | |Chapter01_05|          |
-+------------------------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1 |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter01_01|          |
+    +------------------------------------+-------------------------+
+    | Breadboard x1                                                |
+    |                                                              |
+    | |Chapter01_02|                                               |
+    +------------------------------------+-------------------------+
+    | Freenove 8 RGB LED Module x1       | Jumper M/M x2           |
+    |                                    |                         |
+    | |Chapter06_00|                     | |Chapter01_05|          |
+    +------------------------------------+-------------------------+
   
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -55,12 +60,12 @@ And you can also control many modules at the same time. Just connect OUT pin of 
 Pin description:
 
 .. table::
-
-    :widths: 80%
+    :class: zebra
+    :align: center
 
     +---------------------------------------+---------------------------------------+
     |         (IN)                          |        (OUT)                          |
-    +--------+------------------------------+--------+------------------------------+
+    +========+==============================+========+==============================+
     | symbol | Function                     | symbol | Function                     |
     +--------+------------------------------+--------+------------------------------+
     | S      | Input control signal         | S      | Output control signal        |
@@ -74,17 +79,17 @@ Circuit
 ======================================
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter06_03|
-   * -  Hardware connection. 
+   * -  **Hardware connection**
 
-        :red:`If you need any support, please feel free to contact us via:` support@freenove.com
+   * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
-   * -  |Chapter06_04|
+        |Chapter06_04|
 
 .. |Chapter06_03| image:: ../_static/imgs/6_LEDPixel/Chapter06_03.png    
 .. |Chapter06_04| image:: ../_static/imgs/6_LEDPixel/Chapter06_04.png  
@@ -99,7 +104,7 @@ Library is an important feature of the open source world, and we know that Ardui
 How to install the library
 --------------------------------------
 
-Open Arduino IDE, click Sketch -> Include Library -> Add .ZIP Library, In the pop-up window, find the file named "./Libraries/Freenove_WS2812_Lib_for_ESP32.Zip" which locates in this directory, and click OPEN.
+Open Arduino IDE, click Sketch **->** Include Library **->** Add .ZIP Library, In the pop-up window, find the file named "./Libraries/Freenove_WS2812_Lib_for_ESP32.Zip" which locates in this directory, and click OPEN.
 
 .. image:: ../_static/imgs/6_LEDPixel/Chapter06_05.png
     :align: center
@@ -194,26 +199,26 @@ Reference
     
     **t** : Types of LED.
     
-    :red:`TYPE_RGB`: The sequence of LEDPixel module loading color is red, green and blue.
-    
-    :red:`TYPE_RBG`: The sequence of LEDPixel module loading color is red, blue and green.
-    
-    :red:`TYPE_GRB`: The sequence of LEDPixel module loading color is green, red and blue.
-    
-    :red:`TYPE_GBR`: The sequence of LEDPixel module loading color is green, blue and red.
-    
-    :red:`TYPE_BRG`: The sequence of LEDPixel module loading color is blue, red and green. 
-    
-    :red:`TYPE_BGR`: The sequence of LEDPixel module loading color is blue,g reen and red. 
+        :red:`TYPE_RGB`: The sequence of LEDPixel module loading color is red, green and blue.
+        
+        :red:`TYPE_RBG`: The sequence of LEDPixel module loading color is red, blue and green.
+        
+        :red:`TYPE_GRB`: The sequence of LEDPixel module loading color is green, red and blue.
+        
+        :red:`TYPE_GBR`: The sequence of LEDPixel module loading color is green, blue and red.
+        
+        :red:`TYPE_BRG`: The sequence of LEDPixel module loading color is blue, red and green. 
+        
+        :red:`TYPE_BGR`: The sequence of LEDPixel module loading color is blue,g reen and red. 
 
 .. py:function:: void begin(void);
 
     Initialize the LEDPixel object
 
 .. py:function:: void setLedColorData (u8 index, u8 r, u8 g, u8 b);
-                 void setLedColorData (u8 index, u32 rgb);
-                 void setLedColor (u8 index, u8 r, u8 g, u8 b);
-                 void setLedColor (u8 index, u32 rgb);
+.. py:function:: void setLedColorData (u8 index, u32 rgb);
+.. py:function:: void setLedColor (u8 index, u8 r, u8 g, u8 b);
+.. py:function:: void setLedColor (u8 index, u32 rgb);
 
     Set the color of led with order number n.
 

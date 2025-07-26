@@ -12,11 +12,16 @@ Project Station mode
 Component List
 ===========================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | Micro USB Wire x1       |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter08_00|          |
-+------------------------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | Micro USB Wire x1       |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter08_00|          |
+    +------------------------------------+-------------------------+
   
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter08_00| image:: ../_static/imgs/8_Serial_Communication/Chapter08_00.png
@@ -126,11 +131,11 @@ Reference
 
     **config(local_ip, gateway, subnet, dns1, dns2):** set static local IP address.
 
-    **local_ip:** station fixed IP address.
+        **local_ip:** station fixed IP address.
 
-    **subnet:** subnet mask
+        **subnet:** subnet mask
 
-    **dns1,dns2:** optional parameter. define IP address of domain name server
+        **dns1,dns2:** optional parameter. define IP address of domain name server
 
     **status:** obtain the connection status of WiFI
 
@@ -262,11 +267,11 @@ Reference
     
     **softAPConfig(local_ip, gateway, subnet): ** set static local IP address. 
     
-    **local_ip: ** station fixed IP address.
-    
-    **Gateway: ** gateway IP address
-    
-    **subnet: ** subnet mask
+        **local_ip: ** station fixed IP address.
+        
+        **Gateway: ** gateway IP address
+        
+        **subnet: ** subnet mask
     
     **softAP(): ** obtian IP address in AP mode 
     
@@ -278,11 +283,16 @@ Project AP+Station mode
 Component List
 ==========================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | Micro USB Wire x1       |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter08_00|          |
-+------------------------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | Micro USB Wire x1       |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter08_00|          |
+    +------------------------------------+-------------------------+
   
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter08_00| image:: ../_static/imgs/8_Serial_Communication/Chapter08_00.png

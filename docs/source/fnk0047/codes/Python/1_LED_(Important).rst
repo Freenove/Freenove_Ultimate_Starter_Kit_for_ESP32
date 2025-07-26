@@ -9,20 +9,25 @@ Project Blink
 
 In this project, we will use ESP32 to control blinking a common LED.
 
-If you have not yet installed Thonny, click :ref:`here`.
+If you have not yet installed Thonny, click :ref:`here <Thonny>`.
 
-If you have not yet downloaded Micropython Firmware, click :ref:`here`.
+If you have not yet downloaded Micropython Firmware, click :ref:`here <Downloading>`.
 
-If you have not yet loaded Micropython Firmware, click :ref:`here`.
+If you have not yet loaded Micropython Firmware, click :ref:`here <Burning>`.
 
 Component List
 ===============================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | USB cable               |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter08_00|          |
-+------------------------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | USB cable               |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter08_00|          |
+    +------------------------------------+-------------------------+
   
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter08_00| image:: ../_static/imgs/8_Serial_Communication/Chapter08_00.png
@@ -44,14 +49,12 @@ We can also use DC jack of extension board to power ESP32-WROVER.In this way, 5v
 Code
 ===========================
 
-Codes used in this tutorial are saved in "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/
-
-Python_Codes". You can move the codes to any location. For example, we save the codes in Disk(D) with the path of "D:/Micropython_Codes".
+Codes used in this tutorial are saved in **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes"**. You can move the codes to any location. For example, we save the codes in Disk(D) with the path of **"D:/Micropython_Codes"**.
 
 Blink
 ---------------------------
 
-Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes".
+Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes".
 
 .. image:: ../_static/imgs/1_LED/Chapter01_19.png
     :align: center
@@ -71,7 +74,7 @@ Click "Run current script" shown in the box above, the code starts to be execute
 .. image:: ../_static/imgs/1_LED/Chapter01_22.png
     :align: center
 
-Due to different versions, some board leds will show the opposite effect.
+:combo:`red font-bolder:Due to different versions, some board leds will show the opposite effect.`
 
 .. note::
 
@@ -98,7 +101,7 @@ Press the reset key of ESP32 and you can see LED is ON for one second and then O
 .. image:: ../_static/imgs/1_LED/Chapter01_26.png
     :align: center
 
-:red:`Due to different versions, some board leds will show the opposite effect.`
+:combo:`red font-bolder:Due to different versions, some board leds will show the opposite effect.`
 
 .. note::
     
@@ -107,11 +110,12 @@ Press the reset key of ESP32 and you can see LED is ON for one second and then O
 .. image:: ../_static/imgs/1_LED/Chapter01_27.png
     :align: center
 
-:red:`If you have any concerns, please contact us via:` support@freenove.com
+:combo:`red font-bolder:If you have any concerns, please contact us via:` support@freenove.com
 
 The following is the program code:
 
 .. code-block:: python
+    :linenos:
 
     from time import sleep_ms
     from machine import Pin
@@ -134,12 +138,14 @@ Each time a new file is opened, the program will be executed from top to bottom.
 Print() function is used to print data to Terminal. It can be executed in Terminal directly or be written in a Python file and executed by running the file.
 
 .. code-block:: python
+    :linenos:
 
     print("Hello world!")
 
 Each time when using the functions of ESP32, you need to import modules corresponding to those functions: Import sleep_ms module of time module and Pin module of machine module.
 
 .. code-block:: python
+    :linenos:
 
     from time import sleep_ms
     from machine import Pin
@@ -147,6 +153,7 @@ Each time when using the functions of ESP32, you need to import modules correspo
 Configure GPIO2 of ESP32-WROVER to output mode and assign it to an object named "led". 
 
 .. code-block:: python
+    :linenos:
 
     led=Pin(2,Pin.OUT) #create LED object from pin2,Set Pin2 to output
 
@@ -155,18 +162,21 @@ It means that from now on, LED represents GPIO2 that is in output mode.
 Set the value of LED to 1 and GPIO2 will output high level.
 
 .. code-block:: python
+    :linenos:
 
     led.value(1) #Set led turn on
 
 Set the value of LED to 0 and GPIO2 will output low level.
 
 .. code-block:: python
+    :linenos:
 
     led.value(0) #Set led turn on
 
 Execute codes in a while loop.
 
 .. code-block:: python
+    :linenos:
 
     while True:
         ......
@@ -176,6 +186,7 @@ Put statements that may cause an error in "try" block and the executing statemen
 "Pass" is an empty statement. When it is executed, nothing happens. It is useful as a placeholder to make the structure of a program look better. 
 
 .. code-block:: python
+    :linenos:
 
     try:
         ...
@@ -185,12 +196,14 @@ Put statements that may cause an error in "try" block and the executing statemen
 The single-line comment of Micropython starts with a "#" and continues to the end of the line. Comments help us to understand code. When programs are running, Thonny will ignore comments.
 
 .. code-block:: python
+    :linenos:
 
     #Set led turn on
 
 MicroPython uses indentations to distinguish different blocks of code instead of braces. The number of indentations is changeable, but it must be consistent throughout one block. If the indentation of the same code block is inconsistent, it will cause errors when the program runs.
 
 .. code-block:: python
+    :linenos:
 
     while True:
         led.value(1) #Set led turn on
@@ -249,7 +262,7 @@ Reference
 
 .. py:function:: Class Pin(id[, mode, pull, value])
     
-    Before each use of the Pin module, please add the statement "from machine import Pin" to the top of python file.
+    Before each use of the **Pin** module, please add the statement "**from machine import Pin**" to the top of python file.
     
     **id:** Arbitrary pin number
     
@@ -329,19 +342,24 @@ In this project, we will use ESP32 to control blinking a common LED.
 Component List
 ======================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1 |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter01_01|          |
-+------------------------------------+-------------------------+
-| Breadboard x1                                                |
-|                                                              |
-| |Chapter01_02|                                               |
-+-----------------+------------------+-------------------------+
-| LED x1          | Resistor 220Ω x1 | Jumper M/M x2           |
-|                 |                  |                         |
-| |Chapter01_03|  | |Chapter01_04|   | |Chapter01_05|          |
-+-----------------+------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1 |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter01_01|          |
+    +------------------------------------+-------------------------+
+    | Breadboard x1                                                |
+    |                                                              |
+    | |Chapter01_02|                                               |
+    +-----------------+------------------+-------------------------+
+    | LED x1          | Resistor 220Ω x1 | Jumper M/M x2           |
+    |                 |                  |                         |
+    | |Chapter01_03|  | |Chapter01_04|   | |Chapter01_05|          |
+    +-----------------+------------------+-------------------------+
   
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png    
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png    
@@ -425,21 +443,21 @@ Circuit
 
 First, disconnect all power from the ESP32-WROVER. Then build the circuit according to the circuit and hardware diagrams. After the circuit is built and verified correct, connect the PC to ESP32-WROVER. 
 
-CAUTION: Avoid any possible short circuits (especially connecting 5V or GND, 3.3V and GND)! WARNING: A short circuit can cause high current in your circuit, create excessive component heat and cause permanent damage to your hardware!
+.. caution:: 
+    
+    Avoid any possible short circuits (especially connecting 5V or GND, 3.3V and GND)! WARNING: A short circuit can cause high current in your circuit, create excessive component heat and cause permanent damage to your hardware!
 
 .. list-table:: 
    :width: 100%
-   :header-rows: 1 
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter01_37|
-   
-   * -  Hardware connection. 
+   * -  **Hardware connection**   
+   * -  :combo:`red font-bolder:If you need any support, please contact us via:` support@freenove.com
      
-        :red:`If you need any support, please contact us via:` support@freenove.com
-     
-   * -  |Chapter01_38| 
+        |Chapter01_38| 
         
         :red:`Don't rotate ESP32-WROVER 180° for connection.`
   
@@ -449,14 +467,12 @@ CAUTION: Avoid any possible short circuits (especially connecting 5V or GND, 3.3
 Code
 =====================================
 
-Codes used in this tutorial are saved in "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/
-
-Python_Codes". You can move the codes to any location. For example, we save the codes in Disk(D) with the path of "D:/Micropython_Codes".
+Codes used in this tutorial are saved in "**Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes**". You can move the codes to any location. For example, we save the codes in Disk(D) with the path of "**D:/Micropython_Codes**".
 
 Blink
 -------------------------------------
 
-Open "Thonny"'click "This computer" -> "D:" -> "Micropython_Codes".
+Open "Thonny"'click "This computer" **->** "D:" **->** "Micropython_Codes".
 
 .. image:: ../_static/imgs/1_LED/Chapter01_39.png
     :align: center
@@ -508,4 +524,4 @@ Press the reset key of ESP32 and you can see LED is ON for one second and then O
 .. image:: ../_static/imgs/1_LED/Chapter01_47.png
     :align: center
 
-:red:`If you have any concerns, please contact us via:` support@freenove.com
+:combo:`red font-bolder:If you have any concerns, please contact us via:` support@freenove.com

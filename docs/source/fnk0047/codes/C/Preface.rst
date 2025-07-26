@@ -23,6 +23,7 @@ ESP32-WROVER has launched a total of two antenna packages, PCB on-board antenna 
    :width: 80%
    :header-rows: 1 
    :align: center
+   :class: table-line
    
    * -  PCB on-board antenna 
      -  IPEX antenna
@@ -39,6 +40,13 @@ ESP32-WROVER
 
 .. image:: ../_static/imgs/Preface/Preface02.png
     :align: center
+    :width: 50%
+
+**The version on the left is no longer mass-produced, and we mainly maintain the version on the right.**
+
+Please note that there are many pirated versions of the ESP32 WROVER that look very similar to the version on the left. None of them will carry our logo and Freenove font.
+
+We do not sell pirated ESP32 WROVER, nor do we provide after-sales service for pirated.
 
 The hardware interfaces of ESP32-WROVER are distributed as follows:
 
@@ -51,6 +59,7 @@ Compare the left and right images. We've boxed off the resources on the ESP32-WR
    :width: 80%
    :header-rows: 1 
    :align: center
+   :class: table-line
    
    * -  Box color 
      -  Corresponding resources introduction
@@ -83,6 +92,7 @@ For more information, please visit: https://www.espressif.com/sites/default/file
 
 Extension board of the ESP32-WROVER
 **********************************************
+
 And we also design an extension board, so that you can use the ESP32 more easily in accordance with the circuit diagram provided. The followings are their photos. 
 
 The hardware interfaces of ESP32-WROVER are distributed as follows:
@@ -96,6 +106,7 @@ We've boxed off the resources on the ESP32-WROVER in different colors to facilit
    :width: 80%
    :header-rows: 1 
    :align: center
+   :class: table-line
    
    * -  Box color 
      -  Corresponding resources introduction
@@ -162,17 +173,17 @@ Installing CH340
 .. image:: ../_static/imgs/Preface/Preface19.png
     :align: center
 
-If you would not like to download the installation package, you can open "Freenove_Ultimate_Starter_Kit_for_ESP32/CH340", we have prepared the installation package.
+If you would not like to download the installation package, you can open **"Freenove_Ultimate_Starter_Kit_for_ESP32/CH340"**, we have prepared the installation package.
 
 .. image:: ../_static/imgs/Preface/Preface20.png
     :align: center
 
-2.	Open the folder "Freenove_Ultimate_Starter_Kit_for_ESP32/CH340/Windows/"
+2.	Open the folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/CH340/Windows/"**
 
 .. image:: ../_static/imgs/Preface/Preface21.png
     :align: center
 
-3.	Double click "CH341SER.EXE".
+3.	Double click **"CH341SER.EXE"**.
 
 .. image:: ../_static/imgs/Preface/Preface22.png
     :align: center
@@ -202,9 +213,9 @@ First, download CH340 driver, click http://www.wch-ic.com/search?q=CH340&t=downl
 .. image:: ../_static/imgs/Preface/Preface26.png
     :align: center
 
-If you would not like to download the installation package, you can open "Freenove_Ultimate_Starter_Kit_for_ESP32/CH340", we have prepared the installation package.
+If you would not like to download the installation package, you can open **"Freenove_Ultimate_Starter_Kit_for_ESP32/CH340"**, we have prepared the installation package.
 
-Second, open the folder "Freenove_Ultimate_Starter_Kit_for_ESP32/CH340/MAC/"
+Second, open the folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/CH340/MAC/"**
 
 .. image:: ../_static/imgs/Preface/Preface27.png
     :align: center
@@ -302,7 +313,7 @@ Fifth, select Espressif Systems' ESP32 and select version 3.0.x. Click "INSTALL"
 
     it takes a while to install the ESP32, make sure your network is stable.
 
-When finishing installation, click Tools in the Menus again and select Board: "Arduino Uno", and then you can see information of ESP32 Wrover Module. Click " ESP32 Wrover Module" so that the ESP32 programming development environment is configured.
+When finishing installation, click Tools in the Menus again and select Board: "Arduino Uno", and then you can see information of **ESP32 Wrover Module**. Click **"ESP32 Wrover Module"** so that the ESP32 programming development environment is configured.
 
 .. image:: ../_static/imgs/Preface/Preface43.png
     :align: center
@@ -379,6 +390,7 @@ Pins with underlined numbers are used by the camera function, if you want to use
    :width: 80%
    :header-rows: 1 
    :align: center
+   :class: zebra
    
    * -  CAM_Pin
      -  GPIO_pin

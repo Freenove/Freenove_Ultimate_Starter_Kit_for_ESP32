@@ -17,6 +17,7 @@ Component List
 .. list-table:: 
    :width: 80% 
    :align: center
+   :class: table-line
    
    * -  Pin header x2
      -  Resistor 220Ω x1
@@ -49,12 +50,12 @@ Circuit
 We will solder the following circuit on the main board.
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
+   :class: table-line
    :align: center
    
-   * -  Schematic diagram
-     -  Hardware connection. 
+   * -  **Schematic diagram**
+     -  **Hardware connection** 
    
         If you need any support, please feel free to contact us via: 
         
@@ -77,8 +78,9 @@ Insert the components on the main board and solder the circuit on its back.
 rendering after soldering:
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
+   :class: table-line
+   :header-rows: 1
    :align: center
    
    * -  Front
@@ -108,11 +110,16 @@ From previous chapter, we have learned to make a flowing water light with LED. N
 Component List
 ====================================
 
-+----------------+------------------+----------------+----------------+
-| Pin header x5  | Resistor 220Ω x8 | LED x1         | 74HC595 x1     |
-|                |                  |                |                |
-| |Chapter36_00| | |Chapter01_04|   | |Chapter01_03| | |Chapter15_00| |
-+----------------+------------------+----------------+----------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +----------------+------------------+----------------+----------------+
+    | Pin header x5  | Resistor 220Ω x8 | LED x1         | 74HC595 x1     |
+    |                |                  |                |                |
+    | |Chapter36_00| | |Chapter01_04|   | |Chapter01_03| | |Chapter15_00| |
+    +----------------+------------------+----------------+----------------+
 
 .. |Chapter01_03| image:: ../_static/imgs/1_LED/Chapter01_03.png 
 .. |Chapter15_00| image:: ../_static/imgs/15_74HC595_&_LED_Bar_Graph/Chapter15_00.png 
@@ -123,11 +130,11 @@ Circuit
 Solder the following circuit on the main board.
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
+   :header-rows: 1
    :align: center
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
      -  Hardware connection
 
    * -  |Chapter36_09|
@@ -147,7 +154,7 @@ Insert the components on the main board and solder the circuit on its back.
 Rendering after soldering:
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :header-rows: 1 
    :align: center
    
@@ -174,6 +181,7 @@ Code
 The following is the program code:
 
 .. code-block:: python
+    :linenos:
 
     import time
     from my74HC595 import Chip74HC595

@@ -12,19 +12,24 @@ In this project, we will read acceleration and gyroscope data of the MPU6050 sen
 Component List
 ============================================
 
-+----------------------+----------------------------------------------+
-| ESP32-WROVER x1      | GPIO Extension Board x1                      |
-|                      |                                              |
-| |Chapter01_00|       | |Chapter01_01|                               |
-+----------------------+----------------------------------------------+
-| Breadboard x1                                                       |
-|                                                                     |
-| |Chapter01_02|                                                      |
-+----------------------------------+----------------------------------+
-| LED x1                           | MPU6050 x1                       |
-|                                  |                                  |
-| |Chapter01_05|                   |   |Chapter26_00|                 |
-+----------------------------------+----------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +----------------------+----------------------------------------------+
+    | ESP32-WROVER x1      | GPIO Extension Board x1                      |
+    |                      |                                              |
+    | |Chapter01_00|       | |Chapter01_01|                               |
+    +----------------------+----------------------------------------------+
+    | Breadboard x1                                                       |
+    |                                                                     |
+    | |Chapter01_02|                                                      |
+    +----------------------------------+----------------------------------+
+    | LED x1                           | MPU6050 x1                       |
+    |                                  |                                  |
+    | |Chapter01_05|                   |   |Chapter26_00|                 |
+    +----------------------------------+----------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -47,29 +52,33 @@ MPU6050 is widely used to assist with balancing vehicles, robots and aircraft, m
 
 The port description of the MPU6050 module is as follows:
 
-+----------+------------+-------------------------------------------------------------+
-| Pin name | Pin number | Description                                                 |
-+----------+------------+-------------------------------------------------------------+
-| VCC      | 1          | Positive pole of power supply with voltage 3.3V/5V          |
-+----------+------------+-------------------------------------------------------------+
-| GND      | 2          | Negative pole of power supply                               |
-+----------+------------+-------------------------------------------------------------+
-| SCL      | 3          | I2C communication clock pin                                 |
-+----------+------------+-------------------------------------------------------------+
-| SDA      | 4          | I2C communication clock pin                                 |
-+----------+------------+-------------------------------------------------------------+
-| XDA      | 5          | I2C host data pin which can be connected to other devices.  |
-+----------+------------+-------------------------------------------------------------+
-| XCL      | 6          | I2C host clock pin which can be connected to other devices. |
-+----------+------------+-------------------------------------------------------------+
-|          |            | I2C address bit control pin.                                |
-|          |            |                                                             |
-| AD0      | 7          | Low level: the device address is 0x68                       |
-|          |            |                                                             |
-|          |            | High level: the device address is 0x69                      |
-+----------+------------+-------------------------------------------------------------+
-| INT      | 8          | Output interrupt pin                                        |
-+----------+------------+-------------------------------------------------------------+
+.. table::
+    :align: center
+    :class: zebra
+    
+    +----------+------------+-------------------------------------------------------------+
+    | Pin name | Pin number | Description                                                 |
+    +==========+============+=============================================================+
+    | VCC      | 1          | Positive pole of power supply with voltage 3.3V/5V          |
+    +----------+------------+-------------------------------------------------------------+
+    | GND      | 2          | Negative pole of power supply                               |
+    +----------+------------+-------------------------------------------------------------+
+    | SCL      | 3          | I2C communication clock pin                                 |
+    +----------+------------+-------------------------------------------------------------+
+    | SDA      | 4          | I2C communication clock pin                                 |
+    +----------+------------+-------------------------------------------------------------+
+    | XDA      | 5          | I2C host data pin which can be connected to other devices.  |
+    +----------+------------+-------------------------------------------------------------+
+    | XCL      | 6          | I2C host clock pin which can be connected to other devices. |
+    +----------+------------+-------------------------------------------------------------+
+    |          |            | I2C address bit control pin.                                |
+    |          |            |                                                             |
+    | AD0      | 7          | Low level: the device address is 0x68                       |
+    |          |            |                                                             |
+    |          |            | High level: the device address is 0x69                      |
+    +----------+------------+-------------------------------------------------------------+
+    | INT      | 8          | Output interrupt pin                                        |
+    +----------+------------+-------------------------------------------------------------+
 
 For more detail, please refer to datasheet.
 
@@ -80,14 +89,13 @@ Note that the power supply voltage for MPU6050 module is 3.3V in the circuit.
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
+   :class: table-line
    :align: center
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter26_02|
-   * -  Hardware connection. 
-       
-        If you need any support, please feel free to contact us via: support@freenove.com
+   * -  **Hardware connection** 
+   * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
         |Chapter26_03|
 
@@ -97,9 +105,9 @@ Note that the power supply voltage for MPU6050 module is 3.3V in the circuit.
 Code
 =============================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes"** to disk(D) in advance with the path of "D:/Micropython_Codes".
 
-Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "26.1_MPU6050". Select "mpu6050.py", right click your mouse to select "Upload to /", wait for "mpu6050.py" to be uploaded to ESP32-WROVER and then double click "MPU6050.py". 
+Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "26.1_MPU6050". Select "mpu6050.py", right click your mouse to select "Upload to /", wait for "mpu6050.py" to be uploaded to ESP32-WROVER and then double click "MPU6050.py". 
 
 MPU6050
 ---------------------------
@@ -119,12 +127,14 @@ Click "Run current script". When ESP32 obtains acceleration data and gyroscope d
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/26.1_MPU6050/Acceleration.py
+    :linenos:
     :language: python
     :dedent:
 
 Import MPU6050 and time modules. 
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/26.1_MPU6050/Acceleration.py
+    :linenos:
     :language: python
     :lines: 1-2
     :dedent:
@@ -132,6 +142,7 @@ Import MPU6050 and time modules.
 Set I2C pins and associate them with MPU6050 module, and then initialize MPU6050 and wait for the initialization to complete.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/26.1_MPU6050/Acceleration.py
+    :linenos:
     :language: python
     :lines: 4-7
     :dedent:
@@ -139,6 +150,7 @@ Set I2C pins and associate them with MPU6050 module, and then initialize MPU6050
 Obtain the acceleration data of MPU6050 and store it in accel. Obtain the gyroscope data and store it in gyro. 
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/26.1_MPU6050/Acceleration.py
+    :linenos:
     :language: python
     :lines: 11-12
     :dedent:
@@ -146,6 +158,7 @@ Obtain the acceleration data of MPU6050 and store it in accel. Obtain the gyrosc
 Update and collect the original data of the gyroscope every second and print the original data and processed acceleration and angular velocity data in "Shell".
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/26.1_MPU6050/Acceleration.py
+    :linenos:
     :language: python
     :lines: 11-19
     :dedent:

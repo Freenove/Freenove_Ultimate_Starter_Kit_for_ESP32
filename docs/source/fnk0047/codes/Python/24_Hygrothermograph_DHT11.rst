@@ -12,19 +12,24 @@ Hygrothermograph is an important tool in our lives to give us data on the temper
 Component List
 ============================================
 
-+----------------------+----------------------------------------------+
-| ESP32-WROVER x1      | GPIO Extension Board x1                      |
-|                      |                                              |
-| |Chapter01_00|       | |Chapter01_01|                               |
-+----------------------+----------------------------------------------+
-| Breadboard x1                                                       |
-|                                                                     |
-| |Chapter01_02|                                                      |
-+----------------------+------------------------+---------------------+
-| Jumper M/M x4        | DHT11 x1               | Resistor 10kΩ x1    |
-|                      |                        |                     |
-| |Chapter01_05|       |  |Chapter24_00|        |   |Chapter02_01|    |
-+----------------------+------------------------+---------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +----------------------+----------------------------------------------+
+    | ESP32-WROVER x1      | GPIO Extension Board x1                      |
+    |                      |                                              |
+    | |Chapter01_00|       | |Chapter01_01|                               |
+    +----------------------+----------------------------------------------+
+    | Breadboard x1                                                       |
+    |                                                                     |
+    | |Chapter01_02|                                                      |
+    +----------------------+------------------------+---------------------+
+    | Jumper M/M x4        | DHT11 x1               | Resistor 10kΩ x1    |
+    |                      |                        |                     |
+    | |Chapter01_05|       |  |Chapter24_00|        |   |Chapter02_01|    |
+    +----------------------+------------------------+---------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -54,14 +59,13 @@ Circuit
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
+   :class: table-line
    :align: center
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter24_02|
-   * -  Hardware connection. 
-       
-        If you need any support, please feel free to contact us via: support@freenove.com
+   * -  **Hardware connection** 
+   * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
         |Chapter24_03|
 
@@ -71,9 +75,9 @@ Circuit
 Code
 =============================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes"** to disk(D) in advance with the path of **"D:/Micropython_Codes"**.
 
-Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "24.1_Hygrothermograph" and double click  "Hygrothermograph.py".
+Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "24.1_Hygrothermograph" and double click  "Hygrothermograph.py".
 
 Hygrothermograph
 -------------------------------
@@ -94,12 +98,15 @@ Make sure your circuit is correctly connected and you will see the following mes
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/24.1_Hygrothermograph/Hygrothermograph.py
+    :linenos:
     :language: python
+    :lines: 1-10
     :dedent:
 
 Import machine, time and dht modules.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/24.1_Hygrothermograph/Hygrothermograph.py
+    :linenos:
     :language: python
     :lines: 1-3
     :dedent:
@@ -107,6 +114,7 @@ Import machine, time and dht modules.
 Associate DHT11 with Pin(13).
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/24.1_Hygrothermograph/Hygrothermograph.py
+    :linenos:
     :language: python
     :lines: 5-5
     :dedent:
@@ -114,6 +122,7 @@ Associate DHT11 with Pin(13).
 Start DHT11 to measure data once.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/24.1_Hygrothermograph/Hygrothermograph.py
+    :linenos:
     :language: python
     :lines: 8-8
     :dedent:
@@ -121,6 +130,7 @@ Start DHT11 to measure data once.
 Call the built-in function of DHT to obtain temperature and humidity data and print them in "Shell".
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/24.1_Hygrothermograph/Hygrothermograph.py
+    :linenos:
     :language: python
     :lines: 9-9
     :dedent:
@@ -128,6 +138,7 @@ Call the built-in function of DHT to obtain temperature and humidity data and pr
 Obtain temperature and humidity data once per second and print them out.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/24.1_Hygrothermograph/Hygrothermograph.py
+    :linenos:
     :language: python
     :lines: 7-10
     :dedent:
@@ -163,25 +174,30 @@ In this project, we use L2C-LCD1602 to display data collected by DHT11.
 Component List
 ============================================
 
-+----------------------+----------------------------------------------+
-| ESP32-WROVER x1      | GPIO Extension Board x1                      |
-|                      |                                              |
-| |Chapter01_00|       | |Chapter01_01|                               |
-+----------------------+----------------------------------------------+
-| Breadboard x1                                                       |
-|                                                                     |
-| |Chapter01_02|                                                      |
-+----------------------------------+----------------------------------+
-| LCD1602 Module x1                | Resistor 10kΩ x1                 |
-|                                  |                                  |
-| |Chapter20_00|                   |   |Chapter02_01|                 |
-+----------------------------------+----------------------------------+
-| Jumper F/M x4                    | DHT11 x1                         |
-|                                  |                                  |
-| Jumper M/M x4                    |                                  |
-|                                  |                                  |
-| |Chapter24_08|                   |   |Chapter24_00|                 |
-+----------------------------------+----------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +----------------------+----------------------------------------------+
+    | ESP32-WROVER x1      | GPIO Extension Board x1                      |
+    |                      |                                              |
+    | |Chapter01_00|       | |Chapter01_01|                               |
+    +----------------------+----------------------------------------------+
+    | Breadboard x1                                                       |
+    |                                                                     |
+    | |Chapter01_02|                                                      |
+    +----------------------------------+----------------------------------+
+    | LCD1602 Module x1                | Resistor 10kΩ x1                 |
+    |                                  |                                  |
+    | |Chapter20_00|                   |   |Chapter02_01|                 |
+    +----------------------------------+----------------------------------+
+    | Jumper F/M x4                    | DHT11 x1                         |
+    |                                  |                                  |
+    | Jumper M/M x4                    |                                  |
+    |                                  |                                  |
+    | |Chapter24_08|                   |   |Chapter24_00|                 |
+    +----------------------------------+----------------------------------+
 
 .. |Chapter24_08| image:: ../_static/imgs/24_Hygrothermograph_DHT11/Chapter24_08.png
 .. |Chapter20_00| image:: ../_static/imgs/20_LCD1602/Chapter20_00.png
@@ -191,14 +207,13 @@ Circuit
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
+   :class: table-line
    :align: center
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter24_09|
-   * -  Hardware connection. 
-       
-        If you need any support, please feel free to contact us via: support@freenove.com
+   * -  **Hardware connection** 
+   * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
         |Chapter24_10|
 
@@ -224,12 +239,14 @@ Click "Run current script". The first row of LCD1602 is temperature value and th
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/24.2_Hygrothermograph/Hygrothermograph.py
+    :linenos:
     :language: python
     :dedent:
 
 Import DHT11 and I2C LCD1602 modules.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/24.2_Hygrothermograph/Hygrothermograph.py
+    :linenos:
     :language: python
     :lines: 1-4
     :dedent:
@@ -237,6 +254,7 @@ Import DHT11 and I2C LCD1602 modules.
 Assign Pin(18) to DHT11, Pin(13) and Pin(14) to LCD1602.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/24.2_Hygrothermograph/Hygrothermograph.py
+    :linenos:
     :language: python
     :lines: 17-25
     :dedent:

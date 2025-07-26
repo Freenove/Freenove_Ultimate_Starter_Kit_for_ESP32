@@ -12,21 +12,26 @@ In this project, we will use Audio Converter & Amplifier to transcode audio data
 Component List
 ======================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1 |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter01_01|          |
-+------------------------------------+-------------------------+
-| Micro USB Wire x1                  | Speaker                 |
-|                                    |                         |
-| |Chapter08_00|                     | |Chapter28_00|          |
-+------------------------------------+-------------------------+
-| Audio Converter & Amplifier        | Jumper F/M x4           |
-|                                    |                         |
-|                                    | Jumper F/F x2           |
-|                                    |                         |
-| |Chapter29_00|                     | |Chapter24_08|          |
-+------------------------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1 |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter01_01|          |
+    +------------------------------------+-------------------------+
+    | Micro USB Wire x1                  | Speaker                 |
+    |                                    |                         |
+    | |Chapter08_00|                     | |Chapter28_00|          |
+    +------------------------------------+-------------------------+
+    | Audio Converter & Amplifier        | Jumper F/M x4           |
+    |                                    |                         |
+    |                                    | Jumper F/F x2           |
+    |                                    |                         |
+    | |Chapter29_00|                     | |Chapter24_08|          |
+    +------------------------------------+-------------------------+
   
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -44,6 +49,7 @@ The front and reverse view of Audio Converter & Amplifier module.
    :width: 80%
    :header-rows: 1 
    :align: center
+   :class: table-line
    
    * -  front view
      -  reverse view
@@ -59,42 +65,47 @@ The front and reverse view of Audio Converter & Amplifier module.
 
 Interface description for Audio Converter & Amplifier module
 
-+-----+------+-------------------------------------+
-| Pin | Name | Introductions                       |
-+-----+------+-------------------------------------+
-| 1   | SCK  | System clock input                  |
-+-----+------+-------------------------------------+
-| 2   | BCK  | Audio data bit clock input          |
-+-----+------+-------------------------------------+
-| 3   | DIN  | Audio data input                    |
-+-----+------+-------------------------------------+
-| 4   | LCK  | Audio data word clock input         |
-+-----+------+-------------------------------------+
-| 5   | VCC  | Power input, 3.3V~5.0V              |
-+-----+------+-------------------------------------+
-| 6   | GND  | Power Ground                        |
-+-----+------+-------------------------------------+
-| 7   | L    | External audio left channel input   |
-+-----+------+-------------------------------------+
-| 8   | G    | Power Ground                        |
-+-----+------+-------------------------------------+
-| 9   | R    | External audio right channel input  |
-+-----+------+-------------------------------------+
-| 10  | G    | Power Ground                        |
-+-----+------+-------------------------------------+
-| 11  | R+   | Positive pole of right channel horn |
-+-----+------+-------------------------------------+
-| 12  | R-   | Negative pole of right channel horn |
-+-----+------+-------------------------------------+
-| 13  | L+   | Positive pole of left channel horn  |
-+-----+------+-------------------------------------+
-| 14  | L-   | Negative pole of left channel horn  |
-+-----+------+-------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: zebra
+    
+    +-----+------+-------------------------------------+
+    | Pin | Name | Introductions                       |
+    +=====+======+=====================================+
+    | 1   | SCK  | System clock input                  |
+    +-----+------+-------------------------------------+
+    | 2   | BCK  | Audio data bit clock input          |
+    +-----+------+-------------------------------------+
+    | 3   | DIN  | Audio data input                    |
+    +-----+------+-------------------------------------+
+    | 4   | LCK  | Audio data word clock input         |
+    +-----+------+-------------------------------------+
+    | 5   | VCC  | Power input, 3.3V~5.0V              |
+    +-----+------+-------------------------------------+
+    | 6   | GND  | Power Ground                        |
+    +-----+------+-------------------------------------+
+    | 7   | L    | External audio left channel input   |
+    +-----+------+-------------------------------------+
+    | 8   | G    | Power Ground                        |
+    +-----+------+-------------------------------------+
+    | 9   | R    | External audio right channel input  |
+    +-----+------+-------------------------------------+
+    | 10  | G    | Power Ground                        |
+    +-----+------+-------------------------------------+
+    | 11  | R+   | Positive pole of right channel horn |
+    +-----+------+-------------------------------------+
+    | 12  | R-   | Negative pole of right channel horn |
+    +-----+------+-------------------------------------+
+    | 13  | L+   | Positive pole of left channel horn  |
+    +-----+------+-------------------------------------+
+    | 14  | L-   | Negative pole of left channel horn  |
+    +-----+------+-------------------------------------+
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
+   :class: table-line
    
    * -  |Chapter29_04|
    * -  |Chapter29_05|
@@ -113,16 +124,18 @@ External audio input interface: connect to external audio equipment. Used to amp
 
 Power interface: connect to external power supply. External power supply selection range: 3.3V-5.0V.
 
+Circuit
+==========================
+
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter29_06|
-   * -  Hardware connection. 
-       
-        If you need any support, please feel free to contact us via: support@freenove.com
+   * -  **Hardware connection**  
+   * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
         |Chapter29_07|
 

@@ -12,24 +12,28 @@ First, let's play a 2D snake game.
 Component List
 ====================================
 
-+------------------------------------+------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1|
-|                                    |                        |
-| |Chapter01_00|                     | |Chapter01_01|         |
-+------------------------------------+------------------------+
-| Breadboard x1                                               |
-|                                                             |
-| |Chapter01_02|                                              |
-+------------------------------------+------------------------+
-| Joystick x1                        | Jumper M/M x3          |
-|                                    |                        |
-| |Chapter14_00|                     | |Chapter01_05|         |
-+------------------------------------+------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1|
+    |                                    |                        |
+    | |Chapter01_00|                     | |Chapter01_01|         |
+    +------------------------------------+------------------------+
+    | Breadboard x1                                               |
+    |                                                             |
+    | |Chapter01_02|                                              |
+    +------------------------------------+------------------------+
+    | Joystick x1                        | Jumper M/M x3          |
+    |                                    |                        |
+    | |Chapter14_00|                     | |Chapter01_05|         |
+    +------------------------------------+------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED/Chapter01_02.png
-.. |Chapter13_00| image:: ../_static/imgs/1_LED/Chapter13_00.png 
 .. |Chapter07_04| image:: ../_static/imgs/7_Buzzer/Chapter07_04.png   
 .. |Chapter01_05| image:: ../_static/imgs/1_LED/Chapter01_05.png
 .. |Chapter14_00| image:: ../_static/imgs/14_Joystick/Chapter14_00.png
@@ -40,12 +44,13 @@ Circuit
 Use Pin36 and Pin39 (A0 and A3) ports to detect the voltage value of two rotary potentiometers inside joystick.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter03_00|
-   * -  Hardware connection. 
+   * -  **Hardware connection** 
    * -  |Chapter03_01|
 
 .. |Chapter03_00| image:: ../_static/imgs/3_Snake_Game/Chapter03_00.png

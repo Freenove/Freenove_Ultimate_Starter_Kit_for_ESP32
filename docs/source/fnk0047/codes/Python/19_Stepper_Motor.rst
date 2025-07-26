@@ -10,19 +10,24 @@ Project Stepper Motor
 Component List
 ============================================
 
-+------------------------------------+---------------------------------------------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1                                       |
-|                                    |                                                               |
-| |Chapter01_00|                     | |Chapter01_01|                                                |
-+------------------------------------+---------------------------------------------------------------+
-| Breadboard x1                                                                                      |
-|                                                                                                    |
-| |Chapter01_02|                                                                                     |
-+------------------------------------+------------------------+--------------------------------------+
-| Stepper Motor x1                   | Jumper F/M x6          | ULN2003 Stepper Motor Driver x1      |
-|                                    |                        |                                      |
-| |Chapter19_00|                     |  |Chapter01_05|        |   |Chapter19_01|                     |
-+------------------------------------+------------------------+--------------------------------------+
+.. table:: 
+    :align: center
+    :width: 80%
+    :class: table-line
+
+    +------------------------------------+---------------------------------------------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1                                       |
+    |                                    |                                                               |
+    | |Chapter01_00|                     | |Chapter01_01|                                                |
+    +------------------------------------+---------------------------------------------------------------+
+    | Breadboard x1                                                                                      |
+    |                                                                                                    |
+    | |Chapter01_02|                                                                                     |
+    +------------------------------------+------------------------+--------------------------------------+
+    | Stepper Motor x1                   | Jumper F/M x6          | ULN2003 Stepper Motor Driver x1      |
+    |                                    |                        |                                      |
+    | |Chapter19_00|                     |  |Chapter01_05|        |   |Chapter19_01|                     |
+    +------------------------------------+------------------------+--------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -75,14 +80,13 @@ When building the circuit, note that rated voltage of the stepper motor is 5V, a
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter19_06|
-   * -  Hardware connection. 
-       
-        If you need any support, please feel free to contact us via: support@freenove.com
+   * -  **Hardware connection** 
+   * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
         |Chapter19_07|
 
@@ -94,30 +98,33 @@ Code
 
 This code uses the four-step, four-part mode to drive the Stepper Motor in the clockwise and anticlockwise directions.
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes"** to disk(D) in advance with the path of "D:/Micropython_Codes".
 
-Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "19.1_Stepping_Motor". Select "stepmotor.py", right click your mouse to select "Upload to /", wait for "myservo.py" to be uploaded to ESP32-WROVER and then double click "Stepping_Motor.py". 
+Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "19.1_Stepping_Motor". Select "stepmotor.py", right click your mouse to select "Upload to /", wait for "myservo.py" to be uploaded to ESP32-WROVER and then double click "Stepping_Motor.py". 
 
 Stepping_Motor
 ---------------------------------------
 
-.. image:: ../_static/imgs/19_Stepper_Motor/Chapter19_09.png
+.. image:: ../_static/imgs/19_Stepper_Motor/Chapter19_10.png
     :align: center
 
 Click "Run current script", the stepper motor will rotate 360° clockwise and stop for 1s, and then rotate 360° anticlockwise and stop for 1s. And it will repeat this action in an endless loop.
 
-.. image:: ../_static/imgs/19_Stepper_Motor/Chapter19_10.png
+.. image:: ../_static/imgs/19_Stepper_Motor/Chapter19_08.png
     :align: center
 
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/19.1_Stepping_Motor/Stepping_Motor.py
+    :linenos:
     :language: python
+    :lines: 1-15
     :dedent:
 
 Import time and stepmotor modules.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/19.1_Stepping_Motor/Stepping_Motor.py
+    :linenos:
     :language: python
     :lines: 1-2
     :dedent:
@@ -125,6 +132,7 @@ Import time and stepmotor modules.
 In this project, we define four pins to drive the stepper motor.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/19.1_Stepping_Motor/Stepping_Motor.py
+    :linenos:
     :language: python
     :lines: 4-4
     :dedent:
@@ -132,6 +140,7 @@ In this project, we define four pins to drive the stepper motor.
 Call the function moveSteps to control the stepper motor to rotate for 360°and then call function stop() to stop it.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/19.1_Stepping_Motor/Stepping_Motor.py
+    :linenos:
     :language: python
     :lines: 8-9
     :dedent:
@@ -139,6 +148,7 @@ Call the function moveSteps to control the stepper motor to rotate for 360°and 
 Repeatedly control the stepmotor to rotate 360° clockwise and then rotate 360° anti-clockwise.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/19.1_Stepping_Motor/Stepping_Motor.py
+    :linenos:
     :language: python
     :lines: 7-13
     :dedent:

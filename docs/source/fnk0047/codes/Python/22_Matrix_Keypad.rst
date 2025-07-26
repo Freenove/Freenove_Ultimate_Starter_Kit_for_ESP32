@@ -12,19 +12,24 @@ In this project, we will attempt to get every key code on the Matrix Keypad to w
 Component List
 =====================================
 
-+------------------------------------+----------------------------------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1                            |
-|                                    |                                                    |
-| |Chapter01_00|                     | |Chapter01_01|                                     |
-+------------------------------------+----------------------------------------------------+
-| Breadboard x1                                                                           |
-|                                                                                         |
-| |Chapter01_02|                                                                          |
-+------------------------------------+----------------------------------------------------+
-| 4x4 Matrix Keypad x1               | Jumper M/M x8                                      |
-|                                    |                                                    |
-| |Chapter22_00|                     |  |Chapter01_05|                                    |
-+------------------------------------+----------------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+----------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1    |
+    |                                    |                            |
+    | |Chapter01_00|                     | |Chapter01_01|             |
+    +------------------------------------+----------------------------+
+    | Breadboard x1                                                   |
+    |                                                                 |
+    | |Chapter01_02|                                                  |
+    +------------------------------------+----------------------------+
+    | 4x4 Matrix Keypad x1               | Jumper M/M x8              |
+    |                                    |                            |
+    | |Chapter22_00|                     |  |Chapter01_05|            |
+    +------------------------------------+----------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -55,14 +60,13 @@ Circuit
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
+   :class: table-line
    :align: center
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter22_03|
-   * -  Hardware connection. 
-       
-        If you need any support, please feel free to contact us via: support@freenove.com
+   * -  **Hardware connection** 
+   * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
         |Chapter22_04|
 
@@ -74,9 +78,9 @@ Code
 
 This code is used to obtain all key codes of the 4x4 Matrix Keypad, when one of the keys is pressed, the key code will be printed out via serial port.
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes"** to disk(D) in advance with the path of **"D:/Micropython_Codes"**.
 
-Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->   "22.1_Matrix_Keypad". Select"keypad.py", right click your mouse to select "Upload to /", wait for "keypad.py" to be uploaded to ESP32-WROVER and then double click "Matrix_Keypad.py". 
+Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "22.1_Matrix_Keypad". Select"keypad.py", right click your mouse to select "Upload to /", wait for "keypad.py" to be uploaded to ESP32-WROVER and then double click "Matrix_Keypad.py". 
 
 Matrix_Keypad
 ---------------------------------
@@ -92,12 +96,15 @@ Click "Run current script", push the key board and the key value will be printed
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/22.1_Matrix_Keypad/Matrix_Keypad.py
+    :linenos:
     :language: python
+    :lines: 1-14
     :dedent:
 
 Import keypad module.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/22.1_Matrix_Keypad/Matrix_Keypad.py
+    :linenos:
     :language: python
     :lines:  1-1
     :dedent:
@@ -105,6 +112,7 @@ Import keypad module.
 Associate the keypad module to ESP32 pins. 
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/22.1_Matrix_Keypad/Matrix_Keypad.py
+    :linenos:
     :language: python
     :lines:  4-4
     :dedent:
@@ -112,6 +120,7 @@ Associate the keypad module to ESP32 pins.
 Call function keypad.scan() of the keypad module. When the keypad module detects that the key is pressed, it returns the value of the pressed key; when no key is pressed, the return value is None. 
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/22.1_Matrix_Keypad/Matrix_Keypad.py
+    :linenos:
     :language: python
     :lines:  7-7
     :dedent:
@@ -119,6 +128,7 @@ Call function keypad.scan() of the keypad module. When the keypad module detects
 Call function keyPan.scan() to obtain the value of the pressed key. Once it is obtained, print it out.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/22.1_Matrix_Keypad/Matrix_Keypad.py
+    :linenos:
     :language: python
     :lines:  6-11
     :dedent:
@@ -143,23 +153,28 @@ In this project, we use keypad as a keyboard to control the action of the servo 
 Component List
 =======================================================
 
-+------------------------------------+-----------------------------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1                       |
-|                                    |                                               |
-| |Chapter01_00|                     | |Chapter01_01|                                |
-+------------------------------------+-----------------------------------------------+
-| Breadboard x1                                                                      |
-|                                                                                    |
-| |Chapter01_02|                                                                     |
-+------------------------------------+------------------------+----------------------+
-| Jumper M/M                         | Servo x1               | 4x4 Matrix Keypad x1 |
-|                                    |                        |                      |
-| |Chapter01_05|                     |  |Chapter18_00|        |   |Chapter22_00|     |
-+------------------------------------+------------------------+----------------------+
-| NPN transistorx1 (S8050)           | Active buzzer x1       | Resistor 1kΩ x1      |
-|                                    |                        |                      |
-| |Chapter07_02|                     |  |Chapter07_01|        |   |Chapter07_03|     |
-+------------------------------------+------------------------+----------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-----------------------------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1                       |
+    |                                    |                                               |
+    | |Chapter01_00|                     | |Chapter01_01|                                |
+    +------------------------------------+-----------------------------------------------+
+    | Breadboard x1                                                                      |
+    |                                                                                    |
+    | |Chapter01_02|                                                                     |
+    +------------------------------------+------------------------+----------------------+
+    | Jumper M/M                         | Servo x1               | 4x4 Matrix Keypad x1 |
+    |                                    |                        |                      |
+    | |Chapter01_05|                     |  |Chapter18_00|        |   |Chapter22_00|     |
+    +------------------------------------+------------------------+----------------------+
+    | NPN transistorx1 (S8050)           | Active buzzer x1       | Resistor 1kΩ x1      |
+    |                                    |                        |                      |
+    | |Chapter07_02|                     |  |Chapter07_01|        |   |Chapter07_03|     |
+    +------------------------------------+------------------------+----------------------+
 
 .. |Chapter07_02| image:: ../_static/imgs/7_Buzzer/Chapter07_02.png
 .. |Chapter07_01| image:: ../_static/imgs/7_Buzzer/Chapter07_01.png
@@ -171,14 +186,13 @@ Circuit
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter22_09|
-   * -  Hardware connection. 
-       
-        If you need any support, please feel free to contact us via: support@freenove.com
+   * -  **Hardware connection** 
+   * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
         |Chapter22_10|
 
@@ -188,9 +202,9 @@ Circuit
 Code
 =======================================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes"** to disk(D) in advance with the path of "D:/Micropython_Codes".
 
-Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "22.2_Keypad_Door". Select "keypad.py" and "myservo.py", right click your mouse to select "Upload to /", wait for "keypad.py" and "myservo.py" to be uploaded to ESP32-WROVER and then double click "Keypad_Door.py". 
+Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "22.2_Keypad_Door". Select "keypad.py" and "myservo.py", right click your mouse to select "Upload to /", wait for "keypad.py" and "myservo.py" to be uploaded to ESP32-WROVER and then double click "Keypad_Door.py". 
 
 Keypad_Door
 -----------------------------------------
@@ -203,12 +217,15 @@ Click "Run current script", press the keypad to input password with 4 characters
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/22.2_Keypad_Door/Keypad_Door.py
+    :linenos:
     :language: python
+    :lines: 1-41
     :dedent:
 
 Define an array and set the password.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/22.2_Keypad_Door/Keypad_Door.py
+    :linenos:
     :language: python
     :lines: 11-11
     :dedent:
@@ -216,6 +233,7 @@ Define an array and set the password.
 Each time a key is pressed, the buzzer will short beep once, and the key value of the key will be stored in the keyIn array.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/22.2_Keypad_Door/Keypad_Door.py
+    :linenos:
     :language: python
     :lines: 22-28
     :dedent:
@@ -223,6 +241,7 @@ Each time a key is pressed, the buzzer will short beep once, and the key value o
 When 4 keys are pressed, it will judge whether the password is correct. If it is correct, the servo will rotate 90 degrees, and then turn back after 1 second. If the password is wrong, the buzzer will long beep once and the keyInNum value will be cleared.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/22.2_Keypad_Door/Keypad_Door.py
+    :linenos:
     :language: python
     :lines: 30-41
     :dedent:

@@ -12,31 +12,36 @@ In this project, we will use a push button switch indirectly to control the moto
 Component List
 ==========================
 
-+------------------------------------+----------------------------------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1                            |
-|                                    |                                                    |
-| |Chapter01_00|                     | |Chapter01_01|                                     |
-+------------------------------------+----------------------------------------------------+
-| Breadboard x1                                                                           |
-|                                                                                         |
-| |Chapter01_02|                                                                          |
-+-----------------+------------------+------------------------+---------------------------+
-| Resistor 10kΩ x2| Resistor 220Ω x1 | NPN transistor x1      | Resistor 1kΩ x1           |
-|                 |                  |                        |                           |
-| |Chapter02_01|  | |Chapter01_04|   | |Chapter07_02|         | |Chapter07_03|            |
-+-----------------+------------------+------------------------+---------------------------+
-| Relay x1        | Diode x1         | Push button x1         | LED x1                    |
-|                 |                  |                        |                           |
-| |Chapter17_00|  | |Chapter17_01|   | |Chapter02_02|         | |Chapter01_03|            |
-+-----------------+------------------+------------------------+---------------------------+
-| Motor x1                           | Jumper M/M                                         |
-|                                    |                                                    |
-| |Chapter17_02|                     | |Chapter01_05|                                     |
-+------------------------------------+----------------------------------------------------+
-| 9V battery (prepared by yourself) & battery line                                        |
-|                                                                                         |
-| |Chapter17_03|                                                                          |
-+-----------------------------------------------------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+----------------------------------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1                            |
+    |                                    |                                                    |
+    | |Chapter01_00|                     | |Chapter01_01|                                     |
+    +------------------------------------+----------------------------------------------------+
+    | Breadboard x1                                                                           |
+    |                                                                                         |
+    | |Chapter01_02|                                                                          |
+    +-----------------+------------------+------------------------+---------------------------+
+    | Resistor 10kΩ x2| Resistor 220Ω x1 | NPN transistor x1      | Resistor 1kΩ x1           |
+    |                 |                  |                        |                           |
+    | |Chapter02_01|  | |Chapter01_04|   | |Chapter07_02|         | |Chapter07_03|            |
+    +-----------------+------------------+------------------------+---------------------------+
+    | Relay x1        | Diode x1         | Push button x1         | LED x1                    |
+    |                 |                  |                        |                           |
+    | |Chapter17_00|  | |Chapter17_01|   | |Chapter02_02|         | |Chapter01_03|            |
+    +-----------------+------------------+------------------------+---------------------------+
+    | Motor x1                           | Jumper M/M                                         |
+    |                                    |                                                    |
+    | |Chapter17_02|                     | |Chapter01_05|                                     |
+    +------------------------------------+----------------------------------------------------+
+    | 9V battery (prepared by yourself) & battery line                                        |
+    |                                                                                         |
+    | |Chapter17_03|                                                                          |
+    +-----------------------------------------------------------------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -64,9 +69,9 @@ A relay is a safe switch which can use low power circuit to control high power c
 The following is a schematic diagram of a common relay and the feature and circuit symbol of a 5V relay used in this project:
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
+   :class: table-line
    
    * -  Diagram 
      -  Feature
@@ -110,16 +115,17 @@ When a motor gets connected to the power supply, it will rotate in one direction
 .. image:: ../_static/imgs/17_Relay_&_Motor/Chapter17_10.png
     :align: center
 
+Circuit
+=======================================
+
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
    :align: center
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter17_11|
-   * -  Hardware connection. 
-       
-        If you need any support, please feel free to contact us via: support@freenove.com
+   * -  **Hardware connection** 
+   * -  If you need any support, please feel free to contact us via: support@freenove.com
 
         |Chapter17_12|
 
@@ -128,7 +134,7 @@ When a motor gets connected to the power supply, it will rotate in one direction
 
 .. note::
     
-    the motor circuit uses A large current, about 0.2-0.3A without load.We recommend that you use a 9V battery to power the extension board.
+    The motor circuit uses A large current, about 0.2-0.3A without load.We recommend that you use a 9V battery to power the extension board.
 
 Sketch 
 ===========================================

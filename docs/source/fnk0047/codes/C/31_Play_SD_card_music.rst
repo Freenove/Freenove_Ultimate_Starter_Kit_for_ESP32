@@ -16,27 +16,30 @@ In this project, we will read an mp3 file from an SD card, decode it through ESP
 Component List
 ==================================================
 
-+-------------------+--------------------------+-------------------+
-| ESP32 WROVER x1   | USB cable x1             | SDcard x1         |
-|                   |                          |                   |
-||Chapter01_00|     ||Chapter30_00|            ||Chapter30_02|     |
-+-------------------+--------------------------+-------------------+
-| Micro USB Wire x1 | NPN transistorx1 (S8050) | Speaker           |
-|                   |                          |                   |
-||Chapter08_00|     ||Chapter07_02|            ||Chapter28_00|     |
-+-------------------+--------------------------+-------------------+
-| Diode x1          | Resistor 1kΩ x1          | Capacitor 10uF x1 |
-|                   |                          |                   |
-||Chapter17_01|     ||Chapter07_03|            ||Chapter28_01|     |
-+-------------------+--------------------------+-------------------+
-| Jumper F/M x4     | Card reader x1                               |
-|                   |                                              |
-| Jumper F/F x2     | (random color)                               |
-|                   |                                              |
-||Chapter24_08|     ||Chapter30_01|                                |
-|                   |                                              |
-|                   | :red:`(Not a USB flash drive.)`              |
-+-------------------+----------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +-------------------+--------------------------+-------------------+
+    | ESP32 WROVER x1   | USB cable x1             | SDcard x1         |
+    |                   |                          |                   |
+    ||Chapter01_00|     ||Chapter30_00|            ||Chapter30_02|     |
+    +-------------------+--------------------------+-------------------+
+    | Micro USB Wire x1 | NPN transistorx1 (S8050) | Speaker           |
+    |                   |                          |                   |
+    ||Chapter08_00|     ||Chapter07_02|            ||Chapter28_00|     |
+    +-------------------+--------------------------+-------------------+
+    | Diode x1          | Resistor 1kΩ x1          | Capacitor 10uF x1 |
+    |                   |                          |                   |
+    ||Chapter17_01|     ||Chapter07_03|            ||Chapter28_01|     |
+    +-------------------+------------+-------------+-------------------+
+    | Jumper F/M x4 Jumper F/F x2    | Card reader x1 (random color)   |
+    |                                |                                 |
+    | |Chapter24_08|                 ||Chapter30_01|                   |
+    |                                |                                 |
+    |                                | :red:`(Not a USB flash drive.)` |
+    +--------------------------------+---------------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter08_00| image:: ../_static/imgs/8_Serial_Communication/Chapter08_00.png
@@ -50,18 +53,22 @@ Component List
 .. |Chapter07_03| image:: ../_static/imgs/7_Buzzer/Chapter07_03.png
 .. |Chapter17_01| image:: ../_static/imgs/17_Relay_&_Motor/Chapter17_01.png
 
+Circuit
+========================
+
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter31_00|
    * -  Please note that before connecting the USB cable, please put the music into the SD card and insert the SD card into the card slot on the back of the ESP32.
-     -  |Chapter31_01|
-   * -  Hardware connection. 
+      
+        |Chapter31_01|
+   * -  **Hardware connection** 
        
-        If you need any support, please feel free to contact us via: support@freenove.com
+        :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
         |Chapter31_02|
 
@@ -77,7 +84,7 @@ How to install the library
 
 In this project, we will use the ESP8266Audio.zip library to decode the audio files in the SD card, and then output the audio signal through GPIO. If you have not installed this library, please follow the steps below to install it.
 
-Open arduino->Sketch->Include library-> Add .ZIP Library. 
+Open arduino -> Sketch -> Include library -> Add .ZIP Library. 
 
 .. image:: ../_static/imgs/31_Play_SD_card_music/Chapter31_03.png
     :align: center
@@ -96,7 +103,7 @@ We placed a folder called "music" in:
 
 **Freenove_Ultimate_Starter_Kit_for_ESP32\\Sketches\\Sketch_31.1_PlayMP3FromSD**
 
-User needs to copy this folder to SD card.
+:combo:`red font-bolder:User needs to copy this folder to SD card.`
 
 .. image:: ../_static/imgs/31_Play_SD_card_music/Chapter31_05.png
     :align: center
@@ -120,7 +127,7 @@ The following is the program code:
 
 Add music decoding header files and SD card drive files.
 
-If you want to use the circuit in 31.2, you just need to modify #define IIS_ENABLE 1.
+If you want to use the circuit in 31.2, you just need to modify **#define IIS_ENABLE 1**.
 
 .. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_31.1_PlayMP3FromSD/Sketch_31.1_PlayMP3FromSD.ino
     :linenos: 
@@ -168,22 +175,27 @@ In this project, we will read mp3 files from SD card, decode them through ESP32,
 Component List
 ==================================================
 
-+-------------------+----------------------------------+-------------------+
-| ESP32 WROVER x1   | USB cable x1                     | SDcard x1         |
-|                   |                                  |                   |
-||Chapter01_00|     ||Chapter30_00|                    ||Chapter30_02|     |
-+-------------------+----------------------------------+-------------------+
-| Micro USB Wire x1 | Audio Converter & Amplifier      | Speaker           |
-|                   |                                  |                   |
-||Chapter08_00|     |  |Chapter29_00|                  ||Chapter28_00|     |
-|                   |                                  |                   |
-+-------------------+----------------------------------+-------------------+
-| Jumper F/M x4     | Card reader x1 (random color)                        |
-|                   |                                                      |
-| Jumper F/F x2     | |Chapter30_01|                                       |
-|                   |                                                      |
-||Chapter24_08|     | :red:`(Not a USB flash drive.)`                      |
-+-------------------+------------------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +-------------------+----------------------------------+-------------------+
+    | ESP32 WROVER x1   | USB cable x1                     | SDcard x1         |
+    |                   |                                  |                   |
+    ||Chapter01_00|     ||Chapter30_00|                    ||Chapter30_02|     |
+    +-------------------+----------------------------------+-------------------+
+    | Micro USB Wire x1 | Audio Converter & Amplifier      | Speaker           |
+    |                   |                                  |                   |
+    ||Chapter08_00|     |  |Chapter29_00|                  ||Chapter28_00|     |
+    |                   |                                  |                   |
+    +-------------------+----------------------------------+-------------------+
+    | Jumper F/M x4     | Card reader x1 (random color)                        |
+    |                   |                                                      |
+    | Jumper F/F x2     | |Chapter30_01|                                       |
+    |                   |                                                      |
+    ||Chapter24_08|     | :red:`(Not a USB flash drive.)`                      |
+    +-------------------+------------------------------------------------------+
 
 .. |Chapter29_00| image:: ../_static/imgs/29_Bluetooth_Media_by_Audio_Module/Chapter29_00.png
 
@@ -191,20 +203,20 @@ Circuit
 ==========================================
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter31_08|
    * -  Please note that before connecting the USB cable, please put the music into the
        
         SD card and insert the SD card into the card slot on the back of the ESP32.
 
         |Chapter31_09|
-   * -  Hardware connection. If you need any support,
+   * -  **Hardware connection** 
       
-        please feel free to contact us via: support@freenove.com
+        :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
         |Chapter31_10|
 
@@ -220,12 +232,12 @@ How to install the library
 
 In this project, we will use the ESP32-audioI2S.zip library to decode the audio files in the SD card, and then output the audio signal through IIS. If you have not installed this library, please follow the steps below to install it.
 
-Open arduino->Sketch->Include library-> Add .ZIP Library. 
+Open arduino -> Sketch -> Include library -> Add .ZIP Library. 
 
 .. image:: ../_static/imgs/31_Play_SD_card_music/Chapter31_11.png
     :align: center
 
-In the new pop-up window, select "Freenove_Ultimate_Starter_Kit_for_ESP32\\C\\Libraries\\ESP32-audioI2S.zip". 
+In the new pop-up window, select **"Freenove_Ultimate_Starter_Kit_for_ESP32\\C\\Libraries\\ESP32-audioI2S.zip"**. 
 
 Then click "Open".
 
@@ -244,7 +256,7 @@ User needs to copy this folder to SD card.
 .. image:: ../_static/imgs/31_Play_SD_card_music/Chapter31_13.png
     :align: center
 
-Click Tools -> Partition Scheme, Select Huge APP……, Then click upload. 
+Click Tools -> Partition Scheme, Select Huge APP......, Then click upload. 
 
 .. image:: ../_static/imgs/31_Play_SD_card_music/Chapter31_14.png
     :align: center
@@ -281,7 +293,8 @@ Define the drive pins for SD card and IIS. Note that the SD card driver pins can
 
 Declare an audio decoding object, associate it with the pin, set the volume, and set the decoding object.
 
-.. code-block:: C
+.. code-block:: c
+    :linenos:
 
     Audio audio;
     ......
@@ -308,6 +321,7 @@ In other words, if you want to switch the music in the SD card, you can directly
 The following functions are used to print the audio decoding information. If you do not want to see the decoding information in the serial port, you can directly comment out these functions.
 
 .. code-block:: C
+    :linenos:
 
     void audio_info(const char *info);
     void audio_id3data(const char *info);

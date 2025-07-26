@@ -4,6 +4,8 @@
 
 Before starting building the projects, you need to make some preparation first, which is so crucial that you must not skip.
 
+.. _Thonny:
+
 0.1 Installing Thonny (Important)
 **********************************************
 
@@ -20,41 +22,46 @@ Open-source code repositories of Thonny: https://github.com/thonny/thonny
 
 Follow the instruction of official website to install Thonny or click the links below to download and install. (Select the appropriate one based on your operating system.)
 
-+------------------+----------------------------------------------------------------------------+
-| Operating System | Download links/methods                                                     |
-+------------------+----------------------------------------------------------------------------+
-| Windows          | https://github.com/thonny/thonny/releases/download/v3.2.7/thonny-3.2.7.exe |
-+------------------+----------------------------------------------------------------------------+
-| Mac OS           | https://github.com/thonny/thonny/releases/download/v3.2.7/thonny-3.2.7.pkg |
-+------------------+----------------------------------------------------------------------------+
-|                  | **The latest version:**                                                    |
-|                  |                                                                            |
-|                  | **Binary bundle for PC (Thonny+Python):**                                  |
-|                  |                                                                            |
-|                  | bash <(wget -O - https://thonny.org/installer-for-linux)                   |
-|                  |                                                                            |
-|                  | |                                                                          |
-|                  |                                                                            |
-|                  | **With pip:**                                                              |
-|                  |                                                                            |
-|                  | pip3 install thonny                                                        |
-|                  |                                                                            |
-| Linux            | |                                                                          |
-|                  |                                                                            |
-|                  | **Distro packages (may not be the latest version):**                       |
-|                  |                                                                            |
-|                  | **Debian, Rasbian, Ubuntu, Mint and others:**                              |
-|                  |                                                                            |
-|                  | sudo apt install thonny                                                    |
-|                  |                                                                            |
-|                  | |                                                                          |
-|                  |                                                                            |
-|                  | **Fedora:**                                                                |
-|                  |                                                                            |
-|                  | sudo dnf install thonny                                                    |
-+------------------+----------------------------------------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: zebra
+    
+    +------------------+----------------------------------------------------------------------------+
+    | Operating System | Download links/methods                                                     |
+    +==================+============================================================================+
+    | Windows          | https://github.com/thonny/thonny/releases/download/v3.2.7/thonny-3.2.7.exe |
+    +------------------+----------------------------------------------------------------------------+
+    | Mac OS           | https://github.com/thonny/thonny/releases/download/v3.2.7/thonny-3.2.7.pkg |
+    +------------------+----------------------------------------------------------------------------+
+    |                  | **The latest version:**                                                    |
+    |                  |                                                                            |
+    |                  | **Binary bundle for PC (Thonny+Python):**                                  |
+    |                  |                                                                            |
+    |                  | bash <(wget -O - https://thonny.org/installer-for-linux)                   |
+    |                  |                                                                            |
+    |                  | |                                                                          |
+    |                  |                                                                            |
+    |                  | **With pip:**                                                              |
+    |                  |                                                                            |
+    |                  | pip3 install thonny                                                        |
+    |                  |                                                                            |
+    | Linux            | |                                                                          |
+    |                  |                                                                            |
+    |                  | **Distro packages (may not be the latest version):**                       |
+    |                  |                                                                            |
+    |                  | **Debian, Rasbian, Ubuntu, Mint and others:**                              |
+    |                  |                                                                            |
+    |                  | sudo apt install thonny                                                    |
+    |                  |                                                                            |
+    |                  | |                                                                          |
+    |                  |                                                                            |
+    |                  | **Fedora:**                                                                |
+    |                  |                                                                            |
+    |                  | sudo dnf install thonny                                                    |
+    +------------------+----------------------------------------------------------------------------+
 
-You can also open "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Software", we have prepared it in advance.
+You can also open **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Software"**, we have prepared it in advance.
 
 .. image:: ../_static/imgs/0_LED/Chapter00_09.png
     :align: center
@@ -141,7 +148,7 @@ Check whether CH340 has been installed
 .. image:: ../_static/imgs/0_LED/Chapter00_22.png
     :align: center
 
-3.	Click "Device Manager". If your computer has installed CH340, you can see"USB-SERIAL CH340 (COMx)". And you can click :ref:`here <Burning>` to move to the next step.
+3.	Click "Device Manager". If your computer has installed CH340, you can see"USB-SERIAL CH340 (COMx)". And you can click :ref:`here <Micropython>` to move to the next step.
 
 .. image:: ../_static/imgs/0_LED/Chapter00_23.png
     :align: center
@@ -154,12 +161,12 @@ Installing CH340
 .. image:: ../_static/imgs/0_LED/Chapter00_24.png
     :align: center
 
-You can also open "Freenove_Ultimate_Starter_Kit_for_ESP32/CH340", we have prepared the installation package.
+You can also open **"Freenove_Ultimate_Starter_Kit_for_ESP32/CH340"**, we have prepared the installation package.
 
 .. image:: ../_static/imgs/0_LED/Chapter00_25.png
     :align: center
 
-2.	Open the folder "Freenove_Ultimate_Starter_Kit_for_ESP32/CH340/Windows/ch341ser"
+2.	Open the folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/CH340/Windows/ch341ser"**
 
 .. image:: ../_static/imgs/0_LED/Chapter00_26.png
     :align: center
@@ -226,12 +233,14 @@ If you still haven't installed the CH340 by following the steps above, you can v
 .. image:: ../_static/imgs/0_LED/Chapter00_37.png
     :align: center
 
-.. _Burning:
+.. _Micropython:
 
 0.4 Burning Micropython Firmware (Important)
 ************************************************
 
 To run Python programs on ESP32, we need to burn a firmware to ESP32 first.
+
+.. _Downloading:
 
 Downloading Micropython Firmware
 ============================================
@@ -243,11 +252,11 @@ Webpage listing firmware of microPython for ESP32: https://micropython.org/downl
 .. image:: ../_static/imgs/0_LED/Chapter00_38.png
     :align: center
 
-Firmware used in this tutorial is esp32spiram-20220117-v1.18.bin
+Firmware used in this tutorial is **esp32spiram-20220117-v1.18.bin**
 
-This file is also provided in our data folder "Freenove_Ultimate_Starter_Kit_for_ESP32
+This file is also provided in our data folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Firmware"**.
 
-/Python/Python_Firmware".
+.. _Burning:
 
 Burning a Micropython Firmware
 =====================================
@@ -264,7 +273,7 @@ Make sure that the driver has been installed successfully and that it can recogn
 
 .. note::
     
-    the port of different people may be different, which is a normal situation.
+    The port of different people may be different, which is a normal situation.
 
 1.	Open Thonny, click "run" and select "Select interpreter..."
 
@@ -478,8 +487,9 @@ When using the cam camera of our ESP32-WROVER, please check the pins of it. Pins
 
 .. list-table:: 
    :width: 80%
-   :header-rows: 1 
    :align: center
+   :header-rows: 1
+   :class: zebra
    
    * -  CAM_Pin
      -  GPIO_pin

@@ -77,6 +77,7 @@ First Use
 In the editor, type the following:
 
 .. code-block:: c 
+    :linenos:
     
     ellipse(50, 50, 80, 80);
 
@@ -111,7 +112,7 @@ We need to write code for control board and Processing to complete the interacti
 
 In order to simplify and facilitate the operation, we prepared a SerialDevice class for Processing to communicate with the control board. To use this class, we need to upload the following sketch to the control board:
 
-:red:`Freenove Ultimate Starter Kit for ESP32\C\Processing\SerialDevice\SerialDevice.ino.`
+:combo:`red font-bolder:Freenove Ultimate Starter Kit for ESP32\C\Processing\SerialDevice\SerialDevice.ino.`
  
 This sketch only need to be uploaded once, so the latter projects of this tutorial does not need to upload again.
 

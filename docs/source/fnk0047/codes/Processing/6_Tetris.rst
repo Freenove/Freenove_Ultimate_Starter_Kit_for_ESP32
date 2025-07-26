@@ -12,19 +12,24 @@ Now, let's use Processing and ESP32 board to achieve the tetris game.
 Component list
 ===============================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1 |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter01_01|          |
-+------------------------------------+-------------------------+
-| Breadboard x1                                                |
-|                                                              |
-| |Chapter01_02|                                               |
-+-----------------+------------------+-------------------------+
-| Jumper M/M x4   | Resistor 10kΩ x4 | Push button x4          |
-|                 |                  |                         |
-| |Chapter01_05|  | |Chapter02_01|   | |Chapter02_02|          |
-+-----------------+------------+-----+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1 |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter01_01|          |
+    +------------------------------------+-------------------------+
+    | Breadboard x1                                                |
+    |                                                              |
+    | |Chapter01_02|                                               |
+    +-----------------+------------------+-------------------------+
+    | Jumper M/M x4   | Resistor 10kΩ x4 | Push button x4          |
+    |                 |                  |                         |
+    | |Chapter01_05|  | |Chapter02_01|   | |Chapter02_02|          |
+    +-----------------+------------+-----+-------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -39,12 +44,13 @@ Circuit
 Use Pin4, Pin5, Pin18, Pin19 port on ESP32 board to control the movement of the block.
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter06_00|
-   * -  Hardware connection. 
+   * -  **Hardware connection** 
    * -  |Chapter06_01|
 
 .. |Chapter06_00| image:: ../_static/imgs/6_Tetris/Chapter06_00.png

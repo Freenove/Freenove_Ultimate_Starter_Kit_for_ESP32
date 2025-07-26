@@ -14,19 +14,24 @@ Breathing light, that is, LED is turned from off to on gradually, and gradually 
 Component List
 ======================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1 |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter01_01|          |
-+------------------------------------+-------------------------+
-| Breadboard x1                                                |
-|                                                              |
-| |Chapter01_02|                                               |
-+-----------------+------------------+-------------------------+
-| LED x1          | Resistor 220Ω x1 | Jumper M/M x2           |
-|                 |                  |                         |
-| |Chapter01_03|  | |Chapter01_04|   | |Chapter01_05|          |
-+-----------------+------------------+-------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1 |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter01_01|          |
+    +------------------------------------+-------------------------+
+    | Breadboard x1                                                |
+    |                                                              |
+    | |Chapter01_02|                                               |
+    +-----------------+------------------+-------------------------+
+    | LED x1          | Resistor 220Ω x1 | Jumper M/M x2           |
+    |                 |                  |                         |
+    | |Chapter01_03|  | |Chapter01_04|   | |Chapter01_05|          |
+    +-----------------+------------------+-------------------------+
   
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png    
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png    
@@ -71,7 +76,9 @@ ESP32 and PWM
 
 On ESP32, the LEDC(PWM) controller has 16 separate channels, each of which can independently control frequency, duty cycle, and even accuracy. Unlike traditional PWM pins, the PWM output pins of ESP32 are configurable, with one or more PWM output pins per channel. The relationship between the maximum frequency and bit precision is shown in the following formula, where the maximum value of bit is 31.
 
-Freqmax = 80,000,000/(1≪bit)
+.. math::
+   
+   Freq_{\max} = \frac{80\,000\,000}{1 \ll bit}
 
 For example, generate a PWM with an 8-bit precision (2^8=256. Values range from 0 to 255) with a maximum frequency of 80,000,000/256 = 312,500Hz.
 
@@ -81,17 +88,17 @@ Circuit
 This circuit is the same as the one in engineering Blink.
 
 .. list-table:: 
-   :width: 100%
-   :header-rows: 1 
+   :width: 80%
    :align: center
+   :class: table-line
    
-   * -  Schematic diagram
+   * -  **Schematic diagram**
    * -  |Chapter04_02|
-   * -  Hardware connection. 
+   * -  **Hardware connection**
 
-        :red:`If you need any support, please feel free to contact us via:` support@freenove.com
+   * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
-   * -  |Chapter04_03|
+        |Chapter04_03|
 
 .. |Chapter04_02| image:: ../_static/imgs/4_Analog_&_PWM/Chapter04_02.png    
 .. |Chapter04_03| image:: ../_static/imgs/4_Analog_&_PWM/Chapter04_03.png  
@@ -152,7 +159,7 @@ You can also adjust the rate of the state change of LED by changing the paramete
     **channal**: channel index. Value range :0-15
 
 .. py:function:: void ledcAttach(uint8_t pin, uint32_t freq, uint8_t resolution);
-                 void ledcDetach(uint8_t pin);
+.. py:function:: void ledcDetach(uint8_t pin);
 
     Bind/unbind a GPIO to a PWM channel.
 

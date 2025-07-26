@@ -12,15 +12,20 @@ This project uses ESP32's serial communicator to send data to the computer and p
 Component List
 ======================================
 
-+------------------------------------+-------------------------+
-| ESP32-WROVER x1                    | GPIO Extension Board x1 |
-|                                    |                         |
-| |Chapter01_00|                     | |Chapter01_01|          |
-+------------------------------------+-------------------------+
-| Micro USB Wire x1                                            |
-|                                                              |
-| |Chapter08_00|                                               |
-+--------------------------------------------------------------+
+.. table::
+    :width: 80%
+    :align: center
+    :class: table-line
+    
+    +------------------------------------+-------------------------+
+    | ESP32-WROVER x1                    | GPIO Extension Board x1 |
+    |                                    |                         |
+    | |Chapter01_00|                     | |Chapter01_01|          |
+    +------------------------------------+-------------------------+
+    | Micro USB Wire x1                                            |
+    |                                                              |
+    | |Chapter08_00|                                               |
+    +--------------------------------------------------------------+
   
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
@@ -70,9 +75,9 @@ Connect Freenove ESP32 to the computer with USB cable
 Code
 ========================================
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes"** to disk(D) in advance with the path of **"D:/Micropython_Codes"**.
 
-Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "08.1_Serial_Print" and double "Serial_Print.py". 
+Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "08.1_Serial_Print" and double "Serial_Print.py". 
 
 Serial_Print
 ------------------------------------------
@@ -87,7 +92,8 @@ Click "Run current script" and observe the changes of "Shell", which will displa
 
 The following is the program code:
 
-.. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/03.1_FlowingLight/Serial_Print.py
+.. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/08.1_Serial_Print/Serial_Print.py
+    :linenos:
     :language: python
     :dedent:
 
@@ -115,25 +121,25 @@ Reference
     
     **rx, tx:** UAPT's reading and writing pins
     
-                Pin(0)、Pin(2)、Pin(4)、Pin(5)、Pin(9)、Pin(10)、Pin(12~19)、Pin(21~23)、Pin(25)、Pin(26)、Pin(34~36)、Pin(39)
+        Pin(0)、Pin(2)、Pin(4)、Pin(5)、Pin(9)、Pin(10)、Pin(12~19)、Pin(21~23)、Pin(25)、Pin(26)、Pin(34~36)、Pin(39)
     
-    **Note:** Pin(1) and Pin(3) are occupied and not recommend to be used as tx,rx.
+        Note: Pin(1) and Pin(3) are occupied and not recommend to be used as tx,rx.
     
     **stop:** The number of stop bits, and the stop bit is 1 or 2.
     
     **timeout:** timeout period (Unit: millisecond)
     
-    0 < timeout ≤ 0x7FFF FFFF (decimal: 0 < timeout ≤ 2147483647)
+        0 < timeout ≤ 0x7FFF FFFF (decimal: 0 < timeout ≤ 2147483647)
     
     **UART.init(baudrate, bits, parity, stop, tx, rx, rts, cts)):** Initialize serial ports
         
-            **tx:** writing pins of uart
-            
-            **rx:** reading pins of uart
-            
-            **rts:** rts pins of uart
-            
-            **cts:** cts pins of uart
+        **tx:** writing pins of uart
+        
+        **rx:** reading pins of uart
+        
+        **rts:** rts pins of uart
+        
+        **cts:** cts pins of uart
     
     **UART.read(nbytes):** Read nbytes bytes
     
@@ -159,7 +165,7 @@ Component and Circuit are the same as in the previous project.
 Code
 ==========================================
 
-Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "08.2_Serial_Read_and_Write" and double click "Serial_Read_and_Write.py". 
+Open "Thonny", click "This computer"  **->**  "D:"  **->**  "Micropython_Codes"  **->**  "08.2_Serial_Read_and_Write" and double click "Serial_Read_and_Write.py". 
 
 Serial_Read_and_Write
 ----------------------------------------------
