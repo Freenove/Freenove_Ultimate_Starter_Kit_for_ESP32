@@ -24,7 +24,7 @@ def getSonar():
 time.sleep_ms(2000)
 while True:
     time.sleep_ms(500)
-    print('Distance: ',getSonar(),'cm' )
+    print('Distance: ', getSonar(), 'cm' )
     
     
     

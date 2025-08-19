@@ -86,9 +86,9 @@ def demo():
     def on_rx(rx_data):
         print("Received: ", rx_data)
         if rx_data == b'led_on':
-            led.value(1)
-        elif rx_data == b'led_off':
             led.value(0)
+        elif rx_data == b'led_off':
+            led.value(1)
         else:
             pass
 

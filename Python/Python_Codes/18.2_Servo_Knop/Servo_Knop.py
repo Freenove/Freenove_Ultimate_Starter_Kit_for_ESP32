@@ -4,15 +4,16 @@ import time
 
 servo=myServo(15)
 
-adc2=ADC(Pin(34))
-adc2.atten(ADC.ATTN_11DB)
-adc2.width(ADC.WIDTH_12BIT)
+adc=ADC(Pin(34))
+adc.atten(ADC.ATTN_11DB)
+adc.width(ADC.WIDTH_12BIT)
 
 try:
     while True:
-        adcValue=adc2.read()
+        adcValue=adc.read()
         angle=(adcValue*180)/4096
         servo.myServoWriteAngle(int(angle))
         time.sleep_ms(50)
 except:
+    adc.deinit()
     servo.deinit()

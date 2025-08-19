@@ -18,28 +18,30 @@ def key():
         return keyvalue
 
 keyInNum=0
-while True:
-    keydata=key()
-    if keydata!=None:
-        activeBuzzer.value(1)
-        time.sleep_ms(100)
-        activeBuzzer.value(0)
-        keyIn[keyInNum]=keydata
-        keyInNum=keyInNum+1
-        
-    if keyInNum==4:
-        if keyIn==keyOut:
-            print("passWord right!")
-            servo.myServoWriteAngle(90)
-            time.sleep_ms(1000)
-            servo.myServoWriteAngle(0)
-        else:
-            print("passWord error!")
+try:
+    while True:
+        keydata=key()
+        if keydata!=None:
             activeBuzzer.value(1)
-            time.sleep_ms(1000)
+            time.sleep_ms(100)
             activeBuzzer.value(0)
-        keyInNum=0
-        
+            keyIn[keyInNum]=keydata
+            keyInNum=keyInNum+1
+            
+        if keyInNum==4:
+            if keyIn==keyOut:
+                print("passWord right!")
+                servo.myServoWriteAngle(90)
+                time.sleep_ms(1000)
+                servo.myServoWriteAngle(0)
+            else:
+                print("passWord error!")
+                activeBuzzer.value(1)
+                time.sleep_ms(1000)
+                activeBuzzer.value(0)
+            keyInNum=0
+except:
+    servo.deinit()
         
 
 

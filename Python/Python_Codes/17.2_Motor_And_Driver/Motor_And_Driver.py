@@ -33,6 +33,7 @@ try:
         driveMotor(rotationDir,rotationSpeed)
         time.sleep_ms(10)
 except:
+    adc.deinit()
     pwm.deinit()
 
 

@@ -10,10 +10,10 @@ isPressed = 0
 
 def reverseGPIO():
     if led.value():
-        led.value(0)
+        led.value(1)
         print("Turn off led")
     else:
-        led.value(1)
+        led.value(0)
         print("Turn on led")
         
 while True:
