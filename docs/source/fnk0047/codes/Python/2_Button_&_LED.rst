@@ -133,9 +133,9 @@ The following is the program code:
     try:
         while True:
         if not button.value():
-            led.value(1)  #Set led turn on
+            led.value(0)  #Set led turn on
         else:
-            led.value(0)  #Set led turn off
+            led.value(1)  #Set led turn off
     except:
         pass
 
@@ -163,9 +163,9 @@ Read the pin state of button with value() function. Press the button switch, the
 
     while True:
       if not button.value():
-        led.value(1)  #Set led turn on
+        led.value(0)  #Set led turn on
       else:
-        led.value(0)  #Set led turn off
+        led.value(1)  #Set led turn off
 
 If statement is used to execute the next statement when a certain condition is proved to be true (or non0). It is often used together with "else" statement, which judges other statements except the if statement. If you need to judge if the result of a condition is 0, you can use if not statement.
 

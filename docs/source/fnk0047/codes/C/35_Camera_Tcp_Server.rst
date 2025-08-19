@@ -82,7 +82,7 @@ Connect Freenove ESP32 to the computer using the USB cable.
 Sketch
 ===================================
 
-Click Tools in the menu bar, select Partition Scheme:" :red:`Huge APP (3MB No OTA/1MB SPIFFS)` ", as shown in the figure below.
+Click Tools in the menu bar, select Partition Scheme:" :combo:`red font-bolder:Huge APP (3MB No OTA/1MB SPIFFS)` ", as shown in the figure below.
 
 .. image:: ../_static/imgs/35_Camera_Tcp_Server/Chapter35_05.png
     :align: center

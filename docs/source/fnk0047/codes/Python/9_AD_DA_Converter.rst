@@ -225,7 +225,7 @@ Read ADC value once every 100 millisecods, convert ADC value to DAC value and ou
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/09.1_AnalogRead/AnalogRead.py
     :linenos:
     :language: python
-    :lines: 10-16
+    :lines: 9-15
     :dedent:
 
 Reference

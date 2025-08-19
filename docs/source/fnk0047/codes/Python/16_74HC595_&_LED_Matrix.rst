@@ -151,7 +151,7 @@ Use a nesting of two for loops to display "0"-"F".
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/16.3_LED_Matrix/LED_Matrix.py
     :linenos:
     :language: python
-    :lines: 48-58
+    :lines: 49-58
     :dedent:
 
 The amount of pins of ESP32 is limited, so we need to find ways to save pins. If we use ESP32, s GPIO to control the LEDMatrix instead of 74HC595, we need 16 pins to drive LED matrix. In this example, we use two 74HC595 chips to drive the LED matrix, requiring only three pins, so that we could save the rest of 13 pins.

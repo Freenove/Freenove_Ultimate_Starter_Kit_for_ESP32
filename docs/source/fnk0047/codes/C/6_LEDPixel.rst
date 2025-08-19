@@ -199,17 +199,17 @@ Reference
     
     **t** : Types of LED.
     
-        :red:`TYPE_RGB`: The sequence of LEDPixel module loading color is red, green and blue.
+        :combo:`red font-bolder:TYPE_RGB`: The sequence of LEDPixel module loading color is red, green and blue.
         
-        :red:`TYPE_RBG`: The sequence of LEDPixel module loading color is red, blue and green.
+        :combo:`red font-bolder:TYPE_RBG`: The sequence of LEDPixel module loading color is red, blue and green.
         
-        :red:`TYPE_GRB`: The sequence of LEDPixel module loading color is green, red and blue.
+        :combo:`red font-bolder:TYPE_GRB`: The sequence of LEDPixel module loading color is green, red and blue.
         
-        :red:`TYPE_GBR`: The sequence of LEDPixel module loading color is green, blue and red.
+        :combo:`red font-bolder:TYPE_GBR`: The sequence of LEDPixel module loading color is green, blue and red.
         
-        :red:`TYPE_BRG`: The sequence of LEDPixel module loading color is blue, red and green. 
+        :combo:`red font-bolder:TYPE_BRG`: The sequence of LEDPixel module loading color is blue, red and green. 
         
-        :red:`TYPE_BGR`: The sequence of LEDPixel module loading color is blue,g reen and red. 
+        :combo:`red font-bolder:TYPE_BGR`: The sequence of LEDPixel module loading color is blue,g reen and red. 
 
 .. py:function:: void begin(void);
 

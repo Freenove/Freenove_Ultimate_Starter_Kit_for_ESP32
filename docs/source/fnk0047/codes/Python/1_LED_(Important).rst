@@ -62,7 +62,9 @@ Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes".
 Expand folder "01.1_Blink" and double click "Blink.py" to open it. As shown in the illustration below.
 
 .. image:: ../_static/imgs/1_LED/Chapter01_20.png
+    :class: image-border
     :align: center
+    :width: 88%
 
 Make sure ESP32 has been connected with the computer with ESP32 correctly. Click "Stop/Restart backend" or press the reset button, and then wait to see what interface will show up.
 
@@ -98,7 +100,7 @@ Upload boot.py in the same way.
 
 Press the reset key of ESP32 and you can see LED is ON for one second and then OFF for one second, which repeats in an endless loop. 
 
-.. image:: ../_static/imgs/1_LED/Chapter01_26.png
+.. image:: ../_static/imgs/1_LED/Chapter01_22.png
     :align: center
 
 :combo:`red font-bolder:Due to different versions, some board leds will show the opposite effect.`
@@ -123,9 +125,9 @@ The following is the program code:
     led=Pin(2,Pin.OUT) #create LED object from pin2,Set Pin2 to output
     try:
         while True:
-            led.value(1) #Set led turn on
+            led.value(0) #Set led turn on
             sleep_ms(1000)
-            led.value(0) #Set led turn off
+            led.value(1) #Set led turn off
             sleep_ms(1000)
     except:
         pass
@@ -164,7 +166,7 @@ Set the value of LED to 1 and GPIO2 will output high level.
 .. code-block:: python
     :linenos:
 
-    led.value(1) #Set led turn on
+    led.value(1) #Set led turn off
 
 Set the value of LED to 0 and GPIO2 will output low level.
 
@@ -206,9 +208,9 @@ MicroPython uses indentations to distinguish different blocks of code instead of
     :linenos:
 
     while True:
-        led.value(1) #Set led turn on
+        led.value(0) #Set led turn on
         sleep_ms(1000)
-        led.value(0) #Set led turn off
+        led.value(1) #Set led turn off
         sleep_ms(1000)
 
 How to import python files
@@ -448,7 +450,7 @@ First, disconnect all power from the ESP32-WROVER. Then build the circuit accord
     Avoid any possible short circuits (especially connecting 5V or GND, 3.3V and GND)! WARNING: A short circuit can cause high current in your circuit, create excessive component heat and cause permanent damage to your hardware!
 
 .. list-table:: 
-   :width: 100%
+   :width: 80%
    :align: center
    :class: table-line
    
@@ -459,7 +461,7 @@ First, disconnect all power from the ESP32-WROVER. Then build the circuit accord
      
         |Chapter01_38| 
         
-        :red:`Don't rotate ESP32-WROVER 180° for connection.`
+        :combo:`red font-bolder:Don't rotate ESP32-WROVER 180° for connection.`
   
 .. |Chapter01_37| image:: ../_static/imgs/1_LED/Chapter01_37.png    
 .. |Chapter01_38| image:: ../_static/imgs/1_LED/Chapter01_38.png    
@@ -479,12 +481,14 @@ Open "Thonny"'click "This computer" **->** "D:" **->** "Micropython_Codes".
 
 Expand folder "01.1_Blink" and double click "Blink.py" to open it. As shown in the illustration below.
 
-.. image:: ../_static/imgs/1_LED/Chapter01_40.png
+.. image:: ../_static/imgs/1_LED/Chapter01_20.png
     :align: center
+    :class: image-border
+    :width: 88%
 
 Make sure ESP32 has been connected with the computer with ESP32 correctly. Click "Stop/Restart backend" or press the reset button, and then wait to see what interface will show up.
 
-.. image:: ../_static/imgs/1_LED/Chapter01_41.png
+.. image:: ../_static/imgs/1_LED/Chapter01_21.png
     :align: center
 
 Click "Run current script" shown in the box above, the code starts to be executed and the LED in the circuit starts to blink. 
@@ -496,7 +500,7 @@ Click "Run current script" shown in the box above, the code starts to be execute
 
     This is the code :ref:`running online <online>`. If you disconnect USB cable and repower ESP32 or press its reset key, LED stops blinking and the following messages will be displayed in Thonny.
 
-.. image:: ../_static/imgs/1_LED/Chapter01_43.png
+.. image:: ../_static/imgs/1_LED/Chapter01_23.png
     :align: center
 
 Uploading code to ESP32
@@ -504,12 +508,12 @@ Uploading code to ESP32
 
 As shown in the following illustration, right-click the file Blink.py and select "Upload to /" to upload code to ESP32.
 
-.. image:: ../_static/imgs/1_LED/Chapter01_44.png
+.. image:: ../_static/imgs/1_LED/Chapter01_24.png
     :align: center
 
 Upload boot.py in the same way.
 
-.. image:: ../_static/imgs/1_LED/Chapter01_45.png
+.. image:: ../_static/imgs/1_LED/Chapter01_25.png
     :align: center
 
 Press the reset key of ESP32 and you can see LED is ON for one second and then OFF for one second, which repeats in an endless loop. 

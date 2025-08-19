@@ -11,9 +11,9 @@ When reading this, you should have downloaded the ZIP file for this product.
 
 Unzip it and you will get a folder containing tutorials and related files. Please start with this PDF tutorial.
 
-:red:`!` Unzip the ZIP file instead of opening the file in the ZIP file directly.
+:combo:`red font-bolder:!` Unzip the ZIP file instead of opening the file in the ZIP file directly.
 
-:red:`!` Do not move, delete or rename files in the folder just unzipped.
+:combo:`red font-bolder:!` Do not move, delete or rename files in the folder just unzipped.
 
 Get Support
 *************************************

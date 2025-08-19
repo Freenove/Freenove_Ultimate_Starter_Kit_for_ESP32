@@ -243,5 +243,5 @@ When 4 keys are pressed, it will judge whether the password is correct. If it is
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/22.2_Keypad_Door/Keypad_Door.py
     :linenos:
     :language: python
-    :lines: 30-41
+    :lines: 31-41
     :dedent:
