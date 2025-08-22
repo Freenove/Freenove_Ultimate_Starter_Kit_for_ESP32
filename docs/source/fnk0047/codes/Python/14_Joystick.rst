@@ -97,12 +97,15 @@ Click "Run current script". Shifting the Joystick or pressing it down will make 
 The flowing is the code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/14.1_Joystick/Joystick.py
+    :linenos:
     :language: python
+    :lines: 1-15
     :dedent:
 
 Set the acquisition range of voltage of the two ADC channels to 0-3.3V, and the acquisition width of data to 0-4095.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/14.1_Joystick/Joystick.py
+    :linenos:
     :language: python
     :lines: 8-11
     :dedent:
@@ -110,6 +113,7 @@ Set the acquisition range of voltage of the two ADC channels to 0-3.3V, and the 
 In the code, configure Z_Pin to pull-up input mode. In loop(), use Read () to read the value of axes X and Y and use value() to read the value of axis Z, and then display them.
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/14.1_Joystick/Joystick.py
+    :linenos:
     :language: python
     :lines: 14-14
     :dedent:

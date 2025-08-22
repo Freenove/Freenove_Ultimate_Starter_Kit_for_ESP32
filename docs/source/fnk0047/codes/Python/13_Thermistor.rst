@@ -89,6 +89,7 @@ The circuit of this project is similar to the one in the last chapter. The only 
 .. list-table:: 
    :width: 80%
    :align: center
+   :class: table-line
    
    * -  **Schematic diagram**
    * -  |Chapter13_05|
@@ -123,7 +124,9 @@ If you have any concerns, please contact us via: support@freenove.com
 The following is the code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/13.1_Thermometer/Thermometer.py
+    :linenos:
     :language: python
+    :lines: 1-18
     :dedent:
 
 In the code, the ADC value of ADC module A0 port is read, and then it calculates the voltage and the resistance of Thermistor according to Ohms Law. Finally, it calculates the temperature sensed by the Thermistor, according to the formula. 

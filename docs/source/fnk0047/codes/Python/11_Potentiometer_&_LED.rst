@@ -77,6 +77,7 @@ The following is the code:
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/11.1_Soft_LED/Soft_LED.py
     :linenos:
     :language: python
+    :lines: 1-16
     :dedent:
 
 In the code, read the ADC value of potentiometer and map it to the duty cycle of PWM to control LED brightness. 

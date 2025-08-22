@@ -104,4 +104,5 @@ The following is the program code:
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/12.1_NightLamp/NightLamp.py
     :linenos:
     :language: python
+    :lines: 1-16
     :dedent:

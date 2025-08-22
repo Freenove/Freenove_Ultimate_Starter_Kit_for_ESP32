@@ -20,12 +20,12 @@ Processing language
    :maxdepth: 1
    :glob:
 
-   Processing/1_Oscilloscope
-   Processing/2_Control_2D_and_3D_Figures
-   Processing/3_Snake_Game
-   Processing/4_Pick_Apples
-   Processing/5_Pong_Game
-   Processing/6_Tetris
+   Processing/1_Oscilloscope.rst
+   Processing/2_Control_2D_and_3D_Figures.rst
+   Processing/3_Snake_Game.rst
+   Processing/4_Pick_Apples.rst
+   Processing/5_Pong_Game.rst
+   Processing/6_Tetris.rst
 
 .. toctree::
    :maxdepth: 1
