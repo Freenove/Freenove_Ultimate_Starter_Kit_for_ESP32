@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter RGB LED
+Chapter 5 RGB LED
 ##############################################################################
 
 In this chapter, we will learn how to control a RGB LED. It can emit different colors of light. Next, we will use RGB LED to make a multicolored light.
 
-Project Random Color Light
+Project 5.1 Random Color Light
 ******************************************
 
 In this project, we will make a multicolored LED. And we can control RGB LED to switch different colors automatically.
@@ -82,7 +82,7 @@ Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_C
 
 Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "05.1_RandomColorLight"and double click "RandomColorLight.py". 
 
-RandomColorLight
+05.1_RandomColorLight
 ----------------------------------------------
 
 .. image:: ../_static/imgs/5_RGB_LED/Chapter05_08.png
@@ -184,7 +184,7 @@ Reference
     
         **obj:** list of elements 
 
-Project Gradient Color Light
+Project 5.2 Gradient Color Light
 *********************************************
 
 In the previous project, we have mastered the usage of RGBLED, but the random color display is rather stiff. This project will realize a fashionable Light with soft color changes.
@@ -200,7 +200,7 @@ In this code, the color model will be implemented and RGBLED will change colors 
 
 Open "Thonny", click"This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "05.2_GradientColorLight" and double click "GradientColorLight.py". 
 
-GradientColorLight
+05.2_GradientColorLight
 ----------------------------------
 
 The following is the program code:

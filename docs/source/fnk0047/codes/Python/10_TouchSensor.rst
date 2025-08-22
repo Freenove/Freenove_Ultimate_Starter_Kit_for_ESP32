@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Touch Sensor
+Chapter 10 Touch Sensor
 ##############################################################################
 
 ESP32 offers up to 10 capacitive touch GPIO, and as you can see from the previous section, mechanical switches are prone to jitter that must be eliminated when used, which is not the case with ESP32's built-in touch sensor. In addition, on the service life, the touch switch also has advantages that mechanical switch is completely incomparable.
 
-Project Read Touch Sensor
+Project 10.1 Read Touch Sensor
 *********************************************
 
 This project reads the value of the touch sensor and prints it out.
@@ -100,7 +100,7 @@ Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python
 
 Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "10.1_Read_Touch_Sensor" and double click "Read_Touch_Sensor.py".
 
-Read_Touch_Sensor
+10.1_Read_Touch_Sensor
 -------------------------------
 
 .. image:: ../_static/imgs/10_Touch_Sensor/Chapter10_10.png
@@ -129,7 +129,7 @@ Reference
     
     **TouchPad.read():** Read the capacitance of touchpad. If your fingers touch TouchPad pins, the capacitance decreases; Otherwise, it will not change.
 
-Project Touch Lamp
+Project 10.2 Touch Lamp
 *****************************************
 
 In this project, we will use ESP32's touch sensor to create a touch switch lamp.
@@ -184,7 +184,7 @@ Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python
 
 Open "Thonny, click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "10.2_TouchLamp"and double click "TouchLamp.py". 
 
-TouchLamp
+10.2_TouchLamp
 ------------------------------------------
 
 .. image:: ../_static/imgs/10_Touch_Sensor/Chapter10_13.png

@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter AD/DA Converter
+Chapter 9 AD/DA Converter
 ##############################################################################
 
 We have learned how to control the brightness of LED through PWM and understood that PWM is not the real analog before. In this chapter, we will learn how to read analog, convert it into digital and convert the digital into analog output. That is, ADC and DAC.
 
-Project Read the Voltage of Potentiometer 
+Project 9.1 Read the Voltage of Potentiometer 
 ******************************************************
 
 In this project, we will use the ADC function of ESP32 to read the voltage value of potentiometer. And then output the voltage value through the DAC to control the brightness of LED.
@@ -179,7 +179,7 @@ Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python
 
 Open "Thonny", click "This computer"  **->**  "D:"  **->**  "Micropython_Codes"  **->**  "09.1_AnalogRead and then click "AnalogRead.py". 
 
-AnalogRead 
+09.1_AnalogRead 
 -------------------------------------------
 
 .. image:: ../_static/imgs/9_AD_DA_Converter/Chapter09_11.png

@@ -1,12 +1,12 @@
 .. _LED_BAR:
 
 ##############################################################################
-Chapter 74HC595 & LED Bar Graph
+Chapter 15 74HC595 & LED Bar Graph
 ##############################################################################
 
 We have used LED bar graph to make a flowing water light, in which 10 GPIO ports of ESP32 is occupied. More GPIO ports mean that more peripherals can be connected to ESP32, so GPIO resource is very precious. Can we make flowing water light with less GPIO? In this chapter, we will learn a component, 74HC595, which can achieve the target.
 
-Project Flowing Water Light
+Project 15.1 Flowing Water Light
 *********************************************
 
 Now let's learn how to use the 74HC595 IC chip to make a flowing water light using less GPIO.
@@ -112,7 +112,7 @@ Sketch
 
 In this project, we will make a flowing water light with a 74HC595 chip to learn about its functions.
 
-Sketch_FlowingLight2
+Sketch_15.1_FlowingLight2
 -----------------------------------
 
 .. image:: ../_static/imgs/15_74HC595_&_LED_Bar_Graph/Chapter15_05.png

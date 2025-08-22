@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Camera Tcp Server
+Chapter 35 Camera Tcp Server
 ##############################################################################
 
 In the previous section, we used web page to display the video data captured by ESP32, and in this section, we will use a mobile phone to display it.
 
-Project Camera Tcp Server
+Project 35.1 Camera Tcp Server
 ******************************************
 
 Connect ESP32 using USB and check its IP address through serial monitor. Use a mobile phone to obtain video and image data.
@@ -122,7 +122,7 @@ Click "Connect".
 .. image:: ../_static/imgs/35_Camera_Tcp_Server/Chapter35_11.png
     :align: center
 
-Method 2:
+Method 2
 ---------------------------------------
 
 Using your phone's WiFi function, select the router named ssid_Router and enter the password "ssid_password" to connect. And then open Freenove app and select 4WD Car for Raspberry Pi mode. The operation is similar to Method 1.
@@ -134,7 +134,7 @@ Enter the IP address printed by serial port in the new interface, which generall
 
 The following is the main program code. You need include other code files in the same folder when write your own code.
 
-Sketch_Camera_Tcp_Server
+Sketch_35.1_Camera_Tcp_Server
 ------------------------------------------
 
 .. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_35.1_CameraTcpServer/Sketch_35.1_CameraTcpServer.ino

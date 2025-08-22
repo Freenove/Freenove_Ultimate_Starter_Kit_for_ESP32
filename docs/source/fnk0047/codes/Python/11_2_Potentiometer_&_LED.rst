@@ -1,7 +1,7 @@
 
 
 
-Project Soft Colorful Light 
+Project 11.2 Soft Colorful Light 
 *****************************************
 
 In this project, 3 potentiometers are used to control the RGB LED and in principle it is the same as the Soft Light project. Namely, read the voltage value of the potentiometer and then convert it to PWM used to control LED brightness. Difference is that the original project only controlled one LED, but this project required (3) RGB LEDs.
@@ -56,7 +56,7 @@ Code
 
 Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "11.2_Soft_Colorful_Light" and double click "Soft_Colorful_Light.py". 
 
-Soft_Colorful_Light
+11.2_Soft_Colorful_Light
 ------------------------------------------
 
 Click "Run current script" and control the change of RGBLED color by rotating the handles of three rotary potentiometers.
@@ -70,7 +70,7 @@ The following is the program code:
 In the code, read the ADC value of 3 potentiometers and map it into PWM duty cycle to control the control 3 LEDs with different color of RGBLED, respectively.
 
 
-Project Soft Rainbow Light
+Project 11.3 Soft Rainbow Light
 ********************************************
 
 In this project, we use potentiometer to control Freenove 8 RGB LED Module.

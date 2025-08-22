@@ -1,7 +1,7 @@
 
 
 
-Project Bluetooth Control LED
+Project 27.2 Bluetooth Control LED
 *********************************************
 
 In this section, we will control the LED with Bluetooth.
@@ -67,7 +67,7 @@ Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python
 
 Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "27.2_BLE_LED". Select "ble_advertising.py", right click your mouse to select "Upload to /", wait for "ble_advertising.py" to be uploaded to ESP32-WROVER and then double click "BLE_LED.py".
 
-BLE_LED
+27.2_BLE_LED
 -----------------------------------
 
 .. image:: ../_static/imgs/27_Bluetooth/Chapter27_44.png

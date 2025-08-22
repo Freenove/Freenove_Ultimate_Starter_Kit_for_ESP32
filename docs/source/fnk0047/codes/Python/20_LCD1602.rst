@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter LCD1602
+Chapter 20 LCD1602
 ##############################################################################
 
 In this chapter, we will learn about the LCD1602 Display Screen
 
-Project LCD1602
+Project 20.1 LCD1602
 ****************************************
 
 In this section we learn how to use LCD1602 to display something.
@@ -67,7 +67,7 @@ Below is the PCF8574 pin schematic diagram and the block pin diagram:
    :class: table-line
    :align: center
    
-   * -  PCF8574 chip pin diagram:
+   * -  PCF8574 chip pin diagram
      -  PCF8574 module pin diagram
 
    * -  |Chapter20_04|
@@ -108,7 +108,7 @@ Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python
 
 Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "20.1_I2C_LCD1602". Select "I2C_LCD.py"and "LCD_API.py", right click your mouse to select "Upload to /", wait for "I2C_LCD.py" and"LCD_API.py" to be uploaded to ESP32-WROVER and then double click "I2C_LCD1602.py". 
 
-I2C_LCD1602
+20.1_I2C_LCD1602
 ------------------------------------------
 
 .. image:: ../_static/imgs/20_LCD1602/Chapter20_15.png

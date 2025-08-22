@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter 74HC595 & 7-Segment Display
+Chapter 16 74HC595 & 7-Segment Display
 ##############################################################################
 
 In this chapter, we will introduce the 7-Segment Display.
 
-Project 7-Segment Display.
+Project 16.1 7-Segment Display.
 ********************************************
 
 We will use 74HC595 to control 7-segment display and make it display hexadecimal character "0-F".
@@ -128,7 +128,7 @@ Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->
 
 Select "my74HC595.py", right click your mouse to select "Upload to /", wait for "my74HC595.py" to be uploaded to ESP32-WROVER and then double click"74HC595_and_7_segment_display.py". 
 
-74HC595_and_7_segment_display
+16.1_74HC595_and_7_segment_display
 ----------------------------------------------
 
 .. image:: ../_static/imgs/16_74HC595_&_7-Segment_Display/Chapter16_14.png
@@ -144,6 +144,7 @@ The following is the program code:
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/16.1_74HC595_and_7_segment_display/74HC595_and_7_segment_display.py
     :linenos:
     :language: python
+    :lines: 1-23
     :dedent:
 
 Import time and my74HC595 modules.

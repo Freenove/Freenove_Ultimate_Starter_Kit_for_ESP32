@@ -1,5 +1,5 @@
 ##############################################################################
-Chapter Bluetooth
+Chapter 27 Bluetooth
 ##############################################################################
 
 This chapter mainly introduces how to make simple data transmission through Bluetooth of ESP32-WROVER and mobile phones.
@@ -135,7 +135,7 @@ Reference
 
     **end():** disconnect all Bluetooth devices and turn off the Bluetooth, release all occupied space
 
-Project Bluetooth Low Energy Data Passthrough
+Project 27.2 Bluetooth Low Energy Data Passthrough
 ***********************************************************
 
 Component List
@@ -163,7 +163,7 @@ Connect Freenove ESP32 to the computer using the USB cable.
 Sketch
 ==========================
 
-Sketch_BLE
+Sketch_27.2_BLE
 ----------------------------
 
 .. image:: ../_static/imgs/27_Bluetooth/Chapter27_11.png

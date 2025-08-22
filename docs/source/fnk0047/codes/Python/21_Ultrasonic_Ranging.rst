@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Ultrasonic Ranging
+Chapter 21 Ultrasonic Ranging
 ##############################################################################
 
 In this chapter, we learn a module which use ultrasonic to measure distance, HC SR04.
 
-Project Ultrasonic Ranging
+Project 21.1 Ultrasonic Ranging
 *******************************************
 
 In this project, we use ultrasonic ranging module to measure distance, and print out the data in the terminal.
@@ -120,7 +120,7 @@ Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python
 
 Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "21.1_Ultrasonic_Ranging" and double click "Ultrasonic_Ranging.py". 
 
-Ultrasonic_Ranging
+21.1_Ultrasonic_Ranging
 -----------------------------------------
 
 .. image:: ../_static/imgs/21_Ultrasonic_Ranging/Chapter21_12.png
@@ -171,7 +171,7 @@ Delay for 2 seconds and wait for the ultrasonic module to stabilize. Print data 
     :lines: 24-27
     :dedent:
 
-Project Ultrasonic Ranging
+Project 21.2 Ultrasonic Ranging
 ***************************************
 
 Component List and Circuit

@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Thermistor
+Chapter 13 Thermistor
 ##############################################################################
 
 In this chapter, we will learn about thermistors which are another kind of resistor
 
-Project Thermometer
+Project 13.1 Thermometer
 ******************************************
 
 A thermistor is a type of resistor whose resistance value is dependent on temperature and changes in temperature. Therefore, we can take advantage of this characteristic to make a thermometer.
@@ -104,7 +104,7 @@ The circuit of this project is similar to the one in the last chapter. The only 
 Sketch
 =======================================
 
-Sketch_Thermometer
+Sketch_13.1_Thermometer
 ---------------------------------------
 
 .. image:: ../_static/imgs/13_Thermistor/Chapter13_07.png

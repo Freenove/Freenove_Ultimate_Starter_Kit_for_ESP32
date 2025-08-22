@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter 74HC595 & 7-Segment Display
+Chapter 16 74HC595 & 7-Segment Display
 ##############################################################################
 
 In this chapter, we will introduce the 7-Segment Display.
 
-Project 7-Segment Display.
+Project 16.1 7-Segment Display.
 ********************************************
 
 We will use 74HC595 to control 7-segment display and make it display hexadecimal character "0-F".
@@ -123,7 +123,7 @@ Sketch
 
 In this section, the 74HC595 is used in the same way as in the previous section, but with different values transferred. We can learn how to master the digital display by sending the coded value of "0" - "F".
 
-Sketch_7_Segment_Display
+Sketch_16.1_7_Segment_Display
 ---------------------------------------------
 
 .. image:: ../_static/imgs/16_74HC595_&_7-Segment_Display/Chapter16_05.png

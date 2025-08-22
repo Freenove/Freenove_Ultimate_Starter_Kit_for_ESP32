@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter LCD1602
+Chapter 20 LCD1602
 ##############################################################################
 
 In this chapter, we will learn about the LCD1602 Display Screen
 
-Project LCD1602
+Project 20.1 LCD1602
 ****************************************
 
 In this section we learn how to use LCD1602 to display something.
@@ -124,7 +124,7 @@ In the **Freenove_Ultimate_Starter_Kit_for_ESP32/C/Libraries** folder, select **
 
 Use I2C LCD 1602 to display characters and variables.
 
-Sketch_Display_the_string_on_LCD1602 
+Sketch_20.1_Display_the_string_on_LCD1602 
 -------------------------------------------
 
 .. image:: ../_static/imgs/20_LCD1602/Chapter20_11.png

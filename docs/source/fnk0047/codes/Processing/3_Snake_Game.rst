@@ -1,5 +1,5 @@
 ##############################################################################
-Chapter Snake Game
+Chapter 3 Snake Game
 ##############################################################################
 
 We have learned how control 2D and 3D figures. Now, we will use ESP32 board to play the classic snake game. There are both 2D and 3D version.

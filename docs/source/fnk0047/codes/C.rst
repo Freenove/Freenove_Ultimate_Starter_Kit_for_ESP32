@@ -25,7 +25,6 @@ C language
 
 .. toctree::
    :maxdepth: 1
-   :numbered:
    :glob:
 
    C/1_LED.rst

@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter LED (Important)
+Chapter 1 LED (Important)
 ##############################################################################
 
 This chapter is the Start Point in the journey to build and explore ESP32 electronic projects. We will start with simple "Blink" project.
 
-Project Blink
+Project 1.1 Blink
 *******************************
 
 In this project, we will use ESP32 to control blinking a common LED.
@@ -51,7 +51,7 @@ Code
 
 Codes used in this tutorial are saved in **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes"**. You can move the codes to any location. For example, we save the codes in Disk(D) with the path of **"D:/Micropython_Codes"**.
 
-Blink
+01.1_Blink
 ---------------------------
 
 Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes".
@@ -336,7 +336,7 @@ Reference
     
         **new_t:** Ending time
 
-Project Blink
+Project 1.2 Blink
 ********************************
 
 In this project, we will use ESP32 to control blinking a common LED.
@@ -471,7 +471,7 @@ Code
 
 Codes used in this tutorial are saved in "**Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes**". You can move the codes to any location. For example, we save the codes in Disk(D) with the path of "**D:/Micropython_Codes**".
 
-Blink
+01.1_Blink
 -------------------------------------
 
 Open "Thonny"'click "This computer" **->** "D:" **->** "Micropython_Codes".

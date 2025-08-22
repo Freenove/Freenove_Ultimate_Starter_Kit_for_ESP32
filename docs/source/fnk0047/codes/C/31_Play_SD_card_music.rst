@@ -1,5 +1,5 @@
 ##############################################################################
-Chapter Play SD card music
+Chapter 31 Play SD card music
 ##############################################################################
 
 .. note::
@@ -8,7 +8,7 @@ Chapter Play SD card music
 
 In the previous study, we have learned how to use the SD card, and then we will learn to play the music in the SD card.
 
-Project SDMMC Music
+Project 31.1 SDMMC Music
 **************************************************
 
 In this project, we will read an mp3 file from an SD card, decode it through ESP32, and use a speaker to play it.
@@ -167,7 +167,7 @@ Determine whether the mp3 player is finished. If it is playing, continue playing
     :lines: 84-89
     :dedent:
 
-Project SDMMC Music
+Project 31.2 SDMMC Music
 *********************************************
 
 In this project, we will read mp3 files from SD card, decode them through ESP32, and use Audio Converter & Amplifier module to transcode into stereo output.
@@ -244,7 +244,7 @@ Then click "Open".
 .. image:: ../_static/imgs/31_Play_SD_card_music/Chapter31_12.png
     :align: center
 
-Sketch_SDMMC_Music
+Sketch_31.2_SDMMC_Music
 ----------------------------------------------
 
 We placed a folder called "music" in:

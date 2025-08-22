@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Attitude Sensor MPU6050
+Chapter 26 Attitude Sensor MPU6050
 ##############################################################################
 
 In this chapter, we will learn about a MPU6050 attitude sensor which integrates an accelerometer and gyroscope.
 
-Project Read a MPU6050 Sensor Module
+Project 26.1 Read a MPU6050 Sensor Module
 *****************************************************
 
 In this project, we will read acceleration and gyroscope data of the MPU6050 sensor
@@ -109,7 +109,7 @@ Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python
 
 Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "26.1_MPU6050". Select "mpu6050.py", right click your mouse to select "Upload to /", wait for "mpu6050.py" to be uploaded to ESP32-WROVER and then double click "MPU6050.py". 
 
-MPU6050
+26.1_MPU6050
 ---------------------------
 
 .. image:: ../_static/imgs/26_Attitude_Sensor_MPU6050/Chapter26_08.png

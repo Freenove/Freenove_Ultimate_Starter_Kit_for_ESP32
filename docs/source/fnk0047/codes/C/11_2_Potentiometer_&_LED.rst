@@ -1,7 +1,7 @@
 
 
 
-Project Soft Colorful Light 
+Project 11.2 Soft Colorful Light 
 *****************************************
 
 In this project, 3 potentiometers are used to control the RGB LED and in principle it is the same as the Soft Light project. Namely, read the voltage value of the potentiometer and then convert it to PWM used to control LED brightness. Difference is that the original project only controlled one LED, but this project required (3) RGB LEDs.
@@ -54,7 +54,7 @@ Circuit
 Sketch
 ===========================
 
-Sketch_SoftColorfulLight
+Sketch_11.2_SoftColorfulLight
 -----------------------------------
 
 .. image:: ../_static/imgs/11_Potentiometer_&_LED/Chapter11_06.png

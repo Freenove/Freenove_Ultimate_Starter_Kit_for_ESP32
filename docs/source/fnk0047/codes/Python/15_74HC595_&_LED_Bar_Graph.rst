@@ -1,12 +1,12 @@
 .. _LED_BAR:
 
 ##############################################################################
-Chapter 74HC595 & LED Bar Graph
+Chapter 15 74HC595 & LED Bar Graph
 ##############################################################################
 
 We have used LED bar graph to make a flowing water light, in which 10 GPIO ports of ESP32 is occupied. More GPIO ports mean that more peripherals can be connected to ESP32, so GPIO resource is very precious. Can we make flowing water light with less GPIO? In this chapter, we will learn a component, 74HC595, which can achieve the target.
 
-Project Flowing Water Light
+Project 15.1 Flowing Water Light
 *********************************************
 
 Now let's learn how to use the 74HC595 IC chip to make a flowing water light using less GPIO.
@@ -116,7 +116,7 @@ Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python
 
 Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "15.1_Flowing_Water_Light". Select "my74HC595.py", right click your mouse to select "Upload to /", wait for "my74HC595.py"to be uploaded to ESP32-WROVER and then double click "Flowing_Water_Light.py". 
 
-Flowing_Water_Light
+15.1_Flowing_Water_Light
 -------------------------------------------
 
 .. image:: ../_static/imgs/15_74HC595_&_LED_Bar_Graph/Chapter15_10.png

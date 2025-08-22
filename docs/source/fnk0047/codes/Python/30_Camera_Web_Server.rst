@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Camera Web Server
+Chapter 30 Camera Web Server
 ##############################################################################
 
 In this section, we'll use ESP32's video function as an example to study.
 
-Project Camera Web Server
+Project 30.1 Camera Web Server
 ******************************************
 
 Connect ESP32 using USB and check its IP address through serial monitor. Use web page to access IP address to obtain video and image data.
@@ -66,7 +66,7 @@ Wait for completion.
 
 Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "30.1_Camera_WebServer". Select folder **"lib"**, right click your mouse to select "Upload to /", wait for **"lib"** to be uploaded to ESP32-WROVER and then double click **"picoweb_video.py"**.
 
-Camera_WebServer
+30.1_Camera_WebServer
 ---------------------------------
 
 .. image:: ../_static/imgs/34_Camera_Web_Server/Chapter34_12.png
@@ -102,6 +102,7 @@ The following is the program code.
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/30.1_Camera_WebServer/picoweb_video.py
     :linenos:
     :language: python
+    :lines: 1-118
     :dedent:
 
 Import picoweb、utime、camera、gc modules.

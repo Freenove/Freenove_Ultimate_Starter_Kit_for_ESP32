@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Infrared Remote
+Chapter 23 Infrared Remote
 ##############################################################################
 
 In this chapter, we'll learn how to use an infrared remote control, and control a LED.
 
-Project Infrared Remote Control
+Project 23.1 Infrared Remote Control
 *****************************************
 
 First, we need to understand how infrared remote control works, then get the command sent from infrared remote control.
@@ -96,7 +96,7 @@ Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python
 
 Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "23.1_Infrared_Remote". Select "irrecvdata.py", right click your mouse to select "Upload to /", wait for "irrecvdata.py" to be uploaded to ESP32-WROVER and then double click "Infrared_Remote.py". 
 
-Infrared_Remote
+23.1_Infrared_Remote
 ----------------------------
 
 .. image:: ../_static/imgs/23_Infrared_Remote/Chapter23_15.png
@@ -112,6 +112,7 @@ The following is the program code:
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/23.1_Infrared_Remote/Infrared_Remote.py
     :linenos:
     :language: python
+    :lines: 1-10
     :dedent:
 
 Import the infrared decoder. 
@@ -157,7 +158,7 @@ Reference
 
     **ir_read():** The function that reads the key value of infrared remote. When the value is read, it will be returned; when no value is obtained, character **None** will be returned. 
 
-Project Control LED through Infrared Remote
+Project 23.2 Control LED through Infrared Remote
 *************************************************************
 
 In this project, we will control the brightness of LED lights through an infrared remote control.
@@ -226,7 +227,7 @@ Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python
 
 Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "23.2_Control_LED_through_Infrared_Remote". Select "irrecvdata.py", right click your mouse to select "Upload to /", wait for "irrecvdata.py" to be uploaded to ESP32-WROVER and then double click "Control_LED_through_Infrared_Remote.py". 
 
-Control_LED_through_Infrared_Remote
+23.2_Control_LED_through_Infrared_Remote
 --------------------------------------------
 
 .. image:: ../_static/imgs/23_Infrared_Remote/Chapter23_17.png
@@ -245,6 +246,7 @@ The following is the program code:
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/23.2_Control_LED_through_Infrared_Remote/Control_LED_through_Infrared_Remote.py
     :linenos:
     :language: python
+    :lines: 1-35
     :dedent:
 
 The handleControl() function is used to execute events corresponding to infrared code values. Every time when the function is called, the buzzer sounds once and determines the brightness of the LED based on the infrared key value. If the key value is not "0", "1", "2", "3", the buzzer sounds once, but the brightness of LED will not change.

@@ -1,11 +1,10 @@
 ##############################################################################
-Chapter 74HC595 & LED Matrix
+Chapter 16 74HC595 & LED Matrix
 ##############################################################################
-
 
 Thus far we have learned how to use the 74HC595 IC chip to control the LED bar graph and the 7-segment display. We will now use 74HC595 IC chips to control a LED matrix.
 
-Project LED Matrix
+Project 16.3 LED Matrix
 *************************************
 
 In this project, we will use two 74HC595 IC chips to control a monochrome (one color) (8X8) LED matrix to make it display both simple graphics and characters.
@@ -121,7 +120,7 @@ The following code will make LED matrix display a smiling face, and then display
 
 Download the code to ESP32-WROVER, and the LED matrix display a smiling face, and then display characters "0 to F" scrolling in a loop on the LED matrix.
 
-Sketch_LED_Matrix
+Sketch_16.3_LED_Matrix
 ---------------------------------------
 
 The following is the program code:

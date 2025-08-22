@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Photoresistor & LED
+Chapter 12 Photoresistor & LED
 ##############################################################################
 
 In this chapter, we will learn how to use a photoresistor.
 
-Project NightLamp
+Project 12.1 NightLamp
 ***************************************
 
 A photoresistor is very sensitive to the amount of light present. We can take advantage of the characteristic to make a nightlight with the following function: when the ambient light is less (darker environment) the LED will automatically become brighter to compensate and when the ambient light is greater (brighter environment) the LED will automatically dim to compensate.
@@ -91,7 +91,7 @@ Sketch
 
 The circuit used is similar to the project Soft Light. The only difference is that the input signal of the AIN0 pin of ADC changes from a potentiometer to a combination of a photoresistor and a resistor.
 
-Sketch_Nightlamp
+Sketch_12.1_Nightlamp
 ------------------------------------
 
 .. image:: ../_static/imgs/12_Photoresistor_&_LED/Chapter12_04.png

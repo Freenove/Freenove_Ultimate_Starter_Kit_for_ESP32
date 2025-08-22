@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter LEDPixel
+Chapter 6 LEDPixel
 ##############################################################################
 
 This chapter will help you learn to use a more convenient RGB LED lamp, which requires only one GPIO control and can be connected in infinite series in theory. Each LED can be controlled independently.
 
-Project LEDPixel
+Project 6.1 LEDPixel
 ************************************
 
 Learn the basic usage of LEDPixel and use it to flash red, green, blue and white.
@@ -114,7 +114,7 @@ In the pop-up window, Library Manager, search for the name of the Library, "Free
 .. image:: ../_static/imgs/6_LEDPixel/Chapter06_06.png
     :align: center
 
-Sketch_LEDPixel
+Sketch_06.1_LEDPixel
 ---------------------------------------
 
 .. image:: ../_static/imgs/6_LEDPixel/Chapter06_07.png
@@ -232,7 +232,7 @@ Reference
 
 If you want to learn more about this library, you can visit the following website: https://github.com/Freenove/Freenove_WS2812_Lib_for_ESP32
 
-Project Rainbow Light
+Project 6.2 Rainbow Light
 ********************************************
 
 In the previous project, we have mastered the use of LEDPixel. This project will realize a slightly complicated rainbow light. The component list and the circuit are exactly the same as the project fashionable light.
@@ -245,7 +245,7 @@ Continue to use the following color model to equalize the color distribution of 
 .. image:: ../_static/imgs/6_LEDPixel/Chapter06_09.png
     :align: center
 
-Sketch_RainbowLight
+Sketch_06.2_RainbowLight
 ----------------------------------
 
 .. image:: ../_static/imgs/6_LEDPixel/Chapter06_10.png

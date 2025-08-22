@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Matrix Keypad
+Chapter 22 Matrix Keypad
 ##############################################################################
 
 Earlier we learned about a single Push Button Switch. In this chapter, we will learn about Matrix Keyboards, which integrates a number of Push Button Switches as Keys for the purposes of Input.
 
-Project Matrix Keypad
+Project 22.1 Matrix Keypad
 *************************************
 
 In this project, we will attempt to get every key code on the Matrix Keypad to work.
@@ -82,7 +82,7 @@ Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python
 
 Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "22.1_Matrix_Keypad". Select"keypad.py", right click your mouse to select "Upload to /", wait for "keypad.py" to be uploaded to ESP32-WROVER and then double click "Matrix_Keypad.py". 
 
-Matrix_Keypad
+22.1_Matrix_Keypad
 ---------------------------------
 
 .. image:: ../_static/imgs/22_Matrix_Keypad/Chapter22_12.png
@@ -145,7 +145,7 @@ Reference
     **scan():** Non-blocking keypad scan function. If no key is pressed, it returns None; Otherwise, it returns the valued of the pressed key.
 
 
-Project Keypad Door
+Project 22.2 Keypad Door
 ******************************************************
 
 In this project, we use keypad as a keyboard to control the action of the servo motor.
@@ -206,7 +206,7 @@ Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python
 
 Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "22.2_Keypad_Door". Select "keypad.py" and "myservo.py", right click your mouse to select "Upload to /", wait for "keypad.py" and "myservo.py" to be uploaded to ESP32-WROVER and then double click "Keypad_Door.py". 
 
-Keypad_Door
+22.2_Keypad_Door
 -----------------------------------------
 
 .. image:: ../_static/imgs/22_Matrix_Keypad/Chapter22_14.png

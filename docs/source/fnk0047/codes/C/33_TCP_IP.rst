@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter TCP/IP
+Chapter 33 TCP/IP
 ##############################################################################
 
 In this chapter, we will introduce how ESP32 implements network communications based on TCP/IP protocol. There are two roles in TCP/IP communication, namely Server and Client, which will be implemented respectively with two projects in this chapter.
 
-Project As Client
+Project 33.1 As Client
 **********************************
 
 In this section, ESP32 is used as Client to connect Server on the same LAN and communicate with it.
@@ -144,7 +144,7 @@ ESP32 connects with TCP SERVER, and TCP SERVER receives messages from ESP32, as 
 .. image:: ../_static/imgs/33_TCP_IP/Chapter33_13.png
     :align: center
 
-Sketch_As_Client
+Sketch_33.1_As_Client
 ----------------------------------------
 
 The following is the program code:
@@ -237,7 +237,7 @@ Reference
     
     **readString():** read string in receive buffer 
 
-Project As Server 
+Project 33.2 As Server 
 *******************************************
 
 In this section, ESP32 is used as a server to wait for the connection and communication of client on the same LAN.
@@ -272,7 +272,7 @@ Sketch
 
 Before running Sketch, please modify the contents of the box below first. 
 
-Sketch_As_Server
+Sketch_33.2_As_Server
 ---------------------------------------------
 
 .. image:: ../_static/imgs/33_TCP_IP/Chapter33_15.png

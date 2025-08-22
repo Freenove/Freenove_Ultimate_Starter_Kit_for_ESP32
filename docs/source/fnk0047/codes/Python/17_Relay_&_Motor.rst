@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Relay & Motor
+Chapter 17 Relay & Motor
 ##############################################################################
 
 In this chapter, we will learn a kind of special switch module, relay module.
 
-Project Relay & Motor
+Project 17.1 Relay & Motor
 *********************************************
 
 In this project, we will use a push button switch indirectly to control the motor via a relay.
@@ -143,7 +143,7 @@ Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_C
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "17.1_Relay_And_Motor" and double click "Relay_And_Motor.py". 
 
-Relay_And_Motor
+17.1_Relay_And_Motor
 -----------------------------------
 
 .. image:: ../_static/imgs/17_Relay_&_Motor/Chapter17_15.png
@@ -162,7 +162,7 @@ The following is the program code:
 
 This section of code is basically the same as that of project Tablelamp. If you don't understand the program, you can click :ref:`here <Tablelamp>` to go back to the Tablelamp and study again.
 
-Project Control Motor with Potentiometer
+Project 17.2 Control Motor with Potentiometer
 *************************************************************
 
 Control the direction and speed of the motor with a potentiometer.
@@ -207,7 +207,6 @@ L293D is an IC chip (Integrated Circuit Chip) with a 4-channel motor drive. You 
 Port description of L293D module is as follows:
 
 .. table::
-    :width: 80%
     :align: center
     :class: zebra
     
@@ -278,7 +277,7 @@ Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python
 
 Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "17.2_Motor_And_Driver" and double click "Motor_And_Driver.py". 
 
-Motor_And_Driver
+17.2_Motor_And_Driver
 ----------------------------------------
 
 .. image:: ../_static/imgs/17_Motor_&_Driver/Chapter17_09.png
@@ -294,6 +293,7 @@ The following is the Code:
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/17.2_Motor_And_Driver/Motor_And_Driver.py
     :linenos:
     :language: python
+    :lines: 1-37
     :dedent:
 
 The ADC of ESP32 has a 12-bit accuracy, corresponding to a range from 0 to 4095. In this program, set the number 2048 as the midpoint. If the value of ADC is less than 2048, make the motor rotate in one direction. If the value of ADC is greater than 2048, make the motor rotate in the other direction. Subtract 2048 from the ADC value and take the absolute value, and then divide this result by 2 to be the speed of the motor.

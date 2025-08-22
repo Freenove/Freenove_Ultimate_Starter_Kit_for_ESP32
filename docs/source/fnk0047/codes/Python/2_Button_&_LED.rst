@@ -1,5 +1,5 @@
 ##############################################################################
-Chapter Button & LED
+Chapter 2 Button & LED
 ##############################################################################
 
 Usually, there are three essential parts in a complete automatic control device: INPUT, OUTPUT, and CONTROL. In last section, the LED module was the output part and ESP32 was the control part. In practical applications, we not only make LEDs flash, but also make a device sense the surrounding environment, receive instructions and then take the appropriate action such as LEDs light up, make a buzzer turn ON and so on.
@@ -9,7 +9,7 @@ Usually, there are three essential parts in a complete automatic control device:
 
 Next, we will build a simple control system to control an LED through a push button switch.
 
-Project Button & LED
+Project 2.1 Button & LED
 *****************************************
 
 In the project, we will control the LED state through a Push Button Switch. When the button is pressed, our LED will turn ON, and when it is released, the LED will turn OFF. This describes a Momentary Switch.
@@ -89,7 +89,7 @@ Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python
 
 Open "Thonny", click "This computer" -> "D:" -> "Micropython_Codes" -> "02.1_ButtonAndLed" and double click "ButtonAndLed.py".
 
-ButtonAndLed
+02.1_ButtonAndLed
 ------------------------------------------
 
 .. image:: ../_static/imgs/2_Button_&_LED/Chapter02_14.png
@@ -177,7 +177,7 @@ If statement is used to execute the next statement when a certain condition is p
     else:
         ......
 
-Project MINI table lamp
+Project 2.2 MINI table lamp
 **************************************
 
 We will also use a Push Button Switch, LED and ESP32 to make a MINI Table Lamp but this will function differently: Press the button, the LED will turn ON, and pressing the button again, the LED turns OFF. The ON switch action is no longer momentary (like a door bell) but remains ON without needing to continually press on the Button Switch.
@@ -201,7 +201,7 @@ Code
 
 .. _Tablelamp:
 
-Tablelamp
+02.2_Tablelamp
 --------------------------------
 
 Move the program folder " **Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes** " to disk(D) in advance with the path of " **D:/Micropython_Codes** ".

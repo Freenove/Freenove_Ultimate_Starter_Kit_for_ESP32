@@ -388,9 +388,10 @@ Pins with underlined numbers are used by the camera function, if you want to use
 
 .. list-table:: 
    :width: 80%
+   :widths: 1 1
    :header-rows: 1 
    :align: center
-   :class: zebra
+   :class: zebra text-center
    
    * -  CAM_Pin
      -  GPIO_pin

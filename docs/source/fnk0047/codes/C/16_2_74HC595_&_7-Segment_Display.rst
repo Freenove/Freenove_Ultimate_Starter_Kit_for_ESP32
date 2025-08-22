@@ -1,7 +1,7 @@
 
 
 
-Project 4-Digit 7-Segment Display
+Project 16.2 4-Digit 7-Segment Display
 ***************************************************
 
 Now, let's try to control more digit 7-segment display
@@ -79,7 +79,7 @@ Sketch
 
 In this code, we use the 74HC595 IC chip to control the 4-digit 7-segment display, and use the dynamic scanning method to show the changing number characters.
 
-Sketch_4_Dight_7-Segment_Display
+Sketch_16.2_4_Dight_7-Segment_Display
 --------------------------------------------------
 
 .. image:: ../_static/imgs/16_74HC595_&_7-Segment_Display/Chapter16_12.png

@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Stepper Motor
+Chapter 19 Stepper Motor
 ##############################################################################
 
 In this project, we will learn how to drive a stepper motor, and understand its working principle.
 
-Project Stepper Motor
+Project 19.1 Stepper Motor
 *******************************************
 
 Component List
@@ -98,7 +98,7 @@ Sketch
 
 This code uses the four-step, four-part mode to drive the stepper motor in the clockwise and anticlockwise directions.
 
-Sketch_Drive_Stepper_Motor
+Sketch_19.1_Drive_Stepper_Motor
 ------------------------------------------
 
 .. image:: ../_static/imgs/19_Stepper_Motor/Chapter19_07.png

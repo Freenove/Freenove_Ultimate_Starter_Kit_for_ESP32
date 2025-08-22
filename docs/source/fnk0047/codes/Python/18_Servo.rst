@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Servo
+Chapter 18 Servo
 ##############################################################################
 
 Previously, we learned how to control the speed and rotational direction of a motor. In this chapter, we will learn about servos which are a rotary actuator type motor that can be controlled to rotate to specific angles.
 
-Project Servo Sweep
+Project 18.1 Servo Sweep
 *******************************************
 
 First, we need to learn how to make a servo rotate.
@@ -97,7 +97,7 @@ Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python
 
 Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "18.1_Servo_Sweep". Select "myservo.py", right click your mouse to select "Upload to /", wait for "myservo.py" to be uploaded to ESP32-WROVER and then double click "Servo_Sweep.py". 
 
-Servo_Sweep
+18.1_Servo_Sweep
 ---------------------------------------
 
 .. image:: ../_static/imgs/18_Servo/Chapter18_12.png
@@ -168,7 +168,7 @@ Reference
     
         **us:** Range from 500-2500, with 500 corresponding to the servo, s 0 degree and 2500 corresponding to 180 degrees.
 
-Project Servo Knop
+Project 18.2 Servo Knop
 *********************************
 
 Use a potentiometer to control the servo motor to rotate at any angle.
@@ -192,7 +192,6 @@ Use a potentiometer to control the servo motor to rotate at any angle.
     | |Chapter18_00|                     |  |Chapter01_05|         |  |Chapter09_00|          |
     +------------------------------------+-------------------------+--------------------------+
 
-.. |Chapter18_02| image:: ../_static/imgs/18_Servo/Chapter18_02.png
 .. |Chapter09_00| image:: ../_static/imgs/9_AD_DA_Converter/Chapter09_00.png
 
 Circuit

@@ -1,5 +1,5 @@
 ##############################################################################
-Chapter Pick Apples
+Chapter 4 Pick Apples
 ##############################################################################
 
 In this chapter, we prepare pick apples game. You can use the joystick to pick apples. 

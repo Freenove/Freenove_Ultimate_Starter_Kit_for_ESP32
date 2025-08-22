@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Bluetooth Media by DAC
+Chapter 28 Bluetooth Media by DAC
 ##############################################################################
 
 ESP32 integrates Classic Bluetooth and Bluetooth Low Energy(BLE). It can transmit not only simple data and orders, but also files including texts and audios. In this section, we will utilize the audio's receiving function of Bluetooth to receive music from mobile phones and play it. 
 
-Project Playing Bluetooth Music through DAC
+Project 28.1 Playing Bluetooth Music through DAC
 *****************************************************************
 
 Use the Bluetooth audio receiving function of ESP32 to transcode the audio data from mobile phones and play the music through DAC output pin. 
@@ -101,7 +101,7 @@ Circuit
 Sketch
 ==============================================
 
-Sketch_Bluetooth_Music_by_DAC
+Sketch_28.1_Bluetooth_Music_by_DAC
 ----------------------------------------------
 
 .. image:: ../_static/imgs/28_Bluetooth_Media_by_DAC/Chapter28_06.png

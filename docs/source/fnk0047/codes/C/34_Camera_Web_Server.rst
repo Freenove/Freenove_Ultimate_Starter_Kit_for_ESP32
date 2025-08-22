@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Camera Web Server
+Chapter 34 Camera Web Server
 ##############################################################################
 
 In this section, we'll use ESP32's video function as an example to study.
 
-Project Camera Web Server
+Project 34.1 Camera Web Server
 ******************************************
 
 Connect ESP32 using USB and check its IP address through serial monitor. Use web page to access IP address to obtain video and image data.
@@ -37,7 +37,7 @@ Connect Freenove ESP32 to the computer using the USB cable.
 Sketch
 =====================================
 
-Sketch_As_CameraWebServer
+Sketch_34.1_As_CameraWebServer
 ---------------------------------------
 
 .. image:: ../_static/imgs/34_Camera_Web_Server/Chapter34_00.png
@@ -182,7 +182,7 @@ Reference
 
 :combo:`red font-bolder:We recommend that the resolution not exceed VGA(640x480).`
 
-Project Video Web Server
+Project 34.2 Video Web Server
 *******************************************
 
 Connect to ESP32 using USB and view its IP address through a serial monitor. Access IP addresses through web pages to obtain real-time video data.
@@ -212,7 +212,7 @@ Connect Freenove ESP32 to the computer using the USB cable.
 Sketch
 =================================
 
-Sketch_As_VideoWebServer
+Sketch_34.2_As_VideoWebServer
 ---------------------------------
 
 .. image:: ../_static/imgs/34_Camera_Web_Server/Chapter34_06.png

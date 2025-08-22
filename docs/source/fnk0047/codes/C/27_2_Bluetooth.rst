@@ -1,7 +1,7 @@
 
 
 
-Project Bluetooth Control LED
+Project 27.3 Bluetooth Control LED
 *********************************************
 
 In this section, we will control the LED with Bluetooth.
@@ -64,7 +64,7 @@ Connect Freenove ESP32 to the computer using a USB cable.
 Sketch
 ======================================
 
-Sketch_Bluetooth_Control_LED
+Sketch_27.3_Bluetooth_Control_LED
 --------------------------------------------
 
 .. image:: ../_static/imgs/27_Bluetooth/Chapter27_29.png
@@ -171,7 +171,7 @@ Function memset is mainly used to clean and initialize the memory of array
     
     Function memset() is to set the content of a certain internal storage as specified value.
     
-    *s: the initial address of the content to clear out. 
+    \*s: the initial address of the content to clear out. 
     
     c:to be replaced as specified value 
     

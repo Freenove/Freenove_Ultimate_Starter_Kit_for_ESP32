@@ -1,5 +1,5 @@
 ##############################################################################
-Chapter Tetris
+Chapter 6 Tetris
 ##############################################################################
 
 In this chapter, we prepare a tetris game for you. You can play the game by pressing the buttons.

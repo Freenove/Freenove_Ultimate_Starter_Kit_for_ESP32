@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Thermistor
+Chapter 13 Thermistor
 ##############################################################################
 
 In this chapter, we will learn about thermistors which are another kind of resistor
 
-Project Thermometer
+Project 13.1 Thermometer
 ******************************************
 
 A thermistor is a type of resistor whose resistance value is dependent on temperature and changes in temperature. Therefore, we can take advantage of this characteristic to make a thermometer.
@@ -107,7 +107,7 @@ Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python
 
 Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "13.1_Thermometer" and double click "Thermometer.py". 
 
-Thermometer
+13.1_Thermometer
 --------------------------------------
 
 .. image:: ../_static/imgs/13_Thermistor/Chapter13_09.png

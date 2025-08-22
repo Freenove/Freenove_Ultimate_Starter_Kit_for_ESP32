@@ -25,7 +25,6 @@ Python language
 
 .. toctree::
    :maxdepth: 1
-   :numbered:
    :glob:
 
    Python/1_LED_(Important)

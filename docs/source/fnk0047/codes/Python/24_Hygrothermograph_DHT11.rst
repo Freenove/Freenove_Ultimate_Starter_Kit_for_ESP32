@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Hygrothermograph DHT11
+Chapter 24 Hygrothermograph DHT11
 ##############################################################################
 
 In this chapter, we will learn about a commonly used sensor called a Hygrothermograph DHT11.
 
-Project Hygrothermograph
+Project 24.1 Hygrothermograph
 **********************************************
 
 Hygrothermograph is an important tool in our lives to give us data on the temperature and humidity in our environment. In this project, we will use the ESP32 to read temperature and humidity data of the DHT11 Module.
@@ -79,7 +79,7 @@ Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python
 
 Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "24.1_Hygrothermograph" and double click  "Hygrothermograph.py".
 
-Hygrothermograph
+24.1_Hygrothermograph
 -------------------------------
 
 .. image:: ../_static/imgs/24_Hygrothermograph_DHT11/Chapter24_13.png
@@ -166,7 +166,7 @@ Reference
     
     **DHT12.humidity():** Return humidity data obtained by DHT12.
 
-Project Hygrothermograph
+Project 24.2 Hygrothermograph
 ***********************************************************
 
 In this project, we use L2C-LCD1602 to display data collected by DHT11.
@@ -225,7 +225,7 @@ Code
 
 Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  24.2_Hygrothermograph". Select "I2C_LCD.py" and "LCD_API.py", right click your mouse to select "Upload to /", wait for "I2C_LCD.py" and "LCD_API.py" to be uploaded to ESP32-WROVER and then double click "Hygrothermograph.py".
 
-Hygrothermograph
+24.2_Hygrothermograph
 -----------------------------
 
 .. image:: ../_static/imgs/24_Hygrothermograph_DHT11/Chapter24_16.png
@@ -241,6 +241,7 @@ The following is the program code:
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/24.2_Hygrothermograph/Hygrothermograph.py
     :linenos:
     :language: python
+    :lines: 1-27
     :dedent:
 
 Import DHT11 and I2C LCD1602 modules.

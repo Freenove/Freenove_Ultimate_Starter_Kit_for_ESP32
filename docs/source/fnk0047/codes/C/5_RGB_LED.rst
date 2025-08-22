@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter RGB LED
+Chapter 5 RGB LED
 ##############################################################################
 
 In this chapter, we will learn how to control a RGB LED. It can emit different colors of light. Next, we will use RGB LED to make a multicolored light.
 
-Project Random Color Light
+Project 5.1 Random Color Light
 ******************************************
 
 In this project, we will make a multicolored LED. And we can control RGB LED to switch different colors automatically.
@@ -77,7 +77,7 @@ Sketch
 
 We need to create three PWM channels and use random duty cycle to make random RGB LED color.
 
-Sketch_ColorfulLight
+Sketch_05.1_ColorfulLight
 ---------------------------------------------
 
 .. image:: ../_static/imgs/5_RGB_LED/Chapter05_10.png
@@ -127,7 +127,7 @@ The related function of software PWM can be described as follows:
 
     This function will return a random number(min --- max-1).
 
-Project Gradient Color Light
+Project 5.2 Gradient Color Light
 ********************************************
 
 In the previous project, we have mastered the usage of RGB LED, but the random display of colors is rather stiff. This project will realize a fashionable light with soft color changes.
@@ -141,7 +141,7 @@ Using a color model, the color changes from 0 to 255 as shown below.
 
 In this code, the color model will be implemented and RGB LED will change colors along the model.
 
-Sketch_SoftColorfulLight
+Sketch_05.2_SoftColorfulLight
 ============================================
 
 The following is the program code:

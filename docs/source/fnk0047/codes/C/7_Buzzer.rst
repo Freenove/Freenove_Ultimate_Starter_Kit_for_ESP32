@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Buzzer
+Chapter 7 Buzzer
 ##############################################################################
 
 In this chapter, we will learn about buzzers that can make sounds.
 
-Project Doorbell
+Project 7.1 Doorbell
 *************************************
 
 We will make this kind of doorbell: when the button is pressed, the buzzer sounds; and when the button is released, the buzzer stops sounding.
@@ -131,7 +131,7 @@ Sketch
 
 In this project, a buzzer will be controlled by a push button switch. When the button switch is pressed, the buzzer sounds and when the button is released, the buzzer stops. It is analogous to our earlier project that controlled a LED ON and OFF.
 
-Sketch_Doorbell
+Sketch_07.1_Doorbell
 ---------------------------------
 
 .. image:: ../_static/imgs/7_Buzzer/Chapter07_12.png
@@ -151,7 +151,7 @@ The following is the program code:
 
 The code is logically the same as using button to control LED.
 
-Project Alertor
+Project 7.2 Alertor
 ************************************
 
 Next, we will use a passive buzzer to make an alarm.
@@ -163,7 +163,7 @@ Sketch
 
 In this project, the buzzer alarm is controlled by the button. Press the button, then buzzer sounds. If you release the button, the buzzer will stop sounding. It is logically the same as using button to control LED, but in the control method, passive buzzer requires PWM of certain frequency to sound.
 
-Sketch_Alertor
+Sketch_07.2_Alertor
 -------------------------------------
 
 .. image:: ../_static/imgs/7_Buzzer/Chapter07_14.png
@@ -214,7 +214,7 @@ Reference
 
     This function has some bugs in the current version (V1.0.4): when the call interval is less than 20ms, the resulting PWM will have an exception. We will get in touch with the authorities to solve this problem and give solutions in the following two projects.
 
-Project Alertor (use timer)
+Project 7.3 Alertor (use timer)
 *****************************************
 
 Due to some bugs in the function ledcWriteTone(), this project uses timer to generate software PWM to control the buzzer. The circuit is exactly the same as the last project.

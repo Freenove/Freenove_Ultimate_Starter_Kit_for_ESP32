@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Servo
+Chapter 18 Servo
 ##############################################################################
 
 Previously, we learned how to control the speed and rotational direction of a motor. In this chapter, we will learn about servos which are a rotary actuator type motor that can be controlled to rotate to specific angles.
 
-Project Servo Sweep
+Project 18.1 Servo Sweep
 *******************************************
 
 First, we need to learn how to make a servo rotate.
@@ -176,7 +176,7 @@ Reference
         
         **write(angle)**: Control servo to rotate to the specified angle. 
 
-Project Servo Knop
+Project 18.2 Servo Knop
 *********************************
 
 Use a potentiometer to control the servo motor to rotate at any angle.
@@ -240,7 +240,7 @@ If you haven't installed it yet, please do so before learning. The steps to add 
 
 Use the ESP32Servo library to control the servo motor and let the servo motor rotate back and forth.
 
-Sketch_Servo_Sweep
+Sketch_18.2_Servo_Sweep
 ----------------------------------------
 
 .. image:: ../_static/imgs/18_Servo/Chapter18_16.png

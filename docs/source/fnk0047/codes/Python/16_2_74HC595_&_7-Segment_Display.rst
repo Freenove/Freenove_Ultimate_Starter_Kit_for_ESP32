@@ -1,7 +1,7 @@
 
 
 
-Project 4-Digit 7-Segment Display
+Project 16.2 4-Digit 7-Segment Display
 ***************************************************
 
 Now, let's try to control more digit 7-segment display
@@ -31,15 +31,15 @@ Component List
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED/Chapter01_02.png
-.. |Chapter15_00| image:: ../_static/imgs/15_74HC595_&_LED_Bar_Graph/Chapter15_00.png 
-.. |Chapter01_04| image:: ../_static/imgs/1_LED/Chapter01_04.png    
+.. |Chapter15_00| image:: ../_static/imgs/15_74HC595_&_LED_Bar_Graph/Chapter15_00.png
+.. |Chapter01_04| image:: ../_static/imgs/1_LED/Chapter01_04.png
 .. |Chapter01_05| image:: ../_static/imgs/1_LED/Chapter01_05.png
 .. |Chapter16_07| image:: ../_static/imgs/16_74HC595_&_7-Segment_Display/Chapter16_07.png
 
 Component knowledge
 =============================================
 
-4 Digit 7-Segment Display
+16.2_4 Digit 7-Segment Display
 ---------------------------------------------
 
 A 4 Digit 7-segment display integrates four 7-segment displays into one module, therefore it can display more characters. All of the LEDs contained have a common anode and individual cathodes. Its internal structure and pin designation diagram is shown below:
@@ -97,6 +97,7 @@ The following is the program code:
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/16.2_4_Digit_7_Segment_Display/4_Digit_7_Segment_Display.py
     :linenos:
     :language: python
+    :lines: 1-23
     :dedent:
 
 Import time, my74HC595 and Pin modules.

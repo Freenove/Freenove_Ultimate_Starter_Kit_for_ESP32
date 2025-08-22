@@ -1,5 +1,5 @@
 ##############################################################################
-Chapter Pong Game
+Chapter 5 Pong Game
 ##############################################################################
 
 We have experienced single-player game snake before. Now, let's use ESP32 board to play classic two-player pong game. You will experience both 2D and 3D version.

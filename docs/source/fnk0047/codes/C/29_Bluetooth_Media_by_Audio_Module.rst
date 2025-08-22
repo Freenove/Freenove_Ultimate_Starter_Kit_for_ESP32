@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Bluetooth Media by Audio Module
+Chapter 29 Bluetooth Media by Audio Module
 ##############################################################################
 
 In the previous section, ESP32's own DAC was used to output the audio signal, and obviously there was some distortion in the sound quality. In this section, with the help of PCM5102A chip, you will enjoy higher-quality music.
 
-Project Playing Bluetooth Music through Audio Converter & Amplifier
+Project 29.1 Playing Bluetooth Music through Audio Converter & Amplifier
 **********************************************************************************
 
 In this project, we will use Audio Converter & Amplifier to transcode audio data into stereo and output it. 
@@ -145,7 +145,7 @@ Circuit
 Sketch
 ============================================
 
-Sketch_Bluetooth_Music_by_PCM5102A
+Sketch_29.1_Bluetooth_Music_by_PCM5102A
 ----------------------------------------------
 
 .. image:: ../_static/imgs/29_Bluetooth_Media_by_Audio_Module/Chapter29_08.png

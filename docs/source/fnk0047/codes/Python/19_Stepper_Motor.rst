@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Stepper Motor
+Chapter 19 Stepper Motor
 ##############################################################################
 
 In this project, we will learn how to drive a stepper motor, and understand its working principle.
 
-Project Stepper Motor
+Project 19.1 Stepper Motor
 *******************************************
 
 Component List
@@ -88,10 +88,10 @@ When building the circuit, note that rated voltage of the stepper motor is 5V, a
    * -  **Hardware connection** 
    * -  :combo:`red font-bolder:If you need any support, please feel free to contact us via:` support@freenove.com
 
-        |Chapter19_07|
+        |Chapter19_11|
 
 .. |Chapter19_06| image:: ../_static/imgs/19_Stepper_Motor/Chapter19_06.png
-.. |Chapter19_07| image:: ../_static/imgs/19_Stepper_Motor/Chapter19_07.png
+.. |Chapter19_11| image:: ../_static/imgs/19_Stepper_Motor/Chapter19_11.png
 
 Code
 ======================================
@@ -102,7 +102,7 @@ Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python
 
 Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "19.1_Stepping_Motor". Select "stepmotor.py", right click your mouse to select "Upload to /", wait for "myservo.py" to be uploaded to ESP32-WROVER and then double click "Stepping_Motor.py". 
 
-Stepping_Motor
+19.1_Stepping_Motor
 ---------------------------------------
 
 .. image:: ../_static/imgs/19_Stepper_Motor/Chapter19_10.png

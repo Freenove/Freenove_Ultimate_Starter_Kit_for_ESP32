@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Hygrothermograph DHT11
+Chapter 24 Hygrothermograph DHT11
 ##############################################################################
 
 In this chapter, we will learn about a commonly used sensor called a Hygrothermograph DHT11.
 
-Project Hygrothermograph
+Project 24.1 Hygrothermograph
 **********************************************
 
 Hygrothermograph is an important tool in our lives to give us data on the temperature and humidity in our environment. In this project, we will use the ESP32 to read temperature and humidity data of the DHT11 Module.
@@ -91,7 +91,7 @@ Refer to the following operations:
 .. image:: ../_static/imgs/24_Hygrothermograph_DHT11/Chapter24_05.png
     :align: center
 
-Sketch_Temperature_and_Humidity_Sensor
+Sketch_24.1_Temperature_and_Humidity_Sensor
 ------------------------------------------------------
 
 .. image:: ../_static/imgs/24_Hygrothermograph_DHT11/Chapter24_06.png
@@ -158,7 +158,7 @@ Reference
 
     **getStatus():** To judge whether the obtained data format is normal, the return value of 0 means the data is normal, and the return value of non-0 means the data is abnormal or the data fails to be obtained.
 
-Project Hygrothermograph
+Project 24.2 Hygrothermograph
 ***********************************************************
 
 In this project, we use L2C-LCD1602 to display data collected by DHT11.
@@ -218,7 +218,7 @@ Sketch
 
 This code uses the DHTesp and LiquidCrystal_I2C libraries, so make sure the relevant library files are added before writing the program.
 
-Sketch_Temperature_and_Humidity_Sensor
+Sketch_24.2_Temperature_and_Humidity_Sensor
 ------------------------------------------------------
 
 .. image:: ../_static/imgs/24_Hygrothermograph_DHT11/Chapter24_11.png

@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter TCP/IP
+Chapter 29 TCP/IP
 ##############################################################################
 
 In this chapter, we will introduce how ESP32 implements network communications based on TCP/IP protocol. There are two roles in TCP/IP communication, namely Server and Client, which will be implemented respectively with two projects in this chapter.
 
-Project As Client
+Project 29.1 As Client
 **********************************
 
 In this section, ESP32 is used as Client to connect Server on the same LAN and communicate with it.
@@ -133,7 +133,7 @@ Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->
 
 Before clicking "Run current script", please modify the name and password of your router and fill in the "host" and "port" according to the IP information shown in the box below:
 
-TCP_as_Client
+29.1_TCP_as_Client
 -------------------------------
 
 .. image:: ../_static/imgs/33_TCP_IP/Chapter33_21.png
@@ -264,7 +264,7 @@ Reference
     
 To learn more please visit: http://docs.micropython.org/en/latest/
 
-Project As Server 
+Project 29.2 As Server 
 *******************************************
 
 In this section, ESP32 is used as a server to wait for the connection and communication of client on the same LAN.
@@ -282,9 +282,6 @@ Component List
     |                                    |                         |
     | |Chapter01_00|                     | |Chapter08_00|          |
     +------------------------------------+-------------------------+
-  
-.. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
-.. |Chapter08_00| image:: ../_static/imgs/8_Serial_Communication/Chapter08_00.png
 
 Circuit
 ==========================================
@@ -303,7 +300,7 @@ Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "29
 
 Before clicking "Run current script", please modify the name and password of your router shown in the box below.
 
-TCP_as_Server
+29.2_TCP_as_Server
 ---------------------------------
 
 .. image:: ../_static/imgs/33_TCP_IP/Chapter33_25.png
@@ -333,6 +330,7 @@ The following is the program code:
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/29.2_TCP_as_Server/TCP_as_Server.py
     :linenos:
     :language: python
+    :lines: 1-52
     :dedent:
 
 Call function connectWifi() to connect to router and obtain the dynamic IP that it assigns to ESP32.

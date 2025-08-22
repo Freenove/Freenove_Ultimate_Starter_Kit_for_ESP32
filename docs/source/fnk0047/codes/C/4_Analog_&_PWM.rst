@@ -1,12 +1,12 @@
 ##############################################################################
-Chapter Analog & PWM
+Chapter 4 Analog & PWM
 ##############################################################################
 
 In previous study, we have known that one button has two states: pressed and released, and LED has light-on/off state, then how to enter a middle state?  How to output an intermediate state to let LED "semi bright"?  That's what we're going to learn.
 
 First, let's learn how to control the brightness of a LED.
 
-Project Breathing LED
+Project 4.1 Breathing LED
 *************************************
 
 Breathing light, that is, LED is turned from off to on gradually, and gradually from on to off, just like "breathing". So, how to control the brightness of a LED?  We will use PWM to achieve this target.
@@ -108,7 +108,7 @@ Sketch
 
 This project is designed to make PWM output GPIO2 with pulse width increasing from 0% to 100%, and then reducing from 100% to 0% gradually.
 
-Sketch_BreathingLight
+Sketch_04.1_BreathingLight
 -----------------------------------
 
 .. image:: ../_static/imgs/4_Analog_&_PWM/Chapter04_04.png
@@ -167,7 +167,7 @@ You can also adjust the rate of the state change of LED by changing the paramete
 
     Writes the pulse width value to a PWM channel.
 
-Project Meteor Flowing Light
+Project 4.2 Meteor Flowing Light
 ****************************************************
 
 After learning about PWM, we can use it to control LED bar graph and realize a cooler flowing light.
@@ -179,7 +179,7 @@ Sketch
 
 Meteor flowing light will be implemented with PWM.
 
-Sketch_FlowingLight2
+Sketch_04.2_FlowingLight2
 --------------------------------------------------
 
 .. image:: ../_static/imgs/4_Analog_&_PWM/Chapter04_06.png

@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Potentiometer & LED
+Chapter 11 Potentiometer & LED
 ##############################################################################
 
 We have learned how to use ADC and DAC before. When using DAC output analog to drive LED, we found that, when the output voltage is less than led turn-on voltage, the LED does not light; when the output analog voltage is greater than the LED voltage, the LED lights. This leads to a certain degree of waste of resources. Therefore, in the control of LED brightness, we should choose a more reasonable way of PWM control. In this chapter, we learn to control the brightness of LED through a potentiometer.
 
-Project Soft Light
+Project 11.1 Soft Light
 *********************************************
 
 In this project, we will make a soft light. We will use an ADC Module to read ADC values of a potentiometer and map it to duty cycle of the PWM used to control the brightness of a LED. Then you can change the brightness of a LED by adjusting the potentiometer.
@@ -64,7 +64,7 @@ Move the program folder **"Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python
 
 Open "Thonny", click  "This computer" **->** "D:" **->** "Micropython_Codes" **->** "11.1_Soft_LED" and double click "Soft_LED.py". 
 
-Soft_LED
+11.1_Soft_LED
 -----------------------------------------
 
 .. image:: ../_static/imgs/11_Potentiometer_&_LED/Chapter11_11.png

@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Joystick
+Chapter 14 Joystick
 ##############################################################################
 
 In the previous chapter, we have learned how to use rotary potentiometer. Now, let's learn a new electronic module joystick which working on the same principle as rotary potentiometer.
 
-Project Joystick
+Project 14.1 Joystick
 ***************************************
 
 In this project, we will read the output data of a joystick and display it to the Terminal screen.
@@ -79,11 +79,11 @@ Code
 
 In this project's code, we will read the ADC values of X and Y axes of the Joystick, and read digital quality of the Z axis, then display these out in Terminal.
 
-Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes" to disk(D) in advance with the path of "D:/Micropython_Codes".
+Move the program folder "**Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_Codes**" to disk(D) in advance with the path of "**D:/Micropython_Codes**".
 
 Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "14.1_Joystick" and double click "Joystick.py". 
 
-Joystick
+14.1_Joystick
 --------------------------------------
 
 .. image:: ../_static/imgs/14_Joystick/Chapter14_06.png

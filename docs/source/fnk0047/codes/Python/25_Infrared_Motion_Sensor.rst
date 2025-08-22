@@ -1,10 +1,10 @@
 ##############################################################################
-Chapter Infrared Motion Sensor
+Chapter 25 Infrared Motion Sensor
 ##############################################################################
 
 In this chapter, we will learn a widely used sensor, infrared motion sensor. 
 
-Project Infrared Motion Detector with LED Indicator
+Project 25.1 Infrared Motion Detector with LED Indicator
 ******************************************************************
 
 In this project, we will make a motion detector, with the human body infrared pyroelectric sensors.
@@ -118,7 +118,7 @@ Move the program folder " **Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Pytho
 
 Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "25.1_Infrared_Motion_Detector" and then double click "Infrared_Motion_Detector.py". 
 
-Infrared_Motion_Detector
+25.1_Infrared_Motion_Detector
 --------------------------------
 
 .. image:: ../_static/imgs/25_Infrared_Motion_Sensor/Chapter25_08.png

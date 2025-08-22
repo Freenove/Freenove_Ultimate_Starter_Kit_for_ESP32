@@ -1,5 +1,5 @@
 ##############################################################################
-Chapter Control 2D and 3D Figures
+Chapter 2 Control 2D and 3D Figures
 ##############################################################################
 
 In this chapter, we will use ESP32 board to make Processing program control figure changes. And we will control 2D and 3D figures, respectively.

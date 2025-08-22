@@ -1,12 +1,12 @@
 ##############################################################################
-Chapter Analog & PWM
+Chapter 4 Analog & PWM
 ##############################################################################
 
 In previous study, we have known that one button has two states: pressed and released, and LED has light-on/off state, then how to enter a middle state?  How to output an intermediate state to let LED "semi bright"?  That's what we're going to learn.
 
 First, let's learn how to control the brightness of a LED.
 
-Project Breathing LED
+Project 4.1 Breathing LED
 *************************************
 
 Breathing light, that is, LED is turned from off to on gradually, and gradually from on to off, just like "breathing". So, how to control the brightness of a LED?  We will use PWM to achieve this target.
@@ -106,7 +106,7 @@ Move the program folder "Freenove_Ultimate_Starter_Kit_for_ESP32/Python/Python_C
 
 Open "Thonny", click"This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "04.1_BreatheLight" and double click "BreatheLight.py". 
 
-BreatheLight
+04.1_BreatheLight
 ------------------------------------
 
 .. image:: ../_static/imgs/4_Analog_&_PWM/Chapter04_08.png
@@ -169,7 +169,7 @@ Reference
     
     **PWM.deinit():** Turn OFF PWM.
 
-Project Meteor Flowing Light
+Project 4.2 Meteor Flowing Light
 ******************************************
 
 After learning about PWM, we can use it to control LED Bar Graph and realize a cooler Flowing Light.
@@ -226,7 +226,7 @@ Flowing Light with tail was implemented with PWM.
 
 Open "Thonny", click "This computer"  ->  "D:"  ->  "Micropython_Codes"  ->  "04.2_FlowingLight". Select"pwm.py", right click to select "Upload to /", wait for "pwm.py" to be uploaded to ESP32-WROVER and then double click "FlowingLight.py" 
 
-FlowingLight
+04.2_FlowingLight
 -------------------------------
 
 .. image:: ../_static/imgs/4_Analog_&_PWM/Chapter04_12.png
