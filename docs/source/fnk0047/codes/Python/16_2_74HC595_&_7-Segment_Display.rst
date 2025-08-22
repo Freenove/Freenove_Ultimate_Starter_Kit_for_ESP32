@@ -39,7 +39,7 @@ Component List
 Component knowledge
 =============================================
 
-16.2_4 Digit 7-Segment Display
+4 Digit 7-Segment Display
 ---------------------------------------------
 
 A 4 Digit 7-segment display integrates four 7-segment displays into one module, therefore it can display more characters. All of the LEDs contained have a common anode and individual cathodes. Its internal structure and pin designation diagram is shown below:
@@ -81,7 +81,7 @@ In this code, we use the 74HC595 IC Chip to control the 4-Digit 7-Segment Displa
 
 Open "Thonny", click "This computer" **->** "D:" **->** "Micropython_Codes" **->** "16.2_4_Digit_7_Segment_Display". Select "my74HC595.py", right click your mouse to select "Upload to /", wait for "my74HC595.py" to be uploaded to ESP32-WROVER and double click "4_Digit_7_Segment_Display.py". 
 
-4_Digit_7_Segment_Display
+16.2_4_Digit_7_Segment_Display
 ---------------------------------------------------
 
 .. image:: ../_static/imgs/16_74HC595_&_7-Segment_Display/Chapter16_15.png

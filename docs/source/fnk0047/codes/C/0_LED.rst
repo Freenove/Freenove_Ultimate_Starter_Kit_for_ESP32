@@ -1,5 +1,5 @@
 ##############################################################################
-0. Chapter LED
+Chapter 0 LED
 ##############################################################################
 
 This chapter is the Start Point in the journey to build and explore ESP32 electronic projects. We will start with simple "Blink" project.
@@ -105,6 +105,7 @@ setup() function is generally used to write code to initialize the hardware. And
 In the circuit, ESP32-WROVER's GPIO2 is connected to the LED, so the LED pin is defined as 2.
 
 .. code-block:: c
+    :linenos:
 
     #define PIN_LED 2
 
@@ -113,6 +114,7 @@ This means that after this line of code, all PIN_LED will be treated as 2.
 In the setup () function, first, we set the PIN_LED as output mode, which can make the port output high level or low level.
 
 .. code-block:: c
+    :linenos:
 
     // initialize digital pin PIN_LED as an output.
     pinMode(PIN_LED, OUTPUT);
@@ -120,18 +122,21 @@ In the setup () function, first, we set the PIN_LED as output mode, which can ma
 Then, in the loop () function, set the PIN_LED to output high level to make LED light off.
 
 .. code-block:: c
+    :linenos:
 
     digitalWrite(PIN_LED, HIGH);  // turn the LED off (HIGH is the voltage level)
 
 Wait for 1000ms, that is 1s. Delay () function is used to make control board wait for a moment before executing the next statement. The parameter indicates the number of milliseconds to wait for.
 
 .. code-block:: c
+    :linenos:
 
     delay(1000);                  // wait for a second
 
 Then set the PIN_LED to output low level, and LED light up. One second later, the execution of loop () function will be completed. 
 
 .. code-block:: c
+    :linenos:
 
     digitalWrite(PIN_LED, LOW);   // turn the LED on by making the voltage LOW
     delay(1000);                  // wait for a second

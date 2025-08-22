@@ -144,7 +144,7 @@ The following is the program code:
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/16.1_74HC595_and_7_segment_display/74HC595_and_7_segment_display.py
     :linenos:
     :language: python
-    :lines: 1-23
+    :lines: 1-12
     :dedent:
 
 Import time and my74HC595 modules.

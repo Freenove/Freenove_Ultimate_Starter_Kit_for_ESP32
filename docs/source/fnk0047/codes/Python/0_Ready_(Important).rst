@@ -16,7 +16,7 @@ Thonny supports various operating system, including Windows、Mac OS、Linux.
 Downloading Thonny
 ==============================================
 
-Official website of Thonny: https://thonny.org 
+Official website of Thonny: https://thonny.org
 
 Open-source code repositories of Thonny: https://github.com/thonny/thonny
 
