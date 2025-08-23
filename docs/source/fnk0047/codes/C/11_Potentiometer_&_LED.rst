@@ -45,6 +45,7 @@ Circuit
 .. list-table:: 
    :width: 80%
    :align: center
+   :class: table-line
    
    * -  **Schematic diagram**
    * -  |Chapter11_00|

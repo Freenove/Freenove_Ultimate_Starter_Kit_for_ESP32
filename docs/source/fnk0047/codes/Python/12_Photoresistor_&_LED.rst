@@ -28,22 +28,20 @@ Component List
     +-----------------+--------------------------------------------+
     | LED x1          | Jumper M/M x4                              |
     |                 |                                            |
-    | |Chapter07_00|  | |Chapter01_05|                             |
+    | |Chapter01_03|  | |Chapter01_05|                             |
     +-----------------+------------------+-------------------------+
     |Photoresistor x1 | Resistor 220Ω x1 | Resistor 10kΩ x2        |
     |                 |                  |                         |
-    | |Chapter07_02|  | |Chapter01_04|   | |Chapter07_04|          |
+    | |Chapter12_06|  | |Chapter01_04|   | |Chapter07_04|          |
     +-----------------+------------------+-------------------------+
 
 .. |Chapter01_00| image:: ../_static/imgs/1_LED/Chapter01_00.png
 .. |Chapter01_01| image:: ../_static/imgs/1_LED/Chapter01_01.png
 .. |Chapter01_02| image:: ../_static/imgs/1_LED/Chapter01_02.png
-.. |Chapter01_04| image:: ../_static/imgs/1_LED/Chapter01_02.png
-.. |Chapter07_00| image:: ../_static/imgs/7_Buzzer/Chapter07_00.png
-.. |Chapter07_01| image:: ../_static/imgs/7_Buzzer/Chapter07_01.png
-.. |Chapter07_02| image:: ../_static/imgs/7_Buzzer/Chapter07_02.png
-.. |Chapter07_03| image:: ../_static/imgs/7_Buzzer/Chapter07_03.png
+.. |Chapter01_03| image:: ../_static/imgs/1_LED/Chapter01_03.png
+.. |Chapter01_04| image:: ../_static/imgs/1_LED/Chapter01_04.png
 .. |Chapter07_04| image:: ../_static/imgs/7_Buzzer/Chapter07_04.png
+.. |Chapter12_06| image:: ../_static/imgs/12_Photoresistor_&_LED/Chapter12_06.png
 .. |Chapter01_05| image:: ../_static/imgs/1_LED/Chapter01_05.png
 
 Component knowledge

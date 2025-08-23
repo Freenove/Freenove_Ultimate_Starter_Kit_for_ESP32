@@ -157,7 +157,9 @@ Click "Run current script". When the DC Motor is connected to a power supply, it
 The following is the program code:
 
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/17.1_Relay_And_Motor/Relay_And_Motor.py
+    :linenos:
     :language: python
+    :lines: 1-19
     :dedent:
 
 This section of code is basically the same as that of project Tablelamp. If you don't understand the program, you can click :ref:`here <Tablelamp>` to go back to the Tablelamp and study again.

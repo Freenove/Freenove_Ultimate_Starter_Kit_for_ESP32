@@ -139,6 +139,7 @@ The following is the Code:
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/17.2_Motor_And_Driver/Motor_And_Driver.py
     :linenos:
     :language: python
+    :lines: 1-37
     :dedent:
 
 The ADC of ESP32 has a 12-bit accuracy, corresponding to a range from 0 to 4095. In this program, set the number 2048 as the midpoint. If the value of ADC is less than 2048, make the motor rotate in one direction. If the value of ADC is greater than 2048, make the motor rotate in the other direction. Subtract 2048 from the ADC value and take the absolute value, and then divide this result by 2 to be the speed of the motor.

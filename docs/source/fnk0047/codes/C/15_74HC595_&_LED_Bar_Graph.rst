@@ -132,6 +132,7 @@ The following is the program code:
 In the code, we configure three pins to control the 74HC595 chip and define a one-byte variable to control the state of the 8 LEDs (in the LED bar graph Module) through the 8 bits of the variable. The LEDs light ON when the corresponding bit is 1. If the variable is assigned to 0x01, that is 00000001 in binary, there will be only one LED ON. 
 
 .. code-block:: c
+    :linenos:
 
     x=0x01;
 

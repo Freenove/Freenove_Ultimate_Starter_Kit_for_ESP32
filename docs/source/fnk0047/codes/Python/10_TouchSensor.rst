@@ -208,6 +208,7 @@ The following is the program code:
 .. literalinclude:: ../../../freenove_Kit/Python/Python_Codes/10.2_TouchLamp/TouchLamp.py
     :linenos:
     :language: python
+    :lines: 1-30
     :dedent:
 
 Import Pin and TouchPad modules.

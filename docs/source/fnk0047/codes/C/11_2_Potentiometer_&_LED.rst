@@ -71,7 +71,7 @@ The following is the program code:
 
 In the code you can read the ADC values of the 3 potentiometers and map it into a PWM duty cycle to control the 3 LED elements to vary the color of their respective RGB LED.
 
-Project Soft Rainbow Light
+Project 11.3 Soft Rainbow Light
 ********************************************
 
 In this project, we use potentiometer to control Freenove 8 RGB LED Module.
@@ -104,7 +104,7 @@ Component List
 Sketch
 ====================================
 
-Sketch_Soft_Rainbow_Light
+Sketch_11.3_Soft_Rainbow_Light
 --------------------------------------
 
 .. image:: ../_static/imgs/11_Potentiometer_&_LED/Chapter11_09.png

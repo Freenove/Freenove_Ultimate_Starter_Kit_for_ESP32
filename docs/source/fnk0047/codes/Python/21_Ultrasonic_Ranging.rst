@@ -222,6 +222,7 @@ Define an ultrasonic object and associate with the pins.
 Obtain the distance data returned from the ultrasonic ranging module. 
 
 .. code-block:: python
+    :linenos:
 
     SR.distance()
 

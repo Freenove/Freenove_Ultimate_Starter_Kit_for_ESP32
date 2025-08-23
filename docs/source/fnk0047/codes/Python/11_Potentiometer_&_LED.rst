@@ -81,3 +81,5 @@ The following is the code:
     :dedent:
 
 In the code, read the ADC value of potentiometer and map it to the duty cycle of PWM to control LED brightness. 
+
+.. include:: 11_2_Potentiometer_&_LED.rst
