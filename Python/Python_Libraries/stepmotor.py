@@ -63,7 +63,7 @@ class mystepmotor(object):
         for i in range(turns):
             self.moveSteps(direction,32*64,us)
     
-    def moveAngle(self,angles,us):
+    def moveAngle(self,direction,angles,us):
         self.moveSteps(direction,32*64//angles,us)
         
     def stop(self):
