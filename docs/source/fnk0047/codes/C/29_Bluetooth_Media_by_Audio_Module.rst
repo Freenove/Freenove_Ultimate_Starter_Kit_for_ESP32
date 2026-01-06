@@ -145,8 +145,12 @@ Circuit
 Sketch
 ============================================
 
-Sketch_29.1_Bluetooth_Music_by_PCM5102A
-----------------------------------------------
+If you are using ESP32 Core 2.x.x, please see :ref:`Sketch_29.1_Bluetooth_Music_by_Audio_Converter(2.x.x) <fnk0047/codes/c/29_bluetooth_media_by_audio_module:sketch_29.1_bluetooth_music_by_audio_converter(2.x.x)>`
+
+If you are using ESP32 Core 3.x.x, please see :ref:`Sketch_29.1_Bluetooth_Music_by_Audio_Converter(3.x.x)`
+
+Sketch_29.1_Bluetooth_Music_by_Audio_Converter(2.x.x)
+-----------------------------------------------------------
 
 .. image:: ../_static/imgs/29_Bluetooth_Media_by_Audio_Module/Chapter29_08.png
     :align: center
@@ -163,19 +167,90 @@ Please use your mobile phone to search and connect a Bluetooth device named "ESP
 .. image:: ../_static/imgs/29_Bluetooth_Media_by_Audio_Module/Chapter29_10.png
     :align: center
 
+Code
+^^^^^^^^^^^^^^^
+
 The following is the program code:
 
-.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_29.1_BluetoothByPCM5102A/Sketch_29.1_BluetoothByPCM5102A.ino
+.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_29.1_Bluetooth_Music_by_ Audio_Converter(2.x.x)/Sketch_29.1_Bluetooth_Music_by_ Audio_Converter(2.x.x).ino
     :linenos: 
     :language: c
     :dedent:
 
+Code Explanation
+^^^^^^^^^^^^^^^^^^^
+
 Define an I2S configuration class and initialize it; define an I2S pin configuration class and associate I2S signals with these pins.
 
-.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_29.1_BluetoothByPCM5102A/Sketch_29.1_BluetoothByPCM5102A.ino
+.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_29.1_Bluetooth_Music_by_ Audio_Converter(2.x.x)/Sketch_29.1_Bluetooth_Music_by_ Audio_Converter(2.x.x).ino
     :linenos: 
     :language: c
     :lines: 40-59
     :dedent:
 
 In this chapter, the procedure is very similar to the previous section. The difference only lies in the I2S configuration. The audio quality of the DAC output from the PCM5102 chip after decoding is significantly higher than that of the ESP32's own 8-bit precision DAC.
+
+Sketch_29.1_Bluetooth_Music_by_Audio_Converter(3.x.x)
+-----------------------------------------------------------------
+
+Code
+^^^^^^^^^^^^^^^
+
+The following is the program code:
+
+.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_29.1_Bluetooth_Music_by_ Audio_Converter(3.x.x)/Sketch_29.1_Bluetooth_Music_by_ Audio_Converter(3.x.x).ino
+    :linenos: 
+    :language: c
+    :lines: 1-40
+    :dedent:
+
+Code Explanation
+^^^^^^^^^^^^^^^^^^^^
+
+Introduce the necessary libraries.
+
+.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_29.1_Bluetooth_Music_by_ Audio_Converter(3.x.x)/Sketch_29.1_Bluetooth_Music_by_ Audio_Converter(3.x.x).ino
+    :linenos: 
+    :language: c
+    :lines: 19-20
+    :dedent:
+
+Define the required pins
+
+.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_29.1_Bluetooth_Music_by_ Audio_Converter(3.x.x)/Sketch_29.1_Bluetooth_Music_by_ Audio_Converter(3.x.x).ino
+    :linenos: 
+    :language: c
+    :lines: 22-24
+    :dedent:
+
+Create instances of I2S and Bluetooth A2DP Sink
+
+.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_29.1_Bluetooth_Music_by_ Audio_Converter(3.x.x)/Sketch_29.1_Bluetooth_Music_by_ Audio_Converter(3.x.x).ino
+    :linenos: 
+    :language: c
+    :lines: 25-27
+    :dedent:
+
+Configure the specific pins used for I2S
+
+.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_29.1_Bluetooth_Music_by_ Audio_Converter(3.x.x)/Sketch_29.1_Bluetooth_Music_by_ Audio_Converter(3.x.x).ino
+    :linenos: 
+    :language: c
+    :lines: 30-30
+    :dedent:
+
+Initialize the I2S interface
+
+.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_29.1_Bluetooth_Music_by_ Audio_Converter(3.x.x)/Sketch_29.1_Bluetooth_Music_by_ Audio_Converter(3.x.x).ino
+    :linenos: 
+    :language: c
+    :lines: 31-34
+    :dedent:
+
+Start the Bluetooth sink with the name "ESP32 A2DP"
+
+.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_29.1_Bluetooth_Music_by_ Audio_Converter(3.x.x)/Sketch_29.1_Bluetooth_Music_by_ Audio_Converter(3.x.x).ino
+    :linenos: 
+    :language: c
+    :lines: 36-36
+    :dedent:

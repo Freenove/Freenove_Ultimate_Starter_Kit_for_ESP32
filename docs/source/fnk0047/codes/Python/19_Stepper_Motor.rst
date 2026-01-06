@@ -156,7 +156,7 @@ Repeatedly control the stepmotor to rotate 360° clockwise and then rotate 360°
 Reference
 --------------------------------
 
-.. py:function:: class myServo 	
+.. py:function:: class mystepmotor 	
     
     Before each use of the object **mystepmotor** , please make sure that stepmotor.py has been uploaded to "/" of ESP32, and then add the statement "from stepmotor import mystepmotor" to the top of the python file.
     

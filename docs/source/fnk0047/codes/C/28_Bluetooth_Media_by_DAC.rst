@@ -101,7 +101,11 @@ Circuit
 Sketch
 ==============================================
 
-Sketch_28.1_Bluetooth_Music_by_DAC
+If you are using ESP32 Core 2.x.x, please see :ref:`Sketch_28.1_Bluetooth_Music_by_DAC(2.x.x) <fnk0047/codes/c/28_bluetooth_media_by_dac:sketch_28.1_bluetooth_music_by_dac(2.x.x)>`
+
+If you are using ESP32 Core 3.x.x, please see :ref:`Sketch_28.1_Bluetooth_Music_by_DAC(3.x.x) <fnk0047/codes/c/28_bluetooth_media_by_dac:sketch_28.1_bluetooth_music_by_dac(3.x.x)>`
+
+Sketch_28.1_Bluetooth_Music_by_DAC(2.x.x)
 ----------------------------------------------
 
 .. image:: ../_static/imgs/28_Bluetooth_Media_by_DAC/Chapter28_06.png
@@ -119,14 +123,14 @@ Please use your mobile phone to search and connect a Bluetooth device named "ESP
 
 The following is the program code:
 
-.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_28.1_BluetoothByDAC/Sketch_28.1_BluetoothByDAC.ino
+.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_28.1_BluetoothByDAC(2.x.x)/Sketch_28.1_BluetoothByDAC(2.x.x).ino
     :linenos: 
     :language: c
     :dedent:
 
 Add program files related to Bluetooth and API interface files.
 
-.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_28.1_BluetoothByDAC/Sketch_28.1_BluetoothByDAC.ino
+.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_28.1_BluetoothByDAC(2.x.x)/Sketch_28.1_BluetoothByDAC(2.x.x).ino
     :linenos: 
     :language: c
     :lines: 10-22
@@ -134,7 +138,7 @@ Add program files related to Bluetooth and API interface files.
 
 Set the Bluetooth in slave mode through macro definition and use it to receive data from other devices.
 
-.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_28.1_BluetoothByDAC/Sketch_28.1_BluetoothByDAC.ino
+.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_28.1_BluetoothByDAC(2.x.x)/Sketch_28.1_BluetoothByDAC(2.x.x).ino
     :linenos: 
     :language: c
     :lines: 24-26
@@ -142,7 +146,7 @@ Set the Bluetooth in slave mode through macro definition and use it to receive d
 
 Initialize the serial port and set the baud rate to 115200; initialize Bluetooth and name it as "ESP32".
 
-.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_28.1_BluetoothByDAC/Sketch_28.1_BluetoothByDAC.ino
+.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_28.1_BluetoothByDAC(2.x.x)/Sketch_28.1_BluetoothByDAC(2.x.x).ino
     :linenos: 
     :language: c
     :lines: 45-47
@@ -150,7 +154,7 @@ Initialize the serial port and set the baud rate to 115200; initialize Bluetooth
 
 Define an I2S interface variable and initialize it.
 
-.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_28.1_BluetoothByDAC/Sketch_28.1_BluetoothByDAC.ino
+.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_28.1_BluetoothByDAC(2.x.x)/Sketch_28.1_BluetoothByDAC(2.x.x).ino
     :linenos: 
     :language: c
     :lines: 54-66
@@ -158,7 +162,7 @@ Define an I2S interface variable and initialize it.
 
 Initialize the Bluetooth hardware device, establish a Bluetooth thread task, and print out messages to prompt the user to take the next step.
 
-.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_28.1_BluetoothByDAC/Sketch_28.1_BluetoothByDAC.ino
+.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_28.1_BluetoothByDAC(2.x.x)/Sketch_28.1_BluetoothByDAC(2.x.x).ino
     :linenos: 
     :language: c
     :lines: 68-72
@@ -166,8 +170,62 @@ Initialize the Bluetooth hardware device, establish a Bluetooth thread task, and
 
 Bluetooth thread task: Set Bluetooth to slave mode; initialize Bluetooth command resolution function; set Bluetooth to be visible to other devices and in waiting for connection mode.
 
-.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_28.1_BluetoothByDAC/Sketch_28.1_BluetoothByDAC.ino
+.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_28.1_BluetoothByDAC(2.x.x)/Sketch_28.1_BluetoothByDAC(2.x.x).ino
     :linenos: 
     :language: c
     :lines: 30-42
+    :dedent:
+
+Sketch_28.1_Bluetooth_Music_by_DAC(3.x.x)
+----------------------------------------------
+
+How to install the library
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Click **Sketch** -> **Include Library** -> **Add .ZIP Library...**
+
+.. image:: ../_static/imgs/28_Bluetooth_Media_by_DAC/Chapter28_09.png
+    :align: center
+
+Install ESP32-A2DP-1.8.8.zip and arduino-audio-tools-1.2.1.zip
+
+.. image:: ../_static/imgs/28_Bluetooth_Media_by_DAC/Chapter28_10.png
+    :align: center
+
+Code
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The following is the program code:
+
+.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_28.1_BluetoothByDAC(3.x.x)/Sketch_28.1_BluetoothByDAC(3.x.x).ino
+    :linenos: 
+    :language: c
+    :lines: 1-31
+    :dedent:
+
+Code Explanation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Introduce the necessary libraries.
+
+.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_28.1_BluetoothByDAC(3.x.x)/Sketch_28.1_BluetoothByDAC(3.x.x).ino
+    :linenos: 
+    :language: c
+    :lines: 19-20
+    :dedent:
+
+Initialize the Bluetooth A2DP Sink and connect it to the output stream
+
+.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_28.1_BluetoothByDAC(3.x.x)/Sketch_28.1_BluetoothByDAC(3.x.x).ino
+    :linenos: 
+    :language: c
+    :lines: 22-23
+    :dedent:
+
+"InternalDAC" is the device name that will appear in your phone's Bluetooth list.
+
+.. literalinclude:: ../../../freenove_Kit/C/Sketches/Sketch_28.1_BluetoothByDAC(3.x.x)/Sketch_28.1_BluetoothByDAC(3.x.x).ino
+    :linenos: 
+    :language: c
+    :lines: 26-26
     :dedent:
