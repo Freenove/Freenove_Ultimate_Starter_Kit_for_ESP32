@@ -1,119 +1,105 @@
-# This section uses firmware from Lemariva's Micropython-camera-driver.  
-# for details, please refer to: https://github.com/lemariva/micropython-camera-driver  
 import picoweb
 import utime
 import camera
 import gc
+import network
 
 SSID = "********"         # Enter your WiFi name
 PASSWORD = "********"     # Enter your WiFi password
 
-# Let ESP32 connect to wifi.
+def camera_init():
+    camera.deinit()
+    utime.sleep_ms(100)
+    
+    try:
+        success = camera.init(0, 
+            d0=4, d1=5, d2=18, d3=19, d4=36, d5=39, d6=34, d7=35,
+            format=camera.RGB565,       
+            framesize=camera.FRAME_QVGA,
+            xclk_freq=camera.XCLK_10MHz,
+            href=23, vsync=25, reset=-1, pwdn=-1,
+            sioc=27, siod=26, xclk=21, pclk=22,
+            fb_location=camera.PSRAM)   
+        
+        if success:
+            camera.brightness(1)
+            camera.quality(10)
+            camera.mirror(1)
+            camera.flip(1)
+            print("Camera Init Success")
+            return True
+    except Exception as e:
+        print("Camera Error:", e)
+    return False
+
 def wifi_connect():
-    import network
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
     if not wlan.isconnected():
-        print('connecting to network...')
-        wlan.connect(SSID, PASSWORD) 
-    start = utime.time()
-    while not wlan.isconnected():
-        utime.sleep(1)
-        if utime.time()-start > 5:
-            print("connect timeout!")
-            break
-    if wlan.isconnected():
-        print('network config:', wlan.ifconfig())
+        wlan.connect(SSID, PASSWORD)
+        while not wlan.isconnected():
+            utime.sleep(0.5)
+    print('IP:', wlan.ifconfig()[0])
 
-# Initializing the Camera
-def camera_init():
-    # Disable camera initialization
-    camera.deinit()
-    # Enable camera initialization
-    camera.init(0, d0=4, d1=5, d2=18, d3=19, d4=36, d5=39, d6=34, d7=35,
-                format=camera.JPEG, framesize=camera.FRAME_VGA, 
-                xclk_freq=camera.XCLK_20MHz,
-                href=23, vsync=25, reset=-1, pwdn=-1,
-                sioc=27, siod=26, xclk=21, pclk=22, fb_location=camera.PSRAM)
-
-    camera.framesize(camera.FRAME_VGA) # Set the camera resolution
-    # The options are the following:
-    # FRAME_96X96 FRAME_QQVGA FRAME_QCIF FRAME_HQVGA FRAME_240X240
-    # FRAME_QVGA FRAME_CIF FRAME_HVGA FRAME_VGA FRAME_SVGA
-    # FRAME_XGA FRAME_HD FRAME_SXGA FRAME_UXGA
-    # Note: The higher the resolution, the more memory is used.
-    # Note: And too much memory may cause the program to fail.
-    
-    camera.flip(1)                       # Flip up and down window: 0-1
-    camera.mirror(1)                     # Flip window left and right: 0-1
-    camera.saturation(0)                 # saturation: -2,2 (default 0). -2 grayscale 
-    camera.brightness(0)                 # brightness: -2,2 (default 0). 2 brightness
-    camera.contrast(0)                   # contrast: -2,2 (default 0). 2 highcontrast
-    camera.quality(10)                   # quality: # 10-63 lower number means higher quality
-    # Note: The smaller the number, the sharper the image. The larger the number, the more blurry the image
-    
-    camera.speffect(camera.EFFECT_NONE)  # special effects:
-    # EFFECT_NONE (default) EFFECT_NEG EFFECT_BW EFFECT_RED EFFECT_GREEN EFFECT_BLUE EFFECT_RETRO
-    camera.whitebalance(camera.WB_NONE)  # white balance
-    # WB_NONE (default) WB_SUNNY WB_CLOUDY WB_OFFICE WB_HOME
-
-# HTTP Response Content  
-index_web="""
-HTTP/1.0 200 OK\r\n
+index_web = """
 <html>
-  <head>
-    <title>Video Streaming</title>
-  </head>
   <body>
     <h1>Video Streaming Demonstration</h1>
-    <img src="/video" margin-top:100px; style="transform:rotate(180deg)"; />
+    <canvas id="cv" width="320" height="240" style="transform:rotate(180deg); background:#000;"></canvas>
+    <script>
+      const cv = document.getElementById('cv');
+      const ctx = cv.getContext('2d');
+      const w = 320, h = 240;
+      const size = w * h * 2;
+
+      async function stream() {
+        const res = await fetch('/video');
+        const reader = res.body.getReader();
+        let buf = new Uint8Array(0);
+
+        while (true) {
+          const {done, value} = await reader.read();
+          if (done) break;
+
+          let tmp = new Uint8Array(buf.length + value.length);
+          tmp.set(buf); tmp.set(value, buf.length);
+          buf = tmp;
+
+          while (buf.length >= size) {
+            const frame = buf.slice(0, size);
+            buf = buf.slice(size);
+            const img = ctx.createImageData(w, h);
+            for (let i=0; i<size; i+=2) {
+              const p = (frame[i]<<8) | frame[i+1];
+              const idx = (i>>1)<<2;
+              img.data[idx]   = ((p>>11) & 0x1F) << 3; // R
+              img.data[idx+1] = ((p>>5) & 0x3F) << 2;  // G
+              img.data[idx+2] = (p & 0x1F) << 3;       // B
+              img.data[idx+3] = 255;
+            }
+            ctx.putImageData(img, 0, 0);
+          }
+        }
+      }
+      stream();
+    </script>
   </body>
 </html>
 """
 
-# HTTP Response
-def index(req, resp):
-    # You can construct an HTTP response completely yourself, having
-    yield from resp.awrite(index_web)
-
-# Send camera pictures
-def send_frame():
-    buf = camera.capture()
-    yield (b'--frame\r\n'
-           b'Content-Type: image/jpeg\r\n\r\n'
-           + buf + b'\r\n')
-    del buf
-    gc.collect()
-        
-# Video transmission
 def video(req, resp):
-    yield from picoweb.start_response(resp, content_type="multipart/x-mixed-replace; boundary=frame")
+    yield from resp.awrite("HTTP/1.1 200 OK\r\nContent-Type: application/octet-stream\r\n\r\n")
     while True:
-        yield from resp.awrite(next(send_frame()))
-        gc.collect()
+        buf = camera.capture()
+        if buf:
+            try:
+                yield from resp.awrite(buf)
+                del buf
+                gc.collect() 
+            except:
+                break
 
-
-ROUTES = [
-    # You can specify exact URI string matches...
-    ("/", index),
-    ("/video", video),
-]
-
-
-if __name__ == '__main__':
-    
-    import ulogging as logging
-    logging.basicConfig(level=logging.INFO)
-    camera_init()
-    wifi_connect()
-
-    #Create an app object that contains two decorators
-    app = picoweb.WebApp(__name__, ROUTES)
-    
-    app.run(debug=1, port=80, host="0.0.0.0")
-    # debug values:
-    # -1 disable all logging
-    # 0 (False) normal logging: requests and errors
-    # 1 (True) debug logging
-    # 2 extra debug logging
-
+ROUTES = [("/", lambda r, s: (yield from s.awrite("HTTP/1.1 200 OK\r\n\r\n"+index_web))), ("/video", video)]
+wifi_connect()
+if camera_init():
+    picoweb.WebApp(__name__, ROUTES).run(debug=False, port=80, host="0.0.0.0")
