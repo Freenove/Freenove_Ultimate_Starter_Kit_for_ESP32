@@ -217,7 +217,7 @@ const char index_web[] =
   </head>\
   <body>\
     <h1>Video Streaming Demonstration</h1>\
-    <img src=\"/stream\"\ style=\"transform:rotate(180deg)\"/>\
+    <img src=\"/stream\"\ style=\"transform:rotate(0deg)\"/>\
   </body>\
 </html>\
 ";

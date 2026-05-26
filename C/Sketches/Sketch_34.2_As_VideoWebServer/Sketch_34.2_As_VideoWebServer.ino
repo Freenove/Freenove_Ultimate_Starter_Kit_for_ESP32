@@ -14,6 +14,8 @@
 const char* ssid     = "********";   //input your wifi name
 const char* password = "********";   //input your wifi passwords
 
+camera_config_t config;
+void camera_init();
 void startCameraServer();
 
 void setup() {
@@ -21,7 +23,29 @@ void setup() {
   Serial.setDebugOutput(true);
   Serial.println();
 
-  camera_config_t config;
+  camera_init();
+
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println("");
+  Serial.println("WiFi connected");
+
+  startCameraServer();
+
+  Serial.print("Camera Ready! Use 'http://");
+  Serial.print(WiFi.localIP());
+  Serial.println("' to connect");
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  delay(10000);
+}
+
+void camera_init() {
   config.ledc_channel = LEDC_CHANNEL_0;
   config.ledc_timer = LEDC_TIMER_0;
   config.pin_d0 = Y2_GPIO_NUM;
@@ -41,71 +65,53 @@ void setup() {
   config.pin_pwdn = PWDN_GPIO_NUM;
   config.pin_reset = RESET_GPIO_NUM;
   config.xclk_freq_hz = 10000000;
-  config.pixel_format = PIXFORMAT_JPEG;
+  config.frame_size = FRAMESIZE_QVGA;
+  config.pixel_format = PIXFORMAT_JPEG; // for streaming
+  config.grab_mode = CAMERA_GRAB_WHEN_EMPTY;
+  config.fb_location = CAMERA_FB_IN_PSRAM;
+  config.jpeg_quality = 10;
+  config.fb_count = 1;
   
-  // if PSRAM IC present, init with UXGA resolution and higher JPEG quality
-  //                      for larger pre-allocated frame buffer.
-  if(psramFound()){
-    config.frame_size = FRAMESIZE_VGA;
-    config.jpeg_quality = 10;
-    config.fb_count = 2;
-  } else {
-    config.frame_size = FRAMESIZE_SVGA;
-    config.jpeg_quality = 12;
-    config.fb_count = 1;
-  }
-
   // camera init
   esp_err_t err = esp_camera_init(&config);
   if (err != ESP_OK) {
-    Serial.printf("Camera init failed with error 0x%x", err);
-    return;
+    if(err==ESP_ERR_NOT_SUPPORTED){
+      config.pixel_format = PIXFORMAT_RGB565;
+      esp_err_t err = esp_camera_init(&config);
+      if (err != ESP_OK) {
+        Serial.printf("Camera init failed with error 0x%x", err);
+        return;
+      }
+    }
   }
 
   sensor_t * s = esp_camera_sensor_get();
   // drop down frame size for higher initial frame rate
-  s->set_framesize(s, FRAMESIZE_VGA);
-  uint8_t pid = s->id.PID;
-
-  if(pid == 0x45)
-  {
+  uint16_t pid = s->id.PID;
+  if(pid == OV2640_PID){
+    s->set_hmirror(s, 1);
+    s->set_vflip(s, 1);     
+  }
+  else if(pid == OV3660_PID){
+    s->set_hmirror(s, 1);
+    s->set_vflip(s, 0);     
+  }
+  else if(pid == GC2145_PID){
     s->set_hmirror(s, 0);
-    vTaskDelay(500);
-    s->set_vflip(s, 0);       // Flip the image vertically
-  }else if(pid == 0x26)
-  {
-    s->set_hmirror(s, 1);
-    s->set_vflip(s, 1);       // Flip the image vertically
-  }else if(pid == 0x9B)
-  {
-    s->set_hmirror(s, 1);
-    vTaskDelay(500);
-    s->set_vflip(s, 1);       // Flip the image vertically
+    delay(500);
+    s->set_vflip(s, 0);      
+  }
+  else if(pid == GC0308_PID){
+    s->set_hmirror(s, 0);
+    delay(500);
+    s->set_vflip(s, 0);     
   }
   else{
     s->set_hmirror(s, 1);
-    s->set_vflip(s, 0);       // Flip the image vertically
+    s->set_vflip(s, 0);       
   }
   s->set_brightness(s, 1);  // Slightly increase brightness
   s->set_saturation(s, 0);  // Reduce saturation
   s->set_ae_level(s, -3);   // Set exposure compensation level
-  WiFi.begin(ssid, password);
-
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
-  Serial.println("");
-  Serial.println("WiFi connected");
-
-  startCameraServer();
-
-  Serial.print("Camera Ready! Use 'http://");
-  Serial.print(WiFi.localIP());
-  Serial.println("' to connect");
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-  delay(10000);
-}

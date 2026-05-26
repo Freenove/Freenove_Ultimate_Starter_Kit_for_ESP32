@@ -3,7 +3,7 @@
   Description : ESP32 connects to WiFi and prints a url through a serial port.
                 Users visit the site to view the image data ESP32 camera.
   Auther      : www.freenove.com
-  Modification: 2024/06/20
+  Modification: 2026/05/16
 **********************************************************************/
 #include "esp_camera.h"
 #include <WiFi.h>
@@ -30,8 +30,8 @@
 
 #include "camera_pins.h"
 
-const char *ssid_Router     = "********";  //input your wifi name
-const char *password_Router = "********";  //input your wifi passwords
+const char* ssid_Router     =   "********";
+const char* password_Router =   "********";
 camera_config_t config;
 
 void startCameraServer();
@@ -43,19 +43,6 @@ void setup() {
   Serial.println();
 
   camera_init();
-
-  // camera init
-  esp_err_t err = esp_camera_init(&config);
-  if (err != ESP_OK) {
-    Serial.printf("Camera init failed with error 0x%x", err);
-    return;
-  }
-
-  sensor_t * s = esp_camera_sensor_get();
-  s->set_vflip(s, 0);        //1-Upside down, 0-No operation
-  s->set_hmirror(s, 0);      //1-Reverse left and right, 0-No operation
-  s->set_brightness(s, 1);   //up the blightness just a bit
-  s->set_saturation(s, -1);  //lower the saturation
 
   WiFi.begin(ssid_Router, password_Router);
   WiFi.setSleep(false);
@@ -99,9 +86,50 @@ void camera_init() {
   config.xclk_freq_hz = 10000000;
   config.frame_size = FRAMESIZE_QVGA;
   config.pixel_format = PIXFORMAT_JPEG; // for streaming
-  //config.pixel_format = PIXFORMAT_RGB565; // for face detection/recognition
   config.grab_mode = CAMERA_GRAB_WHEN_EMPTY;
   config.fb_location = CAMERA_FB_IN_PSRAM;
   config.jpeg_quality = 10;
-  config.fb_count = 2;
+  config.fb_count = 1;
+  
+  // camera init
+  esp_err_t err = esp_camera_init(&config);
+  if (err != ESP_OK) {
+    if(err==ESP_ERR_NOT_SUPPORTED){
+      config.pixel_format = PIXFORMAT_RGB565;
+      esp_err_t err = esp_camera_init(&config);
+      if (err != ESP_OK) {
+        Serial.printf("Camera init failed with error 0x%x", err);
+        return;
+      }
+    }
+  }
+
+  sensor_t * s = esp_camera_sensor_get();
+  // drop down frame size for higher initial frame rate
+  uint16_t pid = s->id.PID;
+  if(pid == OV2640_PID){
+    s->set_hmirror(s, 1);
+    s->set_vflip(s, 1);     
+  }
+  else if(pid == OV3660_PID){
+    s->set_hmirror(s, 1);
+    s->set_vflip(s, 0);     
+  }
+  else if(pid == GC2145_PID){
+    s->set_hmirror(s, 0);
+    delay(500);
+    s->set_vflip(s, 0);      
+  }
+  else if(pid == GC0308_PID){
+    s->set_hmirror(s, 0);
+    delay(500);
+    s->set_vflip(s, 0);     
+  }
+  else{
+    s->set_hmirror(s, 1);
+    s->set_vflip(s, 0);       
+  }
+  s->set_brightness(s, 1);  // Slightly increase brightness
+  s->set_saturation(s, 0);  // Reduce saturation
+  s->set_ae_level(s, -3);   // Set exposure compensation level
 }
